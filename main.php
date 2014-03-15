@@ -50,18 +50,18 @@ echo '      </div>
 
 _wp_tpl_mainmenu();
 echo '      </div>
-    </div>
-    <div class="breadcrumbs">
-';
-if($conf['breadcrumbs']){
-  tpl_breadcrumbs();
-} elseif($conf['youarehere']){
-  _wp_tpl_youarehere();
-}
+    </div>';
+    //<div class="breadcrumbs">
+//';
+//if($conf['breadcrumbs']){
+  //tpl_breadcrumbs();
+//} //elseif($conf['youarehere']){
+  //_wp_tpl_youarehere();
+//}
 //$translation = &plugin_load('helper','translation');
 //if ($translation) echo $translation->showTranslations();
-echo '    </div>
-  </div>
+//echo '    </div>
+echo'  </div>
 ';
 flush();
 if($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
