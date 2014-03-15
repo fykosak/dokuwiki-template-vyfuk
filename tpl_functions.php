@@ -294,7 +294,7 @@ function _wp_tpl_youarehere($sep = ' » ') {
     return true;
 };
 function fkssitebar(){
-	$data=io_readFile("fkssitebar.txt", false);
+	$data=io_readFile("data/pages/fkssitebar.txt", false);
 	echo $data;
 	p_render("xhml",p_cached_instructions($data),$info);
 };
