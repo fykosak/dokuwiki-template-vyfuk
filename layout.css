@@ -108,6 +108,7 @@ div.dokuwiki div.stylefoot {
   clear: both;
   color: __text__;
   background: url(images/trans75.png) repeat 0 0 transparent;
+  border-radius: 20px;
 }
 
 div.dokuwiki div.stylefoot div.meta {
@@ -132,6 +133,7 @@ div.dokuwiki div.wrap {
   overflow: hidden;
   min-width: 60em;
   background: url(images/trans75.png) 0 0 repeat transparent;
+  border-radius: 20px;
 }
 
 /* ------------- the  menu bar ------------- */

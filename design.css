@@ -115,7 +115,7 @@ div.dokuwiki input.missing {
   font-size: 100%;
   border: 1px solid __border__;
   color: __text__;
-  background-color: #ffcccc;
+  background-color: #EA0037;
   vertical-align: middle;
   margin: 1px;
   padding: 0.20em 0.3em;
@@ -191,7 +191,8 @@ div.dokuwiki button.button {
   font-size: 0.95em;
   cursor: pointer;
   margin: 1px;
-  padding: 0.125em 0.4em;
+  padding: 0.25em 0.5em;
+  border-radius: 20px;
 }
 
 * html div.dokuwiki input.button,
@@ -301,7 +302,9 @@ div.dokuwiki a.mail {
 
 /* existing wikipage */
 div.dokuwiki a.wikilink1 {
-  color: __existing__ !important;
+  color: __background_neo__ !important;
+  padding: 1em;
+  border-radius: 20px;
 }
 
 /* not existing wikipage */
@@ -309,6 +312,7 @@ div.dokuwiki a.wikilink2 {
   color: __missing__ !important;
   text-decoration: none !important;
   border-bottom: dashed 1px __missing__ !important;
+  border-radius: 20px;
 }
 
 /* ------------- Page elements ----------------- */
@@ -628,11 +632,11 @@ div.dokuwiki table.diff td {
 }
 div.dokuwiki td.diff-addedline,
 div.dokuwiki span.diff-addedline {
-  background-color: #ddffdd;
+  background-color: #9702A7;
 }
 div.dokuwiki td.diff-deletedline,
 div.dokuwiki span.diff-deletedline {
-    background-color: #ffffbb;
+    background-color: #53DF00;
 }
 div.dokuwiki td.diff-context {
     background-color: __background_neu__;
@@ -795,7 +799,7 @@ button.pickerbutton {
 /* ---------- Spellchecking ------------- */
 
 div.dokuwiki a.spell_error {
-  color: #f00;
+  color: #EA0037;
   text-decoration: underline;
 }
 
@@ -817,11 +821,11 @@ div.dokuwiki div#spell__result {
 }
 
 div.dokuwiki span.spell_noerr {
-  color: #093;
+  color: #53DF00;
 }
 
 div.dokuwiki span.spell_wait {
-  color: #06c;
+  color: #000042;
 }
 
 /* ---------------  Image Details  ----------------- */
@@ -876,6 +880,7 @@ legend  {
 /* blog plugin compatibility */
 div.comment_wrapper {
   background-color: __background_neu__ !important;
+  border-radius: 20px;
 }
 
 div.comment_buttons {
