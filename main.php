@@ -66,16 +66,9 @@ echo '    </div>
 flush();
 if($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
   echo '  <div class="wrap">
-     <div class="fkssitebar" style=" float:right ;max-width: 20em;">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at nibh in justo blandit facilisis. Nam a arcu eget erat euismod elementum. In auctor, turpis ac gravida luctus, enim elit scelerisque elit, vel volutpat nunc diam in odio. Fusce commodo condimentum velit, vel lobortis nisl luctus vel. Cras eu urna imperdiet lectus scelerisque mollis. Nulla varius aliquet velit quis fringilla. Aenean egestas consequat quam, vel imperdiet sapien ullamcorper in. Donec non posuere dolor. Donec dictum enim iaculis mi tristique, nec tincidunt metus tristique.
-
-Suspendisse consectetur porta sapien nec semper. Donec risus felis, venenatis vel sollicitudin non, dignissim vulputate arcu. Quisque eget velit commodo, ultrices nisi at, ullamcorper nibh. Nulla auctor arcu eu massa dignissim rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae euismod nunc, et auctor libero. Nunc mattis nibh et feugiat congue. In non congue odio. Pellentesque varius enim sed ultricies tempus. Nunc convallis quam vitae placerat molestie. Maecenas et elementum dolor, in vulputate lorem. Etiam sit amet purus malesuada, dignissim ante tempus, tincidunt sem. Proin nec laoreet neque, eget porttitor purus. Cras interdum elit a dolor ullamcorper, in rhoncus orci placerat. Mauris vestibulum pharetra arcu, porttitor placerat purus semper sed.
-
-Mauris tincidunt hendrerit elementum. Etiam vitae lobortis velit. Praesent fermentum dui in nibh scelerisque lobortis. Suspendisse pulvinar lacus non molestie blandit. Aliquam vitae nisi est. Suspendisse potenti. Donec condimentum, erat quis blandit gravida, nulla sem viverra nibh, sit amet porta urna nibh vel tellus. Suspendisse et dolor in enim gravida pellentesque eget ut felis. Nulla et semper est. Morbi interdum elementum lectus eget accumsan.
-
-Fusce nec fermentum turpis, eget iaculis diam. Nunc iaculis tellus lorem, ut tempor lectus aliquet ac. Vivamus ultricies dictum blandit. Vestibulum lobortis venenatis eros, sit amet congue lacus egestas id. Praesent eu nisl fringilla diam condimentum vehicula. Integer ac sem non velit porta sodales. Aenean malesuada dolor ut blandit dapibus.
-
-Ut ac lobortis enim. Vestibulum tincidunt purus elit, pharetra laoreet massa lobortis ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu velit lorem. Fusce non varius est. Mauris tincidunt lectus eget neque blandit, sed condimentum enim viverra. Maecenas sodales at tellus ac facilisis. Praesent a tellus vitae nunc volutpat tincidunt. Suspendisse sagittis sit amet risus nec malesuada. Fusce iaculis vitae quam ut mattis. Etiam blandit odio dui, in rhoncus erat volutpat vel. Etiam ipsum mi, eleifend ut pretium ac, ultrices vel ipsum. Vestibulum purus enim, placerat quis lectus quis, luctus sollicitudin eros. Suspendisse ac ante odio. Aenean diam nisl, rhoncus at velit eu, lacinia consequat nisi.
+     <div class="fkssitebar" style=" float:right ;max-width: 20em;">';
+	fkssitebar(); 
+	echo '
 </div>
      <div class="page">
 ';
