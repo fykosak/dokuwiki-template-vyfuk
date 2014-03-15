@@ -34,7 +34,7 @@ function _wp_tpl_mainmenu() {
   } else {
     $start = 'start';
   }
-    /*tohle napsal Ivo*/
+    
   $ns = dirname(str_replace(':','/',$ID));
   if($ns == '.') $ns ='';
   $ns  = utf8_encodeFN(str_replace(':','/',$ns));
