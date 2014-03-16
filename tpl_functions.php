@@ -293,8 +293,8 @@ function _wp_tpl_youarehere($sep = ' » ') {
     tpl_pagelink($page);
     return true;
 };
-function fkssitebar(){
-	$data=io_readFile("data/pages/fkssitebar.txt", false);
+function fkssidebar(){
+	$data=io_readFile("data/pages/fkssidebar.txt", false);
 	echo $data;
 	p_render("xhml",p_cached_instructions($data),$info);
 };
