@@ -74,7 +74,7 @@ div.dokuwiki textarea.edit {
   font-size: 1em;
   color: __text__;
   background-color: __background_neu__;
-  border: 1px solid __border__;
+  border: 1px solid #ffffff;
   padding: 0.3em 0 0 0.3em;
   /* should just be "width: 100%", but IE8 doesn't like it, see FS#1910 + FS#1667 */
   width: 700px;

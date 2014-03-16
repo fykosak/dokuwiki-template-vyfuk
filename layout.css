@@ -110,7 +110,7 @@ div.dokuwiki div.stylefoot {
   height: 1.75em;
   clear: both;
   color: __text__;
-  background: /*url(images/trans75.png) repeat 0 0 transparent;*/#ffffff;
+  background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
   border-radius: 5px;
 }
 
@@ -118,7 +118,7 @@ div.dokuwiki div.stylefoot div.meta {
   font-size: 85%;
   text-align: right;
   padding: 0.25em 1em 0.25em 0;
-  border-top: 1px solid __border__;
+  /*border-top: 1px solid __border__;*/
 }
 div.dokuwiki div.stylefoot div.meta div.homelink {
 	margin: 0 0 0 0.5em;
