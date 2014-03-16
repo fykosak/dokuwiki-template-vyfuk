@@ -74,7 +74,7 @@ div.dokuwiki textarea.edit {
   font-size: 1em;
   color: __text__;
   background-color: __background_neu__;
-  border: /*1px solid __border__;*/0px;
+  border: 1px solid /*__border__*/ #ffffff;
   padding: 0.3em 0 0 0.3em;
   /* should just be "width: 100%", but IE8 doesn't like it, see FS#1910 + FS#1667 */
   width: 700px;
@@ -86,7 +86,7 @@ div.dokuwiki form#dw__login fieldset {
 }
 
 div.dokuwiki form#dw__login fieldset input.button {
-	color: __text__;
+	color: /*__text__*/__text_alt__;
 }
 
 div.dokuwiki input.edit,
@@ -203,7 +203,7 @@ div.dokuwiki button.button {
 div.dokuwiki div.secedit input.button {
   border: /*1px solid __border__;*/0px;
   color: __text__;
-  background-color: transparent;
+  background-color: /*__text_alt__*/#f0F0F0;
   vertical-align: middle;
   text-decoration: none;
   margin-bottom: 0.35em;
