@@ -159,7 +159,7 @@ div.dokuwiki div.mainmenu ul {
   margin: 0;
   padding: 0;
   font-weight: bold !important;
-  height: 3em;
+  height: auto;
   border-radius: 5px;
 }
 
