@@ -66,11 +66,11 @@ echo '    </div>
 flush();
 if($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
   echo '  <div class="wrap">
-     <div class="fkssitebar" style=" float:right ;max-width: 20em;">';
+     <div class="fkssitebar" style=" float:right ;width: 23em; height: 90%; margin-left: 2em ">';
 	fkssitebar(); 
 	echo '
 </div>
-     <div class="page">
+     <div class="page" style="margin-right:25em;">
 ';
   tpl_content();
   echo '
