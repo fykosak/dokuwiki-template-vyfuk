@@ -70,9 +70,10 @@ div.dokuwiki div.breadcrumbs {
   color: __text_neu__;
   font-size: 80%;
   padding: 4px 0 0 4px;
-  min-height: 2.5em;
-  margin-top: 5em;
+  min-height: 2em;
+  margin-top: 0em;
   border-radius: 3px;
+  clear:both;
 }
 
 /* ---------------  bottom bar ---------------- */
