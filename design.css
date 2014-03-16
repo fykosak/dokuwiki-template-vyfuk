@@ -182,7 +182,7 @@ div.dokuwiki form#dw__editform div.license {
 
 div.dokuwiki input.button,
 div.dokuwiki button.button {
-  border: 1px solid __border__;
+  border: /*1px solid __border__; */0px;
   color: __text__;
   background-color: __background_neu__;
   vertical-align: middle;
@@ -192,7 +192,7 @@ div.dokuwiki button.button {
   cursor: pointer;
   margin: 1px;
   padding: 0.25em 0.5em;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 * html div.dokuwiki input.button,
@@ -304,7 +304,7 @@ div.dokuwiki a.mail {
 div.dokuwiki a.wikilink1 {
   color: __background_neo__ !important;
   padding: 1em;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 /* not existing wikipage */
@@ -312,7 +312,7 @@ div.dokuwiki a.wikilink2 {
   color: __missing__ !important;
   text-decoration: none !important;
   border-bottom: dashed 1px __missing__ !important;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 /* ------------- Page elements ----------------- */
@@ -880,7 +880,7 @@ legend  {
 /* blog plugin compatibility */
 div.comment_wrapper {
   background-color: __background_neu__ !important;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 div.comment_buttons {

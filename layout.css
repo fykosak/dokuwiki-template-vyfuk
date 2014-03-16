@@ -107,8 +107,8 @@ div.dokuwiki div.stylefoot {
   height: 1.75em;
   clear: both;
   color: __text__;
-  background: url(images/trans75.png) repeat 0 0 transparent;
-  border-radius: 20px;
+  background: /*url(images/trans75.png) repeat 0 0 transparent;*/#ffffff;
+  border-radius: 5px;
 }
 
 div.dokuwiki div.stylefoot div.meta {
@@ -132,8 +132,8 @@ div.dokuwiki div.wrap {
   width: 100%;
   overflow: hidden;
   min-width: 60em;
-  background: url(images/trans75.png) 0 0 repeat transparent;
-  border-radius: 20px;
+  background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
+  border-radius: 5px;
 }
 
 /* ------------- the  menu bar ------------- */
@@ -142,9 +142,10 @@ div.dokuwiki div.mainmenu {
   padding: 0.5em;
   width: 98.75%;
 /*  background-color: __background_alt__; */
-  background: url(images/trans85.png) 0 0 repeat transparent;
+  background: /*url(images/trans85.png) 0 0 repeat transparent; */#abcdef;
   height: 1.5em;
   color: __text_other__;
+  border-radius: 5px; 
 }
 
 div.dokuwiki div.mainmenu ul {
