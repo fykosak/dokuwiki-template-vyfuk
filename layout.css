@@ -186,7 +186,7 @@ div.dokuwiki div.mainmenu ul ul {
   position: absolute;
   min-width: __menuwidth__;
   width: auto;
-  background-color: __background_alt__;
+  background-color: #fffaaa;
   top: 100%;
   left: 0;
   z-index: 1;
