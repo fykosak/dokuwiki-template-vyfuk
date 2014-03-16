@@ -251,7 +251,7 @@ div.dokuwiki a:visited {
 }
 div.dokuwiki a:hover,
 div.dokuwiki a:active {
-  color: __text__;
+  color: __highlight__;
   text-decoration: underline;
 }
 

@@ -39,18 +39,17 @@ echo '  </head>
 html_msgarea();
 echo '  <div class="stylehead">
     <div class="header">
-      <div class="pagename">';
-      
+      <div class="pagename">';      
 tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"');
-echo '      </div>
-
+echo '</div>
      <div class="clearer"></div>
-	   <div class="mainmenu">
+     <div class="mainmenu">
 ';
-
 _wp_tpl_mainmenu();
 echo '      </div>
     </div>
+    <div class="clearer"></div>
+	   
     <div class="breadcrumbs">
 ';
 if($conf['breadcrumbs']){
@@ -65,11 +64,12 @@ echo '    </div>
 ';
 flush();
 if($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
-  echo '  <div class="wrap">
+  echo '      <div class="clearer"></div>
+<div class="wrap">
      <div class="fkssidebar" style=" float:right ;width: 23em; height: 90%; margin-left: 2em ">';
 	fkssidebar(); 
 	echo '
-</div>
+</div> 
      <div class="page" style="margin-right:25em;">
 ';
   tpl_content();
