@@ -62,7 +62,7 @@ div.dokuwiki label.block input.edit {
 div.dokuwiki fieldset {
   width: 24em;
   text-align: center;
-  border: 1px solid __border__;
+  border: /*1px solid __border__;*/0px;
   padding: 0.5em;
   margin: auto;
 }
@@ -74,7 +74,7 @@ div.dokuwiki textarea.edit {
   font-size: 1em;
   color: __text__;
   background-color: __background_neu__;
-  border: 1px solid __border__;
+  border: /*1px solid __border__;*/0px;
   padding: 0.3em 0 0 0.3em;
   /* should just be "width: 100%", but IE8 doesn't like it, see FS#1910 + FS#1667 */
   width: 700px;
@@ -92,7 +92,7 @@ div.dokuwiki form#dw__login fieldset input.button {
 div.dokuwiki input.edit,
 div.dokuwiki select.edit {
   font-size: 100%;
-  border: 1px solid __border__;
+  border: /*1px solid __border__;*/0px;
   color: __text__;
   background-color: __background_neu__;
   vertical-align: middle;
@@ -113,7 +113,7 @@ div.dokuwiki select.edit {
 
 div.dokuwiki input.missing {
   font-size: 100%;
-  border: 1px solid __border__;
+  border: /*1px solid __border__;*/0px;
   color: __text__;
   background-color: #EA0037;
   vertical-align: middle;
@@ -201,7 +201,7 @@ div.dokuwiki button.button {
 }
 
 div.dokuwiki div.secedit input.button {
-  border: 1px solid __border__;
+  border: /*1px solid __border__;*/0px;
   color: __text__;
   background-color: transparent;
   vertical-align: middle;
@@ -311,7 +311,7 @@ div.dokuwiki a.wikilink1 {
 div.dokuwiki a.wikilink2 {
   color: __missing__ !important;
   text-decoration: none !important;
-  border-bottom: dashed 1px __missing__ !important;
+  border-bottom: /*dashed 1px __missing__ !important;*/0px;
   border-radius: 5px;
 }
 
@@ -321,7 +321,7 @@ div.dokuwiki div.preview {
   background-color: __background_alt__;
   margin: 0 0 0 2em;
   padding: 4px;
-  border: 1px dashed __text__;
+  border: /*1px dashed __text__;*/0px;
 }
 
 div.dokuwiki span.user {
