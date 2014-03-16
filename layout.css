@@ -65,13 +65,14 @@ div.dokuwiki .pagename a {
 }
 
 div.dokuwiki div.breadcrumbs {
-  background: url(images/trans50.png) 0 0 repeat transparent;
-  border-bottom: 1px solid __border__;
+  background: /*url(images/trans50.png) 0 0 repeat transparent;*/ #fffaaa;
+  /*border-bottom: 1px solid __border__;*/
   color: __text_neu__;
   font-size: 80%;
   padding: 4px 0 0 4px;
   min-height: 2.5em;
   margin-top: 5em;
+  border-radius: 3px;
 }
 
 /* ---------------  bottom bar ---------------- */
