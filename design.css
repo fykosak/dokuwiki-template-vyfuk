@@ -523,7 +523,7 @@ div.dokuwiki #dw__toc {
 
 div.dokuwiki #dw__toc h3 {
   border: 1px solid __border__;
-  background: url(images/trans75.png) 0 0 repeat transparent;
+  background: /*url(images/trans75.png) 0 0 repeat transparent;*/ #fffbbb;
   text-align: left;
   font-weight: bold;
   padding: 3px;
@@ -553,7 +553,7 @@ div.dokuwiki .toggle.open strong {
 
 div.dokuwiki #dw__toc > div {
   border: 1px solid __border__;
-  background: url(images/trans.png) 0 0 repeat transparent;
+  background: /*url(images/trans.png) 0 0 repeat transparent;*/ __background__;
   text-align: left;
   padding: 0.5em 0 0.7em 0;
 }
