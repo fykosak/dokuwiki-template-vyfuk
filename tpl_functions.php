@@ -293,9 +293,12 @@ function _wp_tpl_youarehere($sep = ' » ') {
     tpl_pagelink($page);
     return true;
 };
+
 function fkssidebar(){
+	include('lib/plugins/fkstimer/syntax.php');
+	fkstimer();
 	$data=io_readFile("data/pages/fkssidebar.txt", false);
 	echo $data;
-	p_render("xhml",p_cached_instructions($data),$info);
+	
 };
 ?>
