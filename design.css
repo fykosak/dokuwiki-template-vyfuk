@@ -73,8 +73,8 @@ div.dokuwiki textarea.edit {
      http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */
   font-size: 1em;
   color: __text__;
-  background-color: __background_neu__;
-  border: 1px solid #ffffff;
+  background-color: __background__;
+  border: 1px solid __border__;
   padding: 0.3em 0 0 0.3em;
   /* should just be "width: 100%", but IE8 doesn't like it, see FS#1910 + FS#1667 */
   width: 700px;
@@ -523,7 +523,7 @@ div.dokuwiki #dw__toc {
 
 div.dokuwiki #dw__toc h3 {
   border: 1px solid __border__;
-  background: url(images/trans75.png) 0 0 repeat transparent;
+  background: /*url(images/trans75.png) 0 0 repeat transparent;*/ #fffbbb;
   text-align: left;
   font-weight: bold;
   padding: 3px;
@@ -553,7 +553,7 @@ div.dokuwiki .toggle.open strong {
 
 div.dokuwiki #dw__toc > div {
   border: 1px solid __border__;
-  background: url(images/trans.png) 0 0 repeat transparent;
+  background: /*url(images/trans.png) 0 0 repeat transparent;*/ __background__;
   text-align: left;
   padding: 0.5em 0 0.7em 0;
 }
