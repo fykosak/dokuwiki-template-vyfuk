@@ -297,10 +297,12 @@ function _wp_tpl_youarehere($sep = ' » ') {
 function fkssidebar(){
 	echo '<div style="margin-left: auto; margin-right: auto;width:90%">';
 	include('lib/plugins/fkstimer/syntax.php');
-	fkstimer();
+	//echo fkstimer();
 	$data=io_readFile("data/pages/fkssidebar.txt", false);
 	echo $data;
 	echo  '</div>';
+        return 0;
 	
-};
-?>
+}
+
+
