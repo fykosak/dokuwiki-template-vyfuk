@@ -80,6 +80,7 @@ div.dokuwiki textarea.edit {
   width: 700px;
   min-width: 100%;
   max-width: 100%;
+  border-radius: 5px;
 }
 div.dokuwiki form#dw__login fieldset {
 	margin-bottom: 2em;
@@ -92,19 +93,21 @@ div.dokuwiki form#dw__login fieldset input.button {
 div.dokuwiki input.edit,
 div.dokuwiki select.edit {
   font-size: 100%;
-  border: /*1px solid __border__;*/0px;
+  border: 1px solid __text_other__;
   color: __text__;
-  background-color: __background_neu__;
+  background-color: __background__;
   vertical-align: middle;
   margin: 1px;
   padding: 0.20em 0.3em;
   display: inline;
+  border-radius: 5px;
 }
 
 #config__manager td.label span.outkey {
 	color: __text_alt__;
 	padding: 0 2px;
   background-color: __background__;
+  border-radius: 5px;
 }
 
 div.dokuwiki select.edit {
@@ -182,9 +185,9 @@ div.dokuwiki form#dw__editform div.license {
 
 div.dokuwiki input.button,
 div.dokuwiki button.button {
-  border: /*1px solid __border__; */0px;
+  border: 1px solid __text_other__;
   color: __text__;
-  background-color: __background_neu__;
+  background-color: __background__;
   vertical-align: middle;
   text-decoration: none;
   font-weight: bold;
@@ -499,6 +502,7 @@ div.dokuwiki table.inline {
   background-color: transparent;
   border-spacing: 0px;
   border-collapse: collapse;
+  border-radius: 5px;
 }
 
 div.dokuwiki table.inline th {
@@ -869,6 +873,7 @@ legend  {
   font-weight: bold;
   background-color: __background_alt__;
   padding: 0 0.5em;
+  border-radius: 5px;
 }
 .license  {
   clear:both;

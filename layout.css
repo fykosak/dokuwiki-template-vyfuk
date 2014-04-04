@@ -73,7 +73,7 @@ div.dokuwiki div.breadcrumbs {
   padding: 4px 0 0 4px;
   min-height: 2em;
   margin-top: 0em;
-  border-radius: 3px;
+  border-radius: 5px 5px 0px 0px;
   clear:both;
 }
 
@@ -111,7 +111,7 @@ div.dokuwiki div.stylefoot {
   clear: both;
   color: __text__;
   background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 div.dokuwiki div.stylefoot div.meta {
@@ -136,7 +136,7 @@ div.dokuwiki div.wrap {
   overflow: hidden;
   min-width: 60em;
   background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 /* ------------- the  menu bar ------------- */
