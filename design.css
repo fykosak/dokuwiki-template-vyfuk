@@ -321,10 +321,11 @@ div.dokuwiki a.wikilink2 {
 /* ------------- Page elements ----------------- */
 
 div.dokuwiki div.preview {
-  background-color: __background_alt__;
+  background-color: __background_neu__;
   margin: 0 0 0 2em;
   padding: 4px;
-  border: /*1px dashed __text__;*/0px;
+  border: /*1px dashed __text__;*/0px; 
+  border-radius: 5px;
 }
 
 div.dokuwiki span.user {
