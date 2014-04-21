@@ -18,7 +18,7 @@ html {
 
 body {
   font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-  background: __background_other__;
+  background: /*__background_other__*/ url(images/bg_4.jpg) 0 0 repeat-x fixed #b0e03e;
   color: __text__; 
   line-height: 1.4em;
   text-align: left;
@@ -142,12 +142,12 @@ div.dokuwiki div.wrap {
 /* ------------- the  menu bar ------------- */
 div.dokuwiki div.mainmenu {
   margin: 0;
-  margin-bottom: 1em;
-  padding: 0.5em;
-  width: 98.75%;
+  margin-bottom: 0em;
+  padding: 0em;
+  width: 100%;
 /*  background-color: __background_alt__; */
   background: /*url(images/trans85.png) 0 0 repeat transparent; */#ffffff;
-  height: 2em;
+  height: 3em;
   color: __text_other__;
   border-radius: 5px; 
   clear:both;
@@ -186,7 +186,7 @@ div.dokuwiki div.mainmenu ul ul {
   position: absolute;
   min-width: __menuwidth__;
   width: auto;
-  background-color: #fffaaa;
+  background-color: #FFFEBF;
   top: 100%;
   left: 0;
   z-index: 1;
@@ -197,7 +197,7 @@ div.dokuwiki div.mainmenu ul ul {
 div.dokuwiki div.mainmenu ul ul li {
   float: none;
   border-top: 1px dotted __border__;
-  padding: 1px 0 0 0.5em;
+  padding: 0em;
   margin-right: 0 !important;
 }
 
@@ -209,6 +209,7 @@ div.dokuwiki div.mainmenu ul li div.li a {
   color: __text_alt__ !important;
   text-decoration: none !important;
   display: block !important;
+  padding: 1em 1em 0.6em 1em;
 }
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,

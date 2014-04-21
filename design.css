@@ -175,7 +175,7 @@ div.dokuwiki a#vorschau {
 }
 
 div.dokuwiki div.license {
-  padding: 0.5em;
+  padding: 0em;
   font-size: 90%;
   text-align: center;
 }
@@ -310,7 +310,7 @@ div.dokuwiki a.mail {
 /* existing wikipage */
 div.dokuwiki a.wikilink1 {
   color: __background_neo__ !important;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 5px;
 }
 
