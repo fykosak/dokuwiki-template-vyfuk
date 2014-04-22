@@ -18,7 +18,7 @@ html {
 
 body {
   font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-  background: /*__background_other__*/ url(images/bg_4.jpg) 0 0 repeat-x fixed #b0e03e;
+  background: __background_other__ url(images/bg_4.jpg) 0 0 repeat-x fixed;
   color: __text__; 
   line-height: 1.4em;
   text-align: left;
@@ -167,7 +167,7 @@ div.dokuwiki div.mainmenu ul li {
   margin: 0 1em 0 0;
   padding: 0;
   float: left;
-  line-height: 1.25em;
+  /*line-height: 1.25em;*/
 }
 
 div.dokuwiki div.mainmenu ul li div.li {
@@ -196,7 +196,7 @@ div.dokuwiki div.mainmenu ul ul {
 
 div.dokuwiki div.mainmenu ul ul li {
   float: none;
-  border-top: 1px dotted __border__;
+  border-top: 1px solid __border__;
   padding: 0em;
   margin-right: 0 !important;
 }
@@ -214,8 +214,10 @@ div.dokuwiki div.mainmenu ul li div.li a {
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,
 div.dokuwiki div.mainmenu ul li div.li a:focus {
-  color: __text_neu__ !important;
-  background-color: __background_other__ !important;
+  color: /*__text_neu__ __color_disabled__*/ !important;
+  background-color: /*__background_other__*/ #FFFFD4 !important;
+  /*text-transform: uppercase;
+  text-decoration: underline;*/
 }
 
 div.dokuwiki div.mainmenu ul ul ul {
@@ -230,16 +232,16 @@ div.dokuwiki div.mainmenu ul li:hover > ul {
 
 div.dokuwiki div.mainmenu ul li.open {
   padding-right: 1em;
-  background-image: url(images/open.gif);
+  /*background-image: url(images/open.gif); 
   background-position: 100% 25%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 
 div.dokuwiki div.mainmenu ul ul li.open {
   padding-right: 1em;
-  background-image: url(images/closed.gif);
+  /*background-image: url(images/closed.gif); 
   background-position: 98% 25%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 
 /* ------------- the document ------------- */
