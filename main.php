@@ -41,6 +41,7 @@ echo '  <div class="stylehead">
     <div class="header">
       <div class="pagename">';      
 tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"');
+
 echo '</div>
      <div class="clearer"></div>
      <div class="mainmenu">

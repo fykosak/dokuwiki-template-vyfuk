@@ -53,7 +53,7 @@ div.dokuwiki .header {
 
 div.dokuwiki .pagename {
   text-align: left;
-  padding: 3.5em 0 3.5em 0;
+  padding: 2em 0 2em 0;
   /*padding: 0px;*/
   background-color: transparent;
 }
@@ -72,7 +72,7 @@ div.dokuwiki div.breadcrumbs {
   font-size: 80%;
   padding: 4px 0 0 4px;
   min-height: 2em;
-  margin-top: 0em;
+  margin: 1.5em 0em 0em 0em;
   border-radius: 5px 5px 0px 0px;
   clear:both;
 }
@@ -141,8 +141,7 @@ div.dokuwiki div.wrap {
 
 /* ------------- the  menu bar ------------- */
 div.dokuwiki div.mainmenu {
-  margin: 0;
-  margin-bottom: 0em;
+  margin: 0em 0em 0em 0em;
   padding: 0em;
   width: 100%;
 /*  background-color: __background_alt__; */
@@ -210,7 +209,7 @@ div.dokuwiki div.mainmenu ul li div.li a {
   color: __text_alt__ !important;
   text-decoration: none !important;
   display: block !important;
-  padding: 1em 1em 0.5em 1em;
+  padding: 1em 1em 0.6em 1em;
 }
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,
