@@ -47,11 +47,12 @@ echo '</div>
      <div class="mainmenu">
 ';
 _wp_tpl_mainmenu();
-echo '      </div>
+echo '      <div class="clearer"></div></div>
     </div>
     <div class="clearer"></div>
 	   
-    <div class="breadcrumbs">
+    <div class="breadcrumbs"> 
+      <div class="clearer"></div>
 ';
 if($conf['breadcrumbs']){
   tpl_breadcrumbs();
