@@ -237,6 +237,14 @@ div.dokuwiki div.mainmenu ul li.open {
   background-repeat: no-repeat;*/
 }
 
+div.dokuwiki div.mainmenu ul li.level1 {
+  padding: 0em 2em 0em 2em;
+  /*background-image: url(images/open.gif); 
+  background-position: 100% 25%;
+  background-repeat: no-repeat;*/
+}
+
+
 div.dokuwiki div.mainmenu ul ul li.open {
   padding-right: 1em;
   /*background-image: url(images/closed.gif); 
