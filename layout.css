@@ -192,7 +192,7 @@ div.dokuwiki div.mainmenu ul ul {
   left: 0;
   z-index: 1;
   margin: 0em 0em 0em 2em;
-  padding: 0 0 0.25em 0;
+  padding: 0 0 0 0;
   /*border: 1px solid __border__;*/
 }
 
@@ -233,14 +233,14 @@ div.dokuwiki div.mainmenu ul li:hover > ul {
 }
 
 div.dokuwiki div.mainmenu ul li.open {
-  padding: 0em 2em 0em 1.1em;
+  padding: 0em 0em 0em 2em;
   /*background-image: url(images/open.gif); 
   background-position: 100% 25%;
   background-repeat: no-repeat;*/
 }
 
 div.dokuwiki div.mainmenu ul li.level1 {
-  padding: 0em 2em 0em 1.1em;
+  padding: 0em 0em 0em 1.1em;
   /*background-image: url(images/open.gif); 
   background-position: 100% 25%;
   background-repeat: no-repeat;*/
