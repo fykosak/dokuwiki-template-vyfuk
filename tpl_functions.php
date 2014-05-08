@@ -70,7 +70,12 @@ function _wp_tpl_mainmenu() {
   $data2 = array();
 	$first = true;
   foreach($data as $item) {
-    if($conf['tpl'][$tpl]['cleanindex']) {
+	  if(preg_match('#https?://#', $item['id'])) {
+		  $item['type'] = 'abs';
+		  $data2[] = $item;
+		  continue;
+	}
+	if($conf['tpl'][$tpl]['cleanindex']) {
       if(strpos($item['id'],'playground') !== false 
          or strpos($item['id'], 'wiki') !== false) {
         continue;
@@ -128,6 +133,8 @@ function _wp_tpl_list_index($item){
     } else {
       $ret .= html_wikilink($item['id'].':', $item['title']);
     }
+  } elseif($item['type'] == 'abs') {
+	  $ret .= '<a href="' . $item['id'] . '">' . $item['title'] . '</a>';
   } else {
     $ret .= html_wikilink(':'.$item['id'], $item['title']);
   }
@@ -169,7 +176,13 @@ function _wp_tpl_parsemenufile(&$data, $filename, $start) {
 			list($id, $title) = explode('|', $tmparr[1]);
 // ignore links to non-existing pages			
 			if(!file_exists(wikiFN($id))) {
-				continue;
+				if(preg_match('#https?://#', $id)) {
+					if(!$title) {
+						$title = $id;
+					}
+				} else {
+					continue;
+				}
 			}
       if(!$title) {
       	$title = p_get_first_heading($id);
