@@ -8,268 +8,279 @@
 
 /* -------------- basic page elements -------------- */
 * { 
-  padding: 0; margin: 0; 
+    padding: 0; margin: 0; 
 }
 
 html { 
-  font-size: 100%;
-  height: 0; 
+    font-size: 100%;
+    height: 0; 
 }
 
 body {
-  font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-  background: __background_other__ url(images/bg_4.jpg) 0 0 repeat-x fixed;
-  color: __text__; 
-  line-height: 1.4em;
-  text-align: left;
-  float: left;
-  width: 100%;
+    font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    background: __background_other__ url(images/bg_4.jpg) 0 0 repeat-x fixed;
+    color: __text__; 
+    line-height: 1.4em;
+    text-align: left;
+    float: left;
+    width: 100%;
 }
 img#fakebackground {
-  width: 100%;	
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
+    width: 100%;	
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 div.dokuwiki {
-  min-width: 65em;
-  max-width: 85em;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+    min-width: 65em;
+    max-width: 85em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* -------------- header --------------- */
 div.dokuwiki .stylehead {
-  background-color: transparent;
-  min-width: 65em;
-  width: 100%;
+    background-color: transparent;
+    min-width: 65em;
+    width: 100%;
 }
 
 div.dokuwiki .header {
-  background-color: transparent;
-  height: 12em;
+    background-color: transparent;
+    height: 12em;
 }
 
 div.dokuwiki .pagename {
-  text-align: left;
-  padding: 1em 0 1em 0;
-  /*padding: 0px;*/
-  background-color: transparent;
+    text-align: left;
+    padding: 1em 0 1em 0;
+    /*padding: 0px;*/
+    background-color: transparent;
 }
 
 div.dokuwiki .pagename a {
-  font-size: 250%;
-  font-weight: bolder;
-  color: __text_neu__ !important;
-  text-decoration: none !important;
+    font-size: 250%;
+    font-weight: bolder;
+    color: __text_neu__ !important;
+    text-decoration: none !important;
 }
 
 div.dokuwiki div.breadcrumbs {
-  background: /*url(images/trans50.png) 0 0 repeat transparent;*/ #fffaaa;
-  /*border-bottom: 1px solid __border__;*/
-  color: __text_neu__;
-  font-size: 80%;
-  padding: 4px 0 0 4px;
-  min-height: 2em;
-  margin: 1.5em 0em 0em 0em;
-  border-radius: 5px 5px 0px 0px;
-  clear:both;
+    background: /*url(images/trans50.png) 0 0 repeat transparent;*/ #fffaaa;
+    /*border-bottom: 1px solid __border__;*/
+    color: __text_neu__;
+    font-size: 80%;
+    padding: 4px 0 0 4px;
+    min-height: 2em;
+    margin: 1.5em 0em 0em 0em;
+    border-radius: 5px 5px 0px 0px;
+    clear:both;
 }
 
 /* ---------------  bottom bar ---------------- */
 div.dokuwiki .bar {
-  float: left;
-  background-color: transparent;
-  width: 100%;
-  clear: both;
-  min-width: 60em;
-  margin-top: 1em;
+    float: left;
+    background-color: transparent;
+    width: 100%;
+    clear: both;
+    min-width: 60em;
+    margin-top: 1em;
 }
 
 div.dokuwiki .bar-left {
-  float: left;
-  padding: 0.1em 0;
+    float: left;
+    padding: 0.1em 0;
 }
 
 div.dokuwiki .bar-right {
-  float: right;
-  text-align: right;
-  padding: 0.1em 0;
+    float: right;
+    text-align: right;
+    padding: 0.1em 0;
 }
 
 div.dokuwiki #bar__bottom {
-  color: __text_neu__;
-  margin-bottom: 0.5em;
+    color: __text_neu__;
+    margin-bottom: 0.5em;
 }
 
 /* ------------- File Metadata ----------------------- */
 div.dokuwiki div.stylefoot {
-  min-width: 60em;
-  width: 100%;
-  height: 1.75em;
-  clear: both;
-  color: __text__;
-  background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
-  border-radius: 0px 0px 5px 5px;
+    min-width: 60em;
+    width: 100%;
+    height: 1.75em;
+    clear: both;
+    color: __text__;
+    background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
+    border-radius: 0px 0px 5px 5px;
 }
 
 div.dokuwiki div.stylefoot div.meta {
-  font-size: 85%;
-  text-align: right;
-  padding: 0.25em 1em 0.25em 0;
-  /*border-top: 1px solid __border__;*/
+    font-size: 85%;
+    text-align: right;
+    padding: 0.25em 1em 0.25em 0;
+    /*border-top: 1px solid __border__;*/
 }
 div.dokuwiki div.stylefoot div.meta div.homelink {
-	margin: 0 0 0 0.5em;
-	float: left;
+    margin: 0 0 0 0.5em;
+    float: left;
 }
 div.dokuwiki div.stylefoot div.meta div.homelink a {
-  display: block;
-  float: left;
-  padding: 0.15em 0.25em 0.5em 1em;
+    display: block;
+    float: left;
+    padding: 0.15em 0.25em 0.5em 1em;
 }
 
 /* ------------- the document area ------------- */
 div.dokuwiki div.wrap {
-  width: 100%;
-  overflow: hidden;
-  min-width: 60em;
-  
-  background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
-  border-radius: 0px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 60em;
+
+    background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
+    border-radius: 0px;
+    /*background-image: url("../../plugins/fksnewsfeed/images/vyfuk2_bg.png");
+    background-position: 100% 0%;
+    background-repeat: no-repeat;*/
 }
 
 /* ------------- the  menu bar ------------- */
 div.dokuwiki div.mainmenu {
-  margin: 0em 0em 5em 0em;
-  padding: 0em;
-  width: 100%;
-  /*  background-color: __background_alt__; */
-  background: /*url(images/trans85.png) 0 0 repeat transparent; */#ffffff;
-  /*height: 3em;*/
-  color: __text_other__;
-  border-radius: 5px; 
-  clear:both;
+    margin: 0em 0em 5em 0em;
+    padding: 0em;
+    width: 100%;
+    /*  background-color: __background_alt__; */
+    background: /*url(images/trans85.png) 0 0 repeat transparent; */#ffffff;
+    /*height: 3em;*/
+    color: __text_other__;
+    border-radius: 5px; 
+    clear:both;
 }
 
 div.dokuwiki div.mainmenu ul {
-  z-index: 0;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-weight: bold !important;
-  height: auto;
-  border-radius: 5px;
+    z-index: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold !important;
+    height: auto;
+    border-radius: 5px;
 }
 
 div.dokuwiki div.mainmenu ul li {
-  margin: 0 0em 0 0em;
-  padding: 0;
-  float: left;
-  /*line-height: 1.25em;*/
+    margin: 0 0em 0 0em;
+    padding: 0;
+    float: left;
+    /*line-height: 1.25em;*/
 }
 
 div.dokuwiki div.mainmenu ul li div.li {
-  font-weight: bold !important;
+    font-weight: bold !important;
 }
 
 div.dokuwiki div.mainmenu ul li.hover,
 div.dokuwiki div.mainmenu ul li:hover {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 div.dokuwiki div.mainmenu ul ul {
-  visibility: hidden;
-  display: none;
-  position: absolute;
-  min-width: __menuwidth__;
-  width: auto;
-  background-color: #FFFEBF;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  margin: 0em 0em 0em 2em;
-  padding: 0 0 0 0;
-  /*border: 1px solid __border__;*/
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    min-width: __menuwidth__;
+    width: auto;
+    background-color: #FFFEBF;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    margin: 0em 0em 0em 2em;
+    padding: 0 0 0 0;
+    /*border: 1px solid __border__;*/
 }
 
 div.dokuwiki div.mainmenu ul ul li {
-  float: none;
-  border-top: 1px solid __border__;
-  padding: 0em;
-  margin-right: 0 !important;
+    float: none;
+    border-top: 1px solid __border__;
+    padding: 0em;
+    margin-right: 0 !important;
 }
 
 div.dokuwiki div.mainmenu ul ul li div.li {
-  font-weight: normal !important;
+    font-weight: normal !important;
 }
 
 div.dokuwiki div.mainmenu ul li div.li a {
-  color: __text_alt__ !important;
-  text-decoration: none !important;
-  display: block !important;
-  padding: 1em 1em 0.6em 1em;
+    color: __text_alt__ !important;
+    text-decoration: none !important;
+    display: block !important;
+    padding: 1em 1em 0.6em 1em;
 }
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,
 div.dokuwiki div.mainmenu ul li div.li a:focus {
-  color: /*__text_neu__ __color_disabled__*/ !important;
-  background-color: /*__background_other__*/ #FFFFD4 !important;
-  /*text-transform: uppercase;
-  text-decoration: underline;*/
+    color: /*__text_neu__ __color_disabled__*/ !important;
+    background-color: /*__background_other__*/ #FFFFD4 !important;
+    /*text-transform: uppercase;
+    text-decoration: underline;*/
 }
 
 div.dokuwiki div.mainmenu ul ul ul {
-  top: -1px;
-  left: 99.5%;
+    top: -1px;
+    left: 99.5%;
 }
 
 div.dokuwiki div.mainmenu ul li:hover > ul {
-  visibility: visible;
-  display: inline;
+    visibility: visible;
+    display: inline;
 }
 
 div.dokuwiki div.mainmenu ul li.open {
-  padding: 0em 0em 0em 2em;
-  /*background-image: url(images/open.gif); 
-  background-position: 100% 25%;
-  background-repeat: no-repeat;*/
+    padding: 0em 0em 0em 2em;
+    /*background-image: url(images/open.gif); 
+    background-position: 100% 25%;
+    background-repeat: no-repeat;*/
 }
 
 div.dokuwiki div.mainmenu ul li.level1 {
-  padding: 0em 0em 0em 1.1em;
-  /*background-image: url(images/open.gif); 
-  background-position: 100% 25%;
-  background-repeat: no-repeat;*/
+    padding: 0em 0em 0em 1.1em;
+    /*background-image: url(images/open.gif); 
+    background-position: 100% 25%;
+    background-repeat: no-repeat;*/
 }
 
 
 div.dokuwiki div.mainmenu ul ul li.open {
-  padding-right: 1em;
-  /*background-image: url(images/closed.gif); 
-  background-position: 98% 25%;
-  background-repeat: no-repeat;*/
+    padding-right: 1em;
+    /*background-image: url(images/closed.gif); 
+    background-position: 98% 25%;
+    background-repeat: no-repeat;*/
 }
 
 /* ------------- the document ------------- */
 div.dokuwiki div.page {
-  margin-left: 2em;
-  /* width: 780px; */
-  padding: 1.5em 1em 1.5em 1.5em;
-  /*background-color: transparent;*/
-  height: 100%;
-  width: 45em;
-  margin-right: auto;
+    float: left;
+    margin-left: 2em;
+    width: 65%;
+    /* width: 780px; */
+    padding: 1.5em 1em 1.5em 1.5em;
+    /*background-color: transparent;*/
+    height: 100%;
+    max-width: 45em;
+    margin-right: 0;
+    /*margin-right: auto;*/
 }
 
 div.dokuwiki div.fkssidebar {
-   float: right;
-   width: 23em;
-   height: 90%;
-   margin-left: 2em;
-   margin-right: 1em;
-   padding: 1.5em 1em 1.5em 1.5em; 
+    float: right;
+    max-width: 23em;
+    width: 35%;
+    padding:.5em;
+    height: 100%;
+    margin-bottom: auto;
+    padding-bottom: auto;
+    /*height: 200%;*/
+    //background-color: white;
+    //border-left: solid 1px #53DF00;
+    
 }

@@ -68,11 +68,13 @@ flush();
 if($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
   echo '      <div class="clearer"></div>
 <div class="wrap">
+<!--<div class="fkssidebarhead">-->
      <div class="fkssidebar">';
 	fkssidebar(); 
 	echo '
 </div> 
-     <div class="page" style="margin-right:25em;order-right: 3px;border-right-color: black;">
+<!--</div>-->
+     <div class="page" >
 ';
   tpl_content();
   echo '
