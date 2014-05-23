@@ -38,6 +38,7 @@ div.dokuwiki {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0em;
 }
 
 /* -------------- header --------------- */
@@ -57,6 +58,9 @@ div.dokuwiki .pagename {
     padding: 1em 0 1em 0;
     /*padding: 0px;*/
     background-color: transparent;
+    width: auto;
+    height: auto;
+    float: left;
 }
 
 div.dokuwiki .pagename a {
@@ -166,6 +170,7 @@ div.dokuwiki div.mainmenu ul {
     font-weight: bold !important;
     height: auto;
     border-radius: 5px;
+    height: 100%;
 }
 
 div.dokuwiki div.mainmenu ul li {
@@ -292,10 +297,10 @@ div.dokuwiki div.fkstopbar {
     margin: 0em 0em 0em 0em;
     padding: 0em;
     width: 100%;
+    height: auto;
     /* background-color: __background_alt__;  */
     background: /*url(images/trans85.png) 0 0 repeat transparent; */__background_alt__;
     /*height: 3em;*/
-    border: black 1px solid;
     color: __text_other__;
     border-radius: 5px; 
     clear:both;

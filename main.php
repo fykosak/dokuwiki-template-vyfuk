@@ -44,7 +44,7 @@ echo '  <div class="stylehead">
      <div class="clearer"></div>
      <div class="fkstopbar">';
 _fks_topbar();
-echo '
+echo '<div class="clearer"></div>
      </div>
      <div class="clearer"></div>
 <div class="scrollmenu" style="display:none">';
