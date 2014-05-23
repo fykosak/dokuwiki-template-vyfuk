@@ -915,3 +915,19 @@ div.comment_buttons {
 div.plugin_translation {
   margin-bottom: 0 !important;
 }
+
+input.button,
+button.button {
+  border: 1px solid __text_other__;
+  color: __text__;
+  background-color: __background__;
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95em;
+  cursor: pointer;
+  margin: 1px;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+}
+
