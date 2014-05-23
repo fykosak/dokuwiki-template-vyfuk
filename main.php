@@ -42,7 +42,10 @@ echo '</div>
 <div class="dokuwiki">'
 //<img id="fakebackground" src="', DOKU_TPL, 'images/bg.jpg" alt="" />
 ;
-html_msgarea();
+//html_msgarea(); 
+/*
+ * irituje ma to hore !!!! ide to do preč :) 
+ */
 echo '  <div class="stylehead">
     <div class="header">
       
