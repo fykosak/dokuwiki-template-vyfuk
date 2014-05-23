@@ -924,11 +924,20 @@ ul li div.li button.button {
     text-decoration: none !important;
     display: block !important;
     padding: 1em 1em 0.6em 1em;
-
+    width: 100%;
     background-color: #FFFEBF;
+    text-align: left;
     //font-weight: bold;
     //font-size: 0.95em;
     cursor: pointer;
     border: 0px;
-    }
+}
+
+ul li div.li input.button:hover,
+ul li div.li button.button:hover {
+    
+
+    background-color: /*__background_other__*/ #FFFFD4 !important;
+   
+}
 

@@ -29,30 +29,27 @@ function _fks_scrollmenu() {
  * deti nepite moc energeťaku lebo vám z toho žačne šibať
  */
 function _fks_topbaruser() {
+    global $INFO;
     //echo '<ul class="fkstopbaruser"><li> <div class="li"><span class="fkstopbaruserinfo">';
     echo '<ul class="fkstopbaruser"><li class="open"> <div class="li"><span class="fkstopbaruserinfo">';
     if ($_SERVER['REMOTE_USER']) {
-        echo '<a>prihláseny: ' . $_SERVER['REMOTE_USER'] . '</a></span></div>';
+        echo '<a>prihláseny: ' . $INFO['userinfo']['name'] . '</a></span></div>';
         echo '<ul class="idx">';
 
 
         echo '<li class="level2"><div class="li">';
         tpl_button('admin');
         echo '</div></li>';
-
-
-        if ($ACT != 'login' && $ACT != 'logout') {
-            echo '<li class="level2"><div class="li">';
-            tpl_button('login');
-            echo '</div></li>';
-            //echo '&nbsp;';
-        }
+        
+        echo '<li class="level2"><div class="li">';
+        tpl_button('edit');
+        echo '</div></li>';       
 
 
         if ($_SERVER['REMOTE_USER']) {
-            echo '<li class="level2"><div class="li">';
-            tpl_button('subscribe');
-            echo '</div></li>';
+            //echo '<li class="level2"><div class="li">';
+            //tpl_button('subscribe');
+            //echo '</div></li>';
 
             echo '<li class="level2"><div class="li">';
             tpl_button('profile');
@@ -88,9 +85,7 @@ function _fks_topbaruser() {
             }
         }
 
-        echo '<li class="level2"><div class="li">';
-        tpl_button('edit');
-        echo '</div></li>';
+        
 
         $dw2pdf = &plugin_load('action', 'dw2pdf');
         if ($dw2pdf) {
@@ -104,6 +99,14 @@ function _fks_topbaruser() {
               </div></form>';
             echo '</div></li>';
         }
+        if ($ACT != 'login' && $ACT != 'logout') {
+            echo '<li class="level2"><div class="li">';
+            tpl_button('login');
+            echo '</div></li>';
+            //echo '&nbsp;';
+        }
+        
+        
 //echo '    </div>
         echo'    </ul></li>';
     }
