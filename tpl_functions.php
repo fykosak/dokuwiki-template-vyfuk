@@ -12,6 +12,15 @@
 if (!defined('DOKU_INC')) die();
 
 /* prints the menu */
+function _fks_topbar(){
+   echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkstopbar.txt", false)), $info);
+}
+function _fks_scrollmenu(){
+    _wp_tpl_mainmenu();
+}
+
+
+
 function _wp_tpl_mainmenu() {
   require_once(DOKU_INC.'inc/search.php');
   global $conf;
