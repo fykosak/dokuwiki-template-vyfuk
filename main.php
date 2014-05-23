@@ -46,10 +46,11 @@ echo '  <div class="stylehead">
 _fks_topbar();
 echo '
      </div>
-     
+     <div class="clearer"></div>
 <div class="scrollmenu" style="display:none">';
 _fks_scrollmenu();
 echo '</div>
+     <div class="clearer"></div>
      <div class="mainmenu">
 ';
 _wp_tpl_mainmenu();
