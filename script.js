@@ -34,10 +34,52 @@ window.onscroll = function(e) {
 window.onscroll = function() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop > 80) {
-        document.getElementById("scrollmenu").style.display = "block";
+        if (document.getElementById("scrollmenu").style.display == "none" ) {
+            scrollopacityup(0.0);
+        } else {
+            document.getElementById("scrollmenu").style.display = "block";
+            document.getElementById("scrollmenu").style.opacity = 1;
+        }
+        ;
     }
     else {
-        document.getElementById("scrollmenu").style.display = "none";
+        if (document.getElementById("scrollmenu").style.display == "block") {
+            scrollopacitydown(1.0);
+        } else {
+            document.getElementById("scrollmenu").style.display = "none";
+            document.getElementById("scrollmenu").style.opacity = 0;
+        }
+        ;
     }
     ;
 };
+
+function scrollopacitydown(opacity) {
+    setTimeout(function() {
+        if (opacity < 0.15) {
+            document.getElementById("scrollmenu").style.display = "none"
+            document.getElementById("scrollmenu").style.opacity = 0;
+        } else {
+            document.getElementById("scrollmenu").style.opacity = opacity;
+            opacity = opacity - 0.1;
+            scrollopacitydown(opacity);
+        }
+
+    }, 50);
+}
+;
+
+function scrollopacityup(opacity) {
+    setTimeout(function() {
+        if (opacity > 0.95) {
+            document.getElementById("scrollmenu").style.display = "block"
+            document.getElementById("scrollmenu").style.opacity = 1;
+        } else {
+            document.getElementById("scrollmenu").style.opacity = opacity;
+            opacity = opacity + 0.1;
+            scrollopacityup(opacity);
+        }
+
+    }, 50);
+}
+;

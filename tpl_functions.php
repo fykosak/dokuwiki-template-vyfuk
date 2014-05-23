@@ -31,9 +31,9 @@ function _fks_scrollmenu() {
 function _fks_topbaruser() {
     global $INFO;
     //echo '<ul class="fkstopbaruser"><li> <div class="li"><span class="fkstopbaruserinfo">';
-    echo '<ul class="fkstopbaruser"><li class="open"> <div class="li"><span class="fkstopbaruserinfo">';
+    echo '<ul class="fkstopbaruser"><li class="open"> <div class="li">';
     if ($_SERVER['REMOTE_USER']) {
-        echo '<a>prihláseny: ' . $INFO['userinfo']['name'] . '</a></span></div>';
+        echo '<a> <span class="fkstopbaruserinfo"></span> ' . $INFO['userinfo']['name'] . '</a></div>';
         echo '<ul class="idx">';
 
 

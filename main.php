@@ -137,7 +137,13 @@ if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && 
 ';
 }
 
-  echo '</div>
+  echo '</div>';
+echo '    <div class="bar" id="bar__bottom">   
+© VÝFUK koršpodenčný seminár MFF UK.<br>
+webmaster: vyfuk-web@atrey.karlin.mff.cuni.cz
+
+</div>
+
   <div class="no">
 ';
 /* provide DokuWiki housekeeping, required in all templates */

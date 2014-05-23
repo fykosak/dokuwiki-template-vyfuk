@@ -531,3 +531,6 @@ ul.fkstopbaruser{
     float: right;
     padding:  0.5em;
 }
+span.fkstopbaruserinfo:before{
+    content: "\e008";
+}
