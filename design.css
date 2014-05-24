@@ -923,14 +923,15 @@ ul li div.li button.button {
     color: __text_alt__ !important;
     text-decoration: none !important;
     display: block !important;
-    padding: 1em 1em 0.6em 1em;
+    padding: 0em;
     width: 100%;
-    background-color: #FFFEBF;
+    background-color: transparent;
     text-align: left;
     //font-weight: bold;
     //font-size: 0.95em;
     cursor: pointer;
     border: 0px;
+    font-family: 'Shadows Into Light Two', cursive;
 }
 
 ul li div.li input.button:hover,

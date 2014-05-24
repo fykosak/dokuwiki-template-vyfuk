@@ -20,7 +20,7 @@ echo '
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="', $conf['lang'], '"
  lang="', $conf['lang'], '" dir="', $lang['direction'], '">
 <head>
-  <link href="http://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin-ext,latin" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>
 ';

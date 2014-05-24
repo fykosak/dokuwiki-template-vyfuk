@@ -156,8 +156,9 @@ div.dokuwiki div.mainmenu {
     margin: 0em 0em 5em 0em;
     padding: 0em;
     width: 65%;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 150%;
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: 2px;
+    font-size: 140%;
     /*  background-color: __background_alt__; */
     background: /*url(images/trans85.png) 0 0 repeat transparent; */#ffffff;
     /*height: 3em;*/
@@ -306,10 +307,13 @@ div.fkssidebarhead{
 div.dokuwiki div.fkstopbar {
     margin: 0em 0em 0em 0em;
     padding: 0em;
-    width: 100%;
+    width: 100%; 
     height: auto;
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: 0px;
+    font-size: 140%;
     /* background-color: __background_alt__;  */
-    background: /*url(images/trans85.png) 0 0 repeat transparent; */__background_alt__;
+    background: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
     /*height: 3em;*/
     color: __text_other__;
     /*border-radius: 5px; */
@@ -330,8 +334,8 @@ div.dokuwiki div.fkstopbar ul li {
     margin: 0 0em 0 0em;
     padding: 0;
     float: left;
-    //border-left: 1px solid __text_alt__ ;
-    border-right: 1px solid __text_alt__ ;
+    /*border-left: 1px solid __text_alt__ ;
+    border-right: 1px solid __text_alt__ ; */
     border-radius: 0px;
 
     /*line-height: 1.25em;*/
@@ -378,7 +382,7 @@ div.dokuwiki div.fkstopbar ul ul li div.li {
 
 div.dokuwiki div.fkstopbar ul li div.li a {
 
-    color: __text_alt__ !important;
+    color: __background__ !important;
     text-decoration: none !important;
     display: block !important;
     padding: 0.5em 1em 0.3em 1em;
@@ -430,7 +434,9 @@ div.dokuwiki div.fkstopbar ul ul li.open {
 /* ------------- the scroll menu ------------- */                                                
 div.scrollmenu{
     position: fixed;
-
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: 2px;
+    font-size: 110%;
     width: 100%;
     margin: 0em 2em 0em 0em;
     padding: 0em;
@@ -545,6 +551,8 @@ div.scrollmenu ul ul li.open {
     background-repeat: no-repeat;*/
 }
 
+
+/* ------------- the fks top bar ------------- */
 ul.fkstopbaruser{
     margin-left: auto;
     color: black;
@@ -562,7 +570,7 @@ ul.fkstopbarlogo li div a{
     //background-position-y: center;
     //background-position-x: 10px;
     background-position: 10px center;
-    margin: 0 2em 0 1em !important;
+    margin: 0 1em 0 0em !important;
     padding-left: 4em !important;
 
 
