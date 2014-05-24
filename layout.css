@@ -57,7 +57,7 @@ div.dokuwiki .header {
 
 div.dokuwiki .pagename {
     text-align: left;
-    padding: 1em 0 1em 1em;
+    padding: 1em 0 1em 2em;
     /*padding: 0px;*/
     background-color: transparent;
     width: auto;
@@ -156,6 +156,8 @@ div.dokuwiki div.mainmenu {
     margin: 0em 0em 5em 0em;
     padding: 0em;
     width: 65%;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 150%;
     /*  background-color: __background_alt__; */
     background: /*url(images/trans85.png) 0 0 repeat transparent; */#ffffff;
     /*height: 3em;*/
@@ -228,7 +230,7 @@ div.dokuwiki div.mainmenu ul li div.li a {
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,
 div.dokuwiki div.mainmenu ul li div.li a:focus {
-    color: /*__text_neu__ __color_disabled__*/ !important;
+    /*color: __text_neu__ __color_disabled__ !important;*/
     background-color: /*__background_other__*/ #FFFFD4 !important;
     /*text-transform: uppercase;
     text-decoration: underline;*/
@@ -379,8 +381,8 @@ div.dokuwiki div.fkstopbar ul li div.li a {
 
 div.dokuwiki div.fkstopbar ul li div.li a:hover,
 div.dokuwiki div.fkstopbar ul li div.li a:focus {
-
     color: /*__text_neu__ __color_disabled__*/ !important;
+
     background-color: /*__background_other__*/ #FFFFD4 !important;
     /*text-transform: uppercase;
     text-decoration: underline;*/
@@ -500,7 +502,7 @@ div.scrollmenu ul li div.li a {
 
 div.scrollmenu ul li div.li a:hover,
 div.scrollmenu ul li div.li a:focus {
-    color: /*__text_neu__ __color_disabled__*/ !important;
+    /*color: __text_neu__ __color_disabled__ !important;*/
     background-color: /*__background_other__*/ #FFFFD4 !important;
     /*text-transform: uppercase;
     text-decoration: underline;*/
