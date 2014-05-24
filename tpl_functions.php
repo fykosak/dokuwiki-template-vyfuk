@@ -441,7 +441,7 @@ function _wp_tpl_youarehere($sep = ' » ') {
 
 function _fkssidebar() {
     echo '<div class="fkssidebar">'
-    . '<div style="margin-left: auto; margin-right: auto;width:90%">';
+    . '<div class="fkssidebarhead">';
     //include('lib/plugins/fkstimer/syntax.php');
     //echo fkstimer();
 

@@ -295,6 +295,11 @@ div.dokuwiki div.fkssidebar {
     //border-left: solid 1px #53DF00;
 
 }
+div.fkssidebarhead{
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
 
 
 /* ------------- the top bar ------------- */
