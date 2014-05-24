@@ -20,9 +20,15 @@ function _fks_topbar() {
 }
 
 function _fks_scrollmenu() {
+    _fks_topbarlogo();
     _wp_tpl_mainmenu();
 }
-
+function _fks_topbarlogo(){
+    echo '<ul class="fkstopbarlogo">
+        <li class="open"><div class="li">
+    <a >  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
+    </div></li></ul>';
+}
 
 /*
  * začiatok mišoveho šialenstva!!!

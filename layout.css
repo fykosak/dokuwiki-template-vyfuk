@@ -535,3 +535,20 @@ ul.fkstopbaruser{
 span.fkstopbaruserinfo:before{
     content: "\e008";
 }
+
+ul.fkstopbarlogo li div a{
+    background-image: url('http://vyfuk.mff.cuni.cz/lib/tpl/wallpaper/images/logo_vyfuk.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position-y: center;
+    background-position-x: 10px;
+    margin: 0 2em 0 1em !important;
+    padding-left: 4em !important;
+        
+    
+}
+span.fkstopbatbeta{
+    font-size: 70%;
+}
+
+

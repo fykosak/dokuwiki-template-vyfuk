@@ -51,6 +51,7 @@ echo '  <div class="stylehead">
       
      <div class="clearer"></div>
      <div class="fkstopbar">';
+_fks_topbarlogo();
 _fks_topbar();
 _fks_topbaruser();
 echo '<div class="clearer"></div>

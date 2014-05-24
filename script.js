@@ -35,15 +35,15 @@ window.onscroll = function() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop > 80) {
         if (document.getElementById("scrollmenu").style.display === "none") {
-            setTimeout(function() {
+            //setTimeout(function() {
                 document.getElementById("scrollmenu").style.display = "block";
-                document.getElementById("scrollmenu").style.opacity = 0;
-                scrollopacityup(0.0);
-            }
-            , 1000);
+                //document.getElementById("scrollmenu").style.opacity = 0;
+                //scrollopacityup(0.0);
+            //}
+            //, 1000);
         } else {
             document.getElementById("scrollmenu").style.display = "block";
-            document.getElementById("scrollmenu").style.opacity = 1;
+            //document.getElementById("scrollmenu").style.opacity = 1;
         }
         ;
 
@@ -51,10 +51,11 @@ window.onscroll = function() {
     if (scrollTop < 50) {
 
         if (document.getElementById("scrollmenu").style.display === "block") {
-            scrollopacitydown(1.0);
+            //scrollopacitydown(1.0);
+            document.getElementById("scrollmenu").style.display = "none";
         } else {
             document.getElementById("scrollmenu").style.display = "none";
-            document.getElementById("scrollmenu").style.opacity = 0;
+            //document.getElementById("scrollmenu").style.opacity = 0;
         }
         ;
     }
