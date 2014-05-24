@@ -26,7 +26,7 @@ function _fks_scrollmenu() {
 function _fks_topbarlogo(){
     echo '<ul class="fkstopbarlogo">
         <li class="open"><div class="li">
-    <a >  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
+    <a href="'.wl().'">  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
     </div></li></ul>';
 }
 
@@ -57,9 +57,9 @@ function _fks_topbaruser() {
             //tpl_button('subscribe');
             //echo '</div></li>';
 
-            echo '<li class="level2"><div class="li">';
-            tpl_button('profile');
-            echo '</div></li>';
+            //echo '<li class="level2"><div class="li">';
+            //tpl_button('profile');
+            //echo '</div></li>';
 
             echo '<li class="level2"><div class="li">';
             tpl_button('history');
@@ -152,8 +152,9 @@ function _wp_tpl_mainmenu() {
     }
 
     $ns = dirname(str_replace(':', '/', $ID));
-    if ($ns == '.')
+    if ($ns == '.') {
         $ns = '';
+    }
     $ns = utf8_encodeFN(str_replace(':', '/', $ns));
 
     $data = array();
