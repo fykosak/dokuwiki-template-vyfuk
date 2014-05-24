@@ -18,7 +18,7 @@ html {
 
 body {
     font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-    background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg2.jpg) repeat;
+    background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg_color2.jpg) repeat;
     color: __text__; 
     line-height: 1.4em;
     text-align: left;
@@ -40,6 +40,7 @@ div.dokuwiki {
     margin-right: auto;
     margin-top: 0em;
     background: __background__;
+    border: 1px solid __border__;
 }
 
 /* -------------- header --------------- */
