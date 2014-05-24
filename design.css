@@ -84,7 +84,7 @@ div.dokuwiki textarea.edit {
     width: 700px;
     min-width: 100%;
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 div.dokuwiki form#dw__login fieldset {
     margin-bottom: 2em;
@@ -104,14 +104,14 @@ div.dokuwiki select.edit {
     margin: 1px;
     padding: 0.20em 0.3em;
     display: inline;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 #config__manager td.label span.outkey {
     color: __text_alt__;
     padding: 0 2px;
     background-color: __background__;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 div.dokuwiki select.edit {
@@ -199,7 +199,7 @@ div.dokuwiki button.button {
     cursor: pointer;
     margin: 1px;
     padding: 0.25em 0.5em;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 * html div.dokuwiki input.button,
@@ -311,7 +311,7 @@ div.dokuwiki a.mail {
 div.dokuwiki a.wikilink1 {
     color: __background_neo__ !important;
     padding: 0.5em;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 /* not existing wikipage */
@@ -319,7 +319,7 @@ div.dokuwiki a.wikilink2 {
     color: __missing__ !important;
     text-decoration: none !important;
     border-bottom: /*dashed 1px __missing__ !important;*/0px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 /* ------------- Page elements ----------------- */
@@ -329,7 +329,7 @@ div.dokuwiki div.preview {
     margin: 0 0 0 2em;
     padding: 4px;
     border: /*1px dashed __text__;*/0px; 
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 div.dokuwiki span.user {
@@ -387,14 +387,16 @@ div.dokuwiki h5 {
     font-weight: bold;
     margin: 0.5em 0 0.25em 0;
     padding: 0;
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: 2px;
 }
 
 /* special headlines */
-div.dokuwiki h1 {font-size: 150%;}
-div.dokuwiki h2 {font-size: 140%;}
-div.dokuwiki h3 {font-size: 130%;}
-div.dokuwiki h4 {font-size: 120%;}
-div.dokuwiki h5 {font-size: 110%;}
+div.dokuwiki h1 {font-size: 170%;}
+div.dokuwiki h2 {font-size: 160%;}
+div.dokuwiki h3 {font-size: 150%;}
+div.dokuwiki h4 {font-size: 140%;}
+div.dokuwiki h5 {font-size: 130%;}
 
 /* indent different sections */
 div.dokuwiki div.level1 {margin-left: 0.1em;}
@@ -507,7 +509,7 @@ div.dokuwiki table.inline {
     background-color: transparent;
     border-spacing: 0px;
     border-collapse: collapse;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 div.dokuwiki table.inline th {
@@ -878,7 +880,7 @@ legend  {
     font-weight: bold;
     background-color: __background_alt__;
     padding: 0 0.5em;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .license  {
     clear:both;
@@ -890,7 +892,7 @@ legend  {
 /* blog plugin compatibility */
 div.comment_wrapper {
     background-color: __background_neu__ !important;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 div.comment_buttons {
@@ -920,12 +922,14 @@ div.plugin_translation {
 
 ul li div.li input.button,
 ul li div.li button.button {
-    color: __text_alt__ !important;
+    color: __background__ !important;
+    letter-spacing: 2px;
     text-decoration: none !important;
     display: block !important;
-    padding: 0em;
+    /*padding: .5em 1em .3em 1em !important;*/
+    margin: 0 !important;
     width: 100%;
-    background-color: transparent;
+    background-color: __background_other__;
     text-align: left;
     //font-weight: bold;
     //font-size: 0.95em;
@@ -936,9 +940,7 @@ ul li div.li button.button {
 
 ul li div.li input.button:hover,
 ul li div.li button.button:hover {
-    
-
-    background-color: /*__background_other__*/ #FFFFD4 !important;
-   
+    background-color: /*__background_other__ #FFFFD4 */ __background__ !important;
+    color: __background_other__ !important;
 }
 

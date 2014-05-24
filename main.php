@@ -123,8 +123,8 @@ tpl_indexerWebBug();
 echo '</div>';
 
 echo '    <div class="bar" id="bar__bottom">   
-© VÝFUK koršpodenčný seminár MFF UK.<br>
-webmaster: vyfuk-web@atrey.karlin.mff.cuni.cz<br>';
+© VÝFUK - korespodenční seminář MFF UK.<br>
+webmaster: vyfuk-web@vyfuk.mff.cuni.cz<br>';
 
 if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
     echo '    
