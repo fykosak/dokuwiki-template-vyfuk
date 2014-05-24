@@ -57,7 +57,7 @@ div.dokuwiki .header {
 
 div.dokuwiki .pagename {
     text-align: left;
-    padding: 1em 0 1em 0;
+    padding: 1em 0 1em 1em;
     /*padding: 0px;*/
     background-color: transparent;
     width: auto;
@@ -87,11 +87,11 @@ div.dokuwiki div.breadcrumbs {
 /* ---------------  bottom bar ---------------- */
 div.dokuwiki .bar {
     float: left;
-    background-color: transparent;
+    /*background-color: __background__;*/
     width: 100%;
     clear: both;
     min-width: 60em;
-    margin-top: 1em;
+    margin-top: 0em;
     text-align: center;
 }
 
