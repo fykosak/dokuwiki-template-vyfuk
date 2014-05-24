@@ -18,7 +18,7 @@ html {
 
 body {
     font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
-    background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/pozadi3.jpg);
+    background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg2.jpg) repeat;
     color: __text__; 
     line-height: 1.4em;
     text-align: left;
