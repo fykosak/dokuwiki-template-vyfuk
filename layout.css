@@ -160,7 +160,7 @@ div.dokuwiki div.mainmenu {
     background: /*url(images/trans85.png) 0 0 repeat transparent; */#ffffff;
     /*height: 3em;*/
     color: __text_other__;
-    border-radius: 5px; 
+    //border-radius: 5px; 
     clear:both;
     float: right;
 }
@@ -172,7 +172,7 @@ div.dokuwiki div.mainmenu ul {
     padding: 0;
     font-weight: bold !important;
     height: auto;
-    border-radius: 5px;
+    //border-radius: 5px;
     height: 100%;
 }
 
@@ -291,7 +291,7 @@ div.dokuwiki div.fkssidebar {
     /*height: 200%;*/
     //background-color: white;
     //border-left: solid 1px #53DF00;
-    
+
 }
 
 
@@ -326,13 +326,13 @@ div.dokuwiki div.fkstopbar ul li {
     //border-left: 1px solid __text_alt__ ;
     border-right: 1px solid __text_alt__ ;
     border-radius: 0px;
-    
+
     /*line-height: 1.25em;*/
 }
 
 div.dokuwiki div.fkstopbar ul li div.li {
     //font-weight: bold !important;
-    
+
 }
 
 div.dokuwiki div.fkstopbar ul li.hover,
@@ -365,12 +365,12 @@ div.dokuwiki div.fkstopbar ul ul li {
 
 div.dokuwiki div.fkstopbar ul ul li div.li {
     font-weight: normal !important;
-    
-    
+
+
 }
 
 div.dokuwiki div.fkstopbar ul li div.li a {
-    
+
     color: __text_alt__ !important;
     text-decoration: none !important;
     display: block !important;
@@ -379,7 +379,7 @@ div.dokuwiki div.fkstopbar ul li div.li a {
 
 div.dokuwiki div.fkstopbar ul li div.li a:hover,
 div.dokuwiki div.fkstopbar ul li div.li a:focus {
-    
+
     color: /*__text_neu__ __color_disabled__*/ !important;
     background-color: /*__background_other__*/ #FFFFD4 !important;
     /*text-transform: uppercase;
@@ -405,7 +405,7 @@ div.dokuwiki div.fkstopbar ul li.open {
 
 div.dokuwiki div.fkstopbar ul li.level1 {
     padding: 0em 1.1em 0em 1.1em;
-    
+
     /*background-image: url(images/open.gif); 
     background-position: 100% 25%;
     background-repeat: no-repeat;*/
@@ -423,7 +423,7 @@ div.dokuwiki div.fkstopbar ul ul li.open {
 /* ------------- the scroll menu ------------- */                                                
 div.scrollmenu{
     position: fixed;
-    
+
     width: 100%;
     margin: 0em 2em 0em 0em;
     padding: 0em;
@@ -435,7 +435,7 @@ div.scrollmenu{
     color: __text_other__;
     /*border-radius: 5px; */
     clear:both;
-    
+
 }
 
 div.scrollmenu ul {
@@ -557,9 +557,18 @@ ul.fkstopbarlogo li div a{
     background-position: 10px center;
     margin: 0 2em 0 1em !important;
     padding-left: 4em !important;
-        
-    
+
+
 }
+div.dokuwiki ul.fkstopbarlogo li div a{
+    background: none !important;
+    margin: 0 2em 0 1em !important;
+    padding-left: 2em !important;
+
+
+}
+
+
 span.fkstopbatbeta{
     font-size: 70%;
 }

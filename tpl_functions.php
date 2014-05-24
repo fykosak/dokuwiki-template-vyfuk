@@ -439,12 +439,13 @@ function _wp_tpl_youarehere($sep = ' » ') {
 
 ;
 
-function fkssidebar() {
-    echo '<div style="margin-left: auto; margin-right: auto;width:90%">';
+function _fkssidebar() {
+    echo '<div class="fkssidebar">'
+    . '<div style="margin-left: auto; margin-right: auto;width:90%">';
     //include('lib/plugins/fkstimer/syntax.php');
     //echo fkstimer();
 
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
-    echo '</div>';
+    echo '</div></div> ';
     return 0;
 }
