@@ -76,18 +76,19 @@ echo '</div>  </div>
 echo'<div class="clearer"></div> 
 
 	   
-    <div class="breadcrumbs"> 
-      <div class="clearer"></div>
-';
-if ($conf['breadcrumbs']) {
-    tpl_breadcrumbs();
-} elseif ($conf['youarehere']) {
-    _wp_tpl_youarehere();
-}
+    ';//<div class="breadcrumbs"> 
+      //<div class="clearer"></div>
+//';
+//if ($conf['breadcrumbs']) {
+//    tpl_breadcrumbs();
+//} elseif ($conf['youarehere']) {
+//    _wp_tpl_youarehere();
+//}
+
 //$translation = &plugin_load('helper','translation');
 //if ($translation) echo $translation->showTranslations();
-echo '    </div>
-  </div>
+//echo '    </div>
+  echo '</div>
 ';
 flush();
 if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
@@ -115,39 +116,36 @@ if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && 
 ';
 }
 tpl_flush();
-echo '  <div class="stylefoot">
-';
+///echo '  <div class="stylefoot"></div>';
+echo '<div class="no">';
+/* provide DokuWiki housekeeping, required in all templates */
+tpl_indexerWebBug();
+echo '</div>';
+
+echo '    <div class="bar" id="bar__bottom">   
+© VÝFUK koršpodenčný seminár MFF UK.<br>
+webmaster: vyfuk-web@atrey.karlin.mff.cuni.cz<br>';
+
 if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
-    echo '    <div class="meta">
-     <div class="homelink">
+    echo '    
+   
   		   <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
    	 <a href="', DOKU_BASE, 'feed.php" title="Recent changes RSS feed"><img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
-    </div>
+   
 ';
-    _wp_tpl_pageinfo();
-    echo '  </div>
-';
+    //_wp_tpl_pageinfo();
+   
+
 } else {
-    echo '  <div class="meta">
-     <div class="homelink">
+    echo '  
+     
   		   <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     	 <a href="', DOKU_BASE, 'feed.php" title="Recent changes RSS feed"><img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
-      </div>
-    </div>
+      
+   
 ';
 }
 
-  echo '</div>';
-echo '    <div class="bar" id="bar__bottom">   
-© VÝFUK koršpodenčný seminár MFF UK.<br>
-webmaster: vyfuk-web@atrey.karlin.mff.cuni.cz
-
-</div>
-
-  <div class="no">
-';
-/* provide DokuWiki housekeeping, required in all templates */
-tpl_indexerWebBug();
 echo '</div>
 </div>
 </body>

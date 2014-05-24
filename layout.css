@@ -91,6 +91,7 @@ div.dokuwiki .bar {
     clear: both;
     min-width: 60em;
     margin-top: 1em;
+    text-align: center;
 }
 
 div.dokuwiki .bar-left {
