@@ -24,8 +24,8 @@ echo '
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>
 ';
+echo ' ', strip_tags($conf['title']), ' | ';
 tpl_pagetitle();
-echo ' || ', strip_tags($conf['title']), ' ';
 echo '</title>
 ';
 
