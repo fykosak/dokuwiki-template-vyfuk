@@ -504,7 +504,7 @@ div.scrollmenu ul ul {
     left: 0;
     z-index: 1;
     margin: 0em 0em 0em 2em;
-    padding: 0 1px 0 1px;
+    padding: 0 1px 1px 1px;
     /*border: 1px solid __border__;*/
     border-radius: 3px;
 }
