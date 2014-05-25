@@ -589,5 +589,9 @@ div.dokuwiki ul.fkstopbarlogo li div a{
 span.fkstopbatbeta{
     font-size: 70%;
 }
+span.newswarning{
+   font-weight:bold;
+   font-size:130%;
+}
 
 
