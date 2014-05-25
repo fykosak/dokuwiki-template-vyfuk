@@ -207,7 +207,7 @@ div.dokuwiki div.mainmenu ul ul {
     min-width: __menuwidth__;
     width: auto;
     height: auto;
-    
+    background-color: __background__;
     top: 100%;
     left: 0;
     z-index: 1;
@@ -319,7 +319,7 @@ div.dokuwiki div.fkstopbar {
     width: 100%; 
     height: auto;
     font-family: 'Shadows Into Light Two', cursive;
-    letter-spacing: 0px;
+    letter-spacing: 2px;
     font-size: 140%;
     /* background-color: __background_alt__;  */
     background: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
@@ -452,11 +452,11 @@ div.scrollmenu{
     width: 100%;
     height: auto;
     /* background-color: __background_alt__;  */
-    background: /*url(images/trans85.png) 0 0 repeat transparent; */__background_alt__;
+    background: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
     /*height: 3em;*/
-    color: __text_other__;
+    color: __background__;
     /*border-radius: 5px; */
-    clear:both;
+    clear: both;
     z-index: 10;
 
 }
@@ -468,7 +468,7 @@ div.scrollmenu ul {
     padding: 0;
     font-weight: bold !important;
     height: auto;
-    /* border-radius: 5px;  */
+    /*border-radius: 3px;*/ 
 }
 
 div.scrollmenu ul li {
@@ -480,12 +480,14 @@ div.scrollmenu ul li {
 
 div.scrollmenu ul li div.li {
     font-weight: bold !important;
+    border-radius: 3px;
 }
 
 div.scrollmenu ul li.hover,
 div.scrollmenu ul li:hover {
     position: relative;
     z-index: 2;
+    border-radius: 3px !important;
 }
 
 div.scrollmenu ul ul {
@@ -494,18 +496,22 @@ div.scrollmenu ul ul {
     position: absolute;
     min-width: __menuwidth__;
     width: auto;
-    background-color: #FFFEBF;
+    height: auto;
+    background-color: __background__;
+    color: __text_alt__;       
     top: 100%;
     left: 0;
     z-index: 1;
     margin: 0em 0em 0em 2em;
     padding: 0 0 0 0;
     /*border: 1px solid __border__;*/
+    border-radius: 3px;
 }
 
 div.scrollmenu ul ul li {
     float: none;
-    border-top: 1px solid __border__;
+    /*border-top: 1px solid __border__;*/
+    margin-top: 2px;
     padding: 0em;
     margin-right: 0 !important;
 }
@@ -514,19 +520,40 @@ div.scrollmenu ul ul li div.li {
     font-weight: normal !important;
 }
 
-div.scrollmenu ul li div.li a {
+div.scrollmenu ul ul li div.li a {
     color: __text_alt__ !important;
+    background-color: __background_neu__; 
     text-decoration: none !important;
     display: block !important;
     padding: 1em 1em 0.6em 1em;
+    border-radius: 3px;
+}
+
+div.scrollmenu ul ul li div.li a:hover,
+div.scrollmenu ul ul li div.li a:focus {
+    color: /*__text_neu__ __color_disabled__*/ __background_other__ !important;
+    background-color: /*__background_other__*/ __background_neu__ !important;
+    /*text-transform: uppercase;
+    text-decoration: underline;*/
+    border-radius: 3px;
+}
+
+
+div.scrollmenu ul li div.li a {
+    color: __background__ !important;
+    text-decoration: none !important;
+    display: block !important;
+    padding: 1em 1em 0.6em 1em;
+    border-radius: 3px;
 }
 
 div.scrollmenu ul li div.li a:hover,
 div.scrollmenu ul li div.li a:focus {
-    /*color: __text_neu__ __color_disabled__ !important;*/
-    background-color: /*__background_other__*/ #FFFFD4 !important;
+    color: /*__text_neu__ __color_disabled__*/ __background_other__ !important;
+    background-color: /*__background_other__*/ __background__ !important;
     /*text-transform: uppercase;
     text-decoration: underline;*/
+    border-radius: 3px;
 }
 
 div.scrollmenu ul ul ul {
@@ -543,7 +570,7 @@ div.scrollmenu ul li.open {
     padding: 0em 0em 0em 2em;
     /*background-image: url(images/open.gif); 
     background-position: 100% 25%;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;*/ 
 }
 
 div.scrollmenu ul li.level1 {
