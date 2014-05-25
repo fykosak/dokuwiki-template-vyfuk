@@ -10,8 +10,9 @@
  */
 
 // must be run from within DokuWiki
-if (!defined('DOKU_INC'))
+if (!defined('DOKU_INC')) {
     die();
+}
 
 /* prints the menu */
 
@@ -23,17 +24,23 @@ function _fks_scrollmenu() {
     _fks_topbarlogo();
     _wp_tpl_mainmenu();
 }
-function _fks_topbarlogo(){
+
+function _fks_topbarlogo() {
     echo '<ul class="fkstopbarlogo">
         <li class="open"><div class="li">
-    <a href="'.wl().'">  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
+    <a href="' . wl() . '">  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
     </div></li></ul>';
+}
+
+function _fks_footbar(){
+     return p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
 }
 
 /*
  * začiatok mišoveho šialenstva!!!
  * deti nepite moc energeťaku lebo vám z toho žačne šibať
  */
+
 function _fks_topbaruser() {
     global $INFO;
     //echo '<ul class="fkstopbaruser"><li> <div class="li"><span class="fkstopbaruserinfo">';
@@ -46,17 +53,19 @@ function _fks_topbaruser() {
         echo '<li class="level2"><div class="li">';
         tpl_button('admin');
         echo '</div></li>';
-        
+
         echo '<li class="level2"><div class="li">';
         tpl_button('edit');
-        echo '</div></li>';       
+        echo '</div></li>';
 
 
         if ($_SERVER['REMOTE_USER']) {
+            /*
+             * nepotrebné kvôli auth FKSDB 
+             */
             //echo '<li class="level2"><div class="li">';
             //tpl_button('subscribe');
             //echo '</div></li>';
-
             //echo '<li class="level2"><div class="li">';
             //tpl_button('profile');
             //echo '</div></li>';
@@ -91,7 +100,7 @@ function _fks_topbaruser() {
             }
         }
 
-        
+
 
         $dw2pdf = &plugin_load('action', 'dw2pdf');
         if ($dw2pdf) {
@@ -111,8 +120,8 @@ function _fks_topbaruser() {
             echo '</div></li>';
             //echo '&nbsp;';
         }
-        
-        
+
+
 //echo '    </div>
         echo'    </ul></li>';
     }
@@ -123,10 +132,10 @@ function _fks_topbaruser() {
     }
     echo '</ul>';
 }
+
 /*
  * koniec mišoveho šialenstva!!!
  */
-
 
 function _wp_tpl_mainmenu() {
     require_once(DOKU_INC . 'inc/search.php');
@@ -398,8 +407,9 @@ function _wp_tpl_youarehere($sep = ' » ') {
     $lspace = $_SESSION[DOKU_COOKIE]['translationlc'];
 
     // check if enabled
-    if (!$conf['youarehere'])
+    if (!$conf['youarehere']) {
         return false;
+    }
 
     $parts = explode(':', $ID);
     $count = count($parts);
@@ -407,16 +417,19 @@ function _wp_tpl_youarehere($sep = ' » ') {
     echo '<span class="bchead">' . $lang['youarehere'] . ': </span>';
 
     // always print the startpage
-    if (!$lspace)
+    if (!$lspace) {
         tpl_pagelink(':' . $conf['start']);
+    }
 
     // print intermediate namespace links
     $part = '';
     for ($i = 0; $i < $count - 1; $i++) {
         $part .= $parts[$i] . ':';
         $page = $part;
-        if ($page == $conf['start'])
-            continue; // Skip startpage
+        if ($page == $conf['start']) {
+            continue;
+        } // Skip startpage
+
 
 
             
@@ -427,24 +440,22 @@ function _wp_tpl_youarehere($sep = ' » ') {
 
     // print current page, skipping start page, skipping for namespace index
     resolve_pageid('', $page, $exists);
-    if (isset($page) && $page == $part . $parts[$i])
+    if (isset($page) && $page == $part . $parts[$i]) {
         return true;
+    }
     $page = $part . $parts[$i];
-    if ($page == $conf['start'])
+    if ($page == $conf['start']) {
         return true;
+    }
     echo $sep;
     tpl_pagelink($page);
     return true;
 }
 
-;
 
 function _fkssidebar() {
     echo '<div class="fkssidebar">'
     . '<div class="fkssidebarhead">';
-    //include('lib/plugins/fkstimer/syntax.php');
-    //echo fkstimer();
-
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
     echo '</div></div> ';
     return 0;
