@@ -367,18 +367,18 @@ div.dokuwiki div.fkstopbar ul ul {
     position: absolute;
     min-width: __menuwidth__;
     width: auto;
-    background-color: #FFFEBF;
+    background-color: __background__;
     top: 100%;
     left: 0;
     z-index: 1;
     margin: 0em 0em 0em 2em;
-    padding: 0 0 0 0;
+    padding: 0 1px 0 1px;
     /*border: 1px solid __border__;*/
 }
 
 div.dokuwiki div.fkstopbar ul ul li {
     float: none;
-    border-top: 1px solid __border__;
+    /*border-top: 1px solid __border__;*/
     padding: 0em;
     margin-right: 0 !important;
 }
@@ -404,6 +404,7 @@ div.dokuwiki div.fkstopbar ul li div.li a:focus {
     background-color: /*__background_other__*/ __background__ !important;
     /*text-transform: uppercase;
     text-decoration: underline;*/
+    border-radius: 3px;
 }
 
 div.dokuwiki div.fkstopbar ul ul ul {
@@ -503,7 +504,7 @@ div.scrollmenu ul ul {
     left: 0;
     z-index: 1;
     margin: 0em 0em 0em 2em;
-    padding: 0 0 0 0;
+    padding: 0 1px 0 1px;
     /*border: 1px solid __border__;*/
     border-radius: 3px;
 }
@@ -588,14 +589,22 @@ div.scrollmenu ul ul li.open {
     background-repeat: no-repeat;*/
 }
 
+div.scrollmenu ul.fkstopbaruser li div.li input.button{
+    padding: .7em 1em .5em 1em;
+}
+
+div.scrollmenu ul.fkstopbaruser li div.li input.button:hover{
+    padding: .7em 1em .5em 1em;
+}
+
 
 /* ------------- the fks top bar ------------- */
 ul.fkstopbaruser{
     margin-left: auto;
-    color: black;
     float: right;
     padding:  0.5em;
 }
+
 span.fkstopbaruserinfo:before{
     content: "\e008";
 }
