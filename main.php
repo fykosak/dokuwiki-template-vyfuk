@@ -122,9 +122,8 @@ echo '<div class="no">';
 tpl_indexerWebBug();
 echo '</div>';
 
-echo '    <div class="bar" id="bar__bottom">   
-© VÝFUK - korespodenční seminář MFF UK.<br>
-webmaster: vyfuk-web@vyfuk.mff.cuni.cz<br>';
+echo '    <div class="bar" id="bar__bottom"> 
+ '._fks_footbar();
 
 if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
     echo '    
