@@ -613,8 +613,8 @@ div.scrollmenu ul.fkstopbarlogo li div a{
     background-image: url('images/logo_vyfuk_white.png');
     background-repeat: no-repeat;
     background-size: 60px;
-    background-position: left center;
-    padding-left: 5em !important;
+    background-position: 1em center;
+    padding-left: 6em !important;
 
 }
 
@@ -623,8 +623,8 @@ div.scrollmenu ul.fkstopbarlogo li div a:focus {
 background-image: url('images/logo_vyfuk_radioactive.png');
     background-repeat: no-repeat;
     background-size: 60px;
-    background-position: left center;
-    padding-left: 5em !important;
+    background-position: 1em center;
+    padding-left: 6em !important;
 
 }
 
