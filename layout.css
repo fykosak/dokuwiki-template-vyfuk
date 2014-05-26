@@ -620,7 +620,7 @@ div.scrollmenu ul.fkstopbarlogo li div a{
 
 div.scrollmenu ul.fkstopbarlogo li div a:hover,
 div.scrollmenu ul.fkstopbarlogo li div a:focus {
-background-image: url('images/logo_vyfuk_radioactive.png');
+    background-image: url('images/logo_vyfuk_radioactive.png');
     background-repeat: no-repeat;
     background-size: 60px;
     background-position: 1em center;
@@ -636,8 +636,15 @@ ul.fkstopbaruser{
     padding:  0.5em;
 }
 
-span.fkstopbaruserinfo:before{
-    content: "\e008";
+//span.fkstopbaruserinfo:before{
+//    content: url('images/smiley_white.png');
+//}
+a.fkstopbaruserinfo:before{
+    content: url('images/smiley_white.png');
+}
+a.fkstopbaruserinfo:hover:before,
+a.fkstopbaruserinfo:focus:before{
+    content: url('images/smiley_radioactive.png');
 }
 
 div.dokuwiki ul.fkstopbarlogo div.li{
@@ -669,3 +676,4 @@ div.fksfootbar p{
     text-align: center !important;
     white-space: pre-wrap;
 }
+

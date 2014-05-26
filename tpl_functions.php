@@ -48,7 +48,8 @@ function _fks_topbaruser() {
     //echo '<ul class="fkstopbaruser"><li> <div class="li"><span class="fkstopbaruserinfo">';
     echo '<ul class="fkstopbaruser"><li class="open"> <div class="li">';
     if ($_SERVER['REMOTE_USER']) {
-        echo '<a> <span class="fkstopbaruserinfo"></span> ' . $INFO['userinfo']['name'] . '</a></div>';
+        echo '<a class="fkstopbaruserinfo"> <!--<span class="fkstopbaruserinfo"></span>--> ' . $INFO['userinfo']['name'] . '</a></div>';
+        //print_r($INFO['userinfo']);
         echo '<ul class="idx">';
 
 
