@@ -618,6 +618,15 @@ div.scrollmenu ul.fkstopbarlogo li div a{
 
 }
 
+div.scrollmenu ul.fkstopbarlogo li div a:hover,
+div.scrollmenu ul.fkstopbarlogo li div a:focus {
+background-image: url('images/logo_vyfuk_radioactive.png');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: left center;
+    padding-left: 5em !important;
+
+}
 
 
 /* ------------- the fks top bar ------------- */
