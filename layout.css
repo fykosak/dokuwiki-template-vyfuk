@@ -57,7 +57,9 @@ div.dokuwiki .header {
 
 div.dokuwiki .pagename {
     text-align: left;
-    padding: 1em 0 1em 2em;
+    padding: 1em 2em 1em 2em;
+    margin-left: auto;
+    margin-right: auto;
     /*padding: 0px;*/
     background-color: transparent;
     width: auto;
