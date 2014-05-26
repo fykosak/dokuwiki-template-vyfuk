@@ -636,7 +636,7 @@ div.dokuwiki div.fksfootbar{
     margin-right: auto;
     width: 40%;
     min-width: 30em;
-    background-color: white;
+    background-color: transparent;
     
 }
 div.fksfootbar p{
