@@ -89,7 +89,7 @@ div.dokuwiki .bar {
     float: left;
     /*background-color: __background__;*/
     width: 100%;
-    
+
     clear: both;
     min-width: 60em;
     margin-top: 0em;
@@ -111,7 +111,12 @@ div.dokuwiki #bar__bottom {
     padding: .5em 0px .3em 0px;
     color: __text_neu__;
     margin-bottom: 0em;
+<<<<<<< HEAD
     background-color: __background_other__;
+=======
+
+    //background-color: __background_other__;
+>>>>>>> 5bc63b1c4ef2590685003f1027741623e962b6a6
     //border: 1px solid __background_other__;
 }
 
@@ -606,6 +611,16 @@ div.scrollmenu ul.fkstopbaruser li div.li input.button:hover{
     padding: .7em 1em .5em 1em;
 }
 
+div.scrollmenu ul.fkstopbarlogo li div a{
+    background-image: url('http://vyfuk.mff.cuni.cz/lib/tpl/wallpaper/images/logo_vyfuk.png');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: left center;
+    padding-left: 5em !important;
+
+}
+
+
 
 /* ------------- the fks top bar ------------- */
 ul.fkstopbaruser{
@@ -641,7 +656,7 @@ div.dokuwiki div.fksfootbar{
     width: 40%;
     min-width: 30em;
     background-color: transparent;
-    
+
 }
 div.fksfootbar p{
     text-align: center !important;

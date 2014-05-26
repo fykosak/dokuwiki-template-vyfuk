@@ -33,7 +33,7 @@ window.onscroll = function(e) {
 
 window.onscroll = function() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollTop > 80) {
+    if (scrollTop >320) {
         if (document.getElementById("scrollmenu").style.display === "none") {
             //setTimeout(function() {
                 document.getElementById("scrollmenu").style.display = "block";
@@ -48,7 +48,7 @@ window.onscroll = function() {
         ;
 
     };
-    if (scrollTop < 50) {
+    if (scrollTop < 300) {
 
         if (document.getElementById("scrollmenu").style.display === "block") {
             //scrollopacitydown(1.0);
