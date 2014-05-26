@@ -674,6 +674,9 @@ div.dokuwiki div.fksfootbar{
 }
 div.fksfootbar p{
     text-align: center !important;
-    white-space: pre-wrap;
+    line-height: normal;
+    color: __background__;
+    letter-spacing: 2px;
+    margin-bottom: 0.2em !important;
 }
 
