@@ -219,7 +219,7 @@ div.dokuwiki div.mainmenu ul ul {
     left: 0;
     z-index: 1;
     margin: 0em 0em 0em 2em;
-    padding: 0 0 0 0;
+    padding: 0 1px 0 1px;
     /*border: 1px solid __border__;*/ 
 }
 
