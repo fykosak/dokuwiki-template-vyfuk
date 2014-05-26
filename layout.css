@@ -41,6 +41,7 @@ div.dokuwiki {
     margin-top: 0em;
     background: __background__;
     border: 1px solid __background_other__;
+    box-shadow: 0px 0px 5px 2px __border__;
 }
 
 /* -------------- header --------------- */
@@ -473,6 +474,7 @@ div.scrollmenu{
     /*border-radius: 5px; */
     clear: both;
     z-index: 10;
+    box-shadow: 0px 0px 5px 2px __border__;
 
 }
 
@@ -639,8 +641,8 @@ ul.fkstopbaruser{
 }
 
 //span.fkstopbaruserinfo:before{
-//    content: url('images/smiley_white.png');
-//}
+    //    content: url('images/smiley_white.png');
+    //}
 a.fkstopbaruserinfo:before{
     content: url('images/smiley_white.png');
 }
