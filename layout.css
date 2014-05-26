@@ -40,7 +40,7 @@ div.dokuwiki {
     margin-right: auto;
     margin-top: 0em;
     background: __background__;
-    border: 1px solid __border__;
+    border: 1px solid __background_other__;
 }
 
 /* -------------- header --------------- */
@@ -107,8 +107,11 @@ div.dokuwiki .bar-right {
 }
 
 div.dokuwiki #bar__bottom {
+    padding: .5em 0px .5em 0px;
     color: __text_neu__;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
+    background-color: __background_other__;
+    //border: 1px solid __background_other__;
 }
 
 /* ------------- File Metadata ----------------------- */
