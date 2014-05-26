@@ -108,11 +108,10 @@ div.dokuwiki .bar-right {
 }
 
 div.dokuwiki #bar__bottom {
-    padding: 1px 0px .5em 0px;
+    padding: .5em 0px .3em 0px;
     color: __text_neu__;
     margin-bottom: 0em;
-    
-    //background-color: __background_other__;
+    background-color: __background_other__;
     //border: 1px solid __background_other__;
 }
 
@@ -241,6 +240,7 @@ div.dokuwiki div.mainmenu ul li div.li a {
     display: block !important;
     padding: 1em 1em 0.6em 1em;
     border-radius: 3px;
+    border-bottom: 1px solid __text_alt__;
 }
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,
@@ -249,6 +249,10 @@ div.dokuwiki div.mainmenu ul li div.li a:focus {
     background-color: /*__background_other__*/ __text_alt__ !important;
     /*text-transform: uppercase;
     text-decoration: underline !important;*/
+}
+
+div.dokuwiki div.mainmenu ul ul li div.li a{
+    border: 0px !important;
 }
 
 div.dokuwiki div.mainmenu ul ul ul {
