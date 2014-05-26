@@ -33,7 +33,7 @@ img#fakebackground {
     z-index: -1;
 }
 div.dokuwiki {
-    min-width: 65em;
+    min-width: 31em;
     max-width: 85em;
     width: 80%;
     margin-left: auto;
@@ -46,7 +46,7 @@ div.dokuwiki {
 /* -------------- header --------------- */
 div.dokuwiki .stylehead {
     /* background-color: transparent;   */
-    min-width: 65em;
+    min-width: 25em;
     width: 100%;
 }
 
@@ -93,7 +93,7 @@ div.dokuwiki .bar {
     width: 100%;
 
     clear: both;
-    min-width: 60em;
+    min-width: 25em;
     margin-top: 0em;
     text-align: center;
 }
@@ -120,7 +120,7 @@ div.dokuwiki #bar__bottom {
 
 /* ------------- File Metadata ----------------------- */
 div.dokuwiki div.stylefoot {
-    min-width: 60em;
+    min-width: 25em;
     width: 100%;
     height: 1.75em;
     clear: both;
@@ -149,7 +149,7 @@ div.dokuwiki div.stylefoot div.meta div.homelink a {
 div.dokuwiki div.wrap {
     width: 100%;
     overflow: hidden;
-    min-width: 60em;
+    min-width: 31em;
 
     background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
     border-radius: 0px;
@@ -293,10 +293,11 @@ div.dokuwiki div.mainmenu ul ul li.open {
 /* ------------- the document ------------- */
 div.dokuwiki div.page {
     float: left;
-    margin-left: 2em;
+    margin-left: 0em;
+    min-width: 25em;
     width: 65%;
     /* width: 780px; */
-    padding: 1.5em 1em 1.5em 1.5em;
+    padding: 1.5em 1em 1.5em 3em;
     /*background-color: transparent;*/
     height: 100%;
     max-width: 45em;
@@ -306,9 +307,10 @@ div.dokuwiki div.page {
 
 div.dokuwiki div.fkssidebar {
     float: right;
-    max-width: 23em;
-    width: 35%;
-    padding:.5em;
+    //max-width: 25em;
+    //width: 35%;
+    width: 25em;
+    padding: 1.5em 3em 1.5em 1em;
     height: 100%;
     margin-bottom: auto;
     padding-bottom: auto;
@@ -319,7 +321,7 @@ div.dokuwiki div.fkssidebar {
 }
 div.fkssidebarhead{
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0;
     width:90%;
 }
 
@@ -668,7 +670,7 @@ div.dokuwiki div.fksfootbar{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    min-width: 30em;
+    min-width: 25em;
     background-color: transparent;
 
 }
