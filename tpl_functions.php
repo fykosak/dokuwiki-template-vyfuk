@@ -32,8 +32,10 @@ function _fks_topbarlogo() {
     </div></li></ul>';
 }
 
-function _fks_footbar(){
-     return p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
+function _fks_footbar() {
+
+    return  p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
+            
 }
 
 /*
@@ -429,10 +431,6 @@ function _wp_tpl_youarehere($sep = ' » ') {
         if ($page == $conf['start']) {
             continue;
         } // Skip startpage
-
-
-
-            
 // output
         echo $sep;
         tpl_pagelink($page);
@@ -451,7 +449,6 @@ function _wp_tpl_youarehere($sep = ' » ') {
     tpl_pagelink($page);
     return true;
 }
-
 
 function _fkssidebar() {
     echo '<div class="fkssidebar">'

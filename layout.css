@@ -89,6 +89,7 @@ div.dokuwiki .bar {
     float: left;
     /*background-color: __background__;*/
     width: 100%;
+    
     clear: both;
     min-width: 60em;
     margin-top: 0em;
@@ -107,10 +108,11 @@ div.dokuwiki .bar-right {
 }
 
 div.dokuwiki #bar__bottom {
-    padding: .5em 0px .5em 0px;
+    padding: 1px 0px .5em 0px;
     color: __text_neu__;
     margin-bottom: 0em;
-    background-color: __background_other__;
+    
+    //background-color: __background_other__;
     //border: 1px solid __background_other__;
 }
 
@@ -187,7 +189,7 @@ div.dokuwiki div.mainmenu ul li {
     padding: 0;
     float: left;
     /*line-height: 1.25em;*/
-    
+
     margin-right: 1em;
     margin-left: 0em;
 }
@@ -629,4 +631,15 @@ span.fkstopbatbeta{
     font-size: 70%;
 }
 
-
+div.dokuwiki div.fksfootbar{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    min-width: 30em;
+    background-color: white;
+    
+}
+div.fksfootbar p{
+    text-align: center !important;
+    white-space: pre-wrap;
+}
