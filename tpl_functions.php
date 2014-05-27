@@ -17,7 +17,112 @@ if (!defined('DOKU_INC')) {
 /* prints the menu */
 
 function _fks_topbar() {
-    echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkstopbar.txt", false)), $info);
+    //echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkstopbar.txt", false)), $info);
+
+    require_once(DOKU_INC . 'inc/search.php');
+    global $conf;
+    global $ID;
+
+    /* options for search() function */
+    $opts = array(
+        'depth' => 0,
+        'listfiles' => true,
+        'listdirs' => true,
+        'pagesonly' => true,
+        'firsthead' => true,
+        'sneakyacl' => true
+    );
+
+    $dir = $conf['datadir'];
+    $tpl = $conf['template'];
+    if (isset($conf['start'])) {
+        $start = $conf['start'];
+    } else {
+        $start = 'start';
+    }
+
+    $ns = dirname(str_replace(':', '/', $ID));
+    if ($ns == '.') {
+        $ns = '';
+    }
+    $ns = utf8_encodeFN(str_replace(':', '/', $ns));
+
+    $data = array();
+    $ff = TRUE;
+    if ($conf['tpl'][$tpl]['usemenufile']) {
+
+        $menufilename = 'fkstopbar';
+
+        $filepath = wikiFN($menufilename);
+        if (!file_exists($filepath)) {
+            $ff = FALSE;
+        } else {
+            _wp_tpl_parsemenufile($data, $menufilename, $start);
+        }
+    }
+    if (!$conf['tpl'][$tpl]['usemenufile'] or ($conf['tpl'][$tpl]['usemenufile'] and !$ff)) {
+        search($data, $conf['datadir'], 'search_universal', $opts);
+    }
+    $i = 0;
+    $cleanindexlist = array();
+    if ($conf['tpl'][$tpl]['cleanindexlist']) {
+        $cleanindexlist = explode(',', $conf['tpl'][$tpl]['cleanindexlist']);
+        $i = 0;
+        foreach ($cleanindexlist as $tmpitem) {
+            $cleanindexlist[$i] = trim($tmpitem);
+            $i++;
+        }
+    }
+    $data2 = array();
+    $first = true;
+    foreach ($data as $item) {
+        if (preg_match('#https?://#', $item['id'])) {
+            $item['type'] = 'abs';
+            $data2[] = $item;
+            continue;
+        }
+        if ($conf['tpl'][$tpl]['cleanindex']) {
+            if (strpos($item['id'], 'playground') !== false or strpos($item['id'], 'wiki') !== false) {
+                continue;
+            }
+            if (count($cleanindexlist)) {
+                if (strpos($item['id'], ':')) {
+                    list($tmpitem) = explode(':', $item['id']);
+                } else {
+                    $tmpitem = $item['id'];
+                }
+                if (in_array($tmpitem, $cleanindexlist)) {
+                    continue;
+                }
+            }
+        }
+        if (strpos($item['id'], $menufilename) !== false and $item['level'] == 1) {
+            continue;
+        }
+        if ($conf['tpl'][$tpl]['hiderootlinks']) {
+            $item2 = array();
+            if ($item['type'] == 'f' and !$item['ns'] and $item['id']) {
+                if ($first) {
+                    $item2['id'] = 'start';
+                    $item2['ns'] = 'root';
+                    $item2['perm'] = 8;
+                    $item2['type'] = 'd';
+                    $item2['level'] = 1;
+                    $item2['open'] = 1;
+                    $item2['title'] = 'Start';
+                    $data2[] = $item2;
+                    $first = false;
+                }
+                $item['ns'] = 'root';
+                $item['level'] = 2;
+            }
+        }
+        if ($item['id'] == $start or preg_match('/:' . $start . '$/', $item['id'])) {
+            continue;
+        }
+        $data2[] = $item;
+    }
+    echo html_buildlist($data2, 'idx', '_wp_tpl_list_index', 'html_li_index');
 }
 
 function _fks_scrollmenu() {
@@ -34,8 +139,7 @@ function _fks_topbarlogo() {
 
 function _fks_footbar() {
 
-    return  p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
-            
+    return p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
 }
 
 /*
@@ -101,6 +205,13 @@ function _fks_topbaruser() {
                 tpl_button('media');
                 echo '</div></li>';
             }
+            echo '<li class="level2"><div class="li">'
+            . '<form class="button btn_admin" method="post" action="/http://vyfuk.mff.cuni.cz/wiki">'
+            . '<div class="no">'
+            . '<input type="submit" value="Wiki" class="button" title="wiki">'
+            . '</div></form>'
+            //. '<a href="http://vyfuk.mff.cuni.cz/wiki">WIKI</a>'
+            . '</div></li>';
         }
 
 
