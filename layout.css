@@ -523,6 +523,8 @@ div.scrollmenu ul ul {
     padding: 0 1px 1px 1px;
     /*border: 1px solid __border__;*/
     border-radius: 3px;
+    box-shadow: 0px 2px 3px 2px __border__;
+    z-index: 0;
 }
 
 div.scrollmenu ul ul li {
@@ -538,7 +540,7 @@ div.scrollmenu ul ul li div.li {
 }
 
 div.scrollmenu ul ul li div.li a {
-    color: __text_alt__ !important;
+    color: __background_other__ !important;
     background-color: __background_neu__; 
     text-decoration: none !important;
     display: block !important;
@@ -548,8 +550,8 @@ div.scrollmenu ul ul li div.li a {
 
 div.scrollmenu ul ul li div.li a:hover,
 div.scrollmenu ul ul li div.li a:focus {
-    color: /*__text_neu__ __color_disabled__*/ __background_other__ !important;
-    background-color: /*__background_other__*/ __background_neu__ !important;
+    color: /*__text_neu__ __color_disabled__*/ __background__ !important;
+    background-color: /*__background_other__*/ __background_other__ !important;
     /*text-transform: uppercase;
     text-decoration: underline;*/
     border-radius: 3px;
