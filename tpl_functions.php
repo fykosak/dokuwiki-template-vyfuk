@@ -206,7 +206,7 @@ function _fks_topbaruser() {
                 echo '</div></li>';
             }
             echo '<li class="level2"><div class="li">'
-            . '<form class="button btn_admin" method="post" action="/http://vyfuk.mff.cuni.cz/wiki">'
+            . '<form class="button btn_admin" method="post" action="http://vyfuk.mff.cuni.cz/wiki">'
             . '<div class="no">'
             . '<input type="submit" value="Wiki" class="button" title="wiki">'
             . '</div></form>'
