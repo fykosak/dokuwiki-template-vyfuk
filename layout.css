@@ -58,20 +58,22 @@ div.dokuwiki .header {
 }
 
 div.dokuwiki .pagename {
-    text-align: left;
+    text-align: center;
     padding: 1em 2em 1em 2em;
     margin-left: auto;
     margin-right: auto;
     /*padding: 0px;*/
-    background-color: transparent;
-    width: auto;
-    height: auto;
+    //background-color: transparent;
+    //width: auto;
+    //height: auto;
     //float: left;
 }
 
 div.dokuwiki .pagename a {
     font-size: 250%;
     font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
     color: __text_neu__ !important;
     text-decoration: none !important;
 }
@@ -643,8 +645,8 @@ ul.fkstopbaruser{
 }
 
 //span.fkstopbaruserinfo:before{
-    //    content: url('images/smiley_white.png');
-    //}
+//    content: url('images/smiley_white.png');
+//}
 a.fkstopbaruserinfo:before{
     content: url('images/smiley_white.png');
 }
@@ -688,9 +690,32 @@ div.fksfootbar p{
 
 div.fks_vyfuk_logo{
     float: left;
+    width: 270px;
 }
 div.fks_vyfucek{
-    float: right;
-    
+    float: left;
+    width: 255px;
+
 }
 
+div.fks_mrak_1{
+    float: left;
+    width: 115px;
+
+}
+
+div.fks_mrak_2{
+    float: left;
+    padding-top: 60px;
+    width: 110px;
+
+
+}
+
+div.fks_mrakovyfucek{
+    //float: right;
+}
+
+div.fks_logomrak_1{
+   // float: left;
+}
