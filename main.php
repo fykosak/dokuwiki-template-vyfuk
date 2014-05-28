@@ -66,10 +66,10 @@ _wp_tpl_mainmenu();
 echo '      <div class="clearer"></div></div>
      </div>
      <div class="fkspagename">
-<div class="pagename">';
+';
 tpl_link(wl(), $conf['title'], 'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"');
 
-echo '</div>  </div>  
+echo '  </div>  
 
 
 
