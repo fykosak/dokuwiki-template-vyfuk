@@ -7,8 +7,9 @@
  */
 
  @font-face { font-family: CMU Sans Serif; font-weight: normal; src: url('cmunss.otf'); } 
- @font-face { font-family: CMU Sans Serif; font-weight: bold; src: url('cmunso.otf');}
- @font-face { font-family: CMU Sans Serif; font-style: italic; src: url('cmunsi.otf');}
+ @font-face { font-family: CMU Bright; font-weight: normal; src: url('cmunbmr.otf'); }
+// @font-face { font-family: CMU Sans Serif; font-weight: bold; src: url('cmunso.otf');}
+// @font-face { font-family: CMU Sans Serif; font-style: italic; src: url('cmunsi.otf');}
 
 
 /* -------------- general elements --------------- */
