@@ -32,30 +32,29 @@ window.onscroll = function(e) {
 ;
 
 window.onscroll = function() {
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollTop >320) {
-        if (document.getElementById("scrollmenu").style.display === "none") {
-            //setTimeout(function() {
+    if (document.getElementById("dokuwiki").width <0) {
+
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 320) {
+            if (document.getElementById("scrollmenu").style.display === "none") {
                 document.getElementById("scrollmenu").style.display = "block";
-                //document.getElementById("scrollmenu").style.opacity = 0;
-                //scrollopacityup(0.0);
-            //}
-            //, 1000);
-        } else {
-            document.getElementById("scrollmenu").style.display = "block";
-            //document.getElementById("scrollmenu").style.opacity = 1;
+            } else {
+                document.getElementById("scrollmenu").style.display = "block";
+            }
+            ;
+
         }
         ;
+        if (scrollTop < 300) {
 
-    };
-    if (scrollTop < 300) {
-
-        if (document.getElementById("scrollmenu").style.display === "block") {
-            //scrollopacitydown(1.0);
-            document.getElementById("scrollmenu").style.display = "none";
-        } else {
-            document.getElementById("scrollmenu").style.display = "none";
-            //document.getElementById("scrollmenu").style.opacity = 0;
+            if (document.getElementById("scrollmenu").style.display === "block") {
+                //scrollopacitydown(1.0);
+                document.getElementById("scrollmenu").style.display = "none";
+            } else {
+                document.getElementById("scrollmenu").style.display = "none";
+                //document.getElementById("scrollmenu").style.opacity = 0;
+            }
+            ;
         }
         ;
     }

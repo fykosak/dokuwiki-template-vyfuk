@@ -40,7 +40,7 @@ _fks_scrollmenu();
 _fks_topbaruser();
 echo '</div>
      <div class="clearer"></div>
-<div class="dokuwiki">'
+<div class="dokuwiki" id="dokuwiki">'
 //<img id="fakebackground" src="', DOKU_TPL, 'images/bg.jpg" alt="" />
 ;
 //html_msgarea(); 
