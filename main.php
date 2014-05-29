@@ -50,19 +50,20 @@ echo '</div>
 echo '  <div class="stylehead">
     <div class="header">
       
-     <div class="clearer"></div>
-     <div class="fkstopbar">';
-_fks_topbarlogo();
-_fks_topbar();
-_fks_topbaruser();
-echo '<div class="clearer"></div>
-     </div>
-     <div class="clearer"></div>
+     <div class="clearer"></div>';
+    // <div class="fkstopbar">';
+//_fks_topbarlogo();
+//_fks_topbar();
+//_fks_topbaruser();
+//echo '<div class="clearer"></div>
+    // </div>
+     //<div class="clearer"></div>
 
-     <div class="fksmenu">
+    echo' <div class="fksmenu">
       <div class="mainmenu">
 ';
 _wp_tpl_mainmenu();
+_fks_topbaruser();;
 echo '      <div class="clearer"></div></div>
      </div>
      <div class="fkspagename">
