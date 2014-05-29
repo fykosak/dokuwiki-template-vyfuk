@@ -170,7 +170,7 @@ div.dokuwiki div.mainmenu {
     letter-spacing: 2px;
     font-size: 140%;
     /*  background-color: __background_alt__; */
-    background: /*url(images/trans85.png) 0 0 repeat transparent; */__background__;
+    background-color: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
     /*height: 3em;*/
     color: __text_other__;
     border-radius: 3px; 
