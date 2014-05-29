@@ -460,6 +460,7 @@ div.dokuwiki div.fkstopbar ul ul li.open {
 
 /* ------------- the scroll menu ------------- */                                                
 div.scrollmenu{
+    display: block;
     position: fixed;
     font-family: 'Shadows Into Light Two', cursive;
     letter-spacing: 2px;
@@ -479,6 +480,15 @@ div.scrollmenu{
     box-shadow: 0px 0px 5px 2px __border__;
 
 }
+/*
+* vypnuté scrollmenu
+*/
+div.scrollmenu_dis{
+    display: none;  
+}
+
+
+
 
 div.scrollmenu ul {
     z-index: 0;
@@ -720,5 +730,5 @@ div.fks_mrakovyfucek{
 }
 
 div.fks_logomrak_1{
-   // float: left;
+    // float: left;
 }
