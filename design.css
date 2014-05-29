@@ -204,7 +204,7 @@ div.dokuwiki button.button {
     font-size: 0.95em;
     cursor: pointer;
     margin: 1px;
-    padding: 0.25em 0.5em;
+    padding: .7em .5em .3em .5em;
     border-radius: 3px;
 }
 
