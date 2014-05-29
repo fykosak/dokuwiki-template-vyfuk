@@ -933,7 +933,7 @@ ul li div.li button.button {
     letter-spacing: 2px;
     text-decoration: none !important;
     display: block !important;
-    /*padding: 5em 1em .3em 1em !important;*/
+    padding: .7em .5em .3em .5m !important;
     margin: 0 !important;
     width: 100%;
     background-color: __background_other__;
