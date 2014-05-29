@@ -58,7 +58,7 @@ div.dokuwiki .header {
 }
 
 div.dokuwiki .pagename {
-    text-align: center;
+    text-align: center; 
     padding: 1em 2em 1em 2em;
     margin-left: auto;
     margin-right: auto;
