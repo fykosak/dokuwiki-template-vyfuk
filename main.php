@@ -35,7 +35,7 @@ echo '<script type="text/javascript" charset="utf-8" src="lib/tpl/wallpaper/scri
 echo '  </head>
 
 <body>
-<div class="scrollmenu" id="scrollmenu" style="display:none">';
+<div class="scrollmenu_dis" id="scrollmenu" >';
 _fks_scrollmenu();
 _fks_topbaruser();
 echo '</div>
