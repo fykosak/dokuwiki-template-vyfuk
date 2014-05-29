@@ -229,7 +229,7 @@ div.dokuwiki div.mainmenu ul ul li {
     width: 100%;
     /*border-top: 1px solid __border__;*/
     padding: 0em;
-    margin-right: 0 !important;      
+    margin: 0 !important;      
 }
 
 div.dokuwiki div.mainmenu ul ul li div.li {
