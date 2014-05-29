@@ -32,7 +32,10 @@ window.onscroll = function(e) {
 ;
 
 window.onscroll = function() {
-    if (document.getElementById("dokuwiki").width <0) {
+    var $window = $(window);
+    var wWidth = $window.width();
+    var wHeight = $window.height();
+    if (wWidth > 800) {
 
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (scrollTop > 320) {
