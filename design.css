@@ -280,14 +280,22 @@ div.dokuwiki a.nolink {
 
 /* external link */
 div.dokuwiki a.urlextern {
-    background: transparent url(images/link_icon.gif) 0px 1px no-repeat;
+    //background: transparent url(images/link_icon.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
+}
+div.dokuwiki a.urlextern:before {
+    content: url(images/link_icon.gif)
+    //padding: 1px 0px 1px 16px;
 }
 
 /* windows share */
 div.dokuwiki a.windows {
-    background: transparent url(images/windows.gif) 0px 1px no-repeat;
+    //background: transparent url(images/windows.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
+}
+div.dokuwiki a.windows {
+    content: url(images/windows.gif)
+    //padding: 1px 0px 1px 16px;
 }
 
 div.dokuwiki a.urlextern:link,

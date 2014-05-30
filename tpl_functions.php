@@ -236,8 +236,7 @@ function _fks_topbaruser() {
 
 //echo '    </div>
         echo'    </ul></li>';
-    }
-    if (!$_SERVER['REMOTE_USER']) {
+    }else{
         echo '<li class="level2"><div class="li">';
         tpl_button('login');
         echo '</div></li>';
