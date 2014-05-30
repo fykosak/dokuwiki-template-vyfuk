@@ -16,6 +16,7 @@ if (!defined('DOKU_INC')) {
 
 /* prints the menu */
 
+
 function _fks_topbar() {
     //echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkstopbar.txt", false)), $info);
 
@@ -125,10 +126,7 @@ function _fks_topbar() {
     echo html_buildlist($data2, 'idx', '_wp_tpl_list_index', 'html_li_index');
 }
 
-function _fks_scrollmenu() {
-    _fks_topbarlogo();
-    _wp_tpl_mainmenu();
-}
+
 
 function _fks_topbarlogo() {
     echo '<ul class="fkstopbarlogo">

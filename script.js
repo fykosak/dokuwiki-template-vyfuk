@@ -1,8 +1,8 @@
 window.onscroll = function() {
     var $window = $(window);
     var wWidth = $window.width();
-    var wHeight = $window.height();
-    if (wWidth > 500) {
+    //var wHeight = $window.height();
+    if (wWidth > 900) {
 
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (scrollTop > 320) {
@@ -14,7 +14,7 @@ window.onscroll = function() {
         }
         ;
     }else{
-        document.getElementById("scrollmenu").className = "scrollmenu_dis";
+        document.getElementById("scrollmenu").className = "scrollmenu_mini";
     }
     ;
 };

@@ -35,9 +35,14 @@ echo '<script type="text/javascript" charset="utf-8" src="lib/tpl/wallpaper/scri
 echo '  </head>
 
 <body>
-<div class="scrollmenu_dis" id="scrollmenu" >';
-_fks_scrollmenu();
+<div class="scrollmenu_dis" id="scrollmenu" >
+<ul class="idx"><li class="level0">';
+_fks_topbarlogo();
+echo '</li><li class="level0">';
+_wp_tpl_mainmenu();
+echo '</li><li class="level0">';
 _fks_topbaruser();
+echo '</li></ul>';
 echo '</div>
      <div class="clearer"></div>
 <div class="dokuwiki" id="dokuwiki">'
@@ -51,19 +56,20 @@ echo '  <div class="stylehead">
     <div class="header">
       
      <div class="clearer"></div>';
-    // <div class="fkstopbar">';
+// <div class="fkstopbar">';
 //_fks_topbarlogo();
 //_fks_topbar();
 //_fks_topbaruser();
 //echo '<div class="clearer"></div>
-    // </div>
-     //<div class="clearer"></div>
+// </div>
+//<div class="clearer"></div>
 
-    echo' <div class="fksmenu">
+echo' <div class="fksmenu">
       <div class="mainmenu">
 ';
 _wp_tpl_mainmenu();
-_fks_topbaruser();;
+_fks_topbaruser();
+;
 echo '      <div class="clearer"></div></div>
      </div>
      <div class="fkspagename">

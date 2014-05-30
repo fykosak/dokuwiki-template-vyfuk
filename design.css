@@ -309,8 +309,12 @@ div.dokuwiki a.interwiki:active {
 
 /* email link */
 div.dokuwiki a.mail {
-    background: transparent url(images/mail_icon.gif) 0px 1px no-repeat;
+    //background: transparent url(images/mail_icon.gif) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
+}
+div.dokuwiki a.mail:before {
+   content: url(images/mail_icon.gif) 
+    //padding: 1px 0px 1px 16px;
 }
 
 /* existing wikipage */
