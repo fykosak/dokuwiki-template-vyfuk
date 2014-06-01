@@ -772,3 +772,18 @@ div.fks_mrakovyfucek{
 div.fks_logomrak_1{
     // float: left;
 }
+/*
+* fks_image_show
+*/
+
+div.fks_images a img{
+    position: relative;
+    top:-20px;
+}
+div.fks_images a{
+    height: 150px;
+    overflow: hidden;
+    display: block;
+    
+    
+}
