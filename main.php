@@ -61,7 +61,6 @@ echo '</li></ul>';
 echo '</div>
      <div class="clearer"></div>
 <div class="dokuwiki" id="dokuwiki">'
-//<img id="fakebackground" src="', DOKU_TPL, 'images/bg.jpg" alt="" />
 ;
 //html_msgarea(); 
 /*
@@ -71,14 +70,6 @@ echo '  <div class="stylehead">
     <div class="header">
       
      <div class="clearer"></div>';
-// <div class="fkstopbar">';
-//_fks_topbarlogo();
-//_fks_topbar();
-//_fks_topbaruser();
-//echo '<div class="clearer"></div>
-// </div>
-//<div class="clearer"></div>
-
 echo' <div class="fksmenu">
       <div class="mainmenu">
 ';
@@ -92,33 +83,15 @@ echo '      <div class="clearer"></div></div>
 tpl_link(wl(), $conf['title'], 'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"');
 
 echo '  </div>  
-
-
-
     </div>'; //end stylehead 
-
 echo'<div class="clearer"></div> 
-
-	   
-    '; //<div class="breadcrumbs"> 
-//<div class="clearer"></div>
-//';
-//if ($conf['breadcrumbs']) {
-//    tpl_breadcrumbs();
-//} elseif ($conf['youarehere']) {
-//    _wp_tpl_youarehere();
-//}
-//$translation = &plugin_load('helper','translation');
-//if ($translation) echo $translation->showTranslations();
-//echo '    </div>
-echo '</div>
+    </div>
 ';
 flush();
 if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
     echo '      <div class="clearer"></div>
 <div class="wrap">
      ';
-
     echo '
      <div class="page" >
 ';
@@ -137,7 +110,6 @@ if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && 
 ';
 }
 tpl_flush();
-///echo '  <div class="stylefoot"></div>';
 echo '<div class="no">';
 /* provide DokuWiki housekeeping, required in all templates */
 tpl_indexerWebBug();
