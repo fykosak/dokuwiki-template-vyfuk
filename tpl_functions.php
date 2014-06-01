@@ -574,7 +574,11 @@ function _fks_image_show() {
         $hrefs = preg_split('/\//', $files[$images[$i]]);
         //echo $hrefs[3];
         //echo ' ' . $images[$i] . ' ';
-        echo '<div id="fks_images' . $i . '" class="fks_images" style="display:block;opacity:1;">'
+       
+        echo '<div id="fks_images' . $i . '" class="fks_images" style="display:'; if($i==0){
+            echo 'block';
+            
+        }else{echo 'none';};echo';opacity:1;">'
         . '<a href="' . wl() . '/../'.$hrefs[2].'/'.$hrefs[3].'/page">'
         . '<img src="' . substr(wl(), 0, -6) . '/_media/' . substr($files[$images[$i]], 10) . '" width="95%"></a></div>';
     }
