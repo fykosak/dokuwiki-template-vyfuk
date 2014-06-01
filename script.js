@@ -13,41 +13,69 @@ window.onscroll = function() {
             document.getElementById("scrollmenu").className = "scrollmenu_dis";
         }
         ;
-    }else{
+    } else {
         document.getElementById("scrollmenu").className = "scrollmenu_mini";
     }
     ;
 };
 
-function scrollopacitydown(opacity) {
+window.onload = function() {
+    for (var i = 1; i < 5; i++) {
+        document.getElementById("fks_images" + i).style.display = "none";
+    }
+    ;
+    var show = 0;
+    shownext(show);
+
+
+};
+function shownext(show) {
     setTimeout(function() {
-        if (opacity < 0.15) {
-            document.getElementById("scrollmenu").style.display = "none";
-            document.getElementById("scrollmenu").style.opacity = 0;
+        if (show == 4) {
+            var newshow = 0;
         } else {
-            document.getElementById("scrollmenu").style.opacity = opacity;
-            opacity = opacity - 0.1;
-            scrollopacitydown(opacity);
+            var newshow = show;
+            newshow++;
         }
         ;
+        var percento = 100;
+        opacityimages(percento, newshow, show);
+    }, 10000);
 
-    }, 100);
 }
 ;
+function opacityimages(percento, newshow, show) {
+    percento--;
+    if (percento === 50) {
+        percento = 49;
 
-function scrollopacityup(opacity) {
-    setTimeout(function() {
-        if (opacity > 0.95) {
-            document.getElementById("scrollmenu").style.display = "block";
-            document.getElementById("scrollmenu").style.opacity = 1;
+        document.getElementById("fks_images" + show).style.display = "none";
+        document.getElementById("fks_images" + show).style.opacity = 1;
+        document.getElementById("fks_images" + newshow).style.display = "block";
+        document.getElementById("fks_images" + newshow).style.opacity = 0;
+
+    }
+    ;
+    if (percento > 0) {
+        if (percento > 50) {
+               var percentojedna = (percento - 50)*2 / 100;
+                document.getElementById("fks_images" + show).style.opacity = percentojedna;
+            
+
         } else {
-            document.getElementById("scrollmenu").style.opacity = opacity;
-            document.getElementById("scrollmenu").style.display = "block";
-            opacity = opacity + 0.1;
-            scrollopacityup(opacity);
+            var percentojedna = ((50 - percento) * 2) / 100;
+
+            document.getElementById("fks_images" + newshow).style.opacity = percentojedna;
+
         }
         ;
+        setTimeout(function() {
+            opacityimages(percento, newshow, show);
+        }, 50);
+    } else {
+        shownext(newshow);
+    }
+    ;
 
-    }, 100);
 }
 ;

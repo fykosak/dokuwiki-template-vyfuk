@@ -20,6 +20,7 @@ echo '
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="', $conf['lang'], '"
  lang="', $conf['lang'], '" dir="', $lang['direction'], '">
 <head>
+
   <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>
@@ -31,8 +32,10 @@ echo '</title>
 
 tpl_metaheaders();
 echo tpl_favicon(array('favicon', 'mobile'));
-echo '<script type="text/javascript" charset="utf-8" src="lib/tpl/wallpaper/script.js"></script>';
-echo '  </head>
+echo '<script type="text/javascript" charset="utf-8" src="'.wl().'/../lib/tpl/wallpaper/script.js"></script>';
+echo ' 
+
+</head>
 
 <body>
 <div class="scrollmenu_dis" id="scrollmenu" >
