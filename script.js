@@ -40,7 +40,7 @@ function shownext(show) {
         ;
         var percento = 100;
         opacityimages(percento, newshow, show);
-    }, 10000);
+    }, 5000);
 
 }
 ;
@@ -71,7 +71,7 @@ function opacityimages(percento, newshow, show) {
         ;
         setTimeout(function() {
             opacityimages(percento, newshow, show);
-        }, 50);
+        }, 25);
     } else {
         shownext(newshow);
     }
