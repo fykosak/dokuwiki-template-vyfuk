@@ -559,7 +559,7 @@ function _wp_tpl_youarehere($sep = ' » ') {
 function _fkssidebar() {
     echo '<div class="fkssidebar">';
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
-    _fks_image_show();
+    
     echo '</div> ';
     return 0;
 }
