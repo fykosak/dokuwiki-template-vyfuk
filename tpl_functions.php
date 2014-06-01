@@ -559,28 +559,8 @@ function _wp_tpl_youarehere($sep = ' » ') {
 function _fkssidebar() {
     echo '<div class="fkssidebar">';
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
-    _fks_image_show();
+    
     echo '</div> ';
     return 0;
 }
 
-function _fks_image_show() {
-    $files = glob('data/media/galerie/*/*');
-    //print_r());
-    //echo count($files);
-
-    for ($i = 0; $i < 5; $i++) {
-        $images[$i] = rand(0, count($files));
-        $hrefs = preg_split('/\//', $files[$images[$i]]);
-        //echo $hrefs[3];
-        //echo ' ' . $images[$i] . ' ';
-       
-        echo '<div id="fks_images' . $i . '" class="fks_images" style="display:'; if($i==0){
-            echo 'block';
-            
-        }else{echo 'none';};echo';opacity:1;">'
-        . '<a href="' . wl() . '/../'.$hrefs[2].'/'.$hrefs[3].'/page">'
-        . '<img src="' . substr(wl(), 0, -6) . '/_media/' . substr($files[$images[$i]], 10) . '" width="95%"></a></div>';
-    }
-
-}
