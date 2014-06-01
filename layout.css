@@ -305,7 +305,7 @@ div.dokuwiki div.page {
     min-width: 25em;
     width: 60% !important;
     /* width: 780px; */
-    padding: 1.5em 1em 1.5em 1.5em;
+    padding: 0em 1em 1.5em 1.5em;
     /*background-color: transparent;*/
     height: 100%;
     max-width: 45em;
@@ -319,7 +319,7 @@ div.dokuwiki div.fkssidebar {
     /*max-width: 25em;*/
     width: 30%;
     width: 25em;
-    padding: 1.5em 1.5em 1.5em 1em;
+    padding: 0em 1.5em 1.5em 1em;
     height: 100%;
     margin-bottom: auto;
     padding-bottom: auto;
@@ -736,6 +736,20 @@ div.fksfootbar p{
     color: __background__;
     letter-spacing: 2px;
     margin-bottom: 0.2em !important;
+}
+
+div.fksfootbar p a.mail{
+    color: __background__;
+    font-weight: bold;
+}
+
+div.fksfootbar p a.mail:hover{
+    color: __background__;
+}
+
+div.fksfootbar p a.mail:before{
+    content: " ";
+
 }
 
 div.fks_vyfuk_logo{
