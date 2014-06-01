@@ -16,7 +16,6 @@ if (!defined('DOKU_INC')) {
 
 /* prints the menu */
 
-
 function _fks_topbar() {
     //echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkstopbar.txt", false)), $info);
 
@@ -126,8 +125,6 @@ function _fks_topbar() {
     echo html_buildlist($data2, 'idx', '_wp_tpl_list_index', 'html_li_index');
 }
 
-
-
 function _fks_topbarlogo() {
     echo '<ul class="fkstopbarlogo">
         <li class="open"><div class="li">
@@ -236,7 +233,7 @@ function _fks_topbaruser() {
 
 //echo '    </div>
         echo'    </ul></li>';
-    }else{
+    } else {
         echo '<li class="level2"><div class="li">';
         tpl_button('login');
         echo '</div></li>';
@@ -562,6 +559,24 @@ function _wp_tpl_youarehere($sep = ' » ') {
 function _fkssidebar() {
     echo '<div class="fkssidebar">';
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
+    _fks_image_show();
     echo '</div> ';
     return 0;
+}
+
+function _fks_image_show() {
+    $files = glob('data/media/galerie/*/*');
+    //print_r());
+    //echo count($files);
+
+    for ($i = 0; $i < 5; $i++) {
+        $images[$i] = rand(0, count($files));
+        $hrefs = preg_split('/\//', $files[$images[$i]]);
+        //echo $hrefs[3];
+        //echo ' ' . $images[$i] . ' ';
+        echo '<div id="fks_images' . $i . '" class="fks_images" style="display:block;opacity:1;">'
+        . '<a href="' . wl() . '/../'.$hrefs[2].'/'.$hrefs[3].'/page">'
+        . '<img src="' . substr(wl(), 0, -6) . '/_media/' . substr($files[$images[$i]], 10) . '" width="95%"></a></div>';
+    }
+
 }
