@@ -559,7 +559,7 @@ function _wp_tpl_youarehere($sep = ' » ') {
 function _fkssidebar() {
     echo '<div class="fkssidebar">';
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
-    echo '<div class="fb-like-box" data-href="https://www.facebook.com/ksvyfuk" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="false"></div>';
+    echo '<div class="fb-like-box" data-href="https://www.facebook.com/ksvyfuk" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>';
         
     echo '</div> ';
     return 0;
