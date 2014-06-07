@@ -42,19 +42,9 @@ echo '
   })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
   ga("create", "UA-51523765-1", "cuni.cz");
-  ga("send", "pageview");
+  ga("send", "pageview");</script>';
 
-</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);';
-echo"
-}(document, 'script', 'facebook-jssdk'));</script>
-";
+
 echo'
 
 </head>
@@ -70,6 +60,8 @@ _fks_topbaruser();
 echo '</li></ul>';
 echo '</div>
      <div class="clearer"></div>
+     <div id="fb-root"></div>
+
 <div class="dokuwiki" id="dokuwiki">'
 ;
 //html_msgarea(); 
