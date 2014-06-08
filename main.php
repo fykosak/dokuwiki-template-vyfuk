@@ -33,7 +33,7 @@ echo '</title>
 tpl_metaheaders();
 echo tpl_favicon(array('favicon', 'mobile'));
 
-echo '<script type="text/javascript" charset="utf-8" src="' . wl() . '/../lib/tpl/wallpaper/script.js"></script>';
+echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/tpl/wallpaper/script.js"></script>';
 echo '  
 <script>
   (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){

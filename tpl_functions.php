@@ -128,7 +128,7 @@ function _fks_topbar() {
 function _fks_topbarlogo() {
     echo '<ul class="fkstopbarlogo">
         <li class="open"><div class="li">
-    <a href="' . wl() . '">  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
+    <a href="' . DOKU_BASE . '">  <span> Výfuk </span><span class="fkstopbatbeta">beta</span></a>
     </div></li></ul>';
 }
 
