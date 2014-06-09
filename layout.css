@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font: 80% "Open Sans", Arial, sans-serif;
     background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg_color2.jpg) repeat;
     background-attachment: fixed;
     color: __text__; 
@@ -154,7 +154,6 @@ div.dokuwiki div.wrap {
     width: 100%;
     overflow: hidden;
     min-width: 31em;
-    font: 130% /*"Lucida Grande"*/"CMU Bright", Verdana, Lucida, Helvetica, Arial, sans-serif;
     background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
     border-radius: 0px;
     /*background-image: url("../../plugins/fksnewsfeed/images/vyfuk2_bg.png");
