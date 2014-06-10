@@ -282,7 +282,7 @@ div.dokuwiki a.nolink {
 /* external link */
 div.dokuwiki a.urlextern {
     //background: transparent url(images/link_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    //padding: 1px 0px 1px 16px;
 }
 div.dokuwiki a.urlextern:before {
     content: url(images/link_icon.gif)
@@ -292,7 +292,7 @@ div.dokuwiki a.urlextern:before {
 /* windows share */
 div.dokuwiki a.windows {
     //background: transparent url(images/windows.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    //padding: 1px 0px 1px 16px;
 }
 div.dokuwiki a.windows {
     content: url(images/windows.gif)
@@ -319,7 +319,7 @@ div.dokuwiki a.interwiki:active {
 /* email link */
 div.dokuwiki a.mail {
     //background: transparent url(images/mail_icon.gif) 0px 1px no-repeat;
-    padding: 1px 0px 1px 16px;
+    //padding: 1px 0px 1px 16px;
 }
 div.dokuwiki a.mail:before {
    content: url(images/mail_icon.gif) 
