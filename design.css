@@ -195,7 +195,7 @@ div.dokuwiki form#dw__editform div.license {
 
 div.dokuwiki input.button,
 div.dokuwiki button.button {  
-    font: 130% /*"Lucida Grande"*/"CMU Bright", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font: 130% /*"Lucida Grande"*/"Open Sans", Arial, sans-serif;
     border: 1px solid __text_other__;
     color: __text__;
     background-color: __background__;

@@ -721,7 +721,7 @@ span.fkstopbatbeta{
 
 /* ----------- fks foot bar ----------------*/
 div.dokuwiki div.fksfootbar{
-    font: 130% /*"Lucida Grande"*/"CMU Bright", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font: 100% /*"Lucida Grande"*/"Open Sans", Arial, sans-serif;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
