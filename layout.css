@@ -794,7 +794,7 @@ div.fks_images{
 
 div.fks_images a img{
     position: relative;
-    top:-20px;
+    top:0%;
 }
 div.fks_images a{
     height: 150px;
