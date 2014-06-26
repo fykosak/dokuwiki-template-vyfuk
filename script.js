@@ -8,9 +8,7 @@ window.onscroll = function() {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (scrollTop > 320) {
             $("#scrollmenu").slideDown();
-        }
-        ;
-        if (scrollTop < 300) {
+        }else{
             $("#scrollmenu").slideUp();
         }
         ;
