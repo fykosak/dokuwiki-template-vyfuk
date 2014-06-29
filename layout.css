@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font: 80% "Open Sans", Arial, sans-serif;
+    font: 90% "Open Sans", Arial, sans-serif;
     background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg_color2.jpg) repeat;
     background-attachment: fixed;
     color: __text__; 
