@@ -1,3 +1,4 @@
+
 /*
  * Tableless Layout for Wallpaper template
  *
@@ -244,7 +245,7 @@ div.dokuwiki div.mainmenu ul li div.li a {
     display: block !important;
     padding: 1em 1em 0.6em 1em;
     border-radius: 3px;
-    
+
 }
 
 div.dokuwiki div.mainmenu ul li div.li a:hover,
@@ -505,7 +506,7 @@ div.scrollmenu ul li {
     padding: 0;
     float: left;
     /*line-height: 1.25em;*/
-   
+
 }
 
 div.scrollmenu_mini ul li.hover,
@@ -528,8 +529,8 @@ div.scrollmenu_mini ul{
     /*border-radius: 3px;*/ 
 }
 div.scrollmenu_mini ul:before{
-content: 'menu';
-position: fixed;
+    content: 'menu';
+    position: fixed;
 }
 
 div.scrollmenu ul li ul li ,
@@ -789,17 +790,19 @@ div.fks_logomrak_1{
 * fks_image_show
 */
 div.fks_images{
-    
+
 }
 
 div.fks_images a img{
+    width: 150%;
     position: relative;
-    top:-20px;
+    top:0%;
+    left: -25%
 }
 div.fks_images a{
     height: 150px;
     overflow: hidden;
     display: block;
-    
-    
+
+
 }
