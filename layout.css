@@ -243,7 +243,7 @@ div.dokuwiki div.mainmenu ul li div.li a {
     color: __background__ !important;
     text-decoration: none !important;
     display: block !important;
-    padding: 1em 1em 0.6em 1em;
+    padding: 1em 1em 1em 1em;
     border-radius: 3px;
 
 }
@@ -594,7 +594,7 @@ div.scrollmenu ul li ul ul li div.li a {
     background-color: __background_neu__; 
     text-decoration: none !important;
     display: block !important;
-    padding: 1em 1em 0.6em 1em;
+    padding: 1em 1em 1em 1em;
     border-radius: 3px;
 }
 
@@ -612,7 +612,7 @@ div.scrollmenu ul li ul li div.li a {
     color: __background__ !important;
     text-decoration: none !important;
     display: block !important;
-    padding: 1em 1em 0.6em 1em;
+    padding: 1em 1em 1em 1em;
     border-radius: 3px;
 }
 
@@ -658,11 +658,11 @@ div.scrollmenu ul li ul ul li.open {
 }
 
 div.scrollmenu ul li ul.fkstopbaruser li div.li input.button{
-    padding: .7em 1em .5em 1em;
+    padding: .7em 1em .7em 1em;
 }
 
 div.scrollmenu ul li ul.fkstopbaruser li div.li input.button:hover{
-    padding: .7em 1em .5em 1em;
+    padding: .7em 1em .7em 1em;
 }
 
 div.scrollmenu ul li ul.fkstopbarlogo li div a{
