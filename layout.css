@@ -658,11 +658,11 @@ div.scrollmenu ul li ul ul li.open {
 }
 
 div.scrollmenu ul li ul.fkstopbaruser li div.li input.button{
-    padding: .7em 1em .7em 1em;
+    padding: .5em 1em .7em 1em;
 }
 
 div.scrollmenu ul li ul.fkstopbaruser li div.li input.button:hover{
-    padding: .7em 1em .7em 1em;
+    padding: .5em 1em .7em 1em;
 }
 
 div.scrollmenu ul li ul.fkstopbarlogo li div a{
