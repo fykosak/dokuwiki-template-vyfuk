@@ -169,7 +169,7 @@ div.dokuwiki div.mainmenu {
     width: 100%;
     font-family: gloria-hallelujah, sans-serif;
     letter-spacing: 2px;
-    font-size: 140%;
+    font-size: 130%;
     /*  background-color: __background_alt__; */
     background-color: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
     /*height: 3em;*/
@@ -522,7 +522,7 @@ div.scrollmenu ul li ul,
 div.scrollmenu_mini ul{
     z-index: 0;
     list-style-type: none;
-    margin: 0 2em 0 0 ;
+    margin: 0 0 0 0 ;
     padding: 0;
     font-weight: bold !important;
     height: auto;
