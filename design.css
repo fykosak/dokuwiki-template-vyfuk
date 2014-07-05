@@ -113,6 +113,20 @@ div.dokuwiki select.edit {
     border-radius: 3px;
 }
 
+
+div.dokuwiki input.datalist,
+div.dokuwiki select.datalist {
+    font-size: 100%;
+    border: 1px solid __text_other__;
+    color: __text__;
+    background-color: __background__;
+    vertical-align: middle;
+    margin: 1px;
+    padding: 0.20em 0.3em;
+    display: inline;
+    border-radius: 3px;
+}
+
 #config__manager td.label span.outkey {
     color: __text_alt__;
     padding: 0 2px;
