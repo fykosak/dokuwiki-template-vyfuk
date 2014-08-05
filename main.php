@@ -36,7 +36,7 @@ tpl_metaheaders();
 echo tpl_favicon(array('favicon', 'mobile'));
 
 echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/tpl/wallpaper/script.js"></script>';
-echo '  
+/*echo '  
 <script>
   (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,7 +44,7 @@ echo '
   })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
   ga("create", "UA-51523765-1", "cuni.cz");
-  ga("send", "pageview");</script>';
+  ga("send", "pageview");</script>';*/
 
 
 echo'
