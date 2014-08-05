@@ -21,10 +21,11 @@ echo '
  lang="', $conf['lang'], '" dir="', $lang['direction'], '">
 <head>
 
- './/<link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
-  //<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css" />
-  //<script src="//use.edgefonts.net/gloria-hallelujah:n4:all;source-sans-pro.js"></script>
-' <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css" />
+  <script src="//use.edgefonts.net/gloria-hallelujah:n4:all;source-sans-pro.js"></script>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>
 ';
 echo ' ', strip_tags($conf['title']), ' | ';
@@ -36,7 +37,7 @@ tpl_metaheaders();
 echo tpl_favicon(array('favicon', 'mobile'));
 
 echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/tpl/wallpaper/script.js"></script>';
-/*echo '  
+echo '  
 <script>
   (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,7 +45,7 @@ echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/t
   })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
   ga("create", "UA-51523765-1", "cuni.cz");
-  ga("send", "pageview");</script>';*/
+  ga("send", "pageview");</script>';
 
 
 echo'
