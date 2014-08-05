@@ -794,10 +794,10 @@ div.fks_images{
 }
 
 div.fks_images a img{
-    width: 150%;
+    //width: 150%;
     position: relative;
     top:0%;
-    left: -25%
+    //left: -25%
 }
 div.fks_images a{
     height: 150px;
