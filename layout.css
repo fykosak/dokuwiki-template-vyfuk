@@ -36,8 +36,8 @@ img#fakebackground {
 }
 div.dokuwiki {
     min-width: 31em;
-    max-width: 85em;
-    width: 85%;
+    max-width: 83em;//pôvodne 85
+    //width: 85%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0em;
