@@ -60,7 +60,7 @@ function _fks_topbar() {
             _wp_tpl_parsemenufile($data, $menufilename, $start);
         }
     }
-    if (!$conf['tpl'][$tpl]['usemenufile'] or ($conf['tpl'][$tpl]['usemenufile'] and !$ff)) {
+    if (!$conf['tpl'][$tpl]['usemenufile'] or ( $conf['tpl'][$tpl]['usemenufile'] and ! $ff)) {
         search($data, $conf['datadir'], 'search_universal', $opts);
     }
     $i = 0;
@@ -101,7 +101,7 @@ function _fks_topbar() {
         }
         if ($conf['tpl'][$tpl]['hiderootlinks']) {
             $item2 = array();
-            if ($item['type'] == 'f' and !$item['ns'] and $item['id']) {
+            if ($item['type'] == 'f' and ! $item['ns'] and $item['id']) {
                 if ($first) {
                     $item2['id'] = 'start';
                     $item2['ns'] = 'root';
@@ -153,9 +153,14 @@ function _fks_topbaruser() {
     //echo '<ul class="fkstopbaruser"><li> <div class="li"><span class="fkstopbaruserinfo">';
     echo '<ul class="fkstopbaruser"><li class="open"> <div class="li">';
     if ($_SERVER['REMOTE_USER']) {
-        echo '<a class="fkstopbaruserinfo"> <!--<span class="fkstopbaruserinfo"></span>--> ' . $INFO['userinfo']['name'] . '</a></div>';
+        echo '<a class="fkstopbaruserinfo"></a>';
+        echo'</div>';
         //print_r($INFO['userinfo']);
         echo '<ul class="idx">';
+
+        echo '<li class="level2"><div class="li">';
+        echo '<a class="fkstopbaruserinfo">' . $INFO['userinfo']['name'] . '</a>';
+        echo '</div></li>';
 
 
         echo '<li class="level2"><div class="li">';
@@ -206,29 +211,23 @@ function _fks_topbaruser() {
                 tpl_button('media');
                 echo '</div></li>';
             }
-            echo '<li class="level2"><div class="li">'
+            
+            echo '<li class="level2"><div class="li">';
+            $form= new Doku_Form(array('class'=>'button btn_admin'), ":wiki:doku.php", "post");
+            $form->addElement(form_makeOpenTag('div',array('class'=>'no')));
+            /*
             . '<form class="button btn_admin" method="post" action="http://vyfuk.mff.cuni.cz/wiki">'
             . '<div class="no">'
             . '<input type="submit" value="Wiki" class="button" title="wiki">'
             . '</div></form>'
-            //. '<a href="http://vyfuk.mff.cuni.cz/wiki">WIKI</a>'
-            . '</div></li>';
-        }
-
-
-
-        $dw2pdf = &plugin_load('action', 'dw2pdf');
-        if ($dw2pdf) {
-            global $REV;
-            echo '<li class="level2"><div class="li">';
-            echo '<form class="button" method="get" action="', wl($ID), '">
-              <div class="no"><input type="hidden" name="do" value="export_pdf" />
-              <input type="hidden" name="rev" value="', $REV, '" />
-              <input type="hidden" name="id" value="', $ID, '" />
-              <input type="submit" value="PDF-Export" class="button" title="PDF-Export" />
-              </div></form>';
+            //. '<a href="http://vyfuk.mff.cuni.cz/wiki">WIKI</a>'*/
+            
+            $form->addElement($elem);
+            $form->addElement(form_makeButton("submit", false, "Wiki", array('title'=>'wiki','action'=>"http://vyfuk.mff.cuni.cz/wiki")));
+            html_form('wiki', $form);
             echo '</div></li>';
         }
+
         if ($ACT != 'login' && $ACT != 'logout') {
             echo '<li class="level2"><div class="li">';
             tpl_button('login');
@@ -240,9 +239,7 @@ function _fks_topbaruser() {
 //echo '    </div>
         echo'    </ul></li>';
     } else {
-        echo '<li class="level2"><div class="li">';
-        tpl_button('login');
-        echo '</div></li>';
+        
     }
     echo '</ul>';
 }
@@ -295,7 +292,7 @@ function _wp_tpl_mainmenu() {
             _wp_tpl_parsemenufile($data, $menufilename, $start);
         }
     }
-    if (!$conf['tpl'][$tpl]['usemenufile'] or ($conf['tpl'][$tpl]['usemenufile'] and !$ff)) {
+    if (!$conf['tpl'][$tpl]['usemenufile'] or ( $conf['tpl'][$tpl]['usemenufile'] and ! $ff)) {
         search($data, $conf['datadir'], 'search_universal', $opts);
     }
     $i = 0;
@@ -336,7 +333,7 @@ function _wp_tpl_mainmenu() {
         }
         if ($conf['tpl'][$tpl]['hiderootlinks']) {
             $item2 = array();
-            if ($item['type'] == 'f' and !$item['ns'] and $item['id']) {
+            if ($item['type'] == 'f' and ! $item['ns'] and $item['id']) {
                 if ($first) {
                     $item2['id'] = 'start';
                     $item2['ns'] = 'root';
