@@ -1,4 +1,4 @@
-var $ = jQuery;
+/*var $ = jQuery;
 window.onscroll = function() {
     var $window = $(window);
 
@@ -16,4 +16,4 @@ window.onscroll = function() {
         document.getElementById("scrollmenu").className = "scrollmenu_mini";
     }
     ;
-};
+};*/
