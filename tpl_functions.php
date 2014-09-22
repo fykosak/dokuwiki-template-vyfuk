@@ -16,128 +16,6 @@ if (!defined('DOKU_INC')) {
 
 /* prints the menu */
 
-function _fks_topbar() {
-    //echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkstopbar.txt", false)), $info);
-
-    require_once(DOKU_INC . 'inc/search.php');
-    global $conf;
-    global $ID;
-
-    /* options for search() function */
-    $opts = array(
-        'depth' => 0,
-        'listfiles' => true,
-        'listdirs' => true,
-        'pagesonly' => true,
-        'firsthead' => true,
-        'sneakyacl' => true
-    );
-
-    $dir = $conf['datadir'];
-    $tpl = $conf['template'];
-    if (isset($conf['start'])) {
-        $start = $conf['start'];
-    } else {
-        $start = 'start';
-    }
-
-    $ns = dirname(str_replace(':', '/', $ID));
-    if ($ns == '.') {
-        $ns = '';
-    }
-    $ns = utf8_encodeFN(str_replace(':', '/', $ns));
-
-    $data = array();
-    $ff = TRUE;
-    if ($conf['tpl'][$tpl]['usemenufile']) {
-
-        $menufilename = 'fkstopbar';
-
-        $filepath = wikiFN($menufilename);
-        if (!file_exists($filepath)) {
-            $ff = FALSE;
-        } else {
-            _wp_tpl_parsemenufile($data, $menufilename, $start);
-        }
-    }
-    if (!$conf['tpl'][$tpl]['usemenufile'] or ( $conf['tpl'][$tpl]['usemenufile'] and ! $ff)) {
-        search($data, $conf['datadir'], 'search_universal', $opts);
-    }
-    $i = 0;
-    $cleanindexlist = array();
-    if ($conf['tpl'][$tpl]['cleanindexlist']) {
-        $cleanindexlist = explode(',', $conf['tpl'][$tpl]['cleanindexlist']);
-        $i = 0;
-        foreach ($cleanindexlist as $tmpitem) {
-            $cleanindexlist[$i] = trim($tmpitem);
-            $i++;
-        }
-    }
-    $data2 = array();
-    $first = true;
-    foreach ($data as $item) {
-        if (preg_match('#https?://#', $item['id'])) {
-            $item['type'] = 'abs';
-            $data2[] = $item;
-            continue;
-        }
-        if ($conf['tpl'][$tpl]['cleanindex']) {
-            if (strpos($item['id'], 'playground') !== false or strpos($item['id'], 'wiki') !== false) {
-                continue;
-            }
-            if (count($cleanindexlist)) {
-                if (strpos($item['id'], ':')) {
-                    list($tmpitem) = explode(':', $item['id']);
-                } else {
-                    $tmpitem = $item['id'];
-                }
-                if (in_array($tmpitem, $cleanindexlist)) {
-                    continue;
-                }
-            }
-        }
-        if (strpos($item['id'], $menufilename) !== false and $item['level'] == 1) {
-            continue;
-        }
-        if ($conf['tpl'][$tpl]['hiderootlinks']) {
-            $item2 = array();
-            if ($item['type'] == 'f' and ! $item['ns'] and $item['id']) {
-                if ($first) {
-                    $item2['id'] = 'start';
-                    $item2['ns'] = 'root';
-                    $item2['perm'] = 8;
-                    $item2['type'] = 'd';
-                    $item2['level'] = 1;
-                    $item2['open'] = 1;
-                    $item2['title'] = 'Start';
-                    $data2[] = $item2;
-                    $first = false;
-                }
-                $item['ns'] = 'root';
-                $item['level'] = 2;
-            }
-        }
-        if ($item['id'] == $start or preg_match('/:' . $start . '$/', $item['id'])) {
-            continue;
-        }
-        $data2[] = $item;
-    }
-    echo html_buildlist($data2, 'idx', '_wp_tpl_list_index', 'html_li_index');
-}
-
-function _fks_topbarlogo() {
-    echo '<ul class="fkstopbarlogo">
-            <li class="open">
-                <div class="li">
-                    <a href="' . DOKU_BASE . '">  
-                        <span> Výfuk </span>
-                        <span class="fkstopbatbeta">beta</span>
-                    </a>
-                </div>
-            </li>
-        </ul>';
-}
-
 function _fks_footbar() {
 
     return p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
@@ -150,98 +28,86 @@ function _fks_footbar() {
 
 function _fks_topbaruser() {
     global $INFO;
-    //echo '<ul class="fkstopbaruser"><li> <div class="li"><span class="fkstopbaruserinfo">';
-    echo '<ul class="fkstopbaruser"><li class="open"> <div class="li">';
+
+
     if ($_SERVER['REMOTE_USER']) {
-        echo '<a class="fkstopbaruserinfo"></a>';
-        echo'</div>';
-        //print_r($INFO['userinfo']);
-        echo '<ul class="idx">';
-
-        echo '<li class="level2"><div class="li">';
-        echo '<a class="fkstopbaruserinfo">' . $INFO['userinfo']['name'] . '</a>';
-        echo '</div></li>';
-
-
-        echo '<li class="level2"><div class="li">';
-        tpl_button('admin');
-        echo '</div></li>';
-
-        echo '<li class="level2"><div class="li">';
-        tpl_button('edit');
-        echo '</div></li>';
-
-
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 1,
+            'open' => 1,
+            'title' => '<span class="fkstopbaruserinfo"></span>');
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => $INFO['userinfo']['name']);
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'admin'));
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'edit'));
         if ($_SERVER['REMOTE_USER']) {
-            /*
-             * nepotrebné kvôli auth FKSDB 
-             */
-            //echo '<li class="level2"><div class="li">';
-            //tpl_button('subscribe');
-            //echo '</div></li>';
-            //echo '<li class="level2"><div class="li">';
-            //tpl_button('profile');
-            //echo '</div></li>';
-
-            echo '<li class="level2"><div class="li">';
-            tpl_button('history');
-            echo '</div></li>';
+            $data[] = array('id' => '',
+                'ns' => '',
+                'perm' => 8,
+                'type' => 'f',
+                'level' => 2,
+                'open' => 1,
+                'title' => return_fce('tpl_button', 'history'));
         }
-
         if (!$_SERVER['REMOTE_USER'] && $ACT != 'login' && $ACT != 'logout') {
-            if (!$conf['tpl']['wallpaper']['showsearch']) {
-                echo '<li class="level2"><div class="li">';
-                tpl_searchform();
-                echo '</div></li>';
-            }
-            if ($conf['tpl']['wallpaper']['showmedia']) {
-                echo '<li class="level2"><div class="li">';
-                tpl_button('media');
-                echo '</div></li>';
-            }
+            
         } else {
             if ($ACT != 'login' && $ACT != 'logout') {
-                if ($conf['tpl']['wallpaper']['showsearch']) {
-                    echo '<li class="level2"><div class="li">';
-                    tpl_searchform();
-                    echo '</div></li>';
-                    //echo '&nbsp';
-                }
-                echo '<li class="level2"><div class="li">';
-                tpl_button('media');
-                echo '</div></li>';
-            }
-            
-            echo '<li class="level2"><div class="li">';
-            $form= new Doku_Form(array('class'=>'button btn_admin'), ":wiki:doku.php", "post");
-            $form->addElement(form_makeOpenTag('div',array('class'=>'no')));
-            /*
-            . '<form class="button btn_admin" method="post" action="http://vyfuk.mff.cuni.cz/wiki">'
-            . '<div class="no">'
-            . '<input type="submit" value="Wiki" class="button" title="wiki">'
-            . '</div></form>'
-            //. '<a href="http://vyfuk.mff.cuni.cz/wiki">WIKI</a>'*/
-            
-            $form->addElement($elem);
-            $form->addElement(form_makeButton("submit", false, "Wiki", array('title'=>'wiki','action'=>"http://vyfuk.mff.cuni.cz/wiki")));
-            html_form('wiki', $form);
-            echo '</div></li>';
+                $data[] = array('id' => '',
+                    'ns' => '',
+                    'perm' => 8,
+                    'type' => 'f',
+                    'level' => 2,
+                    'open' => 1,
+                    'title' => return_fce('tpl_searchform'));
+                $data[] = array('id' => '',
+                    'ns' => '',
+                    'perm' => 8,
+                    'type' => 'f',
+                    'level' => 2,
+                    'open' => 1,
+                    'title' => return_fce('tpl_button', 'media'));
+            };
+
+            $data[] = array('id' => '',
+                'ns' => 'vyfuk.mff.cuni.cz/wiki/doku.php',
+                'perm' => 8,
+                'type' => 'f',
+                'level' => 2,
+                'open' => 1,
+                'title' => 'WIKI');
         }
 
         if ($ACT != 'login' && $ACT != 'logout') {
-            echo '<li class="level2"><div class="li">';
-            tpl_button('login');
-            echo '</div></li>';
-            //echo '&nbsp;';
+            $data[] = array('id' => '',
+                'ns' => '',
+                'perm' => 8,
+                'type' => 'f',
+                'level' => 2,
+                'open' => 1,
+                'title' => return_fce('tpl_button', 'login'));
         }
-
-
-//echo '    </div>
-        echo'    </ul></li>';
-    } else {
-        
     }
-    echo '</ul>';
+    return $data;
 }
 
 /*
@@ -249,112 +115,69 @@ function _fks_topbaruser() {
  */
 
 function _wp_tpl_mainmenu() {
-    require_once(DOKU_INC . 'inc/search.php');
-    global $conf;
-    global $ID;
+    $data2 = array_merge(tpl_parsemenutext(), _fks_topbaruser());
+    echo'
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="' . DOKU_BASE . '">
+                        <span> Výfuk </span>
+                        <span class="fkstopbatbeta">beta</span>
+                    </a>
+    </div>
 
-    /* options for search() function */
-    $opts = array(
-        'depth' => 0,
-        'listfiles' => true,
-        'listdirs' => true,
-        'pagesonly' => true,
-        'firsthead' => true,
-        'sneakyacl' => true
-    );
-
-    $dir = $conf['datadir'];
-    $tpl = $conf['template'];
-    if (isset($conf['start'])) {
-        $start = $conf['start'];
-    } else {
-        $start = 'start';
-    }
-
-    $ns = dirname(str_replace(':', '/', $ID));
-    if ($ns == '.') {
-        $ns = '';
-    }
-    $ns = utf8_encodeFN(str_replace(':', '/', $ns));
-
-    $data = array();
-    $ff = TRUE;
-    if ($conf['tpl'][$tpl]['usemenufile']) {
-        if ($conf['tpl'][$tpl]['menufilename']) {
-            $menufilename = $conf['tpl'][$tpl]['menufilename'];
-        } else {
-            $menufilename = 'menu';
-        }
-        $filepath = wikiFN($menufilename);
-        if (!file_exists($filepath)) {
-            $ff = FALSE;
-        } else {
-            _wp_tpl_parsemenufile($data, $menufilename, $start);
-        }
-    }
-    if (!$conf['tpl'][$tpl]['usemenufile'] or ( $conf['tpl'][$tpl]['usemenufile'] and ! $ff)) {
-        search($data, $conf['datadir'], 'search_universal', $opts);
-    }
-    $i = 0;
-    $cleanindexlist = array();
-    if ($conf['tpl'][$tpl]['cleanindexlist']) {
-        $cleanindexlist = explode(',', $conf['tpl'][$tpl]['cleanindexlist']);
-        $i = 0;
-        foreach ($cleanindexlist as $tmpitem) {
-            $cleanindexlist[$i] = trim($tmpitem);
-            $i++;
-        }
-    }
-    $data2 = array();
-    $first = true;
-    foreach ($data as $item) {
-        if (preg_match('#https?://#', $item['id'])) {
-            $item['type'] = 'abs';
-            $data2[] = $item;
-            continue;
-        }
-        if ($conf['tpl'][$tpl]['cleanindex']) {
-            if (strpos($item['id'], 'playground') !== false or strpos($item['id'], 'wiki') !== false) {
-                continue;
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">';
+    $inli = false;
+    !$inul = false;
+    foreach ($data2 as $v) {
+        if ($v['level'] == 1) {
+            if ($inul) {
+                $inul = false;
+                echo'</ul>';
             }
-            if (count($cleanindexlist)) {
-                if (strpos($item['id'], ':')) {
-                    list($tmpitem) = explode(':', $item['id']);
-                } else {
-                    $tmpitem = $item['id'];
-                }
-                if (in_array($tmpitem, $cleanindexlist)) {
-                    continue;
-                }
+            if ($inli) {
+                $inli = false;
+                echo'</li>';
             }
-        }
-        if (strpos($item['id'], $menufilename) !== false and $item['level'] == 1) {
-            continue;
-        }
-        if ($conf['tpl'][$tpl]['hiderootlinks']) {
-            $item2 = array();
-            if ($item['type'] == 'f' and ! $item['ns'] and $item['id']) {
-                if ($first) {
-                    $item2['id'] = 'start';
-                    $item2['ns'] = 'root';
-                    $item2['perm'] = 8;
-                    $item2['type'] = 'd';
-                    $item2['level'] = 1;
-                    $item2['open'] = 1;
-                    $item2['title'] = 'Start';
-                    $data2[] = $item2;
-                    $first = false;
-                }
-                $item['ns'] = 'root';
-                $item['level'] = 2;
+            $inli = true;
+            echo'<li class="dropdown">
+          <a href="' . wl($v['id']) . '" class="dropdown-toggle" data-toggle="dropdown">' . $v['title'] . '<span class="caret"></span></a>';
+        } elseif ($v['level'] == 2) {
+            if (!$inul) {
+                $inul = true;
+                echo'<ul class="dropdown-menu" role="menu">';
             }
+            echo'<li>';
+            if (!empty($v['id'])) {
+
+                echo'<a href="' . wl($v['id']) . '">' . $v['title'] . '</a>';
+            } else {
+                echo'<span>' . $v['title'] . '</span>';
+            };
+            echo'</li>';
         }
-        if ($item['id'] == $start or preg_match('/:' . $start . '$/', $item['id'])) {
-            continue;
-        }
-        $data2[] = $item;
     }
-    echo html_buildlist($data2, 'idx', '_wp_tpl_list_index', 'html_li_index');
+    if ($inli) {
+        $inli = false;
+        echo'</li>';
+    }
+    if ($inul) {
+        $inul = false;
+        echo'</ul>';
+    }
+    echo '</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+ </nav>';
 }
 
 /* Index item formatter
@@ -396,7 +219,7 @@ function _wp_tpl_parsemenufile(&$data, $filename, $start) {
         $numlines = count($lines2);
         $oldlevel = 0;
 // Array is read back to forth so pages with children can be found easier
-// you do not have to go back in the array if a child entry is found		
+// you do not have to go back in the array if a child entry is found
         for ($i = $numlines - 1; $i >= 0; $i--) {
             if (!$lines2[$i]) {
                 continue;
@@ -406,13 +229,13 @@ function _wp_tpl_parsemenufile(&$data, $filename, $start) {
             if ($level > 3) {
                 $level = 3;
             }
-// ignore lines without links			
+// ignore lines without links
             if (!preg_match('/\s*\[\[[^\]]+\]\]/', $tmparr[1])) {
                 continue;
             }
             $tmparr[1] = str_replace(array(']', '['), '', trim($tmparr[1]));
             list($id, $title) = explode('|', $tmparr[1]);
-// ignore links to non-existing pages			
+// ignore links to non-existing pages
             if (!file_exists(wikiFN($id))) {
                 if (preg_match('#https?://#', $id)) {
                     if (!$title) {
@@ -434,7 +257,7 @@ function _wp_tpl_parsemenufile(&$data, $filename, $start) {
             $data[$i]['title'] = $title;
 // namespaces must be tagged correctly (type = 'd') or they will not be found by the
 // html_wikilink function : means that they will marked as having subpages
-// even if there is no submenu			
+// even if there is no submenu
             if (strpos($id, ':') !== FALSE) {
                 $nsarray = explode(':', $id);
                 $pid = array_pop($nsarray);
@@ -458,7 +281,7 @@ function _wp_tpl_parsemenufile(&$data, $filename, $start) {
     return $ret;
 }
 
-# wallpaper modified version of pageinfo 
+# wallpaper modified version of pageinfo
 
 function _wp_tpl_pageinfo() {
     global $conf;
@@ -564,4 +387,122 @@ function _fkssidebar() {
     echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
     echo '</div> ';
     return 0;
+}
+
+function tpl_parsemenutext() {
+    require_once(DOKU_INC . 'inc/search.php');
+    global $conf;
+    global $ID;
+
+    /* options for search() function */
+    $opts = array(
+        'depth' => 0,
+        'listfiles' => true,
+        'listdirs' => true,
+        'pagesonly' => true,
+        'firsthead' => true,
+        'sneakyacl' => true
+    );
+
+    $dir = $conf['datadir'];
+    $tpl = $conf['template'];
+    if (isset($conf['start'])) {
+        $start = $conf['start'];
+    } else {
+        $start = 'start';
+    }
+
+    $ns = dirname(str_replace(':', '/', $ID));
+    if ($ns == '.') {
+        $ns = '';
+    }
+    $ns = utf8_encodeFN(str_replace(':', '/', $ns));
+
+    $data = array();
+    $ff = TRUE;
+    if ($conf['tpl'][$tpl]['usemenufile']) {
+        if ($conf['tpl'][$tpl]['menufilename']) {
+            $menufilename = $conf['tpl'][$tpl]['menufilename'];
+        } else {
+            $menufilename = 'menu';
+        }
+        $filepath = wikiFN($menufilename);
+        if (!file_exists($filepath)) {
+            $ff = FALSE;
+        } else {
+            _wp_tpl_parsemenufile($data, $menufilename, $start);
+        }
+    }
+    if (!$conf['tpl'][$tpl]['usemenufile'] or ( $conf['tpl'][$tpl]['usemenufile'] and ! $ff)) {
+        search($data, $conf['datadir'], 'search_universal', $opts);
+    }
+    $i = 0;
+    $cleanindexlist = array();
+    if ($conf['tpl'][$tpl]['cleanindexlist']) {
+        $cleanindexlist = explode(',', $conf['tpl'][$tpl]['cleanindexlist']);
+        $i = 0;
+        foreach ($cleanindexlist as $tmpitem) {
+            $cleanindexlist[$i] = trim($tmpitem);
+            $i++;
+        }
+    }
+    $data2 = array();
+    $first = true;
+    foreach ($data as $item) {
+
+        if (preg_match('#https?://#', $item['id'])) {
+            $item['type'] = 'abs';
+            $data2[] = $item;
+            continue;
+        }
+        if ($conf['tpl'][$tpl]['cleanindex']) {
+            if (strpos($item['id'], 'playground') !== false or strpos($item['id'], 'wiki') !== false) {
+                continue;
+            }
+            if (count($cleanindexlist)) {
+                if (strpos($item['id'], ':')) {
+                    list($tmpitem) = explode(':', $item['id']);
+                } else {
+                    $tmpitem = $item['id'];
+                }
+                if (in_array($tmpitem, $cleanindexlist)) {
+                    continue;
+                }
+            }
+        }
+        if (strpos($item['id'], $menufilename) !== false and $item['level'] == 1) {
+            continue;
+        }
+        if ($conf['tpl'][$tpl]['hiderootlinks']) {
+            $item2 = array();
+            if ($item['type'] == 'f' and ! $item['ns'] and $item['id']) {
+                if ($first) {
+                    $item2['id'] = 'start';
+                    $item2['ns'] = 'root';
+                    $item2['perm'] = 8;
+                    $item2['type'] = 'd';
+                    $item2['level'] = 1;
+                    $item2['open'] = 1;
+                    $item2['title'] = 'Start';
+                    $data2[] = $item2;
+                    $first = false;
+                }
+                $item['ns'] = 'root';
+                $item['level'] = 2;
+            }
+        }
+        if ($item['id'] == $start or preg_match('/:' . $start . '$/', $item['id'])) {
+            continue;
+        }
+        $data2[] = $item;
+    }
+    return $data2;
+}
+
+function return_fce($func, $param = '') {
+    ob_start();
+    call_user_func($func, $param);
+    $f = ob_get_contents();
+    ob_end_clean();
+    return $f;
 }

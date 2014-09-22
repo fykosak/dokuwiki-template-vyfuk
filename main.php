@@ -49,19 +49,19 @@ echo '
 
 
 echo'
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-<div class="scrollmenu_dis" id="scrollmenu" >
-<ul class="idx"><li class="level0">';
-_fks_topbarlogo();
-echo '</li><li class="level0">';
-_wp_tpl_mainmenu();
-echo '</li><li class="level0">';
-_fks_topbaruser();
-echo '</li></ul>';
-echo '</div>
+
      <div class="clearer"></div>
      <div id="fb-root"></div>
 
@@ -76,12 +76,12 @@ echo '  <div class="stylehead">
       
      <div class="clearer"></div>';
 echo' <div class="fksmenu">
-      <div class="mainmenu">
+     
 ';
 _wp_tpl_mainmenu();
-_fks_topbaruser();
+
 ;
-echo '      <div class="clearer"></div></div>
+echo '      <div class="clearer"></div>
      </div>
      <div class="fkspagename">
 ';
@@ -139,4 +139,4 @@ echo '</div></div>
 </body>
 </html>
 ';
-?>
+
