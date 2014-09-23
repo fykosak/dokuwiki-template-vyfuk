@@ -1,16 +1,16 @@
 
 body {
-  font: 10pt Times,'Times New Roman',serif;
-  line-height: 1.4em;
-  background-color: #fff;
-  color: #000;
-  text-align: left;
+    font: 10pt Times,'Times New Roman',serif;
+    line-height: 1.4em;
+    background-color: #fff;
+    color: #000;
+    text-align: left;
 }
 
 table {
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 tr,td,th { padding: 0; margin: 0; }
@@ -18,21 +18,21 @@ tr,td,th { padding: 0; margin: 0; }
 img { border: 0; }
 
 a {
-  color: #000000;
-  text-decoration: none;
-  background: none !important;
+    color: #000000;
+    text-decoration: none;
+    background: none !important;
 }
 
 a.interwiki {
-  padding-left: 0px !important;
+    padding-left: 0px !important;
 }
 
 
 div.meta {
-  clear: both;
-  margin-top: 1em;
-  font-size: 70%;
-  text-align: right;
+    clear: both;
+    margin-top: 1em;
+    font-size: 70%;
+    text-align: right;
 }
 
 
@@ -47,27 +47,27 @@ div.secedit,
 div.bar,
 div.mainmenu,
 img#fakebackground {
-  display: none;
+    display: none;
 }
 
 /* --------------------- Text formating -------------------------------- */
 
 /* external link */
 a.urlextern:after {
-   content: " [" attr(href) "]";
-   font-size: 90%;
+    content: " [" attr(href) "]";
+    font-size: 90%;
 }
 
 /* interwiki link */
 a.interwiki:after {
-   content: " [" attr(href) "]";
-   font-size: 90%;
+    content: " [" attr(href) "]";
+    font-size: 90%;
 }
 
 /* email link */
 a.mail:after {
-   content: " [" attr(href) "]";
-   font-size: 90%;
+    content: " [" attr(href) "]";
+    font-size: 90%;
 }
 
 /* existing wikilink */
@@ -75,7 +75,7 @@ a.wikilink1    { text-decoration: underline; }
 
 /* the document */
 div.page {
-  text-align: justify;
+    text-align: justify;
 }
 
 /* general headline setup */
@@ -104,23 +104,30 @@ h5 { font-size: 100%; border-bottom: none; }
 
 /* embedded images */
 img.media {
-  margin: 3px;
+    margin: 3px;
+    width: 90%;
+
 }
 
 /* the styles for media images are already in
    lib/styles/all.css, these are additional styles */
 img.medialeft {
-  border: 0;
-  float: left;
-  margin: 0 1.5em 0 0;
+    border: 0;
+    float: left;
+    margin: 0 1.5em 0 0;
+    width: 90%;
+
 }
 
 img.mediaright {
-  border: 0;
-  float: right;
-  margin: 0 0 0 1.5em;
+    border: 0;
+    float: right;
+    margin: 0 0 0 1.5em;
+    width: 90%;
 }
 img.mediacenter {
+    width: 90%;
+
 }
 
 /* unordered lists */
@@ -140,10 +147,10 @@ ol ol {
     margin: 0 0 0.5em 1.5em;
 }
 div.dokuwiki li ul {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 div.dokuwiki li ol {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 div.dokuwiki ol { list-style-type: decimal; }
@@ -157,98 +164,98 @@ span.li {
 }
 
 pre {
-  font-family: monospace;
+    font-family: monospace;
 }
 
 /* code blocks by indention */
 pre.pre {
-  font-size: 8pt;
-  padding: 0.5em;
-  border: 1px dashed #000000;
-  color: Black;
-  overflow: visible;
+    font-size: 8pt;
+    padding: 0.5em;
+    border: 1px dashed #000000;
+    color: Black;
+    overflow: visible;
 }
 
 /* code blocks by code tag */
 pre.code {
-  font-size: 8pt;
-  padding: 0.5em;
-  border: 1px dashed #000000;
-  color: Black;
-  overflow: visible;
+    font-size: 8pt;
+    padding: 0.5em;
+    border: 1px dashed #000000;
+    color: Black;
+    overflow: visible;
 }
 
 /* inline code words */
 code {
-  font: 100% Courier,"Courier New",monospace;
+    font: 100% Courier,"Courier New",monospace;
 }
 
 /* code blocks by file tag */
 pre.file {
-  font-size: 8pt;
-  padding: 0.5em;
-  border: 1px dotted #000000;
-  color: Black;
-  overflow: visible;
+    font-size: 8pt;
+    padding: 0.5em;
+    border: 1px dotted #000000;
+    color: Black;
+    overflow: visible;
 }
 
 /* footnotes */
 div.footnotes {
-  clear: both;
-  border-top: 1px solid #000000;
-  padding-left: 1em;
-  margin-top: 1em;
+    clear: both;
+    border-top: 1px solid #000000;
+    padding-left: 1em;
+    margin-top: 1em;
 }
 
 div.fn {
-  font-size: 90%;
+    font-size: 90%;
 }
 
 a.fn_top {
-  vertical-align: super;
-  font-size: 80%;
+    vertical-align: super;
+    font-size: 80%;
 }
 
 a.fn_bot {
-  vertical-align: super;
-  font-size: 80%;
-  font-weight: bold;
+    vertical-align: super;
+    font-size: 80%;
+    font-weight: bold;
 }
 
 abbr {
-  border: 0;
+    border: 0;
 }
 
 /* ---------- inline tables ------------------- */
 
 table.inline {
-  font-size: 80%;
-  background-color: #ffffff;
-  border-spacing: 0px;
-  border-collapse: collapse;
+    font-size: 80%;
+    background-color: #ffffff;
+    border-spacing: 0px;
+    border-collapse: collapse;
 }
 
 table.inline th {
-  padding: 3px;
-  border: 1px solid #000000;
-  border-bottom: 2px solid #000000;
+    padding: 3px;
+    border: 1px solid #000000;
+    border-bottom: 2px solid #000000;
 }
 
 table.inline td {
-  padding: 3px;
-  border: 1px solid #000000;
+    padding: 3px;
+    border: 1px solid #000000;
 }
 
 .leftalign {
-  text-align: left;
+    text-align: left;
 }
 
 .centeralign {
-  text-align: center;
+    text-align: center;
 }
 
 .rightalign {
-  text-align: right;
+    text-align: right;
 }
 
 #dw__toc, .footerinc, .header, .bar, .user { display: none; }

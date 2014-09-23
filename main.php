@@ -103,7 +103,7 @@ if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && 
     tpl_content();
     echo '
      </div>';
-    _fkssidebar();
+    
     echo'</div>';
 } else {
     echo '  <div class="wrap">

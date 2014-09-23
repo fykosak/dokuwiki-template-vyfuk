@@ -18,7 +18,7 @@ if (!defined('DOKU_INC')) {
 
 function _fks_footbar() {
 
-    return p_render("xhtml", p_get_instructions(io_readFile("data/pages/fksfootbar.txt", false)), $info);
+    return p_render("xhtml", p_get_instructions(io_readFile(DOKU_BASE."data/pages/fksfootbar.txt", false)), $info);
 }
 
 /*
@@ -159,7 +159,7 @@ function _wp_tpl_mainmenu() {
             echo'<li>';
             if (!empty($v['id'])) {
 
-                echo'<a href="' . wl($v['id']) . '">' . $v['title'] . '</a>';
+                echo'<a href="' . wl($v['id']) . '"><span class="menu_'.$v['id'].'">' . $v['title'] . '</span></a>';
             } else {
                 echo'<span>' . $v['title'] . '</span>';
             };
@@ -382,12 +382,7 @@ function _wp_tpl_youarehere($sep = ' » ') {
     return true;
 }
 
-function _fkssidebar() {
-    echo '<div class="fkssidebar">';
-    echo p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info);
-    echo '</div> ';
-    return 0;
-}
+
 
 function tpl_parsemenutext() {
     require_once(DOKU_INC . 'inc/search.php');
@@ -499,7 +494,7 @@ function tpl_parsemenutext() {
     return $data2;
 }
 
-function return_fce($func, $param = '') {
+function return_fce($func, $param = null) {
     ob_start();
     call_user_func($func, $param);
     $f = ob_get_contents();
