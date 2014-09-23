@@ -116,7 +116,7 @@ function _fks_topbaruser() {
 
 function _wp_tpl_mainmenu() {
     $data2 = array_merge(tpl_parsemenutext(), _fks_topbaruser());
-    print_r($data2);
+    //print_r($data2);
     echo'
     <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
