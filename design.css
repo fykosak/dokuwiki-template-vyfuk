@@ -390,21 +390,21 @@ div.dokuwiki img.medialeft {
     border: 0;
     float: left;
     margin: 0 1.5em 0 0;
-    width: 90%;
+    max-width: 90%;
 }
 
 div.dokuwiki img.mediaright {
     border: 0;
     float: right;
     margin: 0 0 0 1.5em;
-    width: 90%;
+    max-width: 90%;
 }
 
 div.dokuwiki img.mediacenter {
     border: 0;
     display: block;
     margin: 0 auto;
-    width: 90%;
+    max-width: 90%;
 }
 
 /* smileys */
