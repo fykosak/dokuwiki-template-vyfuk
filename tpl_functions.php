@@ -88,8 +88,8 @@ function _fks_topbaruser() {
                     'title' => return_fce('tpl_button', 'media'));
             };
 
-            $data[] = array('id' => '',
-                'ns' => 'vyfuk.mff.cuni.cz/wiki/doku.php',
+            $data[] = array('id' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
+                'ns' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
                 'perm' => 8,
                 'type' => 'f',
                 'level' => 2,
@@ -116,7 +116,7 @@ function _fks_topbaruser() {
 
 function _wp_tpl_mainmenu() {
     $data2 = array_merge(tpl_parsemenutext(), _fks_topbaruser());
-    //print_r($data2);
+
     echo'
     <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -159,8 +159,11 @@ function _wp_tpl_mainmenu() {
             }
             echo'<li>';
             if (!empty($v['id'])) {
-
-                echo'<a href="' . wl($v['id']) . '"><span class="menu_' . $v['id'] . '">' . $v['title'] . '</span></a>';
+                if (preg_match('#https?://#', $v['id'])) {
+                    echo'<a href="' . $v['id'] . '"><span class="menu_' . $v['id'] . '">' . $v['title'] . '</span></a>';
+                } else {
+                    echo'<a href="' . wl($v['id']) . '"><span class="menu_' . $v['id'] . '">' . $v['title'] . '</span></a>';
+                }
             } else {
                 echo'<span>' . $v['title'] . '</span>';
             };
