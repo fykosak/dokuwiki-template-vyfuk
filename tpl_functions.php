@@ -34,7 +34,7 @@ function _fks_topbaruser() {
         $data[] = array('id' => '',
             'ns' => '',
             'perm' => 8,
-            'type' => 'f',
+            'type' => 'd',
             'level' => 1,
             'open' => 1,
             'title' => '<span class="fkstopbaruserinfo"></span>');
@@ -116,7 +116,7 @@ function _fks_topbaruser() {
 
 function _wp_tpl_mainmenu() {
     $data2 = array_merge(tpl_parsemenutext(), _fks_topbaruser());
-
+    print_r($data2);
     echo'
     <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -138,9 +138,10 @@ function _wp_tpl_mainmenu() {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">';
     $inli = false;
-    !$inul = false;
-    foreach ($data2 as $v) {
+    $inul = false;
+    foreach ($data2 as $k => $v) {
         if ($v['level'] == 1) {
+
             if ($inul) {
                 $inul = false;
                 echo'</ul>';
@@ -149,9 +150,22 @@ function _wp_tpl_mainmenu() {
                 $inli = false;
                 echo'</li>';
             }
-            $inli = true;
-            echo'<li class="dropdown">
+            if ($data2[$k + 1]['type'] == 'f') {
+                $inli = true;
+                echo'<li class="dropdown">
           <a href="' . wl($v['id']) . '" class="dropdown-toggle" data-toggle="dropdown">' . $v['title'] . '<span class="caret"></span></a>';
+            } else {
+
+                if (preg_match('#https?://#', $v['id'])) {
+                    echo'<li> <a class="navbar-brand" href="' . $v['id'] . '">
+                        <span>' . $v['title'] . ' </span>
+                                            </a> </li>';
+                } else {
+                    echo'<li> <a class="navbar-brand" href="' . wl($v['id']) . '">
+                        <span>' . $v['title'] . ' </span>
+                                            </a></li> ';
+                }
+            }
         } elseif ($v['level'] == 2) {
             if (!$inul) {
                 $inul = true;
