@@ -70,7 +70,7 @@ div.dokuwiki label.block input.edit {
 }
 
 div.dokuwiki fieldset {
-    width: 24em;
+    width: 90%;
     text-align: center;
     border: /*1px solid __border__;*/0px;
     padding: 0.5em;
@@ -341,7 +341,8 @@ div.dokuwiki a.mail {
     //padding: 1px 0px 1px 16px;
 }
 div.dokuwiki a.mail:before {
-    content: url(../../images/before/envelope.png) 
+    content: url(images/mail_icon.gif);
+    //content: url(../../images/before/envelope.png) 
         //padding: 1px 0px 1px 16px;
 }
 
