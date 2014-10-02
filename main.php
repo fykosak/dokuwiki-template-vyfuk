@@ -45,11 +45,6 @@ echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/t
 
   ga("create", "UA-51523765-1", "cuni.cz");
   ga("send", "pageview");</script>
-    <!-- Latest compiled and minified CSS 
-<link rel="stylesheet" href="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap.min.css">
-
-<!-- Optional theme 
- <link rel="stylesheet" href="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap-theme.min.css">-->
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap.min.js"></script>
