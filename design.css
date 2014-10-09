@@ -88,7 +88,7 @@ div.dokuwiki textarea.edit {
     padding: 0.3em 0 0 0.3em;
     /* should just be "width: 100%", but IE8 doesn't like it, see FS#1910 + FS#1667 */
     width: 700px;
-    min-width: 100%;
+    //min-width: 100%;
     max-width: 100%;
     border-radius: 3px;
 }
@@ -425,6 +425,7 @@ div.dokuwiki h3,
 div.dokuwiki h4,
 div.dokuwiki h5 {
     color: __text_alt__;
+    
     background-color: inherit;
     font-size: 100%;
     font-weight: bold;
@@ -448,6 +449,10 @@ div.dokuwiki div.level3 {margin-left: 1.1em;}
 div.dokuwiki div.level4 {margin-left: 1.6em;}
 div.dokuwiki div.level5 {margin-left: 2.1em;}
 
+h1{
+  
+    border-bottom: 1px solid __border__;
+}
 /* unordered lists */
 div.dokuwiki div.wpap ul {
     list-style-type: square;

@@ -59,6 +59,13 @@ function _fks_topbaruser() {
             'level' => 2,
             'open' => 1,
             'title' => return_fce('tpl_button', 'edit'));
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => helper_plugin_fksvalidpage::FKS_valid_btn());
         if ($_SERVER['REMOTE_USER']) {
             $data[] = array('id' => '',
                 'ns' => '',
@@ -68,6 +75,7 @@ function _fks_topbaruser() {
                 'open' => 1,
                 'title' => return_fce('tpl_button', 'history'));
         }
+        
         if (!$_SERVER['REMOTE_USER'] && $ACT != 'login' && $ACT != 'logout') {
             
         } else {
