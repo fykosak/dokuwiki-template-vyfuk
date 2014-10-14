@@ -18,7 +18,7 @@ if (!defined('DOKU_INC')) {
 
 function _fks_footbar() {
 
-    return p_render("xhtml", p_get_instructions(io_readFile(DOKU_BASE . "data/pages/fksfootbar.txt", false)), $info);
+    return p_render("xhtml", p_get_instructions(io_readFile(DOKU_INC . "data/pages/fksfootbar.txt", false)), $info);
 }
 
 /*
@@ -45,6 +45,19 @@ function _fks_topbaruser() {
             'level' => 2,
             'open' => 1,
             'title' => $INFO['userinfo']['name']);
+        /*
+         * zpatný link
+         */
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'back'));
+        /*
+         * admin button
+         */
         $data[] = array('id' => '',
             'ns' => '',
             'perm' => 8,
@@ -52,6 +65,10 @@ function _fks_topbaruser() {
             'level' => 2,
             'open' => 1,
             'title' => return_fce('tpl_button', 'admin'));
+        /*
+         * edit 
+         * a vlaidpage
+         */
         $data[] = array('id' => '',
             'ns' => '',
             'perm' => 8,
@@ -66,35 +83,54 @@ function _fks_topbaruser() {
             'level' => 2,
             'open' => 1,
             'title' => helper_plugin_fksvalidpage::FKS_valid_btn());
-        if ($_SERVER['REMOTE_USER']) {
+
+
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'index'));
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'media'));
+
+
+
+
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'history'));
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'recent'));
+
+
+
+        if ($ACT != 'login' && $ACT != 'logout') {
             $data[] = array('id' => '',
                 'ns' => '',
                 'perm' => 8,
                 'type' => 'f',
                 'level' => 2,
                 'open' => 1,
-                'title' => return_fce('tpl_button', 'history'));
-        }
-        
-        if (!$_SERVER['REMOTE_USER'] && $ACT != 'login' && $ACT != 'logout') {
-            
-        } else {
-            if ($ACT != 'login' && $ACT != 'logout') {
-                $data[] = array('id' => '',
-                    'ns' => '',
-                    'perm' => 8,
-                    'type' => 'f',
-                    'level' => 2,
-                    'open' => 1,
-                    'title' => return_fce('tpl_searchform'));
-                $data[] = array('id' => '',
-                    'ns' => '',
-                    'perm' => 8,
-                    'type' => 'f',
-                    'level' => 2,
-                    'open' => 1,
-                    'title' => return_fce('tpl_button', 'media'));
-            };
+                'title' => return_fce('tpl_searchform'));
+
+
+
 
             $data[] = array('id' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
                 'ns' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
@@ -123,8 +159,17 @@ function _fks_topbaruser() {
  */
 
 function _wp_tpl_mainmenu() {
-    $data2 = array_merge(tpl_parsemenutext(), _fks_topbaruser());
-   
+    $vyfuk[] = array('id' => '',
+        'ns' => '',
+        'perm' => 8,
+        'type' => 'd',
+        'level' => 1,
+        'open' => 1,
+        'title' => '<span class="fkstopbarcontest"> Výfuk </span>
+                        <span class="fkstopbarbeta">beta</span>'
+    );
+    $data2 = array_merge($vyfuk, tpl_parsemenutext(), _fks_topbaruser());
+
     echo'
     <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -136,10 +181,7 @@ function _wp_tpl_mainmenu() {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="' . DOKU_BASE . '">
-                        <span> Výfuk </span>
-                        <span class="fkstopbatbeta">beta</span>
-                    </a>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -188,7 +230,7 @@ function _wp_tpl_mainmenu() {
                 }
             } else {
                 echo'<span>' . $v['title'] . '</span>';
-            };
+            }
             echo'</li>';
         }
     }
@@ -215,7 +257,7 @@ function _wp_tpl_list_index($item) {
     global $conf;
     $ret = '';
     if ($item['type'] == 'd') {
-        if (@file_exists(wikiFN($item['id'] . ':' . $conf['start']))) {
+        if (file_exists(wikiFN($item['id'] . ':' . $conf['start']))) {
             $ret .= html_wikilink($item['id'] . ':' . $conf['start'], $item['title']);
         } else {
             $ret .= html_wikilink($item['id'] . ':', $item['title']);

@@ -183,27 +183,30 @@ div.dokuwiki ul.fkstopbarlogo li div a{
 }
 
 
-span.fkstopbatbeta{
-    font-size: 70%;
-}
-div.navbar-header a{
+
+span.fkstopbarcontest{
     background-image: url('images/logo_vyfuk_white.png');
 
     background-repeat: no-repeat;
     background-size: 60px;
-    background-position: 1em center;
-    padding-left: 6em !important;
+    //background-position: 1em center;
+    padding-left: 5em !important;
 
 
 }
 
-div.navbar-header a:hover,
-div.navbar-header a:focus{
+span.fkstopbarcontest:hover,
+span.fkstopbarcontest:focus{
     background-image: url('images/logo_vyfuk_radioactive.png');
     background-repeat: no-repeat;
     background-size: 60px;
-    background-position: 1em center;
-    padding-left: 6em !important;
+    //background-position: 1em center;
+    padding-left: 5em !important;
+}
+span.fkstopbarbeta{
+    font-size: 70%;
+    background-image: none !important;
+    padding-left: 0em !important;
 }
 
 

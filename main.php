@@ -8,8 +8,9 @@
  * @author: Klaus Vormweg <klaus.vormweg@gmx.de>
  */
 // must be run from within DokuWiki
-if (!defined('DOKU_INC'))
+if (!defined('DOKU_INC')) {
     die();
+}
 
 // include custom template functions stolen from arctic template 
 require_once(dirname(__FILE__) . '/tpl_functions.php');
@@ -24,6 +25,8 @@ echo '
   <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css" />
   <script src="//use.edgefonts.net/gloria-hallelujah:n4:all;source-sans-pro.js"></script>
+  <script scr="http://jakiestfu.github.io/Behave.js/behave.js"></script>
+  <script type="text/javascript" src="http://jakiestfu.github.io/Behave.js/behave.js"></script>
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>
@@ -47,7 +50,7 @@ echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/t
   ga("send", "pageview");</script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="'.DOKU_BASE.'lib/tpl/'.$conf['template'].'/bootstrap.min.js"></script>
+<script src="' . DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/bootstrap.min.js"></script>
 
 </head>
 
@@ -71,7 +74,7 @@ echo' <div class="fksmenu">
 ';
 _wp_tpl_mainmenu();
 
-;
+
 echo '      <div class="clearer"></div>
      </div>
      <div class="fkspagename">
@@ -84,47 +87,26 @@ echo'<div class="clearer"></div>
     </div>
 ';
 flush();
-if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
-    echo '      <div class="clearer"></div>
+
+echo '      <div class="clearer"></div>
 <div class="wrap">
-     ';
-    echo '
      <div class="page" >
 ';
-    tpl_content();
-    echo '
+tpl_content();
+echo '
+     </div>
      </div>';
-    
-    echo'</div>';
-} else {
-    echo '  <div class="wrap">
-<div class="page" style="margin-left:0; max-width: 60em;"> 
-';
-    tpl_content();
-    echo '   </div>
-  </div>
-';
-}
+
 tpl_flush();
 echo '<div class="no">';
 /* provide DokuWiki housekeeping, required in all templates */
 tpl_indexerWebBug();
-echo '</div>';
-
-echo '    <div class="bar" id="bar__bottom"> 
-    
+echo '</div>
+    <div class="bar" id="bar__bottom">     
 <div class="fksfootbar">
- ' . _fks_footbar();
-
-if ($ACT != 'diff' && $ACT != 'edit' && $ACT != 'preview' && $ACT != 'admin' && $ACT != 'login' && $ACT != 'logout' && $ACT != 'profile' && $ACT != 'revisions') {
-    echo '<a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
-   	 <a href="', DOKU_BASE, 'feed.php" title="Recent changes RSS feed"><img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
-   ';
-} else {
-    echo '<a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+ ' . _fks_footbar()
+ . '<a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     	 <a href="', DOKU_BASE, 'feed.php" title="Recent changes RSS feed"><img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>';
-}
-
 echo '</div></div>
 </div>
 </body>
