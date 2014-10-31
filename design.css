@@ -98,6 +98,7 @@ div.dokuwiki form#dw__login fieldset {
 
 div.dokuwiki form#dw__login fieldset input.button {
     color: /*__text__*/__text_alt__;
+
 }
 
 div.dokuwiki input.edit,
@@ -343,7 +344,7 @@ div.dokuwiki a.mail {
 div.dokuwiki a.mail:before {
     content: url(images/mail_icon.gif);
     //content: url(../../images/before/envelope.png) 
-        //padding: 1px 0px 1px 16px;
+    //padding: 1px 0px 1px 16px;
 }
 
 /* existing wikipage */
@@ -425,7 +426,7 @@ div.dokuwiki h3,
 div.dokuwiki h4,
 div.dokuwiki h5 {
     color: __text_alt__;
-    
+
     background-color: inherit;
     font-size: 100%;
     font-weight: bold;
@@ -433,6 +434,13 @@ div.dokuwiki h5 {
     padding: 0;
     font-family: gloria-hallelujah, sans-serif;
     letter-spacing: 2px;
+}
+div.dokuwiki[do=login] h1,
+div.dokuwiki[do=login] h2,
+div.dokuwiki[do=login] h3,
+div.dokuwiki[do=login] h4,
+div.dokuwiki[do=login] h5 {
+    background-color: transparent;   
 }
 
 /* special headlines */
@@ -450,8 +458,12 @@ div.dokuwiki div.level4 {margin-left: 1.6em;}
 div.dokuwiki div.level5 {margin-left: 2.1em;}
 
 h1{
-  
+
     border-bottom: 1px solid __border__;
+}
+div.dokuwiki[do=login] h1{
+
+    border-bottom: none;
 }
 /* unordered lists */
 div.dokuwiki div.wpap ul {
@@ -718,6 +730,9 @@ div.dokuwiki div.footnotes {
 div.dokuwiki div.fn {
     font-size: 90%;
 }
+div.dokuwiki[do=login] div.fn{
+color:white;
+}
 
 div.dokuwiki a.fn_bot {
     font-weight: bold;
@@ -930,6 +945,11 @@ legend  {
     background-color: __background_alt__;
     padding: 0 0.5em;
     border-radius: 3px;
+}
+div.dokuwiki[do=login] legend{
+    background-color: transparent;
+    font-family: gloria-hallelujah,sans-serif;
+    border: none;
 }
 .license  {
     clear:both;

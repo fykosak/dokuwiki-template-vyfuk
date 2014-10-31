@@ -8,403 +8,458 @@
  */
 
 /* -------------- basic page elements -------------- */
-* { 
-    padding: 0; margin: 0; 
+@media screen{
+    * { 
+        padding: 0; margin: 0; 
+    }
+
+    html { 
+        font-size: 100%;
+        height: 0; 
+    }
+
+    body {
+        font: 90% "Open Sans", Arial, sans-serif;
+        background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg_color2.jpg) repeat;
+        background-attachment: fixed;
+        color: __text__; 
+        line-height: 1.4em;
+        text-align: left;
+        float: left;
+        width: 100%;
+    }
+    body[do=login] {
+        background: __background_other__ no-repeat ;
+
+        background-image: url(images/bg_login_1.jpg) ;
+        background-position:center top;
+
+    }
+    img#fakebackground {
+        width: 100%;	
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    div.dokuwiki {
+        min-width: 31em;
+        max-width: 83em;//pôvodne 85
+        //width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0em;
+        background: __background__;
+        border: 1px solid __background_other__;
+        box-shadow: 0px 0px 5px 2px __border__;
+    }
+    div.dokuwiki[do=login] {
+
+        //margin-right:10em;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+
+
+
+    /* -------------- header --------------- */
+    div.dokuwiki .stylehead {
+        /* background-color: transparent;   */
+        min-width: 25em;
+        width: 100%;
+    }
+
+    div.dokuwiki .header {
+        /*background-color: transparent;*/
+        height: auto;
+    }
+
+    div.dokuwiki .pagename {
+        text-align: center; 
+        //padding: 1em 2em 1em 2em;
+        margin-left: auto;
+        margin-right: auto;
+        /*max-width: 750px;*/
+        /*padding: 0px;*/
+        //background-color: transparent;
+        //width: auto;
+        //height: auto;
+        //float: left;
+    }
+
+    div.dokuwiki .pagename a {
+        font-size: 250%;
+        font-weight: bolder;
+        margin-left: auto;
+        margin-right: auto;
+        color: __text_neu__ !important;
+        text-decoration: none !important;
+    }
+
+    div.dokuwiki div.breadcrumbs {
+        background: /*url(images/trans50.png) 0 0 repeat transparent;*/ #fffaaa;
+        /*border-bottom: 1px solid __border__;*/
+        color: __text_neu__;
+        font-size: 80%;
+        padding: 4px 0 0 4px;
+        min-height: 2em;
+        margin: 1.5em 0em 0em 0em;
+        border-radius: 5px 5px 0px 0px;
+        clear:both;
+    }
+
+
+    /* ------------- File Metadata ----------------------- */
+    div.dokuwiki div.stylefoot {
+        min-width: 25em;
+        width: 100%;
+        height: 1.75em;
+        clear: both;
+        color: __text__;
+        background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    div.dokuwiki div.stylefoot div.meta {
+        font-size: 85%;
+        text-align: right;
+        padding: 0.25em 1em 0.25em 0;
+        /*border-top: 1px solid __border__;*/
+    }
+    div.dokuwiki div.stylefoot div.meta div.homelink {
+        margin: 0 0 0 0.5em;
+        float: left;
+    }
+    div.dokuwiki div.stylefoot div.meta div.homelink a {
+        display: block;
+        float: left;
+        padding: 0.15em 0.25em 0.5em 1em;
+    }
+
+    /* ------------- the document area ------------- */
+    div.dokuwiki div.wrap{
+        width: 100%;
+        overflow: hidden;
+        min-width: 31em;
+        background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
+        border-radius: 0px;
+
+    }
+    div.dokuwiki[do=login] div.wrap{
+        margin-top: 5em;  
+        background: none;
+    }
+
+
+    /*-------Menu*/
+    body[do=login] div.fksmenu{
+        display:none;
+    }
+    span.fkstopbaruserinfo:hover:before,
+    span.fkstopbaruserinfo:focus:before{
+        content: url('images/smiley_radioactive.png');
+    }
+
+    span.fkstopbaruserinfo:before{
+        content: url('images/smiley_radioactive.png');
+    }
+    span.fkstopbarcontest{
+        background-image: url('images/logo_vyfuk_white.png');
+
+        background-repeat: no-repeat;
+        background-size: 60px;
+        //background-position: 1em center;
+        padding-left: 5em !important;
+
+
+    }
+
+    span.fkstopbarcontest:hover,
+    span.fkstopbarcontest:focus{
+        background-image: url('images/logo_vyfuk_radioactive.png');
+
+    }
+    span.fkstopbarbeta{
+        font-size: 70%;
+        background-image: none !important;
+        padding-left: 0em !important;
+    }
+
+
+
+    /* ------------- the  menu bar ------------- */
+    //@media only screen 
+    //and (min-width : 1224px) {
+    /* Styles */
+
+    div.dokuwiki div.mainmenu {
+        //margin: 0em 0em 5em 0em;
+        padding: 0em;
+        width: 100%;
+        font-family: gloria-hallelujah, sans-serif;
+        letter-spacing: 2px;
+        font-size: 130%;
+        /*  background-color: __background_alt__; */
+        background-color: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
+        /*height: 3em;*/
+        color: __text_other__; 
+        //clear:both;
+        //float: right;
+    }
+
+
+
+    //}
+
+    /* ------------- the document ------------- */
+
+    div.dokuwiki div.page{
+        float: left;
+        margin-left: 0em;
+        min-width: 25em;
+
+        padding: 0em 1em 1.5em 1.5em;
+        /*background-color: transparent;*/
+        height: 100%;
+        max-width: 43em;
+        margin-right: 0;
+        /*margin-right: auto;*/
+    }
+    div.dokuwiki[do=login] div.page{
+        box-shadow: 0px 0px 5px 2px __border__;
+        background-color: rgba(2,2,2,0.7);        
+        float: left;
+        width: 100%;
+        max-width: none;
+        padding-bottom:0 !important;
+        padding-right:0 !important;
+
+
+    }
+    div.dokuwiki[do=login] div.page  fieldset{
+        margin-top: 3em;
+    }
+
+    div.fkssidebarhead{
+        margin-left: auto;
+        margin-right: 0;
+        width:90%;
+    }
+    div.dokuwiki[do=login] div.centeralign{
+        //border: 1px solid __background_other__;
+        box-shadow: 0px 0px 5px 2px __border__;
+        background-color: rgba(255,255,255,0.7);
+        margin-left: 1em;
+    }
+
+    /* ----------- fks foot bar ----------------*/
+
+    div.dokuwiki div.fksfootbar{
+        font: 100% /*"Lucida Grande"*/"Open Sans", Arial, sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        min-width: 25em;
+        background-color: transparent;
+
+    }
+    div.fksfootbar p{
+        text-align: center !important;
+        line-height: normal;
+        color: __background__;
+        letter-spacing: 2px;
+        margin-bottom: 0.2em !important;
+    }
+
+    div.fksfootbar p a.mail{
+        color: __background__;
+        font-weight: bold;
+    }
+
+    div.fksfootbar p a.mail:hover{
+        color: __background__;
+    }
+
+    div.fksfootbar p a.mail:before{
+        content: " ";
+
+    }
+
+    div.fks_vyfuk_logo{
+        /*float: left;*/
+        display: inline-block;
+        width: 270px; 
+    }
+    div.fks_vyfucek{
+        /*float: left;*/
+        display: inline-block;
+        width: 255px;
+
+    }
+    div.dokuwiki[do=login] div.fks_vyfucek{
+        display: none;
+    }
+
+    div.fks_mrak_1{
+        /*float: left;*/
+        display: inline-block;
+        width: 115px; 
+    }
+    div.dokuwiki[do=login] div.fks_mrak_1{
+        display: none;
+    }
+
+    div.fks_mrak_2{
+        /*float: left;*/
+        display: inline-block;
+        padding-top: 60px;
+        width: 110px;
+    }
+    div.dokuwiki[do=login] div.fks_mrak_2{
+        display: none;
+    }
+
+    /************ botton bar **************/
+    div.dokuwiki #bar__bottom {
+        padding: .5em 0px .3em 0px;
+        color: __text_neu__;
+        margin-bottom: 0em;
+        background-color: __background_other__;
+        //background-color: __background_other__;
+        //border: 1px solid __background_other__;
+        /*background-color: __background__;*/
+        width: 100%;
+
+        clear: both;
+        min-width: 25em;
+        margin-top: 0em;
+        text-align: center;
+    }
+    div.dokuwiki[do=login] #bar__bottom {
+        display: none;
+    }
+
+
+    /*
+    * fks_image_show
+    *TODO !!!!!!!!!!!!!!!!!!!!!!!
+    */
+    div.fks_images{
+
+    }
+
+    div.fks_images a img{
+        position: relative;
+        top:0%;
+    }
+    div.fks_images a{
+        height: 150px;
+        overflow: hidden;
+        display: block;
+    }
+
+
+    /**********nawbar**************/
+
+    .navbar-default{
+        border-top: 0px!important;
+        background-color: __background_other__;
+
+        background-image: -webkit-linear-gradient(top,#690 0,__background_other__ 100%); /* For Safari 5.1 to 6.0 */
+        background-image: -o-linear-gradient(top,#690 0,__background_other__ 100%); /* For Opera 11.1 to 12.0 */
+        background-image: -moz-linear-gradient(top,#690 0,__background_other__ 100%); /* For Firefox 3.6 to 15 */
+        background-image: linear-gradient(top,#690 0,__background_other__ 100%); /* Standard syntax */
+        margin: 0em 0em 0em 0em;
+        padding: 0em;
+        width: 100%; 
+        height: auto;
+        font-family: gloria-hallelujah, sans-serif;
+        letter-spacing: 2px;
+        font-size: 100%;
+        color: __text_other__;
+        clear:both;
+    }
+    .navbar-default a {
+        color: __background__ !important;
+        text-decoration: none !important;
+        display: block !important;
+        font-size: 110%;
+    }
+    .navbar-default a:hover,
+    .navbar-default a:focus {
+        color: __background_other__ !important;
+        background-color:  __background__ !important;
+        border-radius: 3px;
+    }
+    .navbar-default ul li a {
+        color: __background__ !important;
+        text-decoration: none !important;
+        display: block !important;
+    }
+    .navbar-default ul li a:hover,
+    .navbar-default ul li a:focus {
+        color: __background_other__ !important;
+        background-color:  __background__ !important;
+        border-radius: 3px;
+    }
+    .navbar-default ul ul li a {
+        color: __background_other__ !important;
+        background-color:  __background__ !important;
+        border-radius: 3px;
+        text-decoration: none !important;
+        padding: 0.5em 1em 0.4em 1em;
+    }
+    .navbar-default ul ul li a:hover,
+    .navbar-default ul ul li a:focus {
+        color: __background__ !important;
+        background-color:  __background_other__ !important;
+
+        display: block !important;
+
+    }
+    div.dokuwiki li.open{
+        margin-left: 2em;
+    }
+    div.dokuwiki li.closed{
+        margin-left: 2em;
+    }
+    div.dokuwiki li.level3{
+        margin-left: 4em;
+    }
+    div.dokuwiki li div ul li div ul li {
+        margin-left: 6em;
+    }
+    div.dokuwiki[do=login] div.page div p {
+        //display: none;
+
+        //max-width: 40%;
+        min-width:25em;
+        color:white;
+        font-size: 130%;
+    }
 }
+@media(max-width:855px){
+    div.fks_vyfucek{
+        display: none;
+    }
 
-html { 
-    font-size: 100%;
-    height: 0; 
-}
+    div.fks_mrak_1{
+        display: none; 
+    }
 
-body {
-    font: 90% "Open Sans", Arial, sans-serif;
-    background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg_color2.jpg) repeat;
-    background-attachment: fixed;
-    color: __text__; 
-    line-height: 1.4em;
-    text-align: left;
-    float: left;
-    width: 100%;
-}
-img#fakebackground {
-    width: 100%;	
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-div.dokuwiki {
-    min-width: 31em;
-    max-width: 83em;//pôvodne 85
-    //width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0em;
-    background: __background__;
-    border: 1px solid __background_other__;
-    box-shadow: 0px 0px 5px 2px __border__;
-}
-
-/* -------------- header --------------- */
-div.dokuwiki .stylehead {
-    /* background-color: transparent;   */
-    min-width: 25em;
-    width: 100%;
-}
-
-div.dokuwiki .header {
-    /*background-color: transparent;*/
-    height: auto;
-}
-
-div.dokuwiki .pagename {
-    text-align: center; 
-    //padding: 1em 2em 1em 2em;
-    margin-left: auto;
-    margin-right: auto;
-    /*max-width: 750px;*/
-    /*padding: 0px;*/
-    //background-color: transparent;
-    //width: auto;
-    //height: auto;
-    //float: left;
-}
-
-div.dokuwiki .pagename a {
-    font-size: 250%;
-    font-weight: bolder;
-    margin-left: auto;
-    margin-right: auto;
-    color: __text_neu__ !important;
-    text-decoration: none !important;
-}
-
-div.dokuwiki div.breadcrumbs {
-    background: /*url(images/trans50.png) 0 0 repeat transparent;*/ #fffaaa;
-    /*border-bottom: 1px solid __border__;*/
-    color: __text_neu__;
-    font-size: 80%;
-    padding: 4px 0 0 4px;
-    min-height: 2em;
-    margin: 1.5em 0em 0em 0em;
-    border-radius: 5px 5px 0px 0px;
-    clear:both;
-}
-
-/* ---------------  bottom bar ---------------- */
-div.dokuwiki .bar {
-    /*background-color: __background__;*/
-    width: 100%;
-
-    clear: both;
-    min-width: 25em;
-    margin-top: 0em;
-    text-align: center;
-}
-
-div.dokuwiki .bar-left {
-    float: left;
-    padding: 0.1em 0;
-}
-
-div.dokuwiki .bar-right {
-    float: right;
-    text-align: right;
-    padding: 0.1em 0;
-}
-
-div.dokuwiki #bar__bottom {
-    padding: .5em 0px .3em 0px;
-    color: __text_neu__;
-    margin-bottom: 0em;
-    background-color: __background_other__;
-    //background-color: __background_other__;
-    //border: 1px solid __background_other__;
-}
-
-/* ------------- File Metadata ----------------------- */
-div.dokuwiki div.stylefoot {
-    min-width: 25em;
-    width: 100%;
-    height: 1.75em;
-    clear: both;
-    color: __text__;
-    background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
-    border-radius: 0px 0px 5px 5px;
-}
-
-div.dokuwiki div.stylefoot div.meta {
-    font-size: 85%;
-    text-align: right;
-    padding: 0.25em 1em 0.25em 0;
-    /*border-top: 1px solid __border__;*/
-}
-div.dokuwiki div.stylefoot div.meta div.homelink {
-    margin: 0 0 0 0.5em;
-    float: left;
-}
-div.dokuwiki div.stylefoot div.meta div.homelink a {
-    display: block;
-    float: left;
-    padding: 0.15em 0.25em 0.5em 1em;
-}
-
-/* ------------- the document area ------------- */
-div.dokuwiki div.wrap {
-    width: 100%;
-    overflow: hidden;
-    min-width: 31em;
-    background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
-    border-radius: 0px;
-    /*background-image: url("../../plugins/fksnewsfeed/images/vyfuk2_bg.png");
-    background-position: 100% 0%;
-    background-repeat: no-repeat;*/
-}
-/*-------Menu*/
-span.fkstopbaruserinfo:hover:before,
-span.fkstopbaruserinfo:focus:before{
-    content: url('images/smiley_radioactive.png');
-}
-
-span.fkstopbaruserinfo:before{
-    content: url('images/smiley_radioactive.png');
-}
-
-div.dokuwiki ul.fkstopbarlogo div.li{
-    margin: 0;
-}
-
-div.dokuwiki ul.fkstopbarlogo li div a{
-    background: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 3px;
-}
-
-
-
-span.fkstopbarcontest{
-    background-image: url('images/logo_vyfuk_white.png');
-
-    background-repeat: no-repeat;
-    background-size: 60px;
-    //background-position: 1em center;
-    padding-left: 5em !important;
-
+    div.fks_mrak_2{
+        display: none;
+    }
+    div.dokuwiki div.page{
+        float: none;
+        margin-left: 0em;
+        min-width: 25em;
+        width: 100%;
+        padding: 0em 1em 1.5em 1.5em;
+        max-width: 45em;
+        margin-right: 0;
+    }
 
 }
-
-span.fkstopbarcontest:hover,
-span.fkstopbarcontest:focus{
-    background-image: url('images/logo_vyfuk_radioactive.png');
-    background-repeat: no-repeat;
-    background-size: 60px;
-    //background-position: 1em center;
-    padding-left: 5em !important;
-}
-span.fkstopbarbeta{
-    font-size: 70%;
-    background-image: none !important;
-    padding-left: 0em !important;
-}
-
-
-
-/* ------------- the  menu bar ------------- */
-//@media only screen 
-//and (min-width : 1224px) {
-/* Styles */
-
-div.dokuwiki div.mainmenu {
-    //margin: 0em 0em 5em 0em;
-    padding: 0em;
-    width: 100%;
-    font-family: gloria-hallelujah, sans-serif;
-    letter-spacing: 2px;
-    font-size: 130%;
-    /*  background-color: __background_alt__; */
-    background-color: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
-    /*height: 3em;*/
-    color: __text_other__; 
-    //clear:both;
-    //float: right;
-}
-
-
-
-//}
-
-/* ------------- the document ------------- */
-div.dokuwiki div.page {
-    float: left;
-    margin-left: 0em;
-    min-width: 25em;
-    width: 60% !important;
-    /* width: 780px; */
-    padding: 0em 1em 1.5em 1.5em;
-    /*background-color: transparent;*/
-    height: 100%;
-    max-width: 45em;
-    margin-right: 0;
-    /*margin-right: auto;*/
-}
-
-
-
-
-div.fkssidebarhead{
-    margin-left: auto;
-    margin-right: 0;
-    width:90%;
-}
-
-
-
-
-/* ----------- fks foot bar ----------------*/
-div.dokuwiki div.fksfootbar{
-    font: 100% /*"Lucida Grande"*/"Open Sans", Arial, sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    min-width: 25em;
-    background-color: transparent;
-
-}
-div.fksfootbar p{
-    text-align: center !important;
-    line-height: normal;
-    color: __background__;
-    letter-spacing: 2px;
-    margin-bottom: 0.2em !important;
-}
-
-div.fksfootbar p a.mail{
-    color: __background__;
-    font-weight: bold;
-}
-
-div.fksfootbar p a.mail:hover{
-    color: __background__;
-}
-
-div.fksfootbar p a.mail:before{
-    content: " ";
-
-}
-
-div.fks_vyfuk_logo{
-    /*float: left;*/
-    display: inline-block;
-    width: 270px; 
-}
-div.fks_vyfucek{
-    /*float: left;*/
-    display: inline-block;
-    width: 255px;
-
-}
-
-div.fks_mrak_1{
-    /*float: left;*/
-    display: inline-block;
-    width: 115px; 
-}
-
-div.fks_mrak_2{
-    /*float: left;*/
-    display: inline-block;
-    padding-top: 60px;
-    width: 110px;
-
-
-}
-
-div.fks_mrakovyfucek{
-    //float: right;
-}
-
-div.fks_logomrak_1{
-    // float: left;
-}
-/*
-* fks_image_show
-*/
-div.fks_images{
-
-}
-
-div.fks_images a img{
-    //width: 150%;
-    position: relative;
-    top:0%;
-    //left: -25%
-}
-div.fks_images a{
-    height: 150px;
-    overflow: hidden;
-    display: block;
-
-
-}
-
-
-/**********nawbar**************/
-
-.navbar-default{
-    background-color:__background_other__;
-    // border-color:ff0000;
-    margin: 0em 0em 0em 0em;
-    padding: 0em;
-    width: 100%; 
-    height: auto;
-    font-family: gloria-hallelujah, sans-serif;
-    letter-spacing: 2px;
-    font-size: 100%;
-    color: __text_other__;
-    clear:both;
-}
-div.dokuwiki .navbar-default a {
-    color: __background__ !important;
-    background-color:  __background_other__ !important;
-    text-decoration: none !important;
-    display: block !important;
-    font-size: 110%;
-}
-div.dokuwiki .navbar-default a:hover,
-div.dokuwiki .navbar-default a:focus {
-    color: __background_other__ !important;
-    background-color:  __background__ !important;
-    border-radius: 3px;
-}
-div.dokuwiki .navbar-default ul li a {
-    color: __background__ !important;
-    background-color:  __background_other__ !important;
-    text-decoration: none !important;
-    display: block !important;
-}
-div.dokuwiki .navbar-default ul li a:hover,
-div.dokuwiki .navbar-default ul li a:focus {
-    color: __background_other__ !important;
-    background-color:  __background__ !important;
-    border-radius: 3px;
-}
-div.dokuwiki .navbar-default ul ul li a {
-    color: __background_other__ !important;
-    background-color:  __background__ !important;
-    border-radius: 3px;
-    text-decoration: none !important;
-    padding: 0.5em 1em 0.4em 1em;
-}
-div.dokuwiki .navbar-default ul ul li a:hover,
-div.dokuwiki .navbar-default ul ul li a:focus {
-    color: __background__ !important;
-    background-color:  __background_other__ !important;
-    
-    display: block !important;
-    
-}
-
-
 

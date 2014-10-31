@@ -99,10 +99,6 @@ function _fks_topbaruser() {
             'level' => 2,
             'open' => 1,
             'title' => return_fce('tpl_button', 'media'));
-
-
-
-
         $data[] = array('id' => '',
             'ns' => '',
             'perm' => 8,
@@ -117,39 +113,27 @@ function _fks_topbaruser() {
             'level' => 2,
             'open' => 1,
             'title' => return_fce('tpl_button', 'recent'));
-
-
-
-        if ($ACT != 'login' && $ACT != 'logout') {
-            $data[] = array('id' => '',
-                'ns' => '',
-                'perm' => 8,
-                'type' => 'f',
-                'level' => 2,
-                'open' => 1,
-                'title' => return_fce('tpl_searchform'));
-
-
-
-
-            $data[] = array('id' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
-                'ns' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
-                'perm' => 8,
-                'type' => 'f',
-                'level' => 2,
-                'open' => 1,
-                'title' => 'WIKI');
-        }
-
-        if ($ACT != 'login' && $ACT != 'logout') {
-            $data[] = array('id' => '',
-                'ns' => '',
-                'perm' => 8,
-                'type' => 'f',
-                'level' => 2,
-                'open' => 1,
-                'title' => return_fce('tpl_button', 'login'));
-        }
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_searchform'));
+        $data[] = array('id' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
+            'ns' => 'http://vyfuk.mff.cuni.cz/wiki/doku.php',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => 'WIKI');
+        $data[] = array('id' => '',
+            'ns' => '',
+            'perm' => 8,
+            'type' => 'f',
+            'level' => 2,
+            'open' => 1,
+            'title' => return_fce('tpl_button', 'login'));
     }
     return $data;
 }

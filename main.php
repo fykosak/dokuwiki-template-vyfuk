@@ -54,12 +54,12 @@ echo '<script type="text/javascript" charset="utf-8" src="' . DOKU_BASE . 'lib/t
 
 </head>
 
-<body>
+<body do="'.$ACT.'">
 
      <div class="clearer"></div>
      <div id="fb-root"></div>
 
-<div class="dokuwiki" id="dokuwiki">'
+<div class="dokuwiki" id="dokuwiki" do="'.$ACT.'">'
 ;
 //html_msgarea(); 
 /*
@@ -90,7 +90,7 @@ flush();
 
 echo '      <div class="clearer"></div>
 <div class="wrap">
-     <div class="page" >
+     <div class="page" do="'.$ACT.'" >
 ';
 tpl_content();
 echo '
