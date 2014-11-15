@@ -435,11 +435,11 @@ div.dokuwiki h5 {
     font-family: gloria-hallelujah, sans-serif;
     letter-spacing: 2px;
 }
-div.dokuwiki[do=login] h1,
-div.dokuwiki[do=login] h2,
-div.dokuwiki[do=login] h3,
-div.dokuwiki[do=login] h4,
-div.dokuwiki[do=login] h5 {
+div.dokuwiki[data-do=login] h1,
+div.dokuwiki[data-do=login] h2,
+div.dokuwiki[data-do=login] h3,
+div.dokuwiki[data-do=login] h4,
+div.dokuwiki[data-do=login] h5 {
     background-color: transparent;   
 }
 
@@ -461,7 +461,7 @@ h1{
 
     border-bottom: 1px solid __border__;
 }
-div.dokuwiki[do=login] h1{
+div.dokuwiki[data-do=login] h1{
 
     border-bottom: none;
 }
@@ -500,8 +500,16 @@ div.dokuwiki ol ol ol { list-style-type: lower-alpha; }
 div.dokuwiki ol ol ol ol { list-style-type: lower-greek; }
 
 div.dokuwiki blockquote {
-    border-left: 2px solid __border__;
+    border-left: 3px solid __background_other__;
     padding-left: 3px;
+    font-size:100%;
+    
+}
+
+
+blockquote:before,blockquote:after{
+    content:none!important;
+    // kurva aj s bootstrapom!!! 
 }
 
 div.dokuwiki pre,
@@ -730,7 +738,7 @@ div.dokuwiki div.footnotes {
 div.dokuwiki div.fn {
     font-size: 90%;
 }
-div.dokuwiki[do=login] div.fn{
+div.dokuwiki[data-do=login] div.fn{
 color:white;
 }
 
@@ -946,7 +954,7 @@ legend  {
     padding: 0 0.5em;
     border-radius: 3px;
 }
-div.dokuwiki[do=login] legend{
+div.dokuwiki[data-do=login] legend{
     background-color: transparent;
     font-family: gloria-hallelujah,sans-serif;
     border: none;
@@ -1069,6 +1077,9 @@ div.dokuwiki .navbar-default ul ul li a{
 div.dokuwiki .navbar-default ul ul li  a:hover{
     background-color: __background_other__ !important;
     color: __background__ !important;
+}
+div.carousel-caption{
+    background-color: rgba(0,0,0,0.6);
 }
 
 
