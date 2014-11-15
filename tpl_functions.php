@@ -229,7 +229,19 @@ function _wp_tpl_mainmenu() {
     echo '</ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
- </nav>';
+ </nav>
+ <div class="clearer">
+            </div>';
+}
+
+function _fks_minimenu() {
+    echo'<button class="fks_minimenu_btn">
+                <span class="fks_minimenu_menu">Menu</span>
+                <span class="fks_minimenu_img"></span>
+            
+                <div class="clearer">
+            </div>
+          </button>';
 }
 
 /* Index item formatter

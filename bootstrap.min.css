@@ -1266,7 +1266,8 @@ pre code{
     //padding-right:15px;
     //padding-left:15px;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
+    max-width: 83em;
 }
 .row{
     margin-right:-15px;
@@ -3238,7 +3239,7 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 }
 @media (min-width:856px){
     .navbar
-    {border-radius:4px
+    {border-radius:0 !important;
     }
 
 }
@@ -5409,6 +5410,9 @@ button.close{
     }
 
 }
+
+
+
 
 
 

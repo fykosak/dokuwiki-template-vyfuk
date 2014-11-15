@@ -93,6 +93,7 @@
         font-weight: bolder;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 3em;
         color: __text_neu__ !important;
         text-decoration: none !important;
     }
@@ -154,9 +155,51 @@
 
 
     /*-------Menu*/
+    .navbar{
+        border-radius: 0;
+    }
     body[data-do=login] div.fksmenu{
         display:none;
+        position: absolute;
+        width: 100%;
     }
+    body div.fks_minimenu{
+        display:none;
+    }
+    body[data-do=login] div.fks_minimenu{
+        display:block;
+        position: absolute;
+        left:10px;
+        top: 10px;
+
+
+
+    }
+    span.fks_minimenu_img{
+
+        content: url('../../images/menu-btn.png');
+        height: 30px;
+        width: 30px;
+
+
+    }
+    span.fks_minimenu_menu{
+        float:right;
+        font-size: 110%;
+        padding-top: 4px;
+        padding-left: 1px;
+    }
+
+    button.fks_minimenu_btn{
+        border: none;
+        text-align: center;
+        vertical-align: middle;
+
+        background: none;
+    }
+
+
+
     span.fkstopbaruserinfo:hover:before,
     span.fkstopbaruserinfo:focus:before{
         content: url('images/smiley_radioactive.png');
@@ -210,9 +253,7 @@
     }
 
 
-    .navbar{
-        border-radius: 0;
-    }
+
     //}
 
     /* ------------- the document ------------- */
@@ -373,10 +414,10 @@
         border-top: 0px!important;
         background-color: __background_other__;
 
-       // background-image: -webkit-linear-gradient(top,#690 0,__background_other__ 100%); /* For Safari 5.1 to 6.0 */
-       // background-image: -o-linear-gradient(top,#690 0,__background_other__ 100%); /* For Opera 11.1 to 12.0 */
-       // background-image: -moz-linear-gradient(top,#690 0,__background_other__ 100%); /* For Firefox 3.6 to 15 */
-       // background-image: linear-gradient(top,#690 0,__background_other__ 100%); /* Standard syntax */
+        background-image: -webkit-linear-gradient(top,#690 0,__background_other__ 100%); /* For Safari 5.1 to 6.0 */
+        background-image: -o-linear-gradient(top,#690 0,__background_other__ 100%); /* For Opera 11.1 to 12.0 */
+        background-image: -moz-linear-gradient(top,#690 0,__background_other__ 100%); /* For Firefox 3.6 to 15 */
+        background-image: linear-gradient(top,#690 0,__background_other__ 100%); /* Standard syntax */
         margin: 0em 0em 0em 0em;
         padding: 0em;
         width: 100%; 
@@ -426,7 +467,7 @@
 
     }
     div.dokuwiki li.open{
-    //    margin-left: 2em;
+        margin-left: 2em;
     }
     div.dokuwiki li.closed{
         margin-left: 2em;

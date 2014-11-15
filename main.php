@@ -29,7 +29,7 @@ echo '
         <script type="text/javascript" src="http://jakiestfu.github.io/Behave.js/behave.js">
         </script>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <title> ', tpl_pagetitle(null,true), '::', strip_tags($conf['title']), ' </title>
+        <title> ', tpl_pagetitle(), '::', strip_tags($conf['title']), ' </title>
 ';
 
 tpl_metaheaders();
@@ -49,7 +49,7 @@ echo '
         <!-- Latest compiled and minified JavaScript -->
         <script src="' . DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/bootstrap.min.js"></script>
     
-        <script src="' . DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/script.js"></script>
+        <!--<script src="' . DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/script.js"></script>-->
 
     </head>
     <body data-do="' . $ACT . '">
@@ -57,24 +57,28 @@ echo '
         </div>
         <div id="fb-root">
         </div>
-
+        
+        
+        <div class="fksmenu">            
+';
+_wp_tpl_mainmenu();
+echo '          
+        </div>
+        <div class="fks_minimenu">
+            ';
+_fks_minimenu();
+echo'
+        </div>
+        <div class="clearer">
+        </div>
         <div class="dokuwiki" id="dokuwiki" data-do="' . $ACT . '">
             <div class="stylehead">
                 <div class="header">
                     <div class="clearer">
                     </div>
-        <div class="fksmenu">     
-';
-_wp_tpl_mainmenu();
-echo '
-            <div class="clearer">
-            </div>
-        </div>
-
                     <div class="fkspagename">
 ';
 tpl_link(wl(), $conf['title'], 'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"');
-
 echo '  
                     </div> 
                 </div>
