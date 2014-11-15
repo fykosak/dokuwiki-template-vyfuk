@@ -76,10 +76,21 @@ echo'
                 <div class="header">
                     <div class="clearer">
                     </div>
-                    <div class="fkspagename">
-';
-tpl_link(wl(), $conf['title'], 'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"');
-echo '  
+                    <div class="fkspagename" align="center">
+                        <div class="fks_vyfuk_logo">
+                            <a href="'.DOKU_BASE.'">
+                                <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/logo_vyfuk.png" height="150px" />
+                            </a>
+                        </div>
+                        <div class="fks_mrak_1">
+                            <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/vyfuk_mrak_1.png" height="90px">
+                        </div>            
+                        <div class="fks_mrak_2">
+                            <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/vyfuk_mrak_2.png" height="80px">
+                        </div>
+                        <div class="fks_vyfucek">
+                            <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/vyfuk_tabule.png" height="150px">
+                        </div>           
                     </div> 
                 </div>
                 <div class="clearer">
