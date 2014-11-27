@@ -244,6 +244,19 @@ function _fks_minimenu() {
           </button>';
 }
 
+;
+
+function _fks_noscript() {
+    echo '<noscript>' .
+    helper_plugin_fkshelper::returnmsg('<h1>Asi máte vypnutý JavasScript</h1>
+        <p>Pre správne fungovanie tejto stránky je potrebné mať zapnutý 
+        <a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a>.</p>
+        <p>Ak chcete zobraziť tento web plnohodnotne 
+        <a href="https://www.google.cz/webhp?ie=UTF-8#q=how+to+turn+on+javascript">
+        zapnite si JavaScript</a>!</p>', -1) .
+    '</noscript>';
+}
+
 /* Index item formatter
  * Callback function for html_buildlist()
  */
@@ -562,4 +575,70 @@ function return_fce($func, $param = null) {
     $f = ob_get_contents();
     ob_end_clean();
     return $f;
+}
+
+function _fks_colorize_img($name, $ext, $default_dir, $dir, $ini) {
+    $file_name = DOKU_INC . $default_dir . $name . '.' . $ext;
+    if ($ext == "png") {
+        $im = imagecreatefrompng($file_name);
+    } elseif ($ext == 'jpg' || $ext == 'jpeg') {
+        $im = imagecreatefromjpeg($file_name);
+    } else {
+        return;
+    }
+    list($w, $h) = getimagesize($file_name);
+    if (preg_match('/radioactive/i', $name)) {
+        $style_rgb = hexdec($ini['__vyfuk_back__']);
+    } else {
+        $style_rgb = hexdec($ini['__vyfuk_head__']);
+    }
+    $style_color = imagecolorsforindex($im, $style_rgb);
+    for ($i = 0; $i < $w; $i++) {
+        for ($j = 0; $j < $h; $j++) {
+            $rgb = imagecolorat($im, $i, $j);
+            $colors = imagecolorsforindex($im, $rgb);
+            if ($colors['alpha'] != 127) {
+                if ($colors["red"] != 255 || $colors["green"] != 255 || $colors["blue"] != 255) {
+                    if ($colors["red"] != $style_color["red"] || $colors["green"] != $style_color["green"] || $colors["blue"] != $style_color["blue"]) {
+                        $color = imagecolorallocate($im, $style_color["red"], $style_color["green"], $style_color["blue"]);
+                        imagesetpixel($im, $i, $j, $color);
+                    }
+                }
+            }
+        }
+    }
+    ob_start();
+    if ($ext == "png") {
+        imagesavealpha($im, true);
+        imagepng($im);
+    } elseif ($ext == 'jpg' || $ext == 'jpeg') {
+        imagejpeg($im);
+    }
+    $contents = ob_get_contents();
+    imagedestroy($im);
+    ob_end_clean();
+    io_saveFile(DOKU_INC . $dir . $name . '.' . $ext, $contents);
+    return true;
+}
+
+function _fks_season_img($file, $type) {
+    global $conf;
+    $ini = parse_ini_file(DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini');
+    $season = $ini['__season__'];
+    $dir = 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/';
+    $default_dir = 'lib/tpl/' . $conf['template'] . '/images/season/default/';
+    if (!file_exists(DOKU_INC . $dir . $file . '.' . $type)) {
+        if (!file_exists(DOKU_INC . $dir)) {
+            mkdir(DOKU_INC . $dir);
+        }
+        foreach (scandir(DOKU_INC . $default_dir) as $value) {
+            if (!file_exists(DOKU_INC . $dir . $value)) {
+                $file_path = pathinfo(DOKU_INC . $default_dir . $value);
+                $ext = $file_path['extension'];
+                $name = $file_path['filename'];
+                _fks_colorize_img($name, $ext, $default_dir, $dir, $ini);
+            }
+        }
+    }
+    return DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/' . $file . '.' . $type;
 }

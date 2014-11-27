@@ -458,7 +458,6 @@ div.dokuwiki div.level4 {margin-left: 1.6em;}
 div.dokuwiki div.level5 {margin-left: 2.1em;}
 
 h1{
-
     border-bottom: 1px solid __border__;
 }
 div.dokuwiki[data-do=login] h1{
@@ -818,7 +817,7 @@ div.dokuwiki ul.search_quickhits li {
 }
 
 div.dokuwiki .section_highlight {
-    background-color: __background_alt__ !important;
+    //background-color: __background_alt__ !important;
 }
 
 /* ------------------ Additional ---------------------- */

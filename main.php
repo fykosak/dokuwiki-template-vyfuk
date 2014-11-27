@@ -14,7 +14,7 @@ if (!defined('DOKU_INC')) {
 
 // include custom template functions stolen from arctic template 
 require_once(dirname(__FILE__) . '/tpl_functions.php');
-
+$tpl_season = 'winter';
 echo '
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,17 +26,26 @@ echo '
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css" />
         <script src="//use.edgefonts.net/gloria-hallelujah:n4:all;source-sans-pro.js">
         </script>
-        <script type="text/javascript" src="http://jakiestfu.github.io/Behave.js/behave.js">
-        </script>
+        
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <title> ', tpl_pagetitle(), '::', strip_tags($conf['title']), ' </title>
+        ';
+if (preg_match('/Výfuk/', tpl_pagetitle($ID, true))) {
+    echo'
+        <title> ', tpl_pagetitle($ID, true), ' </title>
 ';
+} else {
+    echo'
+        <title> ', tpl_pagetitle($ID, true), '::', strip_tags($conf['title']), ' </title>
+';
+}
+
+
 
 tpl_metaheaders();
 echo tpl_favicon(array('favicon', 'mobile'));
 
 echo '
-        <script>
+       <script>
   (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -45,18 +54,14 @@ echo '
   ga("create", "UA-51523765-1", "cuni.cz");
   ga("send", "pageview");
         </script>
-
         <!-- Latest compiled and minified JavaScript -->
         <script src="' . DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/bootstrap.min.js"></script>
-    
-        <!--<script src="' . DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/script.js"></script>-->
-
     </head>
     <body data-do="' . $ACT . '">
         <div class="clearer">
         </div>
-        <div id="fb-root">
-        </div>
+        <!--<div id="fb-root">
+        </div>-->
         
         
         <div class="fksmenu">            
@@ -78,18 +83,19 @@ echo'
                     </div>
                     <div class="fkspagename" align="center">
                         <div class="fks_vyfuk_logo">
-                            <a href="'.DOKU_BASE.'">
-                                <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/logo_vyfuk.png" height="150px" />
+                            <a href="' . DOKU_BASE . '">
+                                <img src="' . _fks_season_img('logo_vyfuk', 'png', $tpl_season) . '" height="150px" />
                             </a>
                         </div>
                         <div class="fks_mrak_1">
-                            <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/vyfuk_mrak_1.png" height="90px">
+                        
+                            <img src="' . _fks_season_img('vyfuk_mrak_1', 'png', $tpl_season) . '" height="90px" />
                         </div>            
                         <div class="fks_mrak_2">
-                            <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/vyfuk_mrak_2.png" height="80px">
+                            <img src="' . _fks_season_img('vyfuk_mrak_2', 'png', $tpl_season) . '" height="80px" />
                         </div>
                         <div class="fks_vyfucek">
-                            <img src="' . DOKU_BASE . 'lib/tpl/vyfuk/images/vyfuk_tabule.png" height="150px">
+                            <img src="' . _fks_season_img('vyfuk_tabule', 'png', $tpl_season) . '" height="150px" />
                         </div>           
                     </div> 
                 </div>
@@ -103,8 +109,10 @@ echo '
             <div class="clearer">
             </div>
             <div class="wrap">
-                <div class="page" >
-';
+                <div class="page" >';
+_fks_noscript()
+;
+
 tpl_content();
 echo '
                 </div>
@@ -120,8 +128,12 @@ echo '
             <div class="bar" id="bar__bottom">     
                 <div class="fksfootbar">
                     ' . _fks_footbar() . '
-                    <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
-                    <a href="', DOKU_BASE, 'feed.php" title="Recent changes RSS feed"><img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+                    <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki">
+                        <img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" />
+                    </a>
+                    <a href="', DOKU_BASE, 'feed.php" title="Recent changes RSS feed">
+                        <img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" />
+                    </a>
                 </div>
             </div>
         </div>

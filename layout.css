@@ -20,7 +20,7 @@
 
     body {
         font: 90% "Open Sans", Arial, sans-serif;
-        background: __background_other__ /* url(images/bg_4.jpg) 0 0 repeat-x fixed */ url(images/vyfuk_bg_color2.jpg) repeat;
+        background: __background_other__ url(images/vyfuk_bg_color2.jpg) repeat;
         background-attachment: fixed;
         color: __text__; 
         line-height: 1.4em;
@@ -99,8 +99,7 @@
     }
 
     div.dokuwiki div.breadcrumbs {
-        background: /*url(images/trans50.png) 0 0 repeat transparent;*/ #fffaaa;
-        /*border-bottom: 1px solid __border__;*/
+        background:  #fffaaa;
         color: __text_neu__;
         font-size: 80%;
         padding: 4px 0 0 4px;
@@ -118,7 +117,7 @@
         height: 1.75em;
         clear: both;
         color: __text__;
-        background: /*url(images/trans75.png) repeat 0 0 transparent;*/#fffaaa;
+        background: #fffaaa;
         border-radius: 0px 0px 5px 5px;
     }
 
@@ -143,7 +142,7 @@
         width: 100%;
         overflow: hidden;
         min-width: 31em;
-        background: /*url(images/trans75.png) 0 0 repeat transparent;*/#ffffff;
+        background: #ffffff;
         border-radius: 0px;
 
     }
@@ -202,14 +201,14 @@
 
     span.fkstopbaruserinfo:hover:before,
     span.fkstopbaruserinfo:focus:before{
-        content: url('images/smiley_radioactive.png');
+        content: url("images/season/"+__season__+"/smiley_radioactive.png");
     }
 
     span.fkstopbaruserinfo:before{
-        content: url('images/smiley_radioactive.png');
+        content: url("images/smiley_white.png");
     }
     span.fkstopbarcontest{
-        background-image: url('images/logo_vyfuk_white.png');
+        background-image: url("images/logo_vyfuk_white.png");
 
         background-repeat: no-repeat;
         background-size: 60px;
@@ -221,7 +220,7 @@
 
     span.fkstopbarcontest:hover,
     span.fkstopbarcontest:focus{
-        background-image: url('images/logo_vyfuk_radioactive.png');
+        background-image: url("images/season/"+__season__+"/logo_vyfuk_radioactive.png");
 
     }
     span.fkstopbarbeta{
@@ -238,18 +237,16 @@
     /* Styles */
 
     div.dokuwiki div.mainmenu {
-        //margin: 0em 0em 5em 0em;
         padding: 0em;
         width: 100%;
         font-family: gloria-hallelujah, sans-serif;
         letter-spacing: 2px;
         font-size: 130%;
-        /*  background-color: __background_alt__; */
-        background-color: /*url(images/trans85.png) 0 0 repeat transparent; */__background_other__;
-        /*height: 3em;*/
+
+        background-color: __background_other__;
+
         color: __text_other__; 
-        //clear:both;
-        //float: right;
+
     }
 
 
@@ -414,10 +411,10 @@
         border-top: 0px!important;
         background-color: __background_other__;
 
-        background-image: -webkit-linear-gradient(top,#690 0,__background_other__ 100%); /* For Safari 5.1 to 6.0 */
-        background-image: -o-linear-gradient(top,#690 0,__background_other__ 100%); /* For Opera 11.1 to 12.0 */
-        background-image: -moz-linear-gradient(top,#690 0,__background_other__ 100%); /* For Firefox 3.6 to 15 */
-        background-image: linear-gradient(top,#690 0,__background_other__ 100%); /* Standard syntax */
+        background-image: -webkit-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* For Safari 5.1 to 6.0 */
+        background-image: -o-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* For Opera 11.1 to 12.0 */
+        background-image: -moz-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* For Firefox 3.6 to 15 */
+        background-image: linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* Standard syntax */
         margin: 0em 0em 0em 0em;
         padding: 0em;
         width: 100%; 

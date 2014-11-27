@@ -19,7 +19,7 @@
  };*/
 jQuery(function() {
     $("button.fks_minimenu_btn").click(function() {
-        console.log("kurva");
+        
         $("div.fksmenu").slideToggle("slow");
     });
 });
