@@ -578,6 +578,7 @@ function return_fce($func, $param = null) {
 }
 
 function _fks_colorize_img($name, $ext, $default_dir, $dir, $ini) {
+
     $file_name = DOKU_INC . $default_dir . $name . '.' . $ext;
     if ($ext == "png") {
         $im = imagecreatefrompng($file_name);
@@ -623,21 +624,25 @@ function _fks_colorize_img($name, $ext, $default_dir, $dir, $ini) {
 
 function _fks_season_img($file, $type) {
     global $conf;
+    $ini_time = filemtime(DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini');
+    
+
     $ini = parse_ini_file(DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini');
     $season = $ini['__season__'];
     $dir = 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/';
     $default_dir = 'lib/tpl/' . $conf['template'] . '/images/season/default/';
-    if (!file_exists(DOKU_INC . $dir . $file . '.' . $type)) {
+    $file_time = @filemtime(DOKU_INC . $dir . $file . '.' . $type);
+
+    if ((!file_exists(DOKU_INC . $dir . $file . '.' . $type) || ($file_time < $ini_time))) {
         if (!file_exists(DOKU_INC . $dir)) {
             mkdir(DOKU_INC . $dir);
         }
+
         foreach (scandir(DOKU_INC . $default_dir) as $value) {
-            if (!file_exists(DOKU_INC . $dir . $value)) {
-                $file_path = pathinfo(DOKU_INC . $default_dir . $value);
-                $ext = $file_path['extension'];
-                $name = $file_path['filename'];
-                _fks_colorize_img($name, $ext, $default_dir, $dir, $ini);
-            }
+            $file_path = pathinfo(DOKU_INC . $default_dir . $value);
+            $ext = $file_path['extension'];
+            $name = $file_path['filename'];
+            _fks_colorize_img($name, $ext, $default_dir, $dir, $ini);
         }
     }
     return DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/' . $file . '.' . $type;

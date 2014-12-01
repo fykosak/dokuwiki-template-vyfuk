@@ -19,40 +19,49 @@
  };*/
 jQuery(function() {
     $("button.fks_minimenu_btn").click(function() {
-        
+
         $("div.fksmenu").slideToggle("slow");
     });
+
+    /*$('*').click(function(){
+     console.log('jebem boha');
+     console.log($(this));
+     console.log();
+     if(!$(this).has('*').length){
+     $(this).remove();
+     }
+     });*/
 });
 
 
-/*jQuery(window).load(function() {
- var rewrite = new Array();
- rewrite = {
- //'': '',
- 'div.dokuwiki[do=login] .button': 'button btn btn-success'
+jQuery(window).load(function() {
+// var rewrite = new Array();
+// rewrite = {
+    //'': '',
+// 'div.dokuwiki[do=login] .button': 'button btn btn-success'
+
+
+// };
+// for (var k in rewrite) {
+// if (rewrite.hasOwnProperty(k)) {
+    //alert("Key is " + k + ", value is " + rewrite[k]);
+
+    //console.log(rewrite[k]);
+// $(" " + k).each(function() {
+// $(this).toggleClass(" " + rewrite[k]);
+    //console.log("1");
+// });
+// }
+// }
+
+    console.clear();
+    //console.log($('<span style="font:red">nesockuj tento kod</span>').context.outerHTML);
+    console.log("%cNesockuj tento kód!!!", "color: red; font-size: x-large");
+    //$("div.dokuwiki[do=login] .button").each(function() {
+    //  $(this).toggleClass("button btn btn-success");
+    //});
+    //$(".edit").each(function(){ $(this).toggleClass("edit form-control");});
+
+
+});
  
- 
- };
- for (var k in rewrite) {
- if (rewrite.hasOwnProperty(k)) {
- //alert("Key is " + k + ", value is " + rewrite[k]);
- 
- //console.log(rewrite[k]);
- $(" " + k).each(function() {
- $(this).toggleClass(" " + rewrite[k]);
- //console.log("1");
- });
- }
- }
- 
- //console.clear();
- //console.log($('<span style="font:red">nesockuj tento kod</span>').context.outerHTML);
- console.log("%cNesockuj tento kód!!!", "color: red; font-size: x-large");
- //$("div.dokuwiki[do=login] .button").each(function() {
- //  $(this).toggleClass("button btn btn-success");
- //});
- //$(".edit").each(function(){ $(this).toggleClass("edit form-control");});
- 
- 
- });
- */

@@ -215,7 +215,7 @@ div.dokuwiki form#dw__editform div.license {
 
 div.dokuwiki input.button,
 div.dokuwiki button.button {  
-    font: 130% /*"Lucida Grande"*/source-sans-pro, Arial, sans-serif;
+    font: 130% source-sans-pro, Arial, sans-serif;
     border: 1px solid __text_other__;
     color: __text__;
     background-color: __background__;
@@ -235,17 +235,18 @@ div.dokuwiki button.button {
 }
 
 div.dokuwiki div.secedit input.button {
-    border: /*1px solid __border__;*/0px;
+    
+    border: 0px;
     color: __text__;
     background-color: __text_alt__;
     vertical-align: middle;
     text-decoration: none;
     margin-bottom: 0.35em;
-    padding: 0;
-    font-size: 10px;
     cursor: pointer;
     float: right;
     display: inline;
+    font-size: 0.75em;
+    padding: .5em .5em .5em .5em;
 }
 
 div.dokuwiki input#qsearch__in {
@@ -502,7 +503,7 @@ div.dokuwiki blockquote {
     border-left: 3px solid __background_other__;
     padding-left: 3px;
     font-size:100%;
-    
+
 }
 
 
@@ -738,7 +739,7 @@ div.dokuwiki div.fn {
     font-size: 90%;
 }
 div.dokuwiki[data-do=login] div.fn{
-color:white;
+    color:white;
 }
 
 div.dokuwiki a.fn_bot {
@@ -1002,7 +1003,7 @@ ul li button.button {
     letter-spacing: 2px;
     text-decoration: none !important;
     display: block !important;
-    padding: .7em .5em .3em .5m !important;
+    padding: .7em .5em .3em .5em !important;
     margin: 0 !important;
     width: 100%;
     background-color: __background_other__!important;
@@ -1018,8 +1019,8 @@ ul li button.button {
 
 ul li input.button:hover,
 ul li button.button:hover {
-    background-color:  __background__ !important;
-    color: __background_other__ !important;
+    background-color:  __text_alt__ !important;
+    color: __background__  !important;
 }
 
 div.dokuwiki .navbar-default ul {

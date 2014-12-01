@@ -53,6 +53,7 @@
         margin-top: 0em;
         background: __background__;
         border: 1px solid __background_other__;
+        border-top:none;
         box-shadow: 0px 0px 5px 2px __border__;
     }
     div.dokuwiki[data-do=login] {
@@ -77,15 +78,8 @@
 
     div.dokuwiki .pagename {
         text-align: center; 
-        //padding: 1em 2em 1em 2em;
         margin-left: auto;
         margin-right: auto;
-        /*max-width: 750px;*/
-        /*padding: 0px;*/
-        //background-color: transparent;
-        //width: auto;
-        //height: auto;
-        //float: left;
     }
 
     div.dokuwiki .pagename a {
@@ -125,7 +119,6 @@
         font-size: 85%;
         text-align: right;
         padding: 0.25em 1em 0.25em 0;
-        /*border-top: 1px solid __border__;*/
     }
     div.dokuwiki div.stylefoot div.meta div.homelink {
         margin: 0 0 0 0.5em;
@@ -292,7 +285,7 @@
     }
 
     div.dokuwiki[data-do=login] div.centeralign{
-        //border: 1px solid __background_other__;
+        float: right;
         box-shadow: 0px 0px 5px 2px __border__;
         background-color: rgba(255,255,255,0.7);
         margin-left: 1em;
@@ -301,7 +294,7 @@
     /* ----------- fks foot bar ----------------*/
 
     div.dokuwiki div.fksfootbar{
-        font: 100% /*"Lucida Grande"*/"Open Sans", Arial, sans-serif;
+        font: 100% "Open Sans", Arial, sans-serif;
         margin-left: auto;
         margin-right: auto;
         width: 40%;
@@ -332,12 +325,10 @@
     }
 
     div.fks_vyfuk_logo{
-        /*float: left;*/
         display: inline-block;
         width: 270px; 
     }
     div.fks_vyfucek{
-        /*float: left;*/
         display: inline-block;
         width: 255px;
 
@@ -347,7 +338,6 @@
     }
 
     div.fks_mrak_1{
-        /*float: left;*/
         display: inline-block;
         width: 115px; 
     }
@@ -356,9 +346,7 @@
     }
 
     div.fks_mrak_2{
-        /*float: left;*/
         display: inline-block;
-        padding-top: 60px;
         width: 110px;
     }
     div.dokuwiki[data-do=login] div.fks_mrak_2{
@@ -371,9 +359,6 @@
         color: __text_neu__;
         margin-bottom: 0em;
         background-color: __background_other__;
-        //background-color: __background_other__;
-        //border: 1px solid __background_other__;
-        /*background-color: __background__;*/
         width: 100%;
 
         clear: both;
@@ -384,27 +369,6 @@
     div.dokuwiki[data-do=login] #bar__bottom {
         display: none;
     }
-
-
-    /*
-    * fks_image_show
-    *TODO !!!!!!!!!!!!!!!!!!!!!!!
-    */
-    div.fks_images{
-
-    }
-
-    div.fks_images a img{
-        position: relative;
-        top:0%;
-    }
-    div.fks_images a{
-        height: 150px;
-        overflow: hidden;
-        display: block;
-    }
-
-
     /**********nawbar**************/
 
     .navbar-default{
@@ -459,7 +423,6 @@
     .navbar-default ul ul li a:focus {
         color: __background__ !important;
         background-color:  __background_other__ !important;
-
         display: block !important;
 
     }
@@ -506,6 +469,4 @@
         max-width: 45em;
         margin-right: 0;
     }
-
 }
-
