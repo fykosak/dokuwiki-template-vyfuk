@@ -3,9 +3,7 @@
 /**
  * DokuWiki Wallpaper Template
  *
- * @link:   http://wiki.splitbrain.org/wiki:tpl:templates
- * @author: Andreas Gohr <andi@splitbrain.org>
- * @author: Klaus Vormweg <klaus.vormweg@gmx.de>
+ *
  */
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) {
@@ -62,6 +60,7 @@ echo '
         </div>
         <!--<div id="fb-root">
         </div>-->
+        <div class="dokuwiki" id="dokuwiki" data-do="' . $ACT . '">
         
         
         <div class="fksmenu">            
@@ -76,39 +75,40 @@ echo'
         </div>
         <div class="clearer">
         </div>
-        <div class="dokuwiki" id="dokuwiki" data-do="' . $ACT . '">
-            <div class="stylehead">
-                <div class="header">
-                    <div class="clearer">
-                    </div>
-                    <div class="fkspagename" align="center">
-                        <div class="fks_vyfuk_logo">
-                            <a href="' . DOKU_BASE . '">
-                                <img src="' . _fks_season_img('logo_vyfuk', 'png', $tpl_season) . '" height="150px" />
-                            </a>
+        
+            <div class="wrap">
+                <div class="stylehead">
+                    <div class="header">
+                        <div class="clearer">
                         </div>
-                        <div class="fks_mrak_1">
+                        <div class="fkspagename" align="center">
+                            <div class="fks_vyfuk_logo">
+                                <a href="' . DOKU_BASE . '">
+                                    <img src="' . _fks_season_img('logo_vyfuk', 'png', $tpl_season) . '" height="150px" />
+                                </a>
+                            </div>
+                            <div class="fks_mrak_1">
                         
-                            <img src="' . _fks_season_img('vyfuk_mrak_1', 'png', $tpl_season) . '" height="90px" />
-                        </div>            
-                        <div class="fks_mrak_2">
-                            <img src="' . _fks_season_img('vyfuk_mrak_2', 'png', $tpl_season) . '" height="80px" />
-                        </div>
-                        <div class="fks_vyfucek">
-                            <img src="' . _fks_season_img('vyfuk_tabule', 'png', $tpl_season) . '" height="150px" />
-                        </div>           
+                                <img src="' . _fks_season_img('vyfuk_mrak_1', 'png', $tpl_season) . '" height="90px" />
+                            </div>            
+                            <div class="fks_mrak_2">
+                                <img src="' . _fks_season_img('vyfuk_mrak_2', 'png', $tpl_season) . '" height="80px" />
+                            </div>
+                            <div class="fks_vyfucek">
+                                <img src="' . _fks_season_img('vyfuk_tabule', 'png', $tpl_season) . '" height="150px" />
+                            </div>           
+                        </div> 
+                    </div>
+                    <div class="clearer">
                     </div> 
                 </div>
-                <div class="clearer">
-                </div> 
-            </div>
 '; //end stylehead 
 flush();
 
 echo '      
-            <div class="clearer">
-            </div>
-            <div class="wrap">
+                <div class="clearer">
+                </div>
+            
                 <div class="page" >';
 _fks_noscript()
 ;
@@ -116,7 +116,7 @@ _fks_noscript()
 tpl_content();
 echo '
                 </div>
-            </div>';
+            ';
 
 tpl_flush();
 echo '
@@ -135,6 +135,7 @@ echo '
                         <img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" />
                     </a>
                 </div>
+            </div>
             </div>
         </div>
     </body>

@@ -45,25 +45,9 @@
         z-index: -1;
     }
     div.dokuwiki {
-        min-width: 31em;
-        max-width: 83em;//pôvodne 85
-        //width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0em;
-        background: __background__;
-        border: 1px solid __background_other__;
-        border-top:none;
-        box-shadow: 0px 0px 5px 2px __border__;
     }
     div.dokuwiki[data-do=login] {
-        border: none;
-        background: none;
-        box-shadow: none;
     }
-
-
-
     /* -------------- header --------------- */
     div.dokuwiki .stylehead {
         /* background-color: transparent;   */
@@ -131,134 +115,47 @@
     }
 
     /* ------------- the document area ------------- */
-    div.dokuwiki div.wrap{
+    div.wrap{
         width: 100%;
         overflow: hidden;
-        min-width: 31em;
-        background: #ffffff;
         border-radius: 0px;
+
+        min-width: 31em;
+        max-width: 83em;//pôvodne 85
+        //width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0em;
+        background: __background__;
+        border: 1px solid __background_other__;
+        border-top:none;
+        box-shadow: 0px 0px 5px 2px __border__;
 
     }
     div.dokuwiki[data-do=login] div.wrap{
         margin-top: 5em;  
         background: none;
 
-    }
-
-
-    /*-------Menu*/
-    .navbar{
-        border-radius: 0;
-    }
-    body[data-do=login] div.fksmenu{
-        display:none;
-        position: absolute;
-        width: 100%;
-    }
-    body div.fks_minimenu{
-        display:none;
-    }
-    body[data-do=login] div.fks_minimenu{
-        display:block;
-        position: absolute;
-        left:10px;
-        top: 10px;
-
-
-
-    }
-    span.fks_minimenu_img{
-
-        content: url('../../images/menu-btn.png');
-        height: 30px;
-        width: 30px;
-
-
-    }
-    span.fks_minimenu_menu{
-        float:right;
-        font-size: 110%;
-        padding-top: 4px;
-        padding-left: 1px;
-    }
-
-    button.fks_minimenu_btn{
         border: none;
-        text-align: center;
-        vertical-align: middle;
-
         background: none;
-    }
-
-
-
-    span.fkstopbaruserinfo:hover:before,
-    span.fkstopbaruserinfo:focus:before{
-        content: url("images/season/"+__season__+"/smiley_radioactive.png");
-    }
-
-    span.fkstopbaruserinfo:before{
-        content: url("images/smiley_white.png");
-    }
-    span.fkstopbarcontest{
-        background-image: url("images/logo_vyfuk_white.png");
-
-        background-repeat: no-repeat;
-        background-size: 60px;
-        //background-position: 1em center;
-        padding-left: 5em !important;
-
-
-    }
-
-    span.fkstopbarcontest:hover,
-    span.fkstopbarcontest:focus{
-        background-image: url("images/season/"+__season__+"/logo_vyfuk_radioactive.png");
-
-    }
-    span.fkstopbarbeta{
-        font-size: 70%;
-        background-image: none !important;
-        padding-left: 0em !important;
-    }
-
-
-
-    /* ------------- the  menu bar ------------- */
-    //@media only screen 
-    //and (min-width : 1224px) {
-    /* Styles */
-
-    div.dokuwiki div.mainmenu {
-        padding: 0em;
-        width: 100%;
-        font-family: gloria-hallelujah, sans-serif;
-        letter-spacing: 2px;
-        font-size: 130%;
-
-        background-color: __background_other__;
-
-        color: __text_other__; 
+        box-shadow: none;
 
     }
 
 
 
-    //}
+
 
     /* ------------- the document ------------- */
 
-    div.dokuwiki div.page{
+    div.page{
         float: left;
         margin-left: 0em;
         min-width: 25em;
-
         padding: 0em 1em 1.5em 1.5em;
-        /*background-color: transparent;*/
         height: 100%;
         max-width: 43em;
         margin-right: 0;
-        /*margin-right: auto;*/
     }
     div.dokuwiki[data-do=login] div.page{
 
@@ -293,7 +190,7 @@
 
     /* ----------- fks foot bar ----------------*/
 
-    div.dokuwiki div.fksfootbar{
+    div.fksfootbar, #footer{
         font: 100% "Open Sans", Arial, sans-serif;
         margin-left: auto;
         margin-right: auto;
@@ -302,7 +199,7 @@
         background-color: transparent;
 
     }
-    div.fksfootbar p{
+    div.fksfootbar p,#footer li{
         text-align: center !important;
         line-height: normal;
         color: __background__;
@@ -310,12 +207,12 @@
         margin-bottom: 0.2em !important;
     }
 
-    div.fksfootbar p a.mail{
-        color: __background__;
+    div.fksfootbar p a.mail,#footer li a{
+        color: __background__!important;
         font-weight: bold;
     }
 
-    div.fksfootbar p a.mail:hover{
+    div.fksfootbar p a.mail:hover,#footer li a:hover{
         color: __background__;
     }
 
@@ -328,9 +225,11 @@
         display: inline-block;
         width: 270px; 
     }
+    
     div.fks_vyfucek{
         display: inline-block;
         width: 255px;
+       // content: '<img src="/html/web_vyfuk2/vyfuk-stranky/lib/tpl/vyfuk/images/season/winter/vyfuk_tabule.png" height="150px">';
 
     }
     div.dokuwiki[data-do=login] div.fks_vyfucek{
@@ -354,7 +253,7 @@
     }
 
     /************ botton bar **************/
-    div.dokuwiki #bar__bottom {
+    div.dokuwiki #bar__bottom,#footer {
         padding: .5em 0px .3em 0px;
         color: __text_neu__;
         margin-bottom: 0em;
@@ -370,6 +269,72 @@
         display: none;
     }
     /**********nawbar**************/
+
+    /*-------Menu*/
+    .navbar{
+        border-radius: 0;
+    }
+    body[data-do=login] div.fksmenu{
+        display:none;
+        position: absolute;
+        width: 100%;
+    }
+    body div.fks_minimenu{
+        display:none;
+    }
+    body[data-do=login] div.fks_minimenu{
+        display:block;
+        position: absolute;
+        left:10px;
+        top: 10px;
+    }
+    span.fks_minimenu_img{
+        content: url('../../images/menu-btn.png');
+        height: 30px;
+        width: 30px;
+    }
+    span.fks_minimenu_menu{
+        float:right;
+        font-size: 110%;
+        padding-top: 4px;
+        padding-left: 1px;
+    }
+
+    button.fks_minimenu_btn{
+        border: none;
+        text-align: center;
+        vertical-align: middle;
+
+        background: none;
+    }
+
+
+
+    span.fkstopbaruserinfo:hover:before,
+    span.fkstopbaruserinfo:focus:before{
+        content: url("images/season/"+__season__+"/smiley_radioactive.png");
+    }
+
+    span.fkstopbaruserinfo:before{
+        content: url("images/smiley_white.png");
+    }
+    span.fkstopbarcontest{
+        background-image: url("images/logo_vyfuk_white.png");
+        background-repeat: no-repeat;
+        background-size: 60px;
+        padding-left: 5em !important;
+    }
+
+    span.fkstopbarcontest:hover,
+    span.fkstopbarcontest:focus{
+        background-image: url("images/season/"+__season__+"/logo_vyfuk_radioactive.png");
+
+    }
+    span.fkstopbarbeta{
+        font-size: 70%;
+        background-image: none !important;
+        padding-left: 0em !important;
+    }
 
     .navbar-default{
         border-top: 0px!important;
@@ -406,6 +371,10 @@
         text-decoration: none !important;
         display: block !important;
     }
+    .navbar-default li.active a{
+        color: __background_other__ !important;
+        background-color:  __background__ !important;
+    }
     .navbar-default ul li a:hover,
     .navbar-default ul li a:focus {
         color: __background_other__ !important;
@@ -419,6 +388,7 @@
         text-decoration: none !important;
         padding: 0.5em 1em 0.4em 1em;
     }
+
     .navbar-default ul ul li a:hover,
     .navbar-default ul ul li a:focus {
         color: __background__ !important;
@@ -426,8 +396,14 @@
         display: block !important;
 
     }
-    div.dokuwiki li.open{
+    li{
         margin-left: 2em;
+    }
+    li.open{
+        margin-left: 2em;
+    }
+    .navbar li{
+        margin-left: 0;
     }
     div.dokuwiki li.closed{
         margin-left: 2em;
@@ -439,9 +415,6 @@
         margin-left: 6em;
     }
     div.dokuwiki[data-do=login] div.page div p {
-        //display: none;
-
-        //max-width: 40%;
         min-width:25em;
         color:white;
         font-size: 130%;

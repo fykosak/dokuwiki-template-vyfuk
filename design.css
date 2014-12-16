@@ -235,7 +235,7 @@ div.dokuwiki button.button {
 }
 
 div.dokuwiki div.secedit input.button {
-    
+
     border: 0px;
     color: __text__;
     background-color: __text_alt__;
@@ -279,6 +279,10 @@ div.dokuwiki form#dw__recent select {
 
 /* --------------- Links ------------------ */
 
+a{
+    color: __extern__!important;
+    text-decoration: none;  
+}
 div.dokuwiki a:link,
 div.dokuwiki a:visited {
     color: __extern__;
@@ -347,16 +351,20 @@ div.dokuwiki a.mail:before {
     //content: url(../../images/before/envelope.png) 
     //padding: 1px 0px 1px 16px;
 }
-
+a {
+    color: __background_neo__ !important;
+    //padding: 0.5em;
+    border-radius: 3px;
+}
 /* existing wikipage */
-div.dokuwiki a.wikilink1 {
+a.wikilink1 {
     color: __background_neo__ !important;
     //padding: 0.5em;
     border-radius: 3px;
 }
 
 /* not existing wikipage */
-div.dokuwiki a.wikilink2 {
+a.wikilink2 {
     color: __missing__ !important;
     text-decoration: none !important;
     border-bottom: /*dashed 1px __missing__ !important;*/0px;
@@ -365,7 +373,7 @@ div.dokuwiki a.wikilink2 {
 
 /* ------------- Page elements ----------------- */
 
-div.dokuwiki div.preview {
+div.preview {
     background-color: __background_neu__;
     margin: 0 0 0 2em;
     padding: 4px;
@@ -373,7 +381,7 @@ div.dokuwiki div.preview {
     border-radius: 3px;
 }
 
-div.dokuwiki span.user {
+span.user {
     color: __text_other__;
     font-size: 90%;
 }
@@ -421,20 +429,14 @@ div.dokuwiki abbr {
 }
 
 /* general headline setup */
-div.dokuwiki h1,
-div.dokuwiki h2,
-div.dokuwiki h3,
-div.dokuwiki h4,
-div.dokuwiki h5 {
-    color: __text_alt__;
-
-    background-color: inherit;
-    font-size: 100%;
-    font-weight: bold;
+h1,h2,h3,h4,h5 {
+    color: __text_alt__!important;
+    background-color: inherit;    
+    font-weight: bold!important;
     margin: 1em 0 .5em 0;
     padding: 0;
-    font-family: gloria-hallelujah, sans-serif;
-    letter-spacing: 2px;
+    font-family: gloria-hallelujah, sans-serif!important;
+    letter-spacing: 2px!important;
 }
 div.dokuwiki[data-do=login] h1,
 div.dokuwiki[data-do=login] h2,
@@ -445,11 +447,11 @@ div.dokuwiki[data-do=login] h5 {
 }
 
 /* special headlines */
-div.dokuwiki h1 {font-size: 170%;}
-div.dokuwiki h2 {font-size: 160%;}
-div.dokuwiki h3 {font-size: 150%;}
-div.dokuwiki h4 {font-size: 140%;}
-div.dokuwiki h5 {font-size: 130%;}
+h1 {font-size: 170%!important;}
+h2 {font-size: 160%!important;}
+h3 {font-size: 150%!important;}
+h4 {font-size: 140%!important;}
+h5 {font-size: 130%!important;}
 
 /* indent different sections */
 div.dokuwiki div.level1 {margin-left: 0.1em;}
@@ -656,7 +658,7 @@ div.dokuwiki #dw__toc ul li.clear {
     padding-left: 0.4em;
 }
 
-div.dokuwiki #dw__toc a:link,
+a,div.dokuwiki #dw__toc a:link,
 div.dokuwiki #dw__toc a:visited {
     color: __extern__;
 }
@@ -1023,61 +1025,6 @@ ul li button.button:hover {
     color: __background__  !important;
 }
 
-div.dokuwiki .navbar-default ul {
-    margin: 0;
-    padding: 0;
-    height: auto;
-    border-radius: 3px;
-    height: 100%;
-}
-div.dokuwiki .navbar-default ul ul {
-
-    min-width: __menuwidth__;
-    width: auto;
-    height: auto;
-    background-color: __background__;
-    padding: 1px;
-}
-
-div.dokuwiki .navbar-default ul ul li {
-    width: 100%;
-    padding: 1px 0 0 0;
-    margin: 0 !important;      
-}
-
-div.dokuwiki .navbar-default ul ul li {
-    font-weight: bold !important;
-    background-color: __background_neu__ !important;
-    border-radius: 3px;
-}
-
-div.dokuwiki .navbar-default ul li  a {
-    color: __background__ !important;
-    text-decoration: none !important;
-    display: block !important;
-    padding: 1em 1em 1em 1em;
-    border-radius: 3px;
-
-}
-
-div.dokuwiki .navbar-default ul li  a:hover,
-div.dokuwiki .navbar-default ul li  a:focus {
-    color: __background_other__ !important;
-    background-color:__background__ !important;
-
-}
-
-div.dokuwiki .navbar-default ul ul li a{
-    border: 0px !important;
-    background-color: __background_neu__ !important;
-
-    color: __background_other__ !important;
-}
-
-div.dokuwiki .navbar-default ul ul li  a:hover{
-    background-color: __background_other__ !important;
-    color: __background__ !important;
-}
 div.carousel-caption{
     background-color: rgba(0,0,0,0.6);
 }
