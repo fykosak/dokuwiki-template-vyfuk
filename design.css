@@ -438,13 +438,7 @@ h1,h2,h3,h4,h5 {
     font-family: gloria-hallelujah, sans-serif!important;
     letter-spacing: 2px!important;
 }
-div.dokuwiki[data-do=login] h1,
-div.dokuwiki[data-do=login] h2,
-div.dokuwiki[data-do=login] h3,
-div.dokuwiki[data-do=login] h4,
-div.dokuwiki[data-do=login] h5 {
-    background-color: transparent;   
-}
+
 
 /* special headlines */
 h1 {font-size: 170%!important;}
@@ -463,10 +457,7 @@ div.dokuwiki div.level5 {margin-left: 2.1em;}
 h1{
     border-bottom: 1px solid __border__;
 }
-div.dokuwiki[data-do=login] h1{
 
-    border-bottom: none;
-}
 /* unordered lists */
 div.dokuwiki div.wpap ul {
     list-style-type: square;
@@ -478,7 +469,7 @@ div.dokuwiki div.wpap ul {
 /* ordered lists */
 div.dokuwiki ol {
     list-style-image: none;
-    margin: 0 0 0.5em 1.5em;
+    //margin: 0 0 0.5em 1.5em;
     color: __text__;
     font-weight: bold;
 }
@@ -740,9 +731,7 @@ div.dokuwiki div.footnotes {
 div.dokuwiki div.fn {
     font-size: 90%;
 }
-div.dokuwiki[data-do=login] div.fn{
-    color:white;
-}
+
 
 div.dokuwiki a.fn_bot {
     font-weight: bold;
@@ -956,11 +945,7 @@ legend  {
     padding: 0 0.5em;
     border-radius: 3px;
 }
-div.dokuwiki[data-do=login] legend{
-    background-color: transparent;
-    font-family: gloria-hallelujah,sans-serif;
-    border: none;
-}
+
 .license  {
     clear:both;
     text-align: center;

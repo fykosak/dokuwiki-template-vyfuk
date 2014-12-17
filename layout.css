@@ -14,7 +14,7 @@
     }
 
     html { 
-        font-size: 100%;
+        font-size: 95%;
         height: 0; 
     }
 
@@ -28,15 +28,7 @@
         float: left;
         width: 100%;
     }
-    body[data-do=login] {
 
-        background: __background_other__ no-repeat ;
-
-        background-image: url(images/bg_login_1.jpg) ;
-        background-position:center top;
-
-
-    }
     img#fakebackground {
         width: 100%;	
         position: absolute;
@@ -44,10 +36,7 @@
         left: 0;
         z-index: -1;
     }
-    div.dokuwiki {
-    }
-    div.dokuwiki[data-do=login] {
-    }
+
     /* -------------- header --------------- */
     div.dokuwiki .stylehead {
         /* background-color: transparent;   */
@@ -131,16 +120,11 @@
         border-top:none;
         box-shadow: 0px 0px 5px 2px __border__;
 
-    }
-    div.dokuwiki[data-do=login] div.wrap{
-        margin-top: 5em;  
-        background: none;
 
-        border: none;
-        background: none;
-        box-shadow: none;
 
     }
+
+
 
 
 
@@ -156,37 +140,15 @@
         height: 100%;
         max-width: 43em;
         margin-right: 0;
-    }
-    div.dokuwiki[data-do=login] div.page{
-
-        box-shadow: 0px 0px 5px 2px __border__;
-        background-color: rgba(2,2,2,0.7);        
-        float: left;
-        width: 100%;
-        max-width: none;
-        padding-bottom:0 !important;
-        padding-right:0 !important;
-
-
 
     }
-    div.dokuwiki[data-do=login] div.page  fieldset{
-
-        margin-top: 3em;
-    }
-
     div.fkssidebarhead{
         margin-left: auto;
         margin-right: 0;
         width:90%;
     }
 
-    div.dokuwiki[data-do=login] div.centeralign{
-        float: right;
-        box-shadow: 0px 0px 5px 2px __border__;
-        background-color: rgba(255,255,255,0.7);
-        margin-left: 1em;
-    }
+
 
     /* ----------- fks foot bar ----------------*/
 
@@ -225,32 +187,26 @@
         display: inline-block;
         width: 270px; 
     }
-    
+
     div.fks_vyfucek{
         display: inline-block;
         width: 255px;
-       // content: '<img src="/html/web_vyfuk2/vyfuk-stranky/lib/tpl/vyfuk/images/season/winter/vyfuk_tabule.png" height="150px">';
+        // content: '<img src="/html/web_vyfuk2/vyfuk-stranky/lib/tpl/vyfuk/images/season/winter/vyfuk_tabule.png" height="150px">';
 
     }
-    div.dokuwiki[data-do=login] div.fks_vyfucek{
-        display: none;
-    }
+
 
     div.fks_mrak_1{
         display: inline-block;
         width: 115px; 
     }
-    div.dokuwiki[data-do=login] div.fks_mrak_1{
-        display: none;
-    }
+
 
     div.fks_mrak_2{
         display: inline-block;
         width: 110px;
     }
-    div.dokuwiki[data-do=login] div.fks_mrak_2{
-        display: none;
-    }
+
 
     /************ botton bar **************/
     div.dokuwiki #bar__bottom,#footer {
@@ -265,29 +221,18 @@
         margin-top: 0em;
         text-align: center;
     }
-    div.dokuwiki[data-do=login] #bar__bottom {
-        display: none;
-    }
+
     /**********nawbar**************/
 
     /*-------Menu*/
     .navbar{
         border-radius: 0;
     }
-    body[data-do=login] div.fksmenu{
-        display:none;
-        position: absolute;
-        width: 100%;
-    }
+
     body div.fks_minimenu{
         display:none;
     }
-    body[data-do=login] div.fks_minimenu{
-        display:block;
-        position: absolute;
-        left:10px;
-        top: 10px;
-    }
+
     span.fks_minimenu_img{
         content: url('../../images/menu-btn.png');
         height: 30px;
@@ -414,14 +359,21 @@
     div.dokuwiki li div ul li div ul li {
         margin-left: 6em;
     }
-    div.dokuwiki[data-do=login] div.page div p {
-        min-width:25em;
-        color:white;
-        font-size: 130%;
-    }
+
 
 }
+@media(min-width:855px){
+    div.flex{
+        display: flex;
+        justify-content:space-around; 
+    }
+}
 @media(max-width:855px){
+    div.page{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     div.fks_vyfucek{
         display: none;
     }
