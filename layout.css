@@ -285,10 +285,10 @@
         border-top: 0px!important;
         background-color: __background_other__;
 
-        background-image: -webkit-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* For Safari 5.1 to 6.0 */
-        background-image: -o-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* For Opera 11.1 to 12.0 */
-        background-image: -moz-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* For Firefox 3.6 to 15 */
-        background-image: linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%); /* Standard syntax */
+        /*background-image: -webkit-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* For Safari 5.1 to 6.0 */
+        /*background-image: -o-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* For Opera 11.1 to 12.0 */
+        /*background-image: -moz-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* For Firefox 3.6 to 15 */
+        /*background-image: linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* Standard syntax */
         margin: 0em 0em 0em 0em;
         padding: 0em;
         width: 100%; 

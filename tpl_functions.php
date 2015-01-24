@@ -249,11 +249,11 @@ function _fks_minimenu() {
 function _fks_noscript() {
     echo '<noscript>' .
     helper_plugin_fkshelper::returnmsg('<h1>Asi máte vypnutý JavasScript</h1>
-        <p>Pre správne fungovanie tejto stránky je potrebné mať zapnutý 
+        <p>Pro správne fungovaní téjto stránky je potřebné mít zapnutý 
         <a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a>.</p>
-        <p>Ak chcete zobraziť tento web plnohodnotne 
+        <p>Pokud chcete zobrazit tento web plnohodnotně 
         <a href="https://www.google.cz/webhp?ie=UTF-8#q=how+to+turn+on+javascript">
-        zapnite si JavaScript</a>!</p>', -1) .
+        zapněte si JavaScript</a>!</p>', -1) .
     '</noscript>';
 }
 
