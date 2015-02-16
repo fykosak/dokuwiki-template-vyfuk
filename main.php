@@ -108,13 +108,14 @@ flush();
 echo '      
                 <div class="clearer">
                 </div>
-            
+            <div class="flex">
                 <div class="page" >';
 _fks_noscript()
 ;
 
 tpl_content();
 echo '
+                </div>
                 </div>
             ';
 
