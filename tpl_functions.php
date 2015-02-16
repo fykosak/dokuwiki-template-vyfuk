@@ -623,16 +623,16 @@ function _fks_colorize_img($name, $ext, $default_dir, $dir, $ini) {
 
 function _fks_season_img($file, $type) {
     global $conf;
-    $ini_time = filemtime(DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini');
-    
-
-    $ini = parse_ini_file(DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini');
+    $ini_file=DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini';
+    $ini_time = filemtime($ini_file);
+    $ini = parse_ini_file($ini_file);
     $season = $ini['__season__'];
-    $dir = 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/';
+    $dir         = 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/';
     $default_dir = 'lib/tpl/' . $conf['template'] . '/images/season/default/';
-    $file_time = @filemtime(DOKU_INC . $dir . $file . '.' . $type);
+    $file_patch=DOKU_INC . $dir . $file . '.' . $type;
+    $file_time = @filemtime($file_patch);
 
-    if ((!file_exists(DOKU_INC . $dir . $file . '.' . $type) || ($file_time < $ini_time))) {
+    if ((!file_exists($file_patch) || ($file_time < $ini_time))) {
         if (!file_exists(DOKU_INC . $dir)) {
             mkdir(DOKU_INC . $dir);
         }
