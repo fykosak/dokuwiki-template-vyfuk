@@ -239,8 +239,7 @@ function _fks_minimenu() {
                 <span class="fks_minimenu_menu">Menu</span>
                 <span class="fks_minimenu_img"></span>
             
-                <div class="clearer">
-            </div>
+              
           </button>';
 }
 

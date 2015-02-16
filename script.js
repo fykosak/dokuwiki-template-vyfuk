@@ -54,7 +54,7 @@ jQuery(window).load(function() {
 // }
 // }
 
-    console.clear();
+    //console.clear();
     //console.log($('<span style="font:red">nesockuj tento kod</span>').context.outerHTML);
     console.log("%cNesockuj tento kód!!!", "color: red; font-size: x-large");
     //$("div.dokuwiki[do=login] .button").each(function() {

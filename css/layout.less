@@ -29,13 +29,7 @@
         width: 100%;
     }
 
-    img#fakebackground {
-        width: 100%;	
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
+
 
     /* -------------- header --------------- */
     div.dokuwiki .stylehead {
@@ -49,21 +43,9 @@
         height: auto;
     }
 
-    div.dokuwiki .pagename {
-        text-align: center; 
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    div.dokuwiki .pagename a {
-        font-size: 250%;
-        font-weight: bolder;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 3em;
-        color: __text_neu__ !important;
-        text-decoration: none !important;
-    }
+
+
 
     div.dokuwiki div.breadcrumbs {
         background:  #fffaaa;
@@ -105,50 +87,11 @@
 
     /* ------------- the document area ------------- */
     div.wrap{
-        width: 100%;
-        overflow: hidden;
-        border-radius: 0px;
-
-        min-width: 31em;
-        max-width: 83em;//pôvodne 85
-        //width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0em;
-        background: __background__;
-        border: 1px solid __background_other__;
-        border-top:none;
-        box-shadow: 0px 0px 5px 2px __border__;
-
-
-
+        max-width: 83em;
+        .container;
+        border: 1px __background_other__ solid;
+        background-color: __background__ ;
     }
-
-
-
-
-
-
-
-    /* ------------- the document ------------- */
-
-    div.page{
-        float: left;
-        margin-left: 0em;
-        min-width: 25em;
-        padding: 0em 1em 1.5em 1.5em;
-        height: 100%;
-        max-width: 43em;
-        margin-right: 0;
-
-    }
-    div.fkssidebarhead{
-        margin-left: auto;
-        margin-right: 0;
-        width:90%;
-    }
-
-
 
     /* ----------- fks foot bar ----------------*/
 
@@ -182,46 +125,6 @@
         content: " ";
 
     }
-
-    div.fks_vyfuk_logo{
-        display: inline-block;
-        width: 270px; 
-    }
-
-    div.fks_vyfucek{
-        display: inline-block;
-        width: 255px;
-        // content: '<img src="/html/web_vyfuk2/vyfuk-stranky/lib/tpl/vyfuk/images/season/winter/vyfuk_tabule.png" height="150px">';
-
-    }
-
-
-    div.fks_mrak_1{
-        display: inline-block;
-        width: 115px; 
-    }
-
-
-    div.fks_mrak_2{
-        display: inline-block;
-        width: 110px;
-    }
-
-
-    /************ botton bar **************/
-    div.dokuwiki #bar__bottom,#footer {
-        padding: .5em 0px .3em 0px;
-        color: __text_neu__;
-        margin-bottom: 0em;
-        background-color: __background_other__;
-        width: 100%;
-
-        clear: both;
-        min-width: 25em;
-        margin-top: 0em;
-        text-align: center;
-    }
-
     /**********nawbar**************/
 
     /*-------Menu*/
@@ -285,10 +188,6 @@
         border-top: 0px!important;
         background-color: __background_other__;
 
-        /*background-image: -webkit-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* For Safari 5.1 to 6.0 */
-        /*background-image: -o-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* For Opera 11.1 to 12.0 */
-        /*background-image: -moz-linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* For Firefox 3.6 to 15 */
-        /*background-image: linear-gradient(top,__background_other_dark__ 0,__background_other__ 100%);*/ /* Standard syntax */
         margin: 0em 0em 0em 0em;
         padding: 0em;
         width: 100%; 
@@ -341,6 +240,7 @@
         display: block !important;
 
     }
+
     li{
         margin-left: 2em;
     }
@@ -362,36 +262,7 @@
 
 
 }
-@media(min-width:855px){
-    div.flex{
-        display: flex;
-        justify-content:space-around; 
-    }
-}
-@media(max-width:855px){
-    div.page{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    div.fks_vyfucek{
-        display: none;
-    }
+//nastavneie padania sidebaru pod page
 
-    div.fks_mrak_1{
-        display: none; 
-    }
+//Miznutie vyučka pri malom display
 
-    div.fks_mrak_2{
-        display: none;
-    }
-    div.dokuwiki div.page{
-        float: none;
-        margin-left: 0em;
-        min-width: 25em;
-        width: 100%;
-        padding: 0em 1em 1.5em 1.5em;
-        max-width: 45em;
-        margin-right: 0;
-    }
-}
