@@ -12,6 +12,9 @@ if (!defined('DOKU_INC')) {
 
 // include custom template functions stolen from arctic template 
 require_once(dirname(__FILE__) . '/tpl_functions.php');
+
+
+require_once (DOKU_PLUGIN . plugin_directory('fksimageshow') . '/helper.php');
 $tpl_season = 'winter';
 echo '
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -27,7 +30,7 @@ echo '
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         ';
-if (preg_match('/Výfuk/', tpl_pagetitle($ID, true))) {
+if (preg_match('/výfuk/i', tpl_pagetitle($ID, true))) {
     echo'
         <title> ', tpl_pagetitle($ID, true), ' </title>
 ';
@@ -66,11 +69,13 @@ echo '
         <div class="fksmenu">            
 ';
 _wp_tpl_mainmenu();
+
 echo '          
         </div>
         <div class="fks_minimenu">
             ';
 _fks_minimenu();
+
 echo'
         </div>
         <div class="clearer">
@@ -81,21 +86,23 @@ echo'
                     <div class="header">
                         <div class="clearer">
                         </div>
-                        <div class="fkspagename" align="center">
-                            <div class="fks_vyfuk_logo">
+                        <div class="fkspagename" style="text-align:center">
+                            <div class="fks_vyfuk_logo" >
                                 <a href="' . DOKU_BASE . '">
-                                    <img src="' . _fks_season_img('logo_vyfuk', 'png', $tpl_season) . '" height="150px" />
+                                    <img src="' . fksimage::_fks_season_image('logo_vyfuk', 'png') . '" style="height:150px;" alt="logo_vyfuk" /> ';
+
+echo '
                                 </a>
                             </div>
                             <div class="fks_mrak_1">
                         
-                                <img src="' . _fks_season_img('vyfuk_mrak_1', 'png', $tpl_season) . '" height="90px" />
+                                <img src="' . fksimage::_fks_season_image('vyfuk_mrak_1', 'png', $tpl_season) . '" alt="logo_vyfuk"  style="height:90px" />
                             </div>            
                             <div class="fks_mrak_2">
-                                <img src="' . _fks_season_img('vyfuk_mrak_2', 'png', $tpl_season) . '" height="80px" />
+                                <img src="' . fksimage::_fks_season_image('vyfuk_mrak_2', 'png', $tpl_season) . '" alt="logo_vyfuk"  style="height:80px" />
                             </div>
                             <div class="fks_vyfucek">
-                                <img src="' . _fks_season_img('vyfuk_tabule', 'png', $tpl_season) . '" height="150px" />
+                                <img src="' . fksimage::_fks_season_image('vyfuk_tabule', 'png', $tpl_season) . '" alt="logo_vyfuk"  style="height:150px" />
                             </div>           
                         </div> 
                     </div>
@@ -108,15 +115,23 @@ flush();
 echo '      
                 <div class="clearer">
                 </div>
-            <div class="flex">
                 <div class="page" >';
 _fks_noscript()
 ;
 
 tpl_content();
-echo '
-                </div>
-                </div>
+
+echo '</div>';
+global $ACT;
+if ($ACT == 'show') {
+    echo'<div class="fkssidebar_R">'
+    . p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info)
+    . '</div>'
+    . '<div class="clearer"></div>';
+}
+
+echo'
+
             ';
 
 tpl_flush();
@@ -126,7 +141,7 @@ echo '
 tpl_indexerWebBug();
 echo '
             </div>
-            <div class="bar" id="bar__bottom">     
+                </div>
                 <div class="fksfootbar">
                     ' . _fks_footbar() . '
                     <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki">
@@ -136,8 +151,8 @@ echo '
                         <img src="', DOKU_TPL, 'images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" />
                     </a>
                 </div>
-            </div>
-            </div>
+            
+           
         </div>
     </body>
 </html>

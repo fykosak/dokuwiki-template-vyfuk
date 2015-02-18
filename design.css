@@ -896,7 +896,7 @@ div.dokuwiki div#spell__result {
 
 div.dokuwiki span.spell_noerr {
     color: #53DF00;
-}
+}legend
 
 div.dokuwiki span.spell_wait {
     color: #000042;
@@ -984,35 +984,12 @@ div.plugin_translation {
 
 
 
-ul li input.button,
-ul li button.button {
-    color: __background__ !important;
-    letter-spacing: 2px;
-    text-decoration: none !important;
-    display: block !important;
-    padding: .7em .5em .3em .5em !important;
-    margin: 0 !important;
-    width: 100%;
-    background-color: __background_other__!important;
-    text-align: left;
-    font-weight: bold;
-    font-size: 100%;
-    cursor: pointer;
-    border: 0px;
-    font-family: gloria-hallelujah, sans-serif;
-    border-radius: 3px;
-    white-space: nowrap;
-}
 
-ul li input.button:hover,
-ul li button.button:hover {
-    background-color:  __text_alt__ !important;
-    color: __background__  !important;
-}
 
 div.carousel-caption{
     background-color: rgba(0,0,0,0.6);
 }
+
 
 
 

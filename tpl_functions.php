@@ -37,7 +37,7 @@ function _fks_topbaruser() {
             'type' => 'd',
             'level' => 1,
             'open' => 1,
-            'title' => '<span class="fkstopbaruserinfo"></span>');
+            'title' => '<span class="FKS_topbar_user"></span>');
         $data[] = array('id' => '',
             'ns' => '',
             'perm' => 8,
@@ -149,8 +149,7 @@ function _wp_tpl_mainmenu() {
         'type' => 'd',
         'level' => 1,
         'open' => 1,
-        'title' => '<span class="fkstopbarcontest"> Výfuk </span>
-                        <span class="fkstopbarbeta">beta</span>'
+        'title' => '<span class="FSK_topbar_contest"> Výfuk <small>beta</small></span>'
     );
     $data2 = array_merge($vyfuk, tpl_parsemenutext(), _fks_topbaruser());
 
