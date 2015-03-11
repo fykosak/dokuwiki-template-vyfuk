@@ -6,18 +6,11 @@
 ; print, screen and rtl are supported. rtl styles are loaded additionally
 ; to screen styles if a right-to-left language is selected (eg. hebrew)
 [stylesheets]
-bootstrap.min.less = all
+bootstrap.min.css = all
 bootstrap-theme.min.css = all
 
-css/layout.less    = all
-design.css     = all
-;konktrétne časti dokumentu smaostatne
-css/fkspagename.less = all
-css/fkssidebar.less = all
-css/fksfootbar.less = all
-
-css/navbar.less = all
-login.less = all
+layout.css     = all
+design.css     = screen
 
 media.css         = screen
 ;boostrap.min.css  = rtl
@@ -38,26 +31,25 @@ print.css      = print
 [replacements]
 ;------ guaranteed dokuwiki color placeholders that every plugin can use
 ; main text and background colors
-
-__season__ = "vyfuk"
+__season__ = "winter"
 ;vyfuk color 1 
 ;
 ; headings 
-__text_alt__ = "#ff4800"
-__vyfuk_head__ = "#ff4800"
+__text_alt__ = "#DAA520"
+__vyfuk_head__ = "#DAA520"
 ;__text_alt__ = "#DAA520"
 ;vyfuk color 2
 ; background and borers
-__background_other__ = "#99cc33"
-__vyfuk_back__ = "#99cc33"
+__background_other__ = "#008083"
 ;__background_other__ = "#008083"
+__vyfuk_back__ = "#008083"
 ;dark color of vyfuk color 2
 ;
-__background_other_dark__ = "#669900"
-__vyfuk_back_dark__  = "#669900"
-
-__vyfuk_back_light_1__ = "#DEE2CC"
-__vyfuk_back_light_2__ = "#DEE2CC"
+__background_other_dark__ = "#00ccff"
+__vyfuk_back_dark__  = "#005053"
+;
+__vyfuk_back_light_1__ = "#ddddff"
+__vyfuk_back_light_2__ = "#ddffdd"
 ;
 ;text color 
 __text__ 	= "#000000"
@@ -84,12 +76,11 @@ __text_other__       = "#dcdcdc"
 ;
 ; "#b0e03e"
 ; these are used for links
-__extern__    = "#ff7e00"
-__existing__  = "#ff7e00"
-__missing__   = "#fef200"
+__extern__    = "#008083"
+__existing__  = "#008083"
+__missing__   = "#008083"
 ; highlighting search snippets
-__highlight__ = "#ff4800"
-
+__highlight__ = "#008083"
 ;wallpaper special variables
 ;---------------------------------------------------------------------------
 ; width of submenu items
