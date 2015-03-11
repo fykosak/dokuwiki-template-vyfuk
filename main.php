@@ -29,6 +29,7 @@ echo '
         </script>
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi">
         ';
 if (preg_match('/výfuk/i', tpl_pagetitle($ID, true))) {
     echo'
@@ -75,7 +76,7 @@ echo '
         <div class="fks_minimenu">
             ';
 _fks_minimenu();
-
+flush();
 echo'
         </div>
         <div class="clearer">
@@ -122,10 +123,11 @@ _fks_noscript()
 tpl_content();
 
 echo '</div>';
+flush();
 global $ACT;
 if ($ACT == 'show') {
     echo'<div class="fkssidebar_R">'
-    . p_render("xhtml", p_get_instructions(io_readFile("data/pages/fkssidebar.txt", false)), $info)
+    . p_render("xhtml", p_cached_instructions('data/pages/system/fkssidebar.txt'), $info)
     . '</div>'
     . '<div class="clearer"></div>';
 }
@@ -143,7 +145,7 @@ echo '
             </div>
                 </div>
                 <div class="fksfootbar">
-                    ' . _fks_footbar() . '
+                    ' . p_render("xhtml", p_cached_instructions("data/pages/system/fksfootbar.txt"), $info) . '
                     <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki">
                         <img src="', DOKU_TPL, 'images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" />
                     </a>

@@ -16,10 +16,6 @@ if (!defined('DOKU_INC')) {
 
 /* prints the menu */
 
-function _fks_footbar() {
-
-    return p_render("xhtml", p_get_instructions(io_readFile(DOKU_INC . "data/pages/fksfootbar.txt", false)), $info);
-}
 
 /*
  * začiatok mišoveho šialenstva!!!
@@ -194,7 +190,7 @@ function _wp_tpl_mainmenu() {
                         <span>' . $v['title'] . ' </span>
                                             </a> </li>';
                 } else {
-                    echo'<li> <a class="navbar-brand" href="' . wl($v['id']) . '">
+                    echo'<li> <a class="navbar-brand" href="' . wl($v['id']). '">
                         <span>' . $v['title'] . ' </span>
                                             </a></li> ';
                 }
@@ -209,7 +205,8 @@ function _wp_tpl_mainmenu() {
                 if (preg_match('#https?://#', $v['id'])) {
                     echo'<a href="' . $v['id'] . '"><span class="menu_' . $v['id'] . '">' . $v['title'] . '</span></a>';
                 } else {
-                    echo'<a href="' . wl($v['id']) . '"><span class="menu_' . $v['id'] . '">' . $v['title'] . '</span></a>';
+                    
+                    echo'<a href="'.wl($v['id']) . '"><span class="menu_' . $v['id'] . '">' . $v['title'] . '</span></a>';
                 }
             } else {
                 echo'<span>' . $v['title'] . '</span>';
@@ -489,11 +486,9 @@ function tpl_parsemenutext() {
     $data = array();
     $ff = TRUE;
     if ($conf['tpl'][$tpl]['usemenufile']) {
-        if ($conf['tpl'][$tpl]['menufilename']) {
-            $menufilename = $conf['tpl'][$tpl]['menufilename'];
-        } else {
-            $menufilename = 'menu';
-        }
+       
+            $menufilename = 'system/menu';
+        
         $filepath = wikiFN($menufilename);
         if (!file_exists($filepath)) {
             $ff = FALSE;
@@ -573,75 +568,4 @@ function return_fce($func, $param = null) {
     $f = ob_get_contents();
     ob_end_clean();
     return $f;
-}
-
-function _fks_colorize_img($name, $ext, $default_dir, $dir, $ini) {
-
-    $file_name = DOKU_INC . $default_dir . $name . '.' . $ext;
-    if ($ext == "png") {
-        $im = imagecreatefrompng($file_name);
-    } elseif ($ext == 'jpg' || $ext == 'jpeg') {
-        $im = imagecreatefromjpeg($file_name);
-    } else {
-        return;
-    }
-    list($w, $h) = getimagesize($file_name);
-    if (preg_match('/radioactive/i', $name)) {
-        $style_rgb = hexdec($ini['__vyfuk_back__']);
-    } else {
-        $style_rgb = hexdec($ini['__vyfuk_head__']);
-    }
-    $style_color = imagecolorsforindex($im, $style_rgb);
-    for ($i = 0; $i < $w; $i++) {
-        for ($j = 0; $j < $h; $j++) {
-            $rgb = imagecolorat($im, $i, $j);
-            $colors = imagecolorsforindex($im, $rgb);
-            if ($colors['alpha'] != 127) {
-                if ($colors["red"] != 255 || $colors["green"] != 255 || $colors["blue"] != 255) {
-                    if ($colors["red"] != $style_color["red"] || $colors["green"] != $style_color["green"] || $colors["blue"] != $style_color["blue"]) {
-                        $color = imagecolorallocate($im, $style_color["red"], $style_color["green"], $style_color["blue"]);
-                        imagesetpixel($im, $i, $j, $color);
-                    }
-                }
-            }
-        }
-    }
-    ob_start();
-    if ($ext == "png") {
-        imagesavealpha($im, true);
-        imagepng($im);
-    } elseif ($ext == 'jpg' || $ext == 'jpeg') {
-        imagejpeg($im);
-    }
-    $contents = ob_get_contents();
-    imagedestroy($im);
-    ob_end_clean();
-    io_saveFile(DOKU_INC . $dir . $name . '.' . $ext, $contents);
-    return true;
-}
-
-function _fks_season_img($file, $type) {
-    global $conf;
-    $ini_file=DOKU_INC . 'lib/tpl/' . $conf['template'] . '/style.ini';
-    $ini_time = filemtime($ini_file);
-    $ini = parse_ini_file($ini_file);
-    $season = $ini['__season__'];
-    $dir         = 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/';
-    $default_dir = 'lib/tpl/' . $conf['template'] . '/images/season/default/';
-    $file_patch=DOKU_INC . $dir . $file . '.' . $type;
-    $file_time = @filemtime($file_patch);
-
-    if ((!file_exists($file_patch) || ($file_time < $ini_time))) {
-        if (!file_exists(DOKU_INC . $dir)) {
-            mkdir(DOKU_INC . $dir);
-        }
-
-        foreach (scandir(DOKU_INC . $default_dir) as $value) {
-            $file_path = pathinfo(DOKU_INC . $default_dir . $value);
-            $ext = $file_path['extension'];
-            $name = $file_path['filename'];
-            _fks_colorize_img($name, $ext, $default_dir, $dir, $ini);
-        }
-    }
-    return DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/images/season/' . $season . '/' . $file . '.' . $type;
 }
