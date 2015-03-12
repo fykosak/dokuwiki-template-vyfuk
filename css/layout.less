@@ -1,13 +1,11 @@
 
 /*
- * Tableless Layout for Wallpaper template
+ * 
  *
- * @author Andreas Gohr <andi@splitbrain.org>
- * @author moraes <moraes@tipos.com.br>
- * @author Klaus Vormweg <klaus.vormweg@gmx.de>
+ * 
  */
 
-/* -------------- basic page elements -------------- */
+
 @media screen{
     * { 
         padding: 0; margin: 0; 
@@ -19,7 +17,7 @@
     }
 
     body {
-        width: 110%;
+      
         font: 90% "Open Sans", Arial, sans-serif;
         background: __background_other__ url(images/vyfuk_bg_color2.jpg) repeat;
         background-attachment: fixed;
@@ -30,80 +28,21 @@
     }
 
 
-
-    /* -------------- header --------------- */
-     .stylehead {
-        
-        
-       
-    }
-
-    div.dokuwiki .header {
-       
-        height: auto;
-    }
-
-
-
-
-
-    div.dokuwiki div.breadcrumbs {
-        background:  #fffaaa;
-        color: __text_neu__;
-        font-size: 80%;
-        padding: 4px 0 0 4px;
-        min-height: 2em;
-        margin: 1.5em 0em 0em 0em;
-        border-radius: 5px 5px 0px 0px;
-        clear:both;
-    }
-
-
-    /* ------------- File Metadata ----------------------- */
-    div.dokuwiki div.stylefoot {
-        
-        
-        height: 1.75em;
-        clear: both;
-        color: __text__;
-        background: #fffaaa;
-        border-radius: 0px 0px 5px 5px;
-    }
-
-    div.dokuwiki div.stylefoot div.meta {
-        font-size: 85%;
-        text-align: right;
-        padding: 0.25em 1em 0.25em 0;
-    }
-    div.dokuwiki div.stylefoot div.meta div.homelink {
-        margin: 0 0 0 0.5em;
-      
-    }
-    div.dokuwiki div.stylefoot div.meta div.homelink a {
-        display: block;
-        
-        padding: 0.15em 0.25em 0.5em 1em;
-    }
-
-    /* ------------- the document area ------------- */
-    div.wrap{
+    .wrap{
         max-width: 83em;
-        .container;
+        margin-left: auto;
+        margin-right: auto;
         border: 1px __background_other__ solid;
         background-color: __background__ ;
+        overflow: hidden;
     }
 
     .container-fluid{
-        .container;
+        
         max-width: 83em;
     }
 
     /* ----------- fks foot bar ----------------*/
-
-
-
-
-
 
 
     li{

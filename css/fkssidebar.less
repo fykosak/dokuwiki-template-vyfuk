@@ -9,9 +9,10 @@ and open the template in the editor.
 */
 
 @media screen and(min-width:855px){
-    .page{
+    .page,.fkssidebar_R{
         width: 100%;
         float: none;
+        padding: 0em 2em 0 2em;
     }
     .dokuwiki[data-do=show] {
         .page{
@@ -26,17 +27,19 @@ and open the template in the editor.
 
 }
 @media screen and(max-width:855px){
-    .page{
-        width: 100%
-    }
-    .fkssidebar_R{
-        width: 100%;
+    .page,.fkssidebar_R{
+        float: none;
+        padding: 0em 1em 0 1em;
     }
 }
 @media screen{
-    .page,.fkssidebar_R{
-    padding: 0em 1em 1.5em 1.5em;
-}
+    .fkssidebar_R{
+        
+    }
+    .page{
+
+        
+    }
 }
 
 
