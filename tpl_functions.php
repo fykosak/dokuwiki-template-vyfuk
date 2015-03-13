@@ -145,7 +145,7 @@ function _wp_tpl_mainmenu() {
         'type' => 'd',
         'level' => 1,
         'open' => 1,
-        'title' => '<span class="FSK_topbar_contest"> Výfuk <small>beta</small></span>'
+        'title' => '<span class="FSK_topbar_contest"> Výfuk</span>'
     );
     $data2 = array_merge($vyfuk, tpl_parsemenutext(), _fks_topbaruser());
 
