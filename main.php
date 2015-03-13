@@ -12,7 +12,7 @@ global $ACT;
 global $ID;
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']; ?>" lang="<?php echo $conf['lang']; ?>" dir="<?php echo $lang['direction'] ?>">
 
