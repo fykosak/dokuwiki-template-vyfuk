@@ -17,7 +17,7 @@ global $ID;
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']; ?>" lang="<?php echo $conf['lang']; ?>" dir="<?php echo $lang['direction'] ?>">
 
     <head>
-        <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&ampsubset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="//use.edgefonts.net/gloria-hallelujah:n4:all;source-sans-pro.js" >
         </script>

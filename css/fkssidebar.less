@@ -33,12 +33,21 @@ and open the template in the editor.
     }
 }
 @media screen{
-    .fkssidebar_R{
-        
-    }
-    .page{
+    
+}
 
-        
+/**
+* print projection and another pičoviny
+*/
+@media print,projection,tv{
+    .page, .fkssidebar_R{
+        width: 100%;
+    }
+    
+}
+@media print{
+    .fkssidebar_R{
+        display: none;
     }
 }
 
