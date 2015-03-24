@@ -289,7 +289,7 @@
     div.dokuwiki a:hover,
     div.dokuwiki a:active {
         color: __highlight__;
-        text-decoration: underline;
+      //  text-decoration: underline;
     }
 
     div.dokuwiki h1 a,
