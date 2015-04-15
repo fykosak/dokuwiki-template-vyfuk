@@ -6,57 +6,75 @@
     color: __text_neu__;
 }
 
-.dokuwiki ul.admin_tasks {
+
+ul.admin_tasks {
     font-size: 115%;
     float: left;
-    width: 40%;
+    width: 50%;
     list-style-type: none;
+    li {
+        line-height: 22px;
+
+        margin: 1em 0;
+
+        text-align: left;
+        //.btn;
+       // .btn-primary;
+        display: block;
+    }
+    li div.li {
+        font-weight: bold;
+        display: inline-block;
+        
+        a{
+
+            padding: .5em;
+        }
+
+    }
+    li.admin_acl:before {
+        content: url(../../images/admin/acl.png);
+    }
+    li.admin_usermanager:before {
+        content: url(../../images/admin/usermanager.png);
+    }
+    li.admin_plugin:before{
+        content: url(../../images/admin/plugin.png);
+
+    }
+    li.admin_config:before {
+        content: url(../../images/admin/config.png);
+    }
+    li.admin_revert:before {
+        content: url(../../images/admin/revert.png);
+    }
+    li.admin_popularity:before {
+        content: url(../../images/admin/popularity.png);
+    }
 }
 
-.dokuwiki ul.admin_tasks li {
-    line-height: 22px;
-    padding-left: 35px;
-    margin: 1em 0;
-    background: transparent none no-repeat scroll 0 0;
-    text-align: left;
-}
-
-.dokuwiki ul.admin_tasks li div.li {
-    font-weight: bold;
-}
-
-.dokuwiki ul.admin_tasks li.admin_acl {
-    background-image: url(../../images/admin/acl.png);
-}
-
-.dokuwiki ul.admin_tasks li.admin_usermanager {
-    background-image: url(../../images/admin/usermanager.png);
-}
-
-.dokuwiki ul.admin_tasks li.admin_plugin {
-    background-image: url(../../images/admin/plugin.png);
-}
-
-.dokuwiki ul.admin_tasks li.admin_config {
-    background-image: url(../../images/admin/config.png);
-}
-
-.dokuwiki ul.admin_tasks li.admin_revert {
-    background-image: url(../../images/admin/revert.png);
-}
-
-.dokuwiki ul.admin_tasks li.admin_popularity {
-    background-image: url(../../images/admin/popularity.png);
+@media  (max-width:600px){
+    ul.admin_tasks {
+        float: none;
+        width: 100%;
+    }
 }
 
 #config__manager{
-   
-    input[type=text]{
+
+    input[type=text],select{
         .form-control;
+        border-color:#a94442;
+        -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow:inset 0 1px 1px rgba(0,0,0,.075)
+
+            &:focus{
+            border-color:#843534;
+            -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+            box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483
+        }
     }
-    select{
-        .form-control;
-    }
+
     fieldset{
         background: none;
     }
@@ -71,19 +89,48 @@
         }
     }
     .label,label{
-        
+
         white-space: normal;
         color:black;
-         margin: .5em!important;
-         font-size: 100%!important;
-        
-        
+        margin: .5em!important;
+        font-size: 100%!important;
+
+
     }
     .outkey{
         font-size: 100%!important;
         margin: .5em!important;
     }
-    
+
+    tr.default{
+        *{
+            background-color:transparent!important; 
+        }
+
+        input,textarea,select,.selectiondefault,.edit{
+
+
+
+            border-color:#3c763d;
+            -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow:inset 0 1px 1px rgba(0,0,0,.075)
+
+                &:focus{
+                border-color:#2b542c;
+                -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168;
+                box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168
+            }
+        }
+    }
+
+
+
+    //.form-primary;
+
+
+
 }
+
+
 
 
