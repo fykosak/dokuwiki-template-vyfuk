@@ -230,16 +230,7 @@ function _wp_tpl_mainmenu() {
             </div>';
 }
 
-function _fks_minimenu() {
-    echo'<button class="fks_minimenu_btn">
-                <span class="fks_minimenu_menu">Menu</span>
-                <span class="fks_minimenu_img"></span>
-            
-              
-          </button>';
-}
 
-;
 
 function _fks_noscript() {
     echo '<noscript>' .

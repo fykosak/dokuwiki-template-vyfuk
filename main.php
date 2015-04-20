@@ -38,6 +38,7 @@ global $ID;
         tpl_metaheaders();
         echo tpl_favicon(array('favicon', 'mobile'));
         ?>
+       
         <script>
             (function(i, s, o, g, r, a, m) {
                 i["GoogleAnalyticsObject"] = r;
@@ -52,6 +53,7 @@ global $ID;
             })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
             ga("create", "UA-51523765-1", "cuni.cz");
             ga("send", "pageview");</script>
+        
         <script src="<?php echo DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/bootstrap.min.js'; ?>">
         </script>
     </head>
@@ -62,12 +64,7 @@ global $ID;
             <div class="fksmenu">
                 <?php _wp_tpl_mainmenu(); ?>
             </div>
-            <div class="fks_minimenu">
-                <?php
-                _fks_minimenu();
-                flush();
-                ?>
-            </div>
+
             <div class="clearer">
             </div>
             <div class="wrap">
@@ -128,10 +125,10 @@ global $ID;
             <div class="fksfootbar">
                 <?php echo p_render("xhtml", p_cached_instructions("data/pages/system/fksfootbar.txt"), $info); ?>
                 <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki">
-                    <img src="<?php echo DOKU_TPL.'images/button-dw.png';?>" width="80" height="15" alt="Driven by DokuWiki" />
+                    <img src="<?php echo DOKU_TPL . 'images/button-dw.png'; ?>" width="80" height="15" alt="Driven by DokuWiki" />
                 </a>
-                <a href="<?php echo DOKU_BASE.'feed.php';?>" title="Recent changes RSS feed">
-                    <img src="<?php echo DOKU_TPL.'images/button-rss.png';?>" width="80" height="15" alt="Recent changes RSS feed" />
+                <a href="<?php echo DOKU_BASE . 'feed.php'; ?>" title="Recent changes RSS feed">
+                    <img src="<?php echo DOKU_TPL . 'images/button-rss.png'; ?>" width="80" height="15" alt="Recent changes RSS feed" />
                 </a>
             </div>
         </div>
