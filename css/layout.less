@@ -17,14 +17,14 @@
     }
 
     body {
-      
+
         font: 90% "Open Sans", Arial, sans-serif;
         background: __background_other__ url(images/vyfuk_bg_color2.jpg) repeat;
         background-attachment: fixed;
         color: __text__; 
         line-height: 1.4em;
         text-align: left;
-        
+
     }
 
 
@@ -38,32 +38,36 @@
     }
 
     .container-fluid{
-        
+
         max-width: 83em;
     }
 
     /* ----------- fks foot bar ----------------*/
 
 
-    li{
-        margin-left: 2em;
-    }
-    li.open{
-        margin-left: 2em;
-    }
+    .dokuwiki{
+        li{
+            margin-left: 2em;
+        } 
+        li.open{
+            margin-left: 2em;
+        }
+        li.closed{
+            margin-left: 2em;
+        }
+        li.level3{
+            margin-left: 4em;
+        }
+        li div ul li div ul li {
+            margin-left: 6em;
+        }
+    } 
+
     .navbar li{
         margin-left: 0;
     }
-    div.dokuwiki li.closed{
-        margin-left: 2em;
-    }
-    div.dokuwiki li.level3{
-        margin-left: 4em;
-    }
-    div.dokuwiki li div ul li div ul li {
-        margin-left: 6em;
-    }
-   
+
+
 
 
 }

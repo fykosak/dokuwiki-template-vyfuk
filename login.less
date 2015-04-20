@@ -40,65 +40,62 @@ and open the template in the editor.
         .fks_mrak_2{
             display: none;
         }
+        .fkspagename{
+            max-width: 330px;
+
+        }
         .wrap{
-            margin-top: 5em;  
             border: none;
-            background: none;
-            box-shadow: none;
-            .page {    
-                box-shadow: 0px 0px 5px 2px __border__;
-                background-color: rgba(2,2,2,0.7);        
-                max-width: none;
-                padding-bottom:0 !important;
-                padding-right:0 !important;
+            background-color: transparent;
+            text-align:center;
+            .page {  
+                border-radius: 5px;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 330px;
+                background-color:white;
+                padding: .7em ;
+
+
                 .centeralign{
-                    box-shadow: 0px 0px 5px 2px __border__;
-                    background-color: rgba(255,255,255,0.7);
-                    margin-left: 1em;
-                    legend{
-                        .input-group;
+                    width:100%;
+
+                    label{                        
                         span{
+
                             .input-group-addon;
                         }
                         input{
+                            width: 100%;
+                            display:block;
                             .form-control;
                         }
                         background-color: transparent;
                         font-family: gloria-hallelujah,sans-serif;
                         border: none;
                     }
-                }
-                p {
-
-                    color:white;
-                    font-size: 130%;
-                }
-
+                    .button{
+                        .btn;
+                        .btn-success;
+                        color:white!important;
+                    }
+                }                
             } 
-
         }
         .fksfootbar{
-            display: none;
+             display: none;
         }
     }
 
 
-    @media(min-width:1325px){
-        body[data-do=login] div.fksmenu{
-            display:none;
-            position: absolute;
-            width: 100%;
-        }
+
+    body[data-do=login] div.fksmenu{
+        display:none;
+
     }
 
-    @media(min-width:1325px){
-        body[data-do=login] div.fks_minimenu{
-            display:block;
-            position: absolute;
-            left:10px;
-            top: 10px;
-        }
-    }
+
+
 }
 
 

@@ -6,9 +6,7 @@
 *
 */
 @media screen{
-    .fksmenu .container-fluid{
-        
-    }
+    
     .navbar{
         -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
         box-shadow: 0 6px 12px rgba(0,0,0,0.175);
@@ -46,6 +44,12 @@
                     }
                     .FSK_topbar_contest{
                         background-image: url("images/season/"+__season__+"/logo_vyfuk_radioactive.png");
+                    }
+                }
+                &.active a{
+                    background-color: __text_alt__ ;
+                    &:hover a{
+                       background-color: __text_alt_hover__ ;
                     }
                 }
             }
@@ -87,29 +91,6 @@
 
     }
 
-    .fks_minimenu{
-        display:none;
-    }
-
-    span.fks_minimenu_img{
-        content: url('images/menu-btn.png');
-        height: 30px;
-        width: 30px;
-    }
-    span.fks_minimenu_menu{
-        float:right;
-        font-size: 110%;
-        padding-top: 4px;
-        padding-left: 1px;
-    }
-
-    button.fks_minimenu_btn{
-        border: none;
-        text-align: center;
-        vertical-align: middle;
-
-        background: none;
-    }
 }
 
 

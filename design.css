@@ -12,6 +12,9 @@
 
 /* -------------- general elements --------------- */
 @media screen{
+    .row{
+        width: 100%;
+    }
     div.dokuwiki table {
         font-size: 100%;
     }
@@ -276,92 +279,75 @@
     }
 
     /* --------------- Links ------------------ */
+    .dokuwiki{
+        a{
+            color: __extern__!important;
+            text-decoration: none; 
+            &:link,&:visited{
+                color: __extern__;
+                text-decoration: none;
+            }
+            &:hover,&:active {
+                color: __highlight__;
 
-    a{
-        color: __extern__!important;
-        text-decoration: none;  
-    }
-    div.dokuwiki a:link,
-    div.dokuwiki a:visited {
-        color: __extern__;
-        text-decoration: none;
-    }
-    div.dokuwiki a:hover,
-    div.dokuwiki a:active {
-        color: __highlight__;
-      //  text-decoration: underline;
-    }
+            }
+            &.urlextern:before {
+                content: url(images/link_icon.gif)
 
-    div.dokuwiki h1 a,
-    div.dokuwiki h2 a,
-    div.dokuwiki h3 a,
-    div.dokuwiki h4 a,
-    div.dokuwiki h5 a,
-    div.dokuwiki a.nolink {
-        color: __text_alt__ !important;
-        text-decoration: none !important;
-    }
+            }
+            &.windows {
+                content: url(images/windows.gif)
 
-    /* external link */
-    div.dokuwiki a.urlextern {
-        //background: transparent url(images/link_icon.gif) 0px 1px no-repeat;
-        //padding: 1px 0px 1px 16px;
-    }
-    div.dokuwiki a.urlextern:before {
-        content: url(images/link_icon.gif)
-            //padding: 1px 0px 1px 16px;
-    }
+            }
+            &.urlextern:link,&.windows:link,&.interwiki:link,&.urlextern:visited,&.windows:visited,&.interwiki:visited {
+                color: __extern__;
+            }
 
-    /* windows share */
-    div.dokuwiki a.windows {
-        //background: transparent url(images/windows.gif) 0px 1px no-repeat;
-        //padding: 1px 0px 1px 16px;
-    }
-    div.dokuwiki a.windows {
-        content: url(images/windows.gif)
-            //padding: 1px 0px 1px 16px;
-    }
+            
+        }
 
-    div.dokuwiki a.urlextern:link,
-    div.dokuwiki a.windows:link,
-    div.dokuwiki a.interwiki:link,
-    div.dokuwiki a.urlextern:visited,
-    div.dokuwiki a.windows:visited,
-    div.dokuwiki a.interwiki:visited {
-        color: __extern__;
-    }
-    div.dokuwiki a.urlextern:hover,
-    div.dokuwiki a.urlextern:active,
-    div.dokuwiki a.windows:hover,
-    div.dokuwiki a.windows:active,
-    div.dokuwiki a.interwiki:hover,
-    div.dokuwiki a.interwiki:active {
-        color: __text__;
+
+
+
+
+
+
+
+
+
+        a.mail:before {
+            content: url(images/mail_icon.gif);
+            
+        }
+
+
+
+        h1 a,h2 a,h3 a,h4 a,h5 a,a.nolink {
+            color: __text_alt__ !important;
+            text-decoration: none !important;
+        }
     }
 
-    /* email link */
-    div.dokuwiki a.mail {
-        //background: transparent url(images/mail_icon.gif) 0px 1px no-repeat;
-        //padding: 1px 0px 1px 16px;
-    }
-    div.dokuwiki a.mail:before {
-        content: url(images/mail_icon.gif);
-        //content: url(../../images/before/envelope.png) 
-        //padding: 1px 0px 1px 16px;
-    }
+
+
+
+
+
+
+
     a {
         color: __background_neo__ !important;
-        //padding: 0.5em;
+      
         border-radius: 3px;
     }
-    /* existing wikipage */
+    
     a.wikilink1 {
         color: __background_neo__ !important;
         //padding: 0.5em;
         border-radius: 3px;
     }
 
-    /* not existing wikipage */
+    
     a.wikilink2 {
         color: __missing__ !important;
         text-decoration: none !important;
