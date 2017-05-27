@@ -56,6 +56,7 @@ global $ID;
         
         <script src="<?php echo DOKU_BASE . 'lib/tpl/' . $conf['template'] . '/bootstrap.min.js'; ?>">
         </script>
+ <meta name="google-site-verification" content="Z__tiJ79t7gWSoTBODkD_FP3YXja-tL4myNJSh5JFKc" />
     </head>
     <body data-do="<?php echo $ACT ?>">
         <div class="clearer">

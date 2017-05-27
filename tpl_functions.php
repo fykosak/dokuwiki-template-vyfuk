@@ -248,7 +248,6 @@ function _fks_noscript() {
  */
 
 function _wp_tpl_list_index($item) {
-    global $ID;
     global $conf;
     $ret = '';
     if ($item['type'] == 'd') {
@@ -347,10 +346,8 @@ function _wp_tpl_parsemenufile(&$data, $filename, $start) {
 # wallpaper modified version of pageinfo
 
 function _wp_tpl_pageinfo() {
-    global $conf;
     global $lang;
     global $INFO;
-    global $REV;
     global $ID;
 
     // return if we are not allowed to view the page
