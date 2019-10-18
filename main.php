@@ -32,7 +32,8 @@ global $conf;
     <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi"/>
     <title>
         <?php
-        echo tpl_pagetitle($ID, true) . (preg_match('/výfuk/i', tpl_pagetitle($ID, true)) ?: '::' . strip_tags($conf['title']))
+        //echo tpl_pagetitle($ID, true) . (preg_match('/výfuk/i', tpl_pagetitle($ID, true)) ?: '::' . strip_tags($conf['title']))
+		echo tpl_pagetitle($ID, true)
         ?>
 
     </title>
@@ -59,6 +60,7 @@ global $conf;
         $fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
         $fullMenu->setClassName('container navbar-inverse ')
             ->addMenuText('menu')
+			->addBrand('', null, 'images/logo_vyfuk_white.png', null, 30)
             ->addTools('ml-auto justify-content-end', true)
             ->render();
         ?>
@@ -110,7 +112,7 @@ global $conf;
             if ($ACT === 'show') {
                 ?>
                 <aside class="col-lg-4 col-md-12">
-                    <?php echo tpl_include_page('system:fkssidebar'); ?>
+                    <?php tpl_include_page('system:fkssidebar'); ?>
                 </aside>
                 <?php
             }
