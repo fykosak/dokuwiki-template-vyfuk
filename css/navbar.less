@@ -6,7 +6,6 @@
 */
 
 .navbar {
-
   font-family: gloria-hallelujah, sans-serif;
   letter-spacing: 2px;
   color: @ini_text_other;
@@ -16,7 +15,27 @@
   a.dropdown-item ,.tools a{
     color: @ini_background_other;
     &:hover, &:focus, &:active, &.active {
-      color: darken(@ini_background_other, 20%);
+	  color: @ini_background;
+      background-color: @ini_background_other;
+	  border-radius: 5px;
+    }
+  }
+  a.nav-item.nav-link, .nav-link.dropdown-toggle {
+    color: @ini_background;
+	background-color: @ini_background_other;
+    &:hover, &:focus, &:active, &.active {
+	  color: @ini_background_other;
+      background-color: @ini_background;
+	  border-radius: 5px;
+    }
+  }
+  a.navbar-brand {
+    color: @ini_background;
+    &:hover, &:focus, &:active, &.active {
+	  content: url("images/logo_g.png");
+      background-color: @ini_background;
+	  width: 55px;
+	  border-radius: 5px;
     }
   }
 }

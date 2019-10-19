@@ -8,6 +8,8 @@ require_once(dirname(__FILE__) . '/tpl_functions.php');
 require_once(dirname(__FILE__) . '/navBar/BootstrapNavBar.php');
 require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 
+// Hide php warnings caused mainly by syntax
+error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
 
 global $ACT;
 global $ID;
@@ -32,8 +34,8 @@ global $conf;
     <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi"/>
     <title>
         <?php
-        //echo tpl_pagetitle($ID, true) . (preg_match('/výfuk/i', tpl_pagetitle($ID, true)) ?: '::' . strip_tags($conf['title']))
-		echo tpl_pagetitle($ID, true)
+        echo tpl_pagetitle($ID, true) . (preg_match('/výfuk/i', tpl_pagetitle($ID, true)) ?: " - " . strip_tags($conf['title']))
+		//echo tpl_pagetitle($ID, true)  . ' - ' . strip_tags($conf['title'])
         ?>
 
     </title>
@@ -58,22 +60,21 @@ global $conf;
     <div class="bg-vyfuk-green">
         <?php
         $fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
-        $fullMenu->setClassName('container navbar-inverse ')
+        $fullMenu->setClassName('container navbar-inverse')
             ->addMenuText('menu')
-			->addBrand('', null, 'images/logo_vyfuk_white.png', null, 30)
+			->addBrand('', null, 'images/logo_w.png', 55, null)
             ->addTools('ml-auto justify-content-end', true)
             ->render();
         ?>
     </div>
-    <div class="container main-container">
-
-        <header class="header">
+    <div class="container-fluid main-container" style="max-width: 1280px">
+        <header class="header" align="center">
             <div class="row justify-content-around pt-3 pb-3">
-                <div class="col-lg-4 col-md-12 header-logo">
+                <div class="col-lg-4 col-md-8 image-fluid justify-content-center">
                     <a
                             href="<?php echo DOKU_BASE ?>">
                         <img
-                                src="<?php echo DOKU_TPL . '/images/logo.png'; ?>"
+                                src="<?php echo DOKU_TPL . '/images/logo.svg'; ?>"
                                 alt="logo_vyfuk"/>
                     </a>
                 </div>
