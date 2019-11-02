@@ -1,0 +1,3 @@
+[submodule "navBar"]
+	path = navBar
+	url = https://github.com/fykosak/dokuwiki-navbar.git
