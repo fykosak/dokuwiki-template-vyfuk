@@ -38,8 +38,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 	<meta charset="utf-8"/>
 	<title><?php
 	if($ID == "start"){
-		//echo "Vítejte na stránkách Výfuku!";
-		echo $pageId;
+		echo "Vítejte na stránkách Výfuku!";
 	}
 	else{
 		tpl_pagetitle(); echo " - Výfuk";
@@ -54,7 +53,6 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 
 <body data-act="<?php echo $ACT; ?>" data-namespace="<?php echo getNS($ID); ?>" data-page_id="<?php echo $ID; ?>">
 	<div class="dokuwiki" id="dokuwiki" data-do="<?php echo $ACT ?>" >
-		<div class="component" id="menuBackground">
 			<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
 				<?php
 				$fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
@@ -64,41 +62,39 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 					->addTools('ml-auto justify-content-end', true)
 					->render();
 				?>
-			</div>
-		</nav>
-		<?php if ($pageId == "start"): ?>
+			</nav>
+		<?php if ($ID == "start"): ?>
+		<div id="carousel-container" class="container-fluid">
 			<div id="mainSlider" class="container-fluid carousel slide" data-ride="carousel" style="text-align: center">
-	<ol class="carousel-indicators">
-		<li data-target="#mainSlider" data-slide-to="0" class="active"></li>
-		<li data-target="#mainSlider" data-slide-to="1"></li>
-		<li data-target="#mainSlider" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner">
-		<div class="carousel-item active" data-interval="12000">
-			<img src="/lib/tpl/vyfuk/images/slider1.png" class="d-block w-100">
-			<div class="carousel-caption">
-				<h5>Kdo jsme?</h5>
-				<p>Výfuk je fyzikální soutěž pro základoškoláky a nižší gymnázia. S námi zažiješ fyziku v novém rozměru!</p>
+				<ol class="carousel-indicators">
+					<li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+					<li data-target="#mainSlider" data-slide-to="1"></li>
+					<li data-target="#mainSlider" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active" id="firstSlide">
+						<div class="carousel-caption">
+							<h5>Kdo jsme?</h5>
+							<p>Výfuk je fyzikální soutěž pro základoškoláky a nižší gymnázia. S námi zažiješ fyziku v novém rozměru!</p>
+						</div>
+					</div>
+					<div class="carousel-item" id="secondSlide">
+						<div class="carousel-caption">
+							<h5>Výpočty i zábava</h5>
+							<p>I u fyziky se můžeš pobavit. Zkus si vlastní pokus nebo s námi vyjeď na zajímavá místa po celé republice!</p>
+						</div>
+					</div>
+					<div class="carousel-item" id="thirdSlide">
+						<div class="carousel-caption">
+							<h5>Přidej se k nám!</h5>
+							<p>Můžeš začít řešit hned, stačí se zaregistrovat a poslat nám svou práci.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="carousel-item" data-interval="10000">
-			<img src="/lib/tpl/vyfuk/images/slider2.png" class="d-block w-100">
-			<div class="carousel-caption">
-				<h5>Výpočty i zábava</h5>
-				<p>I u fyziky se můžeš pobavit. Zkus si vlastní pokus nebo s námi vyjeď na zajímavá místa po celé republice!</p>
-			</div>
-		</div>
-		<div class="carousel-item" data-interval="10000">
-			<img src="/lib/tpl/vyfuk/images/slider3.png" class="d-block w-100">
-			<div class="carousel-caption">
-				<h5>Přidej se k nám!</h5>
-				<p>Můžeš začít řešit hned, stačí se zaregistrovat a poslat nám svou práci.</p>
-			</div>
-		</div>
-	</div>
-</div>
 		<?php endif; ?>
-		<div class="container-fluid main-container" style="max-width: 1000px">
+		<div class="container-fluid main-container">
 			<?php tpl_content(); ?>
 		</div>
 	</div>

@@ -1,0 +1,37 @@
+#carousel-container {
+	background: url("/lib/tpl/vyfuk/images/background.svg") repeat;
+	background-size:200px auto;
+	padding: 0px;
+	border-bottom: 2px solid @ini_background_other;
+}
+
+.carousel, .carousel-item {
+	min-height: 500px;
+	max-width: 1280px;
+	background-size: auto 100%;
+	padding: 0px;
+}
+
+.carousel-caption {
+	background-color: #ff480088;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	margin: auto;
+}
+
+#firstSlide {
+	background:url("/lib/tpl/vyfuk/images/carousel-1.png") no-repeat center center;
+}
+#secondSlide {
+	background:url("/lib/tpl/vyfuk/images/carousel-2.png") no-repeat center center;
+}
+#thirdSlide {
+	background:url("/lib/tpl/vyfuk/images/carousel-3.png") no-repeat center center;
+}
+
+
+#mainPageTimer {
+	text-align: center;
+	font-size: 150%;
+}
