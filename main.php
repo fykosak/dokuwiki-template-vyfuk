@@ -63,39 +63,31 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 					->render();
 				?>
 			</nav>
-		<?php if ($ID == "start"): ?>
-		<div id="carousel-container" class="container-fluid">
-			<div id="mainSlider" class="container-fluid carousel slide" data-ride="carousel" style="text-align: center">
-				<ol class="carousel-indicators">
-					<li data-target="#mainSlider" data-slide-to="0" class="active"></li>
-					<li data-target="#mainSlider" data-slide-to="1"></li>
-					<li data-target="#mainSlider" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="carousel-item active" id="firstSlide">
-						<div class="carousel-caption">
-							<h5>Kdo jsme?</h5>
-							<p>Výfuk je fyzikální soutěž pro základoškoláky a nižší gymnázia. S námi zažiješ fyziku v novém rozměru!</p>
+		<div class="container-fluid main-container">
+			<?php if ($ID == "start"): ?>
+			<div class="container-fluid">
+				<h1>Tady je Výfučí!</h1>
+				<div class="row">
+					<div class="col-12 col-lg-8">
+						<?php tpl_include_page("system:about"); ?>
+					</div>
+					<div class="d-none d-lg-block col-lg-4">
+						<img src="/lib/tpl/vyfuk/images/blackboard.svg">
+					</div>
+					<div class="col-lg-8">
+						<img src="/lib/tpl/vyfuk/images/rocket.svg" id="rocketImg">
+					</div>
+					<div class="col-12 col-lg-4 my-auto">
+						<div id="startTimer">
+						<?php tpl_include_page("system:timer"); ?>
 						</div>
 					</div>
-					<div class="carousel-item" id="secondSlide">
-						<div class="carousel-caption">
-							<h5>Výpočty i zábava</h5>
-							<p>I u fyziky se můžeš pobavit. Zkus si vlastní pokus nebo s námi vyjeď na zajímavá místa po celé republice!</p>
-						</div>
-					</div>
-					<div class="carousel-item" id="thirdSlide">
-						<div class="carousel-caption">
-							<h5>Přidej se k nám!</h5>
-							<p>Můžeš začít řešit hned, stačí se zaregistrovat a poslat nám svou práci.</p>
-						</div>
+					<?php endif; ?>
+					<div class="col">
+						<?php tpl_content(); ?>
 					</div>
 				</div>
 			</div>
-		</div>
-		<?php endif; ?>
-		<div class="container-fluid main-container">
-			<?php tpl_content(); ?>
 		</div>
 	</div>
 </body>

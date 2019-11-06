@@ -20,16 +20,13 @@ a.dropdown-item {
 
 h1, h2, h3, h4, h5 {
 	margin-top: 1rem;
-	padding: 3px 6px;
+	padding: 6px;
 }
 
 h1 {
-	background-color: @ini_background_other;
-	color: @ini_background;
-	border-style: solid;
-	border-width: 1px;
-	border-color: @ini_background_other;
-	border-radius: 4px;
+	color: @ini_background_other;
+	border-bottom: 1px solid @ini_background_other;
+	border-top: 1px solid @ini_background_other;
 }
 
 p {
@@ -42,6 +39,10 @@ button {
 	color: @ini_text;
 	border-style: solid;
 	border-width: 1px;
+}
+
+img {
+    max-width: 100%;
 }
 
 .btn-primary {
