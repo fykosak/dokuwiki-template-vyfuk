@@ -2,43 +2,29 @@
 
 global $conf;
 global $ID;
-$orange = "#ff4800";
 
 require_once(dirname(__FILE__) . '/navBar/BootstrapNavBar.php');
 require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
-
-//Code extracted from fkstpl for getting pageId
-/*class pageProp {	
-	private $pageId;
-	/**
-	* @param $pageId
-	* @return $this
-	
-	public function setPageId($pageId) {
-		$this->pageId = $pageId;
-		return $this;
-	}
-}*/
 ?>
 
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']; ?>" lang="<?php echo $conf['lang']; ?>" dir="<?php echo $lang['direction'] ?>">
+<!DOCTYPE html>
 <head>
 	<!--Files important for Bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
 	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	
+	<!--Rules for creating page title-->
 	<meta charset="utf-8"/>
 	<title><?php
 	if($ID == "start"){
-		echo "Vítejte na stránkách Výfuku!";
+		echo "Tady je Výfučí!";
 	}
 	else{
 		tpl_pagetitle(); echo " - Výfuk";
@@ -52,41 +38,79 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 </head>
 
 <body data-act="<?php echo $ACT; ?>" data-namespace="<?php echo getNS($ID); ?>" data-page_id="<?php echo $ID; ?>">
-	<div class="dokuwiki" id="dokuwiki" data-do="<?php echo $ACT ?>" >
-			<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+	<div class="dokuwiki" id="dokuwiki" data-do="<?php echo $ACT ?>">
+		<div class="sticky-top">
+			<nav class="navbar navbar-expand-lg navbar-dark">
 				<?php
 				$fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
 				$fullMenu->setClassName('container')
 					->addMenuText('menu')
-					->addBrand('', '', 'images/logo-w.svg', 50, null)
+					->addBrand('', '', 'images/logo.svg', 50, null)
 					->addTools('ml-auto justify-content-end', true)
 					->render();
 				?>
 			</nav>
-		<div class="container-fluid main-container">
-			<?php if ($ID == "start"): ?>
-			<div class="container-fluid">
-				<h1>Tady je Výfučí!</h1>
-				<div class="row">
-					<div class="col-12 col-lg-8">
-						<?php tpl_include_page("system:about"); ?>
-					</div>
-					<div class="d-none d-lg-block col-lg-4">
-						<img src="/lib/tpl/vyfuk/images/blackboard.svg">
-					</div>
-					<div class="col-lg-8">
-						<img src="/lib/tpl/vyfuk/images/rocket.svg" id="rocketImg">
-					</div>
-					<div class="col-12 col-lg-4 my-auto">
-						<div id="startTimer">
-						<?php tpl_include_page("system:timer"); ?>
-						</div>
-					</div>
-					<?php endif; ?>
-					<div class="col">
-						<?php tpl_content(); ?>
-					</div>
+		</div>
+		<?php if ($ID == "start"): ?>
+		<div style="max-width: 1200px; margin: auto;">
+			<div class="row">
+				<div class="d-none d-lg-block col-6 cloud-left">
+					<h2>Tady je Výfučí!</h2>
+					<p><b>Výfuk</b>, jméno našeho korespondenčního semináře, je vlastně zkratka jeho dlouhého názvu – <b>Vý</b>počty <b>f</b>yzikálních <b>úk</b>olů. Touto soutěží se snažíme ukázat, že fyzika je vlastně velmi zábavné a fascinující téma.</p>
 				</div>
+				<div class="d-none d-lg-block col-6 cloud-right">
+					<h2>Jak to probíhá?</h2>
+					<p>Během školního roku postupně zveřejňujeme zadání šesti sérií. Každá z nich obsahuje pět úloh z různých oblastí fyziky, jeden problém týkajícího se našeho odborného textu (tzv. Výfučtení) a jeden zábavný experiment. Zapojit se můžete kdykoliv!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="d-none d-lg-block col-6 cloud-left">
+					<h2>Co tím získám?</h2>
+					<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především na našich akcích; dvou setkání a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>
+				</div>
+				<div class="d-none d-lg-block col-6 cloud-right" id="timer">
+					<?php tpl_include_page("system:timer"); ?>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
+		<div class="container-fluid" id="main-container">
+		<div class="d-lg-none">
+			<h2>Tady je Výfučí!</h2>
+			<p><b>Výfuk</b>, jméno našeho korespondenčního semináře, je vlastně zkratka jeho dlouhého názvu – <b>Vý</b>počty <b>f</b>yzikálních <b>úk</b>olů. Touto soutěží se snažíme ukázat, že fyzika je vlastně velmi zábavné a fascinující téma.</p>
+			
+			<h2>Jak to probíhá?</h2>
+			<p>Během školního roku postupně zveřejňujeme zadání šesti sérií. Každá z nich obsahuje pět úloh z různých oblastí fyziky, jeden problém týkajícího se našeho odborného textu (tzv. Výfučtení) a jeden zábavný experiment. Zapojit se můžete kdykoliv!</p>
+			
+			<h2>Co tím získám?</h2>
+			<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především na našich akcích; dvou setkání a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>	
+		</div>
+			<?php tpl_content(); ?>
+		</div>
+		<div class="waveUp"></div>
+		<div class="container-fluid footer row">
+			<div class="col-12 col-lg-4">
+				Korespondenční seminář Výfuk<br>
+				Matematicko-fyzikální fakulta UK<br>
+				V Holešovičkách 2<br>
+				180 00 Praha 8
+			</div>
+			<div class="col-12 col-lg-4">
+				<img src="/lib/tpl/vyfuk/images/logo.svg" style="width: 100px" alt="Výfuk"><br>
+				@2020 Výfuk<br>
+				In case of fire call<br>
+				<a href="mailto:webmaster@vyfuk.mff.cuni.cz">webmaster@vyfuk.mff.cuni.cz</a>
+			</div>
+			<div class="col-12 col-lg-4">
+			<a href="https://facebook.com/ksvyfuk" id="fb-icon">
+					<img src="/lib/tpl/vyfuk/images/fb.svg" style="width: 70px" alt="FB">
+				</a>
+				<a href="https://www.instagram.com/ksvyfuk/" id="ig-icon">
+					<img src="/lib/tpl/vyfuk/images/ig.svg" style="width: 70px" alt="IG">
+					</a>
+				<a href="https://www.youtube.com/channel/UCUBv3Ydd-laLSY5DMimoE7w" id="yt-icon">
+					<img src="/lib/tpl/vyfuk/images/yt.svg" style="width: 70px" alt="YT">
+				</a>
 			</div>
 		</div>
 	</div>

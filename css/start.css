@@ -1,13 +1,70 @@
-#startTimer {
-	text-align: center;
-	vertical-align: center;
-	font-size: 150%;
-}
-
-#rocketImg {
-	max-size: 60px;
+.jumbotron {
+	background-color: lighten(@ini_background_other, 25%);
 }
 
 .bs-callout {
 	border-left: 2px solid @ini_background_other
+}
+
+.plugin-social, .rss {
+	display: none;
+}
+
+.cloud-left, .cloud-right {
+	background-image: url("/lib/tpl/vyfuk/images/cloud.svg");
+	background-repeat: none;
+	background-size: 100% 100%;
+	padding: 40px 30px;
+	h2 {
+		text-align: center;
+		color: @ini_background_other;
+	}
+	p {
+		text-align: justify;
+	}
+}
+
+.cloud-left {
+	margin-top: 16px;
+	margin-bottom: 128px;
+}
+
+.cloud-right {
+	margin-top: 128px;
+	margin-bottom: 16px;
+}
+
+.waveUp {
+	height: 40px;
+	background-image: url("/lib/tpl/vyfuk/images/edge.svg");
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	z-index: 1;
+}
+
+.waveDown {
+	height: 40px;
+	background-size: auto;
+	background-image: url("/lib/tpl/vyfuk/images/edge.svg");
+	background-repeat: repeat-x;
+	transform: rotate(180deg);
+	background-position: center bottom;
+	z-index: 1;
+}	
+
+#aboutInfo {
+	text-align: center;
+}
+
+#aboutIcon {
+	height: 50px;
+	width: 50px;
+	border: 3px solid @ini_background_other;
+	border-radius: 50%;
+}
+
+#timer p {
+	text-align: center !important;
+	vertical-align: center;
+	font-size: 150%;
 }
