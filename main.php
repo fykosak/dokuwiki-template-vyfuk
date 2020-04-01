@@ -42,12 +42,17 @@
 			<div class="content">
 				<div class="sticky-top" id="navbar">
 					<?php
-						$fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
-						$fullMenu->setClassName('container navbar-dark')
-						->addMenuText('menu')
-						->addBrand('', '', 'images/logo.svg', 50, null)
-						->addTools('ml-auto justify-content-end', true)
-						->render();
+						if (page_exists("system:menu")) {
+							$fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
+							$fullMenu->setClassName('container navbar-dark')
+							->addMenuText('menu')
+							->addBrand('', '', 'images/logo.svg', 50, null)
+							->addTools('ml-auto justify-content-end', true)
+							->render();
+						}
+						else {
+							echo "<p style='color: #fff'>Please create page <b>system:menu</b> containing menu structure.<br>Založte prosím stránku <b>system:menu</b> obsahující strukturu menu.</p>";
+						}
 					?>
 				</div>
 				<?php if ($ID == "start"): ?>
@@ -83,47 +88,47 @@
 				<div class="container-fluid" id="main-container">
 					<div class="d-lg-none">
 						<h2>Tady je Výfučí!</h2>
-						<p><b>Výfuk</b>, jméno našeho korespondenčního semináře, je vlastně zkratka jeho dlouhého názvu – <b>Vý</b>počty <b>f</b>yzikálních <b>úk</b>olů. Touto soutěží se snažíme ukázat, že fyzika je vlastně velmi zábavné a fascinující téma.</p>
-						
-						<h2>Jak to probíhá?</h2>
-						<p>Během školního roku postupně zveřejňujeme zadání šesti sérií. Každá z nich obsahuje pět úloh z různých oblastí fyziky, jeden problém týkajícího se našeho odborného textu (tzv. Výfučtení) a jeden zábavný experiment. Zapojit se můžete kdykoliv!</p>
-						
-						<h2>Co tím získám?</h2>
-						<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především na našich akcích; dvou setkání a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>	
-					</div>
-					<?php tpl_content(); ?>
+					<p><b>Výfuk</b>, jméno našeho korespondenčního semináře, je vlastně zkratka jeho dlouhého názvu – <b>Vý</b>počty <b>f</b>yzikálních <b>úk</b>olů. Touto soutěží se snažíme ukázat, že fyzika je vlastně velmi zábavné a fascinující téma.</p>
+					
+					<h2>Jak to probíhá?</h2>
+					<p>Během školního roku postupně zveřejňujeme zadání šesti sérií. Každá z nich obsahuje pět úloh z různých oblastí fyziky, jeden problém týkajícího se našeho odborného textu (tzv. Výfučtení) a jeden zábavný experiment. Zapojit se můžete kdykoliv!</p>
+					
+					<h2>Co tím získám?</h2>
+					<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především na našich akcích; dvou setkání a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>	
+				</div>
+				<?php tpl_content(); ?>
 				</div>
 			</div>
 			<footer>
 				<div class="upper-cloud"></div>
-				<div class="container-fluid footer row">
-					<div class="col-12 col-lg-4">
-						Korespondenční seminář Výfuk<br>
-						Matematicko-fyzikální fakulta UK<br>
-						V Holešovičkách 2<br>
-						180 00 Praha 8
-					</div>
-					<div class="col-12 col-lg-4">
-						<img src="/lib/tpl/vyfuk/images/logo.svg" style="width: 100px" alt="Výfuk"><br>
-						©2020 Výfuk<br>
-						In case of fire call<br>
-						<a href="mailto:webmaster@vyfuk.mff.cuni.cz">webmaster@vyfuk.mff.cuni.cz</a>
-					</div>
-					<div class="col-12 col-lg-4">
-						<a href="https://facebook.com/ksvyfuk" id="fb-icon">
-							<img src="/lib/tpl/vyfuk/images/fb.svg" style="width: 70px" alt="FB">
-						</a>
-						<a href="https://www.instagram.com/ksvyfuk/" id="ig-icon">
-							<img src="/lib/tpl/vyfuk/images/ig.svg" style="width: 70px" alt="IG">
-						</a>
-						<a href="https://www.youtube.com/channel/UCUBv3Ydd-laLSY5DMimoE7w" id="yt-icon">
-							<img src="/lib/tpl/vyfuk/images/yt.svg" style="width: 70px" alt="YT">
-						</a>
-					</div>
-				</div>
+			<div class="container-fluid footer row">
+			<div class="col-12 col-lg-4">
+			Korespondenční seminář Výfuk<br>
+			Matematicko-fyzikální fakulta UK<br>
+			V Holešovičkách 2<br>
+			180 00 Praha 8
+			</div>
+			<div class="col-12 col-lg-4">
+			<img src="/lib/tpl/vyfuk/images/logo.svg" style="width: 100px" alt="Výfuk"><br>
+			©2020 Výfuk<br>
+			In case of fire call<br>
+			<a href="mailto:webmaster@vyfuk.mff.cuni.cz">webmaster@vyfuk.mff.cuni.cz</a>
+			</div>
+			<div class="col-12 col-lg-4">
+			<a href="https://facebook.com/ksvyfuk" id="fb-icon">
+			<img src="/lib/tpl/vyfuk/images/fb.svg" style="width: 70px" alt="FB">
+			</a>
+			<a href="https://www.instagram.com/ksvyfuk/" id="ig-icon">
+			<img src="/lib/tpl/vyfuk/images/ig.svg" style="width: 70px" alt="IG">
+			</a>
+			<a href="https://www.youtube.com/channel/UCUBv3Ydd-laLSY5DMimoE7w" id="yt-icon">
+			<img src="/lib/tpl/vyfuk/images/yt.svg" style="width: 70px" alt="YT">
+			</a>
+			</div>
+			</div>
 			</footer>
 			<div class="loader-wrapper">
-				<span class="loader"></span>
+			<span class="loader"></span>
 			</div>
-		</div>
-	</body>						
+			</div>
+			</body>									
