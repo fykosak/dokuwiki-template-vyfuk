@@ -15,10 +15,8 @@
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="/lib/tpl/vyfuk/css/bootstrap.min.css">
+		<script src="/lib/tpl/vyfuk/js/bootstrap.min.js"></script>
 		
 		<!--Rules for creating page title-->
 		<meta charset="utf-8"/>
@@ -40,14 +38,15 @@
 	<body data-act="<?php echo $ACT; ?>" data-namespace="<?php echo getNS($ID); ?>" data-page_id="<?php echo $ID; ?>">
 		<div class="dokuwiki" id="dokuwiki" data-do="<?php echo $ACT; tpl_flush(); ?>">
 			<div class="content">
-				<div class="sticky-top" id="navbar">
+				<div class="sticky-top navbar-bg">
 					<?php
-						if (page_exists("system:menu")) {
-							$fullMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
-							$fullMenu->setClassName('container navbar-dark')
-							->addMenuText('menu')
-							->addBrand('', '', 'images/logo.svg', 50, null)
-							->addTools('ml-auto justify-content-end', true)
+						if (true) {
+							$leftMenu = new \fksTemplate\NavBar\BootstrapNavBar('full');
+							$leftMenu->setClassName('navbar-expand-lg navbar-content')
+							->addMenuText('menu', 'mr-auto')
+							->addMenuText('login')
+							->addBrand('', '', '', 50, null)
+							->addTools('justify-content-end', true)
 							->render();
 						}
 						else {

@@ -1,9 +1,9 @@
-#navbar {
+.navbar-bg {
 	background-color: @ini_background_other;
-	width: 100%;
-	height: 60px;
-	font-size: 1.1em;
-	padding: 0px;
+}
+
+.navbar {
+	max-width: 1200px;
 	margin: auto;
 	img {
 		height: 40px;
@@ -11,34 +11,51 @@
 	}
 }
 
-.navbar-collapse, .navbar-nav, .nav-link {
-	color: darken(@ini_background, 10%) !important;
-	background-color: @ini_background_other;
-	margin: 0px 8px;
-	z-index: 5;
-	&:active, &:hover {
-		color: @ini_background !important;
+.navbar-brand {
+	content: url("images/logo.svg");
+	width: 65px;
+	height: auto;
+	transition: .3s all;
+	&:hover {
+		filter: brightness(0.85);
+	}
+}
+	
+.nav-link, .nav-item {
+	color: @ini_background;
+	transition: all .2s;
+	&:hover {
+	color: darken(@ini_background, 15%);
+	}
+	&:hover > .fa {
+	filter: brightness(0.85);
 	}
 }
 
+.dropdown-menu {
+	transition: all .3s;
+	left: -2px;
+	animation: dropdown-menu .3s;
+}
 
 .dropdown-item {
-	&:active, &:hover {
-		background-color: @ini_background_other;
-		color: white;
+	transition: all .3s;
+	padding: 4px 8px;
+}
+
+@media (min-width: 979px) {
+	.dropdown-item:hover {
+		background-color: darken(@ini_background, 15%);
 	}
 }
 
-.navbar-toggleable-md {
-	background-color: @ini_background_other;
-	padding: 4px;
+@keyframes dropdown-menu {
+	0% {transform: translateY(16px); opacity: 0;}
+	100% {transform: translateY(0px); opacity: 1;}
+	0% {transform: translateY(16px); opacity: 0;}
 }
 
-.navbar-brand.img {
-	content: url("images/alt/logo.svg");
-	height: 100%;
-	&:hover, &:active {
-		content: url("images/alt/logo.svg");
-		background-color: @ini_background_other;
-	}
+/*Definition of menu icons*/
+.fa-cogs::before {
+	content: url("images/icon/admin.svg");
 }
