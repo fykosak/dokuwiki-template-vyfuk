@@ -69,7 +69,7 @@
 					<div class="row">
 						<div class="d-none d-lg-block col-6 cloud-left">
 							<h2>Co tím získám?</h2>
-							<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především na našich akcích; dvou setkání a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>
+							<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především účast na našich akcích; dvou setkání a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>
 						</div>
 						<div class="d-none d-lg-block col-6 cloud-right" id="timer">
 							<?php

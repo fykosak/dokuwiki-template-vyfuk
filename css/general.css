@@ -88,6 +88,15 @@ body {
 	}
 }
 
+table, th, td {
+	border: 1px solid @ini_background_other !important;
+}
+
+th {
+	background-color: @ini_background_other;
+	color: @ini_background;
+}
+
 .btn-primary {
 	background-color: @ini_background_other;
 	border-color: @ini_background_other;
