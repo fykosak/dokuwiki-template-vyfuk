@@ -4,11 +4,11 @@
 	0%{transform: translateY(16px); opacity: 0}
 }
 @keyframes loader {
-	0% {width: 160px; transform: rotate(0deg)}
-	25% {width: 240px; transform: rotate(360deg);}
-	50% {width: 160px; transform: rotate(0deg)}
-	75% {width: 240px; transform: rotate(-360deg);}
-	100% {width: 160px; transform: rotate(0deg)}
+	0% {transform: rotate(0deg) scale(1, 1)}
+	25% {transform: rotate(360deg) scale(1.5, 1.5);}
+	50% {transform: rotate(0deg) scale(1, 1)}
+	75% {transform: rotate(-360deg) scale(1.5, 1.5);}
+	100% {transform: rotate(0deg) scale(1, 1)}
 }
 @keyframes shake {
 	0%{transform: translate(1px, 1px) rotate(0deg)};
@@ -17,9 +17,6 @@
 	60%{transform: translate(0px, -1px) rotate(0deg)};
 	80%{transform: translate(1px, 0px) rotate(1deg)};
 	100%{transform: translate(0px, 0px) rotate(0deg)};
-}
-.cloud-left, .cloud-right {
-	transition: all .5s;
 }
 #quickLinks a:hover {
 	transform: scale(1.05);
