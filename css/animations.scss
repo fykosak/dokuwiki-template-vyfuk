@@ -1,0 +1,35 @@
+@keyframes dropdown-menu {
+	0%{transform: translateY(16px); opacity: 0}
+	100%{transform: translateY(0px); opacity: 1}
+	0%{transform: translateY(16px); opacity: 0}
+}
+@keyframes loader {
+	0% {width: 160px; transform: rotate(0deg)}
+	25% {width: 240px; transform: rotate(360deg);}
+	50% {width: 160px; transform: rotate(0deg)}
+	75% {width: 240px; transform: rotate(-360deg);}
+	100% {width: 160px; transform: rotate(0deg)}
+}
+@keyframes shake {
+	0%{transform: translate(1px, 1px) rotate(0deg)};
+	20%{transform: translate(-1px, -1px) rotate(-1deg)};
+	40%{transform: translate(-2px, 2px) rotate(2deg)};
+	60%{transform: translate(0px, -1px) rotate(0deg)};
+	80%{transform: translate(1px, 0px) rotate(1deg)};
+	100%{transform: translate(0px, 0px) rotate(0deg)};
+}
+.cloud-left, .cloud-right {
+	transition: all .5s;
+}
+#quickLinks a:hover {
+	transform: scale(1.05);
+}
+.dropdown-menu {
+	animation: dropdown-menu .3s;
+}
+.loader {
+	animation: loader 3s infinite;
+}
+.nav-link:hover > span.ico, .navbar-brand:hover {
+	animation: shake .25s;
+}

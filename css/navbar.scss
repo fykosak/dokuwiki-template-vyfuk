@@ -1,0 +1,81 @@
+.navbar-bg {
+	background-color: @ini_background_alt;
+}
+.navbar {
+	max-width: 1200px;
+	margin: auto;
+	padding: 6px 18px;
+	font-size: 18px;
+}
+.navbar-brand {
+	content: url("images/logo-white.svg");
+	width: 65px;
+	height: auto;
+	transition: .3s all;
+	&:hover {
+		filter: brightness(0.85);
+	}
+}	
+.nav-link, .nav-item {
+	color: @ini_background;
+	transition: all .3s;
+	&:hover {
+		color: darken(@ini_background, 15%);
+	}
+	&:hover > .ico {
+		filter: brightness(0.85);
+	}
+}
+.dropdown-menu {
+	transition: all .3s;
+	left: -2px;
+}
+.dropdown-item {
+	transition: all .3s;
+	padding: 4px 8px;
+}
+@media (min-width: 979px) {
+	.dropdown-item:hover {
+		background-color: darken(@ini_background, 15%);
+	}
+}
+.navbar-toggler, .navbar-toggler-icon {
+	height: 22px;
+	width: auto;
+	padding: 0;
+	&:hover, &:active {
+	background-color: @ini_background_alt;
+	box-shadow: none;
+	border: ipx solid @ini_background_alt;
+	}
+}
+span.ico {
+	transition: all .3s;
+	position: relative;
+	top: 4px;
+	height: 22px;
+}
+.ico-about {
+	content: url("icons/icon-about.svg");
+}
+.ico-query {
+	content: url("icons/icon-query.svg");
+}
+.ico-pencil {
+	content: url("icons/icon-pencil.svg");
+}
+.ico-board {
+	content: url("icons/icon-board.svg");
+}
+.ico-calendar {
+	content: url("icons/icon-calendar.svg");
+}
+.ico-picture {
+	content: url("icons/icon-picture.svg");
+}
+.ico-login {
+	content: url("icons/icon-login.svg");
+}
+.navbar-toggler-icon {
+	content: url("icons/icon-menu.svg");
+}

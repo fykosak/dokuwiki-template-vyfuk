@@ -1,0 +1,278 @@
+body {
+	position: relative;
+	background: url("images/wallpaper.png") no-repeat center top;
+	background-size: 100% auto;
+	@media (max-width: 992px) {
+		background: none;
+	}
+}
+body::after {
+	content: "";
+	display: block;
+	height: 140px;
+}
+h1, h2, h3, h4, h5 {
+	padding: 6px 0px;
+	color: @ini_background_alt;
+}
+h1 {
+	border-bottom: 2px solid @ini_background_alt;
+}
+a {
+	color: @ini_link;
+	transition: 0.5s all;
+	a:hover, a:active {
+		color: lighten(@ini_background_alt, 20%);
+	}
+}
+img {
+    max-width: 100%;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+label {
+	width: 100%;
+}
+button {
+	background-color: @ini_background;
+	border: 1px solid @ini_background_alt;
+	border-radius: .25rem;
+	color: @ini_background_alt;
+	transition: 0.5s all;
+	&:hover, &:active, &:focus {
+		border: 1px solid @ini_background_alt;
+		background-color: lighten(@ini_background_alt, 20%);
+		color: @ini_background;
+		box-shadow: none;
+	}
+}
+table, th, td {
+	border: 1px solid @ini_background_alt !important;
+}
+
+th {
+	background-color: @ini_background_alt;
+	color: @ini_background;
+}
+.btn-primary, .more-news, #clouds a {
+	color: @ini_background;
+	background-color: @ini_background_alt;
+	border: 1px solid @ini_background_alt;
+}
+.btn-primary:hover, .more-news:hover, #clouds a:hover {
+	color: @ini_background;
+	background-color: lighten(@ini_background_alt, 20%);
+	border: 1px solid lighten(@ini_background_alt, 20%);
+	text-decoration: none;
+}
+.btn-primary:focus, .btn-primary.focus, .more-news:focus, .more-news.focus, #clouds a:focus {
+	color: @ini_background;
+	background-color: @ini_background_alt;
+	border: 1px solid @ini_background_alt;
+	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.25);
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+	color: @ini_background;
+	background-color: @ini_background_alt;
+	border: 1px solid @ini_background_alt;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.5);
+}
+.bs-callout {
+	border-left: 2px solid @ini_background_alt;
+	padding-left: 8px;
+}
+.cloud-up, .cloud-down {
+	height: 40px;
+	width: 100%;
+	background: url("images/edge.svg") repeat-x center top;
+	z-index: 10;
+}
+.cloud-up {
+	transform: rotate(180deg);
+}
+.cloud-left, .cloud-right {
+	background-image: url("images/cloud.svg");
+	background-size: 100% 100%;
+	min-height: 220px;
+	max-width: 500px;
+	margin: auto;
+	padding: 48px;
+	user-select: none;
+	align-items: center;
+	h2 {
+		text-align: center;
+		color: @ini_background_alt;
+		padding: 0px;
+	}
+	p {
+		text-align: justify;
+	}
+}
+.cookielaw-banner button {
+	margin: 0px 8px;
+	width: 60px;
+}
+.cookielaw-banner {
+    background-color: @ini_background_alt;
+	box-shadow: none;
+	opacity: 0.8;
+}
+.dokuwiki div.section_highlight {
+    margin: 0 -6px;
+    padding: 0 4px;
+    border: dotted @ini_background_alt;
+    border-width: 0 2px;
+}
+.fks-timer {
+	display: block;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.footer {
+	color: @ini_background;
+	background-color: @ini_background_alt;
+	text-align: center;
+	margin: 0px;
+	padding: 8px;
+	p {
+		vertical-align: middle !important;
+	}
+	a {
+		text-decoration: none;
+		color: @ini_background;
+		transition: all .3s;
+		&:hover {
+			filter: brightness(0.85);
+		}
+	}
+}
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	background-color: @ini_background;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loader {
+	content: url("images/logo-orange.svg");
+	width: 160px;
+	display: flex;
+}
+.plugin-social, .rss {
+	display: none;
+}
+.pull-right {
+	float: right;
+}
+.social a {
+	display: inline-block;
+	width: 70px;
+	height: 104px;
+	margin: 0 8px;
+	transition: .3s all;
+	&:hover {
+		filter: none;
+	}
+	&:hover > img {
+	content: url("icons/vyfucek2.svg");
+	}
+}
+.social img {
+	height: 52px;
+	width: auto;
+	margin: auto;
+}
+.social #fb-icon {
+	background: url("icons/social-fb.svg") no-repeat bottom;
+	background-size: 80%;
+}
+.social #ig-icon {
+	background: url("icons/social-ig.svg") no-repeat bottom;
+	background-size: 80%;
+}
+.social #yt-icon {
+	background: url("icons/social-yt.svg") no-repeat bottom;
+	background-size: 80%;
+}
+.task-repo.task .tag {
+	display: none !important;
+}
+.timer {
+	padding: 48px 0;
+}
+#aboutIcon {
+	height: 50px;
+	width: 50px;
+	border: 3px solid @ini_background_alt;
+	border-radius: 50%;
+}
+#clouds {
+	margin: 16px 0;
+	padding: 0;
+	position: relative;
+}
+#clouds a {
+	display: block;
+	max-width: 200px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 0.375rem 0.75rem;
+	margin: auto;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#content, #landing-page {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+#content {
+	background-color: white;
+	box-shadow: 0px 0px 10px 4px @ini_background_alt;
+	padding: 20px 40px 60px;
+	text-align: justify;
+	a {
+		color: @ini_background_alt;
+		display: inline-block;
+		:visited {
+			color: lighten(@ini_background_alt, 20%) !important;
+			text-decoration: none;
+		}
+		&:hover, &:active {
+		color: darken(@ini_background_alt, 15%);
+		text-decoration: none;
+		}
+	}
+}
+#quickLinks a {
+	background-image: url("images/cloud-alt.svg");
+	background-size: 100% 100%;
+	color: @ini_background;
+	display: block;
+	font-size: 1.5rem;
+	max-width: 350px;
+	padding: 48px 16px;
+	margin: 32px auto;
+	text-align: center;
+	z-index: 10;
+}
+#quickLinks a:hover {
+	color: @ini_background;
+	text-decoration: none;
+}

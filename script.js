@@ -1,14 +1,37 @@
 jQuery(function () {
     var $ = jQuery;
-    $(window).load(function () {
-        console.log("%cNesockuj tento kód!!!", "color: red; font-size: x-large");
-	});
 });
 
 $(window).on("load",function(){
+	let ticking = false;
+	let lastPos = 0;
+	
+	if (document.cookie.includes("new-era")) {
+		$("#new-era-wrapper").hide();
+	}
 	$(".loader-wrapper").fadeOut("500");
+	window.addEventListener("scroll", function(e) {
+		Y = window.scrollY;
+		menuH = $(".navbar-bg")[0].scrollHeight;
+		footerH = $("footer")[0].scrollHeight;
+		bodyH = document.body.scrollHeight-menuH-footerH;
+		winH = window.innerHeight-menuH;
+		imgH = 1669*document.body.scrollWidth/1920;
+		
+		bckgrdY = Math.round((Y*(bodyH-imgH)/(bodyH-winH))+menuH);
+		$("body").css("background-position", "0 " + bckgrdY + "px");
+		console.log("Y = " + Y + "\nbodyH = " + bodyH + "\nwinH = " + winH + "\nbckgrdY = " + bckgrdY);
+	});
+	window.scrollTo(window.scrollX, window.scrollY - 1);
+	window.scrollTo(window.scrollX, window.scrollY + 1);
 });
 
+function closeWelcome(){
+	var date = new Date();
+	date.setFullYear(date.getFullYear() + 1);
+	document.cookie = "name=new-era; path=/; expires=" + date.toGMTString();
+	$("#new-era-wrapper").hide();
+};
 
 (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
