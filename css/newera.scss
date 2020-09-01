@@ -18,11 +18,25 @@
 	max-width: 992px;
 	padding: 128px 96px;
 	@media (max-width: 992px) {
-	padding: 128px 64px;
+		background: white;
+		width: 90%;
+		border-radius: 16px;
+		padding: 32px;
 	}
 	button {
 		display: block;
 		margin: auto;
 		width: 320px;
+	}
+	h2:after {
+		background-image: url("images/wave.gif");
+		background-size: 80px auto;
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		display: inline-block;
+		height: 80px;
+		width: 80px;
+		margin-left: 8px;
+		content: "";
 	}
 }

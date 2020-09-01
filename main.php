@@ -86,18 +86,18 @@
 				</div>
 				<div id="quickLinks" class="row">
 					<div class="col-12 col-lg-4">
-						<a href="">Výfučtení</a>
+						<a href="/ulohy/zadani">Aktuální zadání úloh</a>
 					</div>
 					<div class="col-12 col-lg-4">
-						<a href="">Aktuální zadání úloh</a>
+						<a href="/ulohy/vyfucteni">Výfučtení</a>
 					</div>
 					<div class="col-12 col-lg-4">
-						<a href="">Další odkaz</a>
+						<a href="/akce/start">Akce</a>
 					</div>
 				</div>
 			</div>
 			<?php endif; ?>
-			<div id="content">
+			<div id="content" class="clearfix">
 				<?php tpl_content(); ?>
 			</div>
 			<footer>
@@ -116,7 +116,7 @@
 					</div>
 					<div class="col-12 col-lg-4">
 						<a href="/"><img id="footerLogo" src="/lib/tpl/vyfuk/images/logo-white.svg" style="width: 100px" alt="Výfuk"></a><br>
-						©2020 <a href="mailto:jason@vyfuk.mff.cuni.cz">Miroslav Jarý</a><br>
+						©2020 <a href="/o_webu">Výfuk</a><br>
 						In case of fire call<br>
 						<a href="mailto:webmaster@vyfuk.mff.cuni.cz">webmaster@vyfuk.mff.cuni.cz</a>
 					</div>
