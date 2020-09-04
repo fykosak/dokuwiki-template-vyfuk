@@ -18,15 +18,20 @@
 	80%{transform: translate(1px, 0px) rotate(1deg)};
 	100%{transform: translate(0px, 0px) rotate(0deg)};
 }
-#quickLinks a:hover {
-	transform: scale(1.05);
-}
 .dropdown-menu {
-	animation: dropdown-menu .3s;
+	animation: dropdown-menu 0.2s;
 }
 .loader {
 	animation: loader 3s infinite;
 }
 .nav-link:hover > span.ico, .navbar-brand:hover {
-	animation: shake .25s;
+	animation: shake 0.2s;
+}
+#quickLinks a:hover {
+	transform: scale(1.05);
+}
+@media (max-width: 991px) {
+	.nav-link:hover {
+		transform: scale(1);
+	}
 }

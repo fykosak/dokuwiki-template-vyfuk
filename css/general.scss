@@ -1,23 +1,19 @@
+html, body {
+	min-height: 100%;
+}
 body {
-	position: relative;
 	background: url("images/wallpaper.png") no-repeat center top;
 	background-size: 100% auto;
-	@media (max-width: 992px) {
-		background: none;
-	}
-}
-body::after {
-	content: "";
-	display: block;
-	height: 140px;
-	@media (max-width: 992px) {
-		height: 340px;
-	}
+	display: flex;
+	flex-direction: column;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	position: relative;
 }
 footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	flex-shrink: 0;
+	-moz-flex-shrink: 0;
+	-webkit-flex-shrink: 0;
 }
 a {
 	color: @ini_link;
@@ -52,7 +48,7 @@ img {
 label {
 	width: 100%;
 }
-p a, .li a {
+p a, .li a, a.media {
 	display: inline-block;
 }
 table, th, td {
@@ -64,24 +60,24 @@ th {
 	color: @ini_background;
 }
 .btn-primary, .more-news, #clouds a {
-	color: @ini_background;
+	color: @ini_text_alt;
 	background-color: @ini_background_alt;
 	border: 1px solid @ini_background_alt;
 }
 .btn-primary:hover, .more-news:hover, #clouds a:hover {
-	color: @ini_background;
-	background-color: lighten(@ini_background_alt, 20%);
-	border: 1px solid lighten(@ini_background_alt, 20%);
+	color: @ini_text_alt;
+	background-color: darken(@ini_background_alt, 10%);
+	border: 1px solid darken(@ini_background_alt, 10%);
 	text-decoration: none;
 }
 .btn-primary:focus, .btn-primary.focus, .more-news:focus, .more-news.focus, #clouds a:focus {
-	color: @ini_background;
+	color: @ini_text_alt;
 	background-color: @ini_background_alt;
 	border: 1px solid @ini_background_alt;
 	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.25);
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-	color: @ini_background;
+	color: @ini_text_alt;
 	background-color: @ini_background_alt;
 	border: 1px solid @ini_background_alt;
 }
@@ -107,7 +103,7 @@ th {
 	min-height: 220px;
 	max-width: 500px;
 	margin: auto;
-	padding: 48px;
+	padding: 64px 48px;
 	align-items: center;
 	//Browser lag fix
 	transform: translatez(0);
@@ -128,6 +124,7 @@ th {
 .cookielaw-banner {
     background-color: @ini_background_alt;
 	box-shadow: none;
+	max-width: 100%;
 	opacity: 0.8;
 }
 .dokuwiki div.section_highlight {
@@ -157,6 +154,9 @@ th {
 		&:hover {
 			filter: brightness(0.85);
 		}
+	}
+	div {
+		margin: 8px 0;
 	}
 }
 .gallery .gallery-image {
@@ -201,7 +201,7 @@ th {
 }
 .loader {
 	content: url("images/logo-orange.svg");
-	width: 160px;
+	width: 120px;
 	display: flex;
 }
 .plugin-social, .rss {
@@ -240,6 +240,10 @@ th {
 	background: url("icons/social-yt.svg") no-repeat bottom;
 	background-size: 80%;
 }
+.stream.row {
+	max-width: 100%;
+	margin: 0;
+}
 .task-repo.task .tag {
 	display: none !important;
 }
@@ -256,6 +260,9 @@ th {
 	margin: 16px 0;
 	padding: 0;
 	position: relative;
+	.col-12 {
+		padding: 0;
+	}
 }
 #clouds a {
 	display: block;
@@ -279,12 +286,36 @@ th {
 	margin: 0 auto;
 }
 #content {
+	display: flex;
+	flex: 1 0 auto;
+	-moz-flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+	flex-direction: column;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	transition: .15s ease-in-out;
+	-webkit-transition: .15s ease-in-out;
+	-moz-transition: .15s ease-in-out;
+	-o-transition: .15s ease-in-out;
+	transition-property: background-position;
+	-webkit-transition-property: background-position;
+	-moz-transition-property: background-position;
+	-o-transition-property: background-position;
+}
+#dokuwiki {
 	background-color: white;
 	box-shadow: 0px 0px 10px 4px @ini_background_alt;
+	flex: 1 0 auto;
+	-moz-flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
 	padding: 20px 40px 60px;
+	margin-bottom: -40px;
 	text-align: justify;
 	a {
 		color: @ini_background_alt;
+		span {
+			margin-right: 4px
+		}
 		:visited {
 			color: lighten(@ini_background_alt, 20%) !important;
 			text-decoration: none;
@@ -295,7 +326,14 @@ th {
 		}
 	}
 }
+#media__tree {
+	ul li {
+		display: list-item;
+	}
+}
 #quickLinks {
+	align-items: center;
+	margin: 0;
 	max-width: 100%;
 	a {
 		background-image: url("images/cloud-alt.svg");
@@ -303,8 +341,10 @@ th {
 		color: @ini_background;
 		display: block;
 		font-size: 1.5rem;
-		max-width: 350px;
-		margin: 32px auto;
+		font-weight: 500;
+		width: 100%;
+		max-width: 320px;
+		margin: 16px auto;
 		padding: 48px 16px;
 		text-align: center;
 		z-index: 10;
@@ -312,8 +352,28 @@ th {
 		transform: translatez(0);
 		-webkit-transform: translatez(0);
 	}
+	a:hover {
+		color: @ini_background;
+		text-decoration: none;
+	}
 }
-#quickLinks a:hover {
-	color: @ini_background;
-	text-decoration: none;
+@media (max-width: 425px) {
+	#dokuwiki {
+		padding: 1px 2px 54px;
+	}
+	div.cookielaw-banner {
+		padding: 2px;
+	}
+}
+@media (max-width: 991px) {
+	body {
+		background: none;
+	}
+	.table td, .table th {
+		padding: 1px;
+	}
+	#dokuwiki {
+		padding: 4px 8px 52px;
+		margin-bottom: -48px
+	}
 }

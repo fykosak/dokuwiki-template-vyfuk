@@ -1,42 +1,37 @@
 jQuery(function () {
     var $ = jQuery;
 });
-
 $(window).on("load",function(){
 	let ticking = false;
 	let lastPos = 0;
-	
+
 	if (document.cookie.includes("new-era")) {
 		$("#new-era-wrapper").hide();
 	}
 	$(".loader-wrapper").fadeOut("250");
 	window.addEventListener("scroll", function(e) {
 		winW = document.body.scrollWidth;
-		Y = window.scrollY;
 		if (winW > 992) {
+			Y = window.scrollY;
 			menuH = $(".navbar-bg")[0].scrollHeight;
 			footerH = $("footer")[0].scrollHeight;
-			bodyH = document.body.scrollHeight-menuH-footerH;
-			winH = window.innerHeight-menuH;
+			bodyH = document.body.scrollHeight;
+			winH = window.innerHeight;
 			imgH = 1669*document.body.scrollWidth/1920;
-			
-			bckgrdY = Math.round((Y*(bodyH-imgH)/(bodyH-winH))+menuH);
+			koef = Y/(bodyH-winH);
+			bckgrdY = (koef*(bodyH-footerH-imgH+menuH))+menuH;
 			$("body").css("background-position", "0 " + bckgrdY + "px");
-		} else {
-			$("body").css("background-position", "0 " + Y + "px");
 		}
 	});
 	window.scrollTo(window.scrollX, window.scrollY - 1);
 	window.scrollTo(window.scrollX, window.scrollY + 1);
 });
-
 function closeWelcome(){
 	var date = new Date();
 	date.setFullYear(date.getFullYear() + 1);
 	document.cookie = "name=new-era; path=/; expires=" + date.toGMTString();
 	$("#new-era-wrapper").hide();
 };
-
 (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
     i[r] = i[r] || function () {
