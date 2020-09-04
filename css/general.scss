@@ -99,7 +99,7 @@ th {
 	transform: rotate(180deg);
 }
 .cloud-left, .cloud-right {
-	background-image: url("images/cloud.svg?v=2");
+	background-image: url("images/cloud.svg?v=3");
 	background-size: 100% 100%;
 	min-height: 220px;
 	max-width: 500px;
@@ -334,7 +334,7 @@ th {
 	margin: 0;
 	max-width: 100%;
 	a {
-		background-image: url("images/cloud-alt.svg");
+		background-image: url("images/cloud-alt.svg?v=2");
 		background-size: 100% 100%;
 		color: @ini_background;
 		display: block;
