@@ -2,7 +2,7 @@ html, body {
 	min-height: 100%;
 }
 body {
-	background: url("images/wallpaper.png") no-repeat center top;
+	background: url("images/wallpaper.png?v=2") no-repeat center top;
 	background-size: 100% auto;
 	display: flex;
 	flex-direction: column;
@@ -98,7 +98,7 @@ th {
 	transform: rotate(180deg);
 }
 .cloud-left, .cloud-right {
-	background-image: url("images/cloud.svg");
+	background-image: url("images/cloud.svg?v=2");
 	background-size: 100% 100%;
 	min-height: 220px;
 	max-width: 500px;
