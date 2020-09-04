@@ -75,7 +75,7 @@
 						<h2>Co tím získám?</h2>
 						<p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné ceny, ale především účast na našich akcích; dvou setkáních a letním táboře. Na obojím můžete zakusit zajímavé exkurze, poutavé přednášky, spoustu her, výletů a přivést si domů spousty neopakovatelných zážitků.</p>
 					</div>
-					<div class="cloud-right col-lg-6 timer">
+					<div class="cloud-right col-lg-6">
 						<?php drawContent("system:timer");?>
 					</div>
 				</div>

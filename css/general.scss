@@ -36,8 +36,9 @@ button {
 	}
 }
 h1, h2, h3, h4, h5 {
-	padding: 6px 0px;
 	color: @ini_background_alt;
+	padding: 6px 0px;
+	text-align: left;
 }
 h1 {
 	border-bottom: 2px solid @ini_background_alt;
@@ -246,9 +247,6 @@ th {
 }
 .task-repo.task .tag {
 	display: none !important;
-}
-.timer {
-	padding: 48px 0;
 }
 #aboutIcon {
 	height: 50px;
