@@ -1,10 +1,10 @@
 <?php if (!defined('DOKU_INC')) die();
 	global $conf;
 	global $ID;
-	
+
 	require_once(dirname(__FILE__) . '/navBar/BootstrapNavBar.php');
 	require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
-	
+
 	function drawContent($path){
 		if(page_exists($path)){
 			tpl_include_page($path);

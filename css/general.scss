@@ -1,3 +1,7 @@
+:root {
+	--primary: @ini_background_alt;
+	--secondary: @ini_background_neu;
+}
 html, body {
 	min-height: 100%;
 }
@@ -8,7 +12,8 @@ body {
 	flex-direction: column;
 	-moz-flex-direction: column;
 	-webkit-flex-direction: column;
-	position: relative;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	margin: 0;
 }
 footer {
 	flex-shrink: 0;
@@ -44,7 +49,7 @@ h1 {
 	border-bottom: 2px solid @ini_background_alt;
 }
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 label {
 	width: 100%;
@@ -75,16 +80,38 @@ th {
 	color: @ini_text_alt;
 	background-color: @ini_background_alt;
 	border: 1px solid @ini_background_alt;
-	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.25);
+	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.25) !important;
 }
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-	color: @ini_text_alt;
-	background-color: @ini_background_alt;
-	border: 1px solid @ini_background_alt;
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, .more-news:active, #clouds a:active{
+	color: @ini_text_alt !important;
+	background-color: @ini_background_alt !important;
+	border: 1px solid @ini_background_alt !important;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
-	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.5);
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, .more-news.active:focus, .more-news:active:focus, #clouds a.active:focus, #clouds a:active:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.5) !important;
 }
+.btn-secondary {
+	background-color: darken(@ini_background_neu, 5%);
+	border: 1px solid darken(@ini_background_neu, 5%);
+}
+.btn-secondary:hover {
+	background-color: darken(@ini_background_neu, 15%);
+	border: 1px solid darken(@ini_background_neu, 15%);
+	text-decoration: none;
+}
+.btn-secondary:focus, .btn-secondary.focus {
+	background-color: @ini_background_neu;
+	border: 1px solid @ini_background_neu;
+	box-shadow: 0 0 0 0.2rem rgba(255, 164, 128, 0.25) !important;
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active {
+	background-color: @ini_background_neu !important;
+	border: 1px solid @ini_background_neu !important;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 164, 128, 0.5) !important;
+}
+
 .bs-callout {
 	border-left: 2px solid @ini_background_alt;
 	padding-left: 8px;
@@ -123,16 +150,20 @@ th {
 	width: 60px;
 }
 .cookielaw-banner {
-    background-color: @ini_background_alt;
+	background-color: @ini_background_alt;
 	box-shadow: none;
 	max-width: 100%;
 	opacity: 0.8;
 }
+.dokuwiki textarea.edit {
+	font-family: Consolas,"Andale Mono WT","Andale Mono","Bitstream Vera Sans Mono","Nimbus Mono L",Monaco,"Courier New",monospace;
+	font-size: 14px;
+}
 .dokuwiki div.section_highlight {
-    margin: 0 -6px;
-    padding: 0 4px;
-    border: dotted @ini_background_alt;
-    border-width: 0 2px;
+	margin: 0 -6px;
+	padding: 0 4px;
+	border: dotted @ini_background_alt;
+	border-width: 0 2px;
 }
 .fks-timer {
 	display: block;
@@ -199,6 +230,13 @@ th {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	animation: loader-fadeout 2s 1;
+	animation-fill-mode: forwards;
+}
+@keyframes loader-fadeout {
+	0%{opacity: 1}
+	87.5%{opacity: 1}
+	100%{opacity: 0}
 }
 .loader {
 	content: url("images/logo-orange.svg");
@@ -309,7 +347,7 @@ th {
 	padding: 20px 40px 60px;
 	margin-bottom: -40px;
 	text-align: justify;
-	a {
+	a:not(.btn) {
 		color: @ini_background_alt;
 		span {
 			margin-right: 4px
@@ -323,6 +361,16 @@ th {
 			text-decoration: none;
 		}
 	}
+}
+#media__content .odd {
+	background-color: @ini_background_neu;
+}
+#media__manager {
+	background-color: @ini_background;
+	min-height: 100vh;
+}
+#mediamgr__aside, #mediamgr__content {
+	background-color: @ini_background;
 }
 #media__tree {
 	ul li {

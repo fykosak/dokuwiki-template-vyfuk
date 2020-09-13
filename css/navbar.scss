@@ -15,7 +15,7 @@
 	&:hover {
 		filter: brightness(0.85);
 	}
-}	
+}
 .nav-link, .nav-item {
 	color: @ini_background;
 	transition: all .3s;
@@ -25,10 +25,13 @@
 	&:hover > .ico {
 		filter: brightness(0.85);
 	}
+	&:hover > .dropdown-menu {
+		display: block;
+	}
 }
 .dropdown-menu {
 	transition: all .3s;
-	left: -2px;
+	margin-top: 0px;
 }
 .dropdown-item {
 	transition: all .3s;
