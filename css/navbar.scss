@@ -36,6 +36,9 @@
 .dropdown-item {
 	transition: all .3s;
 	padding: 4px 8px;
+	&:active {
+		background-color: @ini_background_alt;
+	}
 }
 .navbar-toggler, .navbar-toggler-icon {
 	height: 22px;
