@@ -404,6 +404,9 @@ th {
 	}
 }
 @media (max-width: 425px) {
+	#clouds p {
+		text-align: center;
+	}
 	#dokuwiki {
 		padding: 1px 2px 54px;
 	}
