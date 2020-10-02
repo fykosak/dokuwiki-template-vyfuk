@@ -2,11 +2,9 @@ jQuery(function () {
     var $ = jQuery;
 });
 $(window).on("load",function(){
-	let ticking = false;
-	let lastPos = 0;
-
-	if (document.cookie.includes("new-era")) {
-		$("#new-era-wrapper").hide();
+	if ($("body").attr("data-act") == "login") {
+		$('input[name$="u"]').attr("placeholder", "Uživatelské jméno");
+		$('input[name$="p"]').attr("placeholder", "Heslo");
 	}
 	$(".loader-wrapper").fadeOut("250");
 	window.addEventListener("scroll", function(e) {

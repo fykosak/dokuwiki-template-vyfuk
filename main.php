@@ -121,14 +121,5 @@
 		<div class="loader-wrapper">
 			<span class="loader"></span>
 		</div>
-		<div id="new-era-wrapper">
-			<div id="new-era-content">
-				<h2 style="text-align: center">Vítej ve Výfučím!</h2>
-				<p>Zdravíme tě, poutníku! Jak si jistě všimneš, oblékli jsme náš web do nového kabátu. Dali jsme mu svěží design, zjednodušili hlavní menu a připravili spoustu dalších překvapení!</p>
-				<p>Pokud se ti na webu cokoliv nelíbí, nezdá, nebo ti připadá, že tu něco důležitého chybí, neváhej nás kontaktovat pomocí e-mailu, který nalezneš dole na stránce. Rádi si tvůj názor přečteme, a pokusíme se ti vyhovět.</p>
-				<p>Tak na co ještě čekáš? Vzhůru na průzkum!</p>
-				<button class="btn btn-primary" onclick="closeWelcome()">Rozumím!</button>
-			</div>
-		</div>
 	</body>
 </html>

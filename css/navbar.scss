@@ -7,6 +7,10 @@
 	margin: auto;
 	padding: 2px 16px;
 }
+.navbar .justify-content-end .dropdown-menu {
+	right: 0;
+	left: auto;
+}
 .navbar-brand {
 	content: url("images/logo-white.svg");
 	width: 65px;
@@ -24,9 +28,6 @@
 	}
 	&:hover > .ico {
 		filter: brightness(0.85);
-	}
-	&:hover > .dropdown-menu {
-		display: block;
 	}
 }
 .dropdown-menu {
@@ -87,5 +88,12 @@ span.ico {
 	}
 	span.ico {
 		width: 30px;
+	}
+}
+@media (min-width: 992px) {
+	.nav-link, .nav-item {
+		&:hover > .dropdown-menu {
+		display: block;
+		}
 	}
 }
