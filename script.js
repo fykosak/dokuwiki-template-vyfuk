@@ -6,7 +6,7 @@ $(window).on("load",function(){
 		$('input[name$="u"]').attr("placeholder", "Uživatelské jméno");
 		$('input[name$="p"]').attr("placeholder", "Heslo");
 	}
-	$(".loader-wrapper").fadeOut("250");
+	$(".loader-wrapper").fadeOut("200");
 	window.addEventListener("scroll", function(e) {
 		winW = document.body.scrollWidth;
 		if (winW > 992) {

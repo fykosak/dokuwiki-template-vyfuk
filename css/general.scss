@@ -15,6 +15,11 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	margin: 0;
 }
+body:not([data-act=show]){
+	#landing-page{
+		display: none;
+	}
+}
 footer {
 	flex-shrink: 0;
 	-moz-flex-shrink: 0;
@@ -54,7 +59,7 @@ img {
 label {
 	width: 100%;
 }
-p a, .li a, a.media {
+p a:not(:has(img)), .li a, a.media {
 	display: inline-block;
 }
 table, th, td {
@@ -230,12 +235,12 @@ th {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: loader-fadeout 2s 1;
+	animation: loader-fadeout 0.2s 1;
+	animation-delay: 0.8s;
 	animation-fill-mode: forwards;
 }
 @keyframes loader-fadeout {
 	0%{opacity: 1}
-	87.5%{opacity: 1}
 	100%{opacity: 0}
 }
 .loader {
