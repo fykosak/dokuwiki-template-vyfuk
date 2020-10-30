@@ -248,6 +248,12 @@ th {
 	width: 120px;
 	display: flex;
 }
+.media {
+	display: block;
+	img {
+		margin: 0 .5rem;
+	}
+}
 .plugin-social, .rss {
 	display: none;
 }
