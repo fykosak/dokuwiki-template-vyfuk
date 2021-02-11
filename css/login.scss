@@ -1,9 +1,6 @@
 body[data-act=login] {
 	background: url("images/login.jpg") no-repeat fixed center;
 	background-size: cover;
-	flex-direction: none;
-	-moz-flex-direction: none;
-	-webkit-flex-direction: none;
 	button {
 		background-color: @ini_background_alt;
 		border: 1px solid @ini_background_alt;

@@ -3,9 +3,7 @@
 }
 .navbar {
 	font-weight: 500;
-	max-width: 1200px;
-	margin: auto;
-	padding: 2px 16px;
+    font-size: 15px;
 }
 .navbar .justify-content-end .dropdown-menu {
 	right: 0;
@@ -13,12 +11,16 @@
 }
 .navbar-brand {
 	content: url("images/logo-white.svg");
-	width: 65px;
+	width: 60px;
 	height: auto;
 	transition: .3s all;
+    margin-right: .5rem;
 	&:hover {
 		filter: brightness(0.85);
 	}
+}
+.nav-link {
+
 }
 .nav-link, .nav-item {
 	color: @ini_background;
@@ -32,7 +34,7 @@
 }
 .dropdown-menu {
 	transition: all .3s;
-	margin-top: 0px;
+	margin-top: 0;
 }
 .dropdown-item {
 	transition: all .3s;
@@ -52,10 +54,10 @@
 	}
 }
 span.ico {
-	height: 22px;
-	margin-right: 2px;
+	height: 1.25rem;
+	margin-right: .125rem;
 	position: relative;
-	top: 4px;
+	top: .25rem;
 	transition: all .3s;
 }
 .ico-about {

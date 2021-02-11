@@ -6,8 +6,6 @@ html, body {
 	min-height: 100vh;
 }
 body {
-	background: url("images/wallpaper.png?v=2") no-repeat center top;
-	background-size: 100% auto;
 	display: flex;
 	flex-direction: column;
 	-moz-flex-direction: column;
@@ -47,7 +45,7 @@ button {
 }
 h1, h2, h3, h4, h5 {
 	color: @ini_background_alt;
-	padding: 6px 0px;
+	padding: 6px 0;
 	text-align: left;
 }
 h1 {
@@ -125,40 +123,49 @@ th {
 	height: 40px;
 	width: 100%;
 	background: url("images/edge.svg") repeat-x center top;
-	z-index: 10;
+	position: relative;
 }
 .cloud-up {
 	transform: rotate(180deg);
 }
-.cloud-left, .cloud-right {
+.cloud-wrapper {
 	background-image: url("images/cloud.svg?v=3");
 	background-size: 100% 100%;
-	min-height: 220px;
-	max-width: 500px;
-	margin: auto;
-	padding: 64px 48px;
+    min-height: 10rem;
+    max-width: 32rem;
+    display: flex;
+    margin: auto;
+	padding: 3rem 4rem!important;
+    justify-content: center;
 	align-items: center;
 	//Browser lag fix
-	transform: translatez(0);
-	-webkit-transform: translatez(0);
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
 	h2 {
 		text-align: center;
 		color: @ini_background_alt;
-		padding: 0px;
+		padding: 0;
 	}
 	p {
 		text-align: justify;
 	}
-}
-.cookielaw-banner button {
-	margin: 0px 8px;
-	width: 60px;
+    .timer-content h2 {
+        margin-bottom: 2rem;
+    }
 }
 .cookielaw-banner {
 	background-color: @ini_background_alt;
 	box-shadow: none;
 	max-width: 100%;
 	opacity: 0.8;
+    position: absolute !important;
+    a {
+        color: white !important;
+    }
+    button {
+        margin: 0 8px;
+        width: 60px;
+    }
 }
 .dokuwiki textarea.edit {
 	font-family: Consolas,"Andale Mono WT","Andale Mono","Bitstream Vera Sans Mono","Nimbus Mono L",Monaco,"Courier New",monospace;
@@ -179,7 +186,7 @@ th {
 	color: @ini_background;
 	background-color: @ini_background_alt;
 	text-align: center;
-	margin: 0px;
+	margin: 0;
 	padding: 8px;
 	p {
 		vertical-align: middle !important;
@@ -193,7 +200,7 @@ th {
 		}
 	}
 	div {
-		margin: 8px 0;
+		margin: auto;
 	}
 }
 .gallery .gallery-image {
@@ -235,17 +242,19 @@ th {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: loader-fadeout 0.2s 1;
-	animation-delay: 0.8s;
-	animation-fill-mode: forwards;
+}
+.no-js .loader-wrapper {
+    animation: loader-fadeout 0.2s 1;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
 }
 @keyframes loader-fadeout {
 	0%{opacity: 1}
-	100%{opacity: 0}
+	100%{opacity: 0; display: none}
 }
 .loader {
 	content: url("images/logo-orange.svg");
-	width: 120px;
+	width: 8rem;
 	display: flex;
 }
 .media {
@@ -304,12 +313,9 @@ th {
 	border-radius: 50%;
 }
 #clouds {
-	margin: 16px 0;
+	margin: .5rem 0;
 	padding: 0;
 	position: relative;
-	.col-12 {
-		padding: 0;
-	}
 }
 #clouds a {
 	display: block;
@@ -327,12 +333,7 @@ th {
 	border-radius: 0.25rem;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-#content, #landing-page {
-	width: 100%;
-	max-width: 1100px;
-	margin: 0 auto;
-}
-#content {
+#content, .parallax-wrapper, .parallax-fg {
 	display: flex;
 	flex: 1 0 auto;
 	-moz-flex: 1 0 auto;
@@ -340,18 +341,10 @@ th {
 	flex-direction: column;
 	-moz-flex-direction: column;
 	-webkit-flex-direction: column;
-	transition: .15s ease-in-out;
-	-webkit-transition: .15s ease-in-out;
-	-moz-transition: .15s ease-in-out;
-	-o-transition: .15s ease-in-out;
-	transition-property: background-position;
-	-webkit-transition-property: background-position;
-	-moz-transition-property: background-position;
-	-o-transition-property: background-position;
 }
 #dokuwiki {
 	background-color: white;
-	box-shadow: 0px 0px 10px 4px @ini_background_alt;
+	box-shadow: 0 0 10px 4px @ini_background_alt;
 	flex: 1 0 auto;
 	-moz-flex: 1 0 auto;
 	-webkit-flex: 1 0 auto;
@@ -414,21 +407,29 @@ th {
 		text-decoration: none;
 	}
 }
-@media (max-width: 425px) {
-	#clouds p {
-		text-align: center;
-	}
-	#dokuwiki {
-		padding: 1px 2px 54px;
-	}
-	div.cookielaw-banner {
-		padding: 2px;
-	}
+@media (max-width: 420px) {
+    .cloud-wrapper {
+        background: none;
+        padding: 0!important;
+    }
+    .parallax-bg {
+        display: none!important;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        margin: 0;
+        padding: 0 1.5rem;
+    }
+    .cookielaw-banner {
+        padding: 2px;
+    }
+    #dokuwiki {
+        box-shadow: none;
+        padding: 1px 2px 54px;
+    }
 }
 @media (max-width: 991px) {
-	body {
-		background: none;
-	}
 	.table td, .table th {
 		padding: 1px;
 	}
