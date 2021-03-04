@@ -42,7 +42,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 </head>
 <body data-act="<?php echo $ACT; ?>" data-namespace="<?php echo getNS($ID); ?>" data-page_id="<?php echo $ID; ?>">
 <div class="parallax-wrapper">
-    <img class="parallax-bg" src="/lib/tpl/vyfuk/images/wallpaper.png" alt="Výfuk wallpaper">
+    <img class="parallax-bg w-100" src="/lib/tpl/vyfuk/images/wallpaper.png?v=3" alt="Výfuk wallpaper">
     <div class="parallax-fg">
         <div class="sticky-top navbar-bg">
             <?php
@@ -61,8 +61,8 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
         </div>
         <div id="content" class="clearfix">
             <?php if ($ID == "start"): ?>
-                <div id="landing-page" class="container">
-                    <div class="row justify-content-center justify-content-lg-between" id="clouds">
+                <div id="landing-page" class="container p-0">
+                    <div class="row justify-content-center justify-content-lg-between no-gutters" id="clouds">
                         <div class="col-lg-6 cloud-wrapper">
                             <div class="cloud-content">
                                 <h2>Tady je Výfučí!</h2>
@@ -94,7 +94,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
                             </div>
                         </div>
                     </div>
-                    <div class="row" id="quickLinks">
+                    <div class="row justify-content-center justify-content-lg-between no-gutters" id="quickLinks">
                         <a class="col-lg" href="/ulohy/zadani">Aktuální zadání úloh</a>
                         <a class="col-lg" href="/ulohy/vyfucteni">Výfučtení</a>
                         <a class="col-lg" href="/akce/start">Akce</a>
@@ -108,14 +108,14 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
         </div>
         <footer>
             <div class="cloud-down"></div>
-            <div class="container-fluid footer">
-                <div class="container row">
+            <div class="footer w-100">
+                <div class="container row justify-content-center justify-content-lg-between">
                     <div class="col-lg order-lg-2">
                         <a href="/">
                             <img id="footerLogo" src="/lib/tpl/vyfuk/images/logo-white.svg" style="width: 100px"
                                  alt="Výfuk">
                         </a><br>
-                        <a href="/o_webu">©2021 Výfuk</a><br>
+                        <a href="/o_webu">©<?php echo date("Y")?> Výfuk</a><br>
                         Neváhej nás kontaktovat!<br>
                         <a href="mailto:vyfuk@vyfuk.mff.cuni.cz">vyfuk@vyfuk.mff.cuni.cz</a>
                     </div>

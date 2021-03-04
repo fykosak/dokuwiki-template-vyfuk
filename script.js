@@ -1,19 +1,19 @@
+let image = $('.parallax-bg');
+let content = $('.parallax-fg');
+
+let cookie = $('.cookielaw-bottom');
+let wrapper = $('.parallax-wrapper')[0];
 jQuery(function () {
     var $ = jQuery;
 });
 function update_cookie_pos () {
-    let cookie = $('.cookielaw-bottom');
-    let content = $('.parallax-wrapper')[0];
-
-    const scrollHeight = content.scrollTop;
-    const pageHeight = content.scrollHeight;
+    const scrollHeight = wrapper.scrollTop;
+    const pageHeight = wrapper.scrollHeight;
     const winHeight = window.innerHeight;
     cookie.css('bottom', pageHeight - scrollHeight - winHeight);
 }
 function update_parallax () {
-    let image = $('.parallax-bg');
-    let content = $('.parallax-fg');
-
+    console.log('Updating parallax...');
     const imgDisplay = image.css('display');
     image.css('display', 'block');
     const imgHeight = image[0].clientHeight;
@@ -21,7 +21,6 @@ function update_parallax () {
     const pageHeight = content[0].scrollHeight;
     const winHeight = window.innerHeight;
 
-    const yValue = 0;
     const zValue = (imgHeight-pageHeight)/(imgHeight-winHeight);
     const scaleValue = 1-(zValue*1.01);
 
@@ -30,7 +29,7 @@ function update_parallax () {
         content.css('background', '');
     } else {
         image.css({
-            'transform': `translateY(${yValue}%) translateZ(${zValue}px) scale(${scaleValue})`,
+            'transform': `translateZ(${zValue}px) scale(${scaleValue})`,
             'display': 'block'
         });
         content.css('background', 'none');
@@ -38,16 +37,17 @@ function update_parallax () {
 
 }
 window.onload = function () {
-    if ($("body").attr("data-act") === "login") {
+    if ($('#dw__login').length) {
         $('input[name$="u"]').attr("placeholder", "Uživatelské jméno");
         $('input[name$="p"]').attr("placeholder", "Heslo");
     }
-    $('.loader-wrapper').fadeOut("1000");
     update_parallax();
     window.addEventListener('resize', update_parallax);
-    if ($('.cookielaw-bottom')[0] != null) {
+    document.addEventListener('resize', update_parallax);
+    $('.loader-wrapper').fadeOut("1000");
+    if (cookie[0] != null) {
         update_cookie_pos();
-        $('.parallax-wrapper')[0].addEventListener('scroll', update_cookie_pos);
+        wrapper.addEventListener('scroll', update_cookie_pos);
     }
 };
 (function (i, s, o, g, r, a, m) {

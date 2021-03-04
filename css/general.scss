@@ -4,6 +4,7 @@
 }
 html, body {
 	min-height: 100vh;
+    scroll-behavior: smooth;
 }
 body {
 	display: flex;
@@ -68,53 +69,31 @@ th {
 	background-color: @ini_background_alt;
 	color: @ini_background;
 }
-.btn-primary, .more-news, #clouds a {
+.btn-primary, .btn.more-news, #clouds a {
 	color: @ini_text_alt;
 	background-color: @ini_background_alt;
 	border: 1px solid @ini_background_alt;
 }
-.btn-primary:hover, .more-news:hover, #clouds a:hover {
+.btn-primary:hover, .btn.more-news:hover, #clouds a:hover {
 	color: @ini_text_alt;
 	background-color: darken(@ini_background_alt, 10%);
 	border: 1px solid darken(@ini_background_alt, 10%);
 	text-decoration: none;
 }
-.btn-primary:focus, .btn-primary.focus, .more-news:focus, .more-news.focus, #clouds a:focus {
+.btn-primary:focus, .btn-primary.focus, .btn.more-news:focus, .btn.more-news.focus, #clouds a:focus {
 	color: @ini_text_alt;
 	background-color: @ini_background_alt;
 	border: 1px solid @ini_background_alt;
 	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.25) !important;
 }
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, .more-news:active, #clouds a:active{
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, .btn.more-news:active, #clouds a:active{
 	color: @ini_text_alt !important;
 	background-color: @ini_background_alt !important;
 	border: 1px solid @ini_background_alt !important;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, .more-news.active:focus, .more-news:active:focus, #clouds a.active:focus, #clouds a:active:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, .btn.more-news.active:focus, .btn.more-news:active:focus, #clouds a.active:focus, #clouds a:active:focus {
 	box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.5) !important;
 }
-.btn-secondary {
-	background-color: darken(@ini_background_neu, 5%);
-	border: 1px solid darken(@ini_background_neu, 5%);
-}
-.btn-secondary:hover {
-	background-color: darken(@ini_background_neu, 15%);
-	border: 1px solid darken(@ini_background_neu, 15%);
-	text-decoration: none;
-}
-.btn-secondary:focus, .btn-secondary.focus {
-	background-color: @ini_background_neu;
-	border: 1px solid @ini_background_neu;
-	box-shadow: 0 0 0 0.2rem rgba(255, 164, 128, 0.25) !important;
-}
-.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active {
-	background-color: @ini_background_neu !important;
-	border: 1px solid @ini_background_neu !important;
-}
-.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus {
-	box-shadow: 0 0 0 0.2rem rgba(255, 164, 128, 0.5) !important;
-}
-
 .bs-callout {
 	border-left: 2px solid @ini_background_alt;
 	padding-left: 8px;
@@ -134,7 +113,6 @@ th {
     min-height: 10rem;
     max-width: 32rem;
     display: flex;
-    margin: auto;
 	padding: 3rem 4rem!important;
     justify-content: center;
 	align-items: center;
@@ -230,6 +208,15 @@ th {
 	a:hover > .caption {
 		background-color: rgba(0, 0, 0, 0.5) !important;
 	}
+}
+.insitu-footnote {
+    border: 1px solid @ini_border;
+    border-radius: .25rem;
+    margin: .5rem;
+    padding: .25rem;
+}
+.load-bar {
+    display: none;
 }
 .loader-wrapper {
 	width: 100%;
@@ -382,9 +369,6 @@ th {
 	}
 }
 #quickLinks {
-	align-items: center;
-	margin: 0;
-	max-width: 100%;
 	a {
 		background-image: url("images/cloud-alt.svg?v=2");
 		background-size: 100% 100%;
@@ -393,14 +377,14 @@ th {
 		font-size: 1.5rem;
 		font-weight: 500;
 		width: 100%;
-		max-width: 320px;
-		margin: 16px auto;
+		max-width: 20rem;
+		margin: 1rem 0;
 		padding: 48px 16px;
 		text-align: center;
 		z-index: 10;
 		//Browser lag fix
-		transform: translatez(0);
-		-webkit-transform: translatez(0);
+		transform: translateZ(0);
+		-webkit-transform: translateZ(0);
 	}
 	a:hover {
 		color: @ini_background;
