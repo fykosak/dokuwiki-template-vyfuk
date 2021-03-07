@@ -13,7 +13,6 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']; ?>" lang="<?php echo $conf['lang']; ?>">
-<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Miroslav Jarý, jason@vyfuk.mff.cuni.cz">
@@ -29,8 +28,6 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
@@ -44,7 +41,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
 <div class="parallax-wrapper">
     <img class="parallax-bg w-100" src="/lib/tpl/vyfuk/images/wallpaper.png?v=3" alt="Výfuk wallpaper">
     <div class="parallax-fg">
-        <div class="sticky-top navbar-bg">
+        <div class="sticky-top bg-primary">
             <?php
             if (page_exists("system:menu_cs")) {
                 $leftMenu = new BootstrapNavBar('full');
@@ -115,7 +112,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
                             <img id="footerLogo" src="/lib/tpl/vyfuk/images/logo-white.svg" style="width: 100px"
                                  alt="Výfuk">
                         </a><br>
-                        <a href="/o_webu">©<?php echo date("Y")?> Výfuk</a><br>
+                        <a href="/o_webu">©<?php echo date("Y") ?> Výfuk</a><br>
                         Neváhej nás kontaktovat!<br>
                         <a href="mailto:vyfuk@vyfuk.mff.cuni.cz">vyfuk@vyfuk.mff.cuni.cz</a>
                     </div>

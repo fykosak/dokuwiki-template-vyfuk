@@ -1,9 +1,11 @@
 body {
     position: relative;
 }
+
 body[data-act=login] .parallax-fg {
     background: none;
 }
+
 .parallax-wrapper {
     perspective: 1px;
     perspective-origin: top center;
@@ -11,10 +13,12 @@ body[data-act=login] .parallax-fg {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .parallax-bg {
     position: absolute;
     transform-origin: top center;
 }
+
 .parallax-fg {
     background: url("images/wallpaper.png?v=3") no-repeat scroll center center;
     background-size: 100% auto;
