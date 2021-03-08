@@ -10,7 +10,6 @@ global $ID;
 require_once(dirname(__FILE__) . '/tpl_functions.php');
 require_once(dirname(__FILE__) . '/navBar/BootstrapNavBar.php');
 require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
-
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']; ?>" lang="<?php echo $conf['lang']; ?>">
 <head>
@@ -21,15 +20,13 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
     <meta name="keywords" content="vyfuk, výfuk,  fyzika, fyzikalni, fyzikální, seminar, seminář, soutez, soutěž">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/tpl/vyfuk/css/bootstrap.min.css">
     <script src="https://use.fontawesome.com/f585fb7cc3.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
     <title><?php echo templateFunctions::get_title($ID); ?></title>
     <?php
@@ -104,9 +101,9 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
             </div>
         </div>
         <footer>
-            <div class="cloud-down"></div>
-            <div class="footer w-100">
-                <div class="container row justify-content-center justify-content-lg-between">
+            <div class="footer-cloud"></div>
+            <div class="footer-content">
+                <div class="container row m-auto align-items-center justify-content-center justify-content-lg-between">
                     <div class="col-lg order-lg-2">
                         <a href="/">
                             <img id="footerLogo" src="/lib/tpl/vyfuk/images/logo-white.svg" style="width: 100px"
