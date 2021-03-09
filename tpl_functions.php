@@ -12,13 +12,12 @@ namespace vyfukTemplate;
 
 class templateFunctions {
     static function get_title($ID) {
-        $prefix = '';
         if ($ID == "start")
             return "Tady je Výfučí!";
         elseif (!page_exists($ID))
             $prefix = "Stránka nenalezena";
         else
-            tpl_pagetitle();
+            $prefix = p_get_metadata($ID, 'title');
 
         return $prefix . ' • Výfuk';
     }
