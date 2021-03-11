@@ -1,11 +1,8 @@
-let image = $('.parallax-bg');
-let content = $('.parallax-fg');
+let image = jQuery('.parallax-bg');
+let content = jQuery('.parallax-fg');
 
-let cookie = $('.cookielaw-bottom');
-let wrapper = $('.parallax-wrapper')[0];
-jQuery(function () {
-    var $ = jQuery;
-});
+let cookie = jQuery('.cookielaw-bottom');
+let wrapper = jQuery('.parallax-wrapper')[0];
 
 function update_cookie_pos() {
     const scrollHeight = wrapper.scrollTop;
@@ -23,7 +20,8 @@ function update_parallax() {
     const winHeight = window.innerHeight;
 
     const zValue = (imgHeight - pageHeight) / (imgHeight - winHeight);
-    const scaleValue = 1 - (zValue * 1.01);
+    const scaleValue = 1 - zValue;
+    console.log(zValue, scaleValue);
 
     if (imgHeight >= pageHeight) {
         image.css('display', 'none');
@@ -38,20 +36,23 @@ function update_parallax() {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    if ($('#dw__login').length) {
-        $('input[name$="u"]').attr("placeholder", "Uživatelské jméno");
-        $('input[name$="p"]').attr("placeholder", "Heslo");
+    if (jQuery('#dw__login').length) {
+        jQuery('input[namejQuery="u"]').attr("placeholder", "Uživatelské jméno");
+        jQuery('input[namejQuery="p"]').attr("placeholder", "Heslo");
     }
 
-    const resize_observer = new ResizeObserver(update_parallax);
-    resize_observer.observe(content[0]);
+    if (content[0]) {
+        const resize_observer = new ResizeObserver(update_parallax);
+        resize_observer.observe(content[0]);
+        console.log('OBSERVE');
+    }
     window.addEventListener('resize', update_parallax);
     if (cookie[0] != null) {
         update_cookie_pos();
         wrapper.addEventListener('scroll', update_cookie_pos);
     }
 
-    $('.loader-wrapper').fadeOut();
+    jQuery('.loader-wrapper').fadeOut();
 });
 (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;

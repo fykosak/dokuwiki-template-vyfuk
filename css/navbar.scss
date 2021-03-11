@@ -21,11 +21,11 @@
 
 .nav-link, .nav-item, .navbar-toggler {
     background-color: transparent !important;
-    color: @ini_background;
+    color: __background__;
     transition: .3s filter;
 
     &:hover {
-        color: darken(@ini_background, 15%);
+        color: darken(__background__, 15%);
     }
 
     &:hover > .ico {
@@ -43,7 +43,7 @@
     padding: .25rem .5rem;
 
     &:active {
-        background-color: @ini_background_alt;
+        background-color: __background___alt;
     }
 }
 
@@ -89,7 +89,7 @@ span.ico {
 
 @media (max-width: 991px) {
     .dropdown-item:hover {
-        background-color: darken(@ini_background, 15%);
+        background-color: darken(__background__, 15%);
     }
     span.ico {
         width: 30px;

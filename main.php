@@ -58,7 +58,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
                 <div id="landing-page" class="container p-0">
                     <div class="row justify-content-center justify-content-lg-between no-gutters" id="clouds">
                         <div class="col-lg-6 cloud-wrapper">
-                            <div class="cloud-content">
+                            <div class="cloud-content m-1">
                                 <h2>Tady je Výfučí!</h2>
                                 <p><b>Výfuk</b>, jméno našeho korespondenčního semináře, je vlastně zkratka jeho
                                     dlouhého názvu – <b>Vý</b>počty <b>f</b>yzikálních <b>úk</b>olů. Touto soutěží se
@@ -66,15 +66,15 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
                             </div>
                         </div>
                         <div class="col-lg-6 cloud-wrapper">
-                            <div class="cloud-content">
+                            <div class="cloud-content m-1">
                                 <h2>Jak to probíhá?</h2>
                                 <p>Během školního roku postupně zveřejňujeme zadání šesti sérií. Každá z nich obsahuje
-                                    pět úloh z různých oblastí fyziky, jeden problém týkajícího se našeho odborného
+                                    pět úloh z různých oblastí fyziky, jeden problém týkající se našeho odborného
                                     textu (tzv. Výfučtení) a jeden zábavný experiment. Zapojit se můžete kdykoliv!</p>
                             </div>
                         </div>
                         <div class="col-lg-6 cloud-wrapper">
-                            <div class="cloud-content">
+                            <div class="cloud-content m-1">
                                 <h2>Co tím získám?</h2>
                                 <p>Kromě mnoha zkušeností, které uplatníte po celý svůj život, můžete vyhrát hmotné
                                     ceny, ale především účast na našich akcích - dvou setkání a letním táboře. Na obojím
@@ -83,7 +83,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
                             </div>
                         </div>
                         <div class="col-lg-6 cloud-wrapper">
-                            <div class="timer-content">
+                            <div class="timer-content m-1">
                                 <?php templateFunctions::draw_content("system:timer"); ?>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ require_once(dirname(__FILE__) . '/navBar/NavBarItem.php');
     </div>
 </div>
 <div class="loader-wrapper">
-    <span class="loader"></span>
+    <span class="loader d-flex"></span>
 </div>
 </body>
 </html>
