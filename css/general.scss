@@ -105,8 +105,10 @@ th {
     box-shadow: 0 0 0 0.2rem rgba(255, 72, 0, 0.25) !important;
 }
 
-#config__manager fieldset {
-    background-color: __background__;
+#config__manager {
+    fieldset {
+        background-color: __background__;
+    }
 }
 
 .bs-callout {
