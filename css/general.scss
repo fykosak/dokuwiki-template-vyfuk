@@ -26,7 +26,7 @@ footer {
 
 a {
     color: __link__;
-    transition: 0.5s all;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     a:hover, a:active {
         color: lighten(__orange__, 20%);
@@ -40,7 +40,7 @@ button, .qq-upload-button {
     color: __orange__;
     margin: 0 .125rem;
     padding: .125rem .5rem;
-    transition: 0.5s all;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &:hover, &:active, &:focus {
         border: 1px solid __orange__;
@@ -434,6 +434,7 @@ th {
         padding: 48px 16px;
         text-align: center;
         z-index: 10;
+        transition: .3s all;
         //Browser lag fix
         transform: translateZ(0);
         -webkit-transform: translateZ(0);

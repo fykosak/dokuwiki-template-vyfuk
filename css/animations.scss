@@ -29,22 +29,22 @@
 
 @keyframes shake {
     0% {
-        transform: translate(2px, 1px) rotate(0deg)
+        transform: translate(.1rem, .05rem) rotate(0deg)
     }
     20% {
-        transform: translate(-1px, -1px) rotate(-1deg)
+        transform: translate(-.05rem, -.05rem) rotate(-8deg)
     }
     40% {
-        transform: translate(-2px, 3px) rotate(2deg)
+        transform: translate(-.1rem, .1rem) rotate(-2deg)
     }
     60% {
-        transform: translate(0px, -1px) rotate(0deg)
+        transform: translate(0, -.1rem) rotate(-7deg)
     }
     80% {
-        transform: translate(1px, 0px) rotate(1deg)
+        transform: translate(.1rem, 0) rotate(-3deg)
     }
     100% {
-        transform: translate(0px, 0px) rotate(0deg)
+        transform: translate(0, 0) rotate(0deg)
     }
 }
 
@@ -56,7 +56,7 @@
     animation: loader 3s infinite;
 }
 
-.nav-link:hover > span.ico, .navbar-brand:hover {
+.nav-link:hover > .ico, .nav-link:hover > .fa, .navbar-brand:hover, #footerLogo:hover {
     animation: shake 0.2s;
 }
 
